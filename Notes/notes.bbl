@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{lunardi2015infinite}
+Alessandra Lunardi, Michele Miranda, and Diego Pallara.
+\newblock Infinite dimensional analysis.
+\newblock In {\em 19th Internet Seminar}, volume 2016, 2015.
+
+\bibitem{stuart2010inverse}
+Andrew~M Stuart.
+\newblock Inverse problems: a bayesian perspective.
+\newblock {\em Acta numerica}, 19:451--559, 2010.
+
+\bibitem{owhadi2015conditioning}
+Houman Owhadi and Clint Scovel.
+\newblock Conditioning gaussian measure on hilbert space.
+\newblock {\em arXiv preprint arXiv:1506.04208}, 2015.
+
+\bibitem{lord2014introduction}
+Gabriel~J Lord, Catherine~E Powell, and Tony Shardlow.
+\newblock {\em An introduction to computational stochastic PDEs}, volume~50.
+\newblock Cambridge University Press, 2014.
+
+\bibitem{masarotto2019procrustes}
+Valentina Masarotto, Victor~M Panaretos, and Yoav Zemel.
+\newblock Procrustes metrics on covariance operators and optimal transportation
+  of gaussian processes.
+\newblock {\em Sankhya A}, 81(1):172--213, 2019.
+
+\end{thebibliography}
