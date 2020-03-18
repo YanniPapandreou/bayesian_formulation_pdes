@@ -26,4 +26,9 @@ Valentina Masarotto, Victor~M Panaretos, and Yoav Zemel.
   of gaussian processes.
 \newblock {\em Sankhya A}, 81(1):172--213, 2019.
 
+\bibitem{cuesta1996lower}
+JA~Cuesta-Albertos, C~Matr{\'a}n-Bea, and A~Tuero-Diaz.
+\newblock On lower bounds for the l2-wasserstein metric in a hilbert space.
+\newblock {\em Journal of Theoretical Probability}, 9(2):263--283, 1996.
+
 \end{thebibliography}

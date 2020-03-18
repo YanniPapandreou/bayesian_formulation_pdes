@@ -70,7 +70,7 @@ options:
   intermediatePostScript: false
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2020-03-18T09:31:31.000Z
+    timeStamp: 2020-03-18T15:19:45.335Z
     jobNames: []
     value:
       severity: info
@@ -128,20 +128,20 @@ files:
       intermediatePostScript: false
     type: ParsedYAML
   notes.tex:
-    timeStamp: 2020-03-18T10:26:29.867Z
+    timeStamp: 2020-03-18T15:19:44.674Z
     jobNames: []
-    hash: YG8AnKK0km3HeK8jP/U6WWl/edPd4oUEtf0xXkx5wAk=
+    hash: 2/WjYQuV0yvnzOh0JUxCSyrtNvQDRExlfIcYHGlv3D8=
     type: LaTeX
     subType: article
   /home/johnandrew/.config/dicy/config.yaml:
-    timeStamp: 2020-03-18T09:31:31.009Z
+    timeStamp: 2020-03-18T15:19:45.343Z
     jobNames: []
     type: YAML
   x.y-Nil:
     jobNames: []
     type: Nil
   notes.fls-ParsedFileListing:
-    timeStamp: 2020-02-28T13:09:41.178Z
+    timeStamp: 2020-03-18T14:49:17.076Z
     jobNames: []
     value:
       messages: []
@@ -284,7 +284,7 @@ files:
       calls: []
     type: ParsedFileListing
   notes.log-ParsedLaTeXLog:
-    timeStamp: 2020-03-18T10:26:22.980Z
+    timeStamp: 2020-03-18T15:15:19.505Z
     jobNames: []
     value:
       messages:
@@ -1627,13 +1627,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 518
-              end: 518
+              start: 549
+              end: 549
           log:
             file: notes.log
             range:
-              start: 799
-              end: 799
+              start: 820
+              end: 820
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1641,13 +1641,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 518
-              end: 518
+              start: 549
+              end: 549
           log:
             file: notes.log
             range:
-              start: 801
-              end: 801
+              start: 824
+              end: 824
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1655,13 +1655,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 518
-              end: 518
+              start: 549
+              end: 549
           log:
             file: notes.log
             range:
-              start: 805
-              end: 805
+              start: 828
+              end: 828
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1669,13 +1669,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 518
-              end: 518
+              start: 549
+              end: 549
           log:
             file: notes.log
             range:
-              start: 806
-              end: 806
+              start: 829
+              end: 829
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -1687,8 +1687,8 @@ files:
           log:
             file: notes.log
             range:
-              start: 807
-              end: 808
+              start: 830
+              end: 831
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1696,46 +1696,46 @@ files:
           source:
             file: notes.tex
             range:
-              start: 518
-              end: 518
+              start: 549
+              end: 549
           log:
             file: notes.log
             range:
-              start: 809
-              end: 809
+              start: 832
+              end: 832
       inputs: []
       outputs:
         - notes.pdf
       calls: []
     type: ParsedLaTeXLog
   notes.aux:
-    timeStamp: 2020-03-18T10:26:30.879Z
+    timeStamp: 2020-03-18T15:19:46.435Z
     jobNames: []
-    hash: JDj40dF2cT2JtwYDCXQXmI2uGvqHqMy1LNquLImItJ8=
+    hash: 9mHLKUg0sJZMKiJx4MfJsV1cdDsECIQxrwlHIukanks=
     type: LaTeXAuxilary
   notes.fls:
-    timeStamp: 2020-03-18T10:26:30.907Z
+    timeStamp: 2020-03-18T15:19:46.467Z
     jobNames: []
     hash: 2pfDS2hYAyeaaGJvOKJfYJFFS7cU4L5JzOmheOgMpn4=
     type: FileListing
   notes.log:
-    timeStamp: 2020-03-18T10:26:30.919Z
+    timeStamp: 2020-03-18T15:19:46.479Z
     jobNames: []
-    hash: syzD7HPmUfSUV7L/SNj2FNi+Y+5xzmuaCdbdIERVjMc=
+    hash: xt6+ZDY/n2tIac1B5pUteZfo8mnzmenHWKHIvEakkeg=
     type: LaTeXLog
     subType: pdfTeX
   notes.synctex.gz:
-    timeStamp: 2020-03-18T10:26:30.919Z
+    timeStamp: 2020-03-18T15:19:46.479Z
     jobNames: []
-    hash: bD3r3VQGcK03oRbh/vA2b/K2hiMlrZD2AYd8TeNXKIg=
+    hash: B1C3Y0otwO5BgrWm8FyD9l2ovT7qu309VRChlqXfBLw=
     type: SyncTeX
   notes.pdf:
-    timeStamp: 2020-03-18T10:26:30.919Z
+    timeStamp: 2020-03-18T15:19:46.479Z
     jobNames: []
-    hash: aaEemAO3T/AdlQK6uoA5YHY9TCAlM049RMPABHUBtnw=
+    hash: 7u6nk1NpI1H9okk1a/odZgSC9N2PVCCuGhado96RZSk=
     type: PortableDocumentFormat
   notes.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2020-03-18T10:26:22.386Z
+    timeStamp: 2020-03-18T15:01:40.474Z
     jobNames: []
     value:
       commands:
@@ -1784,7 +1784,8 @@ files:
         - newlabel
         - newlabel
         - citation
-        - '@writefile'
+        - citation
+        - citation
         - '@writefile'
         - bibdata
         - bibcite
@@ -1792,7 +1793,9 @@ files:
         - bibcite
         - bibcite
         - bibcite
+        - bibcite
         - bibstyle
+        - '@writefile'
     type: ParsedLaTeXAuxilary
   /etc/texmf/web2c/texmf.cnf:
     timeStamp: 2019-12-07T22:46:03.582Z
@@ -2130,13 +2133,13 @@ files:
       calls: []
     type: ParsedBibTeXLog
   notes.bbl:
-    timeStamp: 2020-03-18T10:26:30.479Z
+    timeStamp: 2020-03-18T15:19:46.023Z
     jobNames: []
-    hash: 7TTOwYoAA/IYXfJMJfBj3s5UmhBFvqkFP/YNKBCzPOw=
+    hash: Qh5/dGNRxei+xWAOfGpJuxlchzvikyZDFLKOoYANhfU=
   notes.blg:
-    timeStamp: 2020-03-18T10:26:30.479Z
+    timeStamp: 2020-03-18T15:19:46.023Z
     jobNames: []
-    hash: Uo5dRJAg1Su8Id7tTnN9UKj1ud//9TM74sv1URuhjn0=
+    hash: I5ez0X0dkxIf8KZbGgAdMKN7XLWlMgwj3tZGEiS5ybc=
     type: BibTeXLog
     subType: BibTeX
   /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty:
@@ -2181,7 +2184,7 @@ files:
     jobNames: []
     type: LaTeXStyle
   notes.out:
-    timeStamp: 2020-03-18T10:26:30.879Z
+    timeStamp: 2020-03-18T15:19:46.435Z
     jobNames: []
     hash: T0VbdyF94sRw3e1UlhU5F6gmh+b3RFfH0FlBvv31rDU=
     type: OUT
@@ -2219,6 +2222,9 @@ files:
     timeStamp: 2016-11-25T18:33:41.000Z
     jobNames: []
     type: FontDescription
+  /usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb:
+    timeStamp: 2016-11-25T18:32:24.000Z
+    jobNames: []
 rules:
   - name: ApplyOptions
     command: load
@@ -2566,6 +2572,8 @@ rules:
       - file: /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
         type: default
       - file: /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+        type: default
+      - file: /usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb
         type: default
     outputs:
       - file: notes.aux

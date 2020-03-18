@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  18 MAR 2020 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  18 MAR 2020 15:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -784,38 +784,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 468--470
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
 
  []
 
+
+Overfull \hbox (67.79816pt too wide) detected at line 493
+\OT1/cmr/m/n/10 ^^@(\OML/cmm/m/it/10 ^^V; ^^W\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/
+10 f[]\OML/cmm/m/it/10 ^^Y[]\OMS/cmsy/m/n/10 H ^^B Hj\OML/cmm/m/it/10 ^^Y\OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 E \OMS/cmsy/m/n/10 ^^B H\OT1/cmr/m/n/10 ) = \OML/cm
+m/m/it/10 ^^V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 )[]\OML/cmm/m/i
+t/10 ^^Y\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 H ^^B \OML/cmm/m/it/10 F\OT1/cmr/m/n/
+10 ) = \OML/cmm/m/it/10 ^^W\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 )
+[]\OML/cmm/m/it/10 E; F \OMS/cmsy/m/n/10 ^^Z Hg
+ []
+
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 508--510
+Underfull \hbox (badness 10000) in paragraph at lines 511--513
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 533--535
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--541
 
  []
 
 
 (/home/johnandrew/Documents/Imperial/PhD/Bayesian_Formulation_PDE_Based_Models/
 Notes/notes.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
-[10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 549.
+[11
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 549.
 
 (/home/johnandrew/Documents/Imperial/PhD/Bayesian_Formulation_PDE_Based_Models/
 Notes/notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 518.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 549.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 549.
 Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: FA9575065E8D51FD31AC82E93FE43D4C;212.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 518.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 549.
  ) 
 Here is how much of TeX's memory you used:
- 7360 strings out of 492982
- 104431 string characters out of 6134896
- 220546 words of memory out of 5000000
- 10753 multiletter control sequences out of 15000+600000
+ 7366 strings out of 492982
+ 104513 string characters out of 6134896
+ 220583 words of memory out of 5000000
+ 10756 multiletter control sequences out of 15000+600000
  14130 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,15n,28p,889b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,15n,28p,1047b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -837,10 +860,10 @@ ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type
 c/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb>
-Output written on notes.pdf (10 pages, 274442 bytes).
+Output written on notes.pdf (11 pages, 283200 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
+ 252 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

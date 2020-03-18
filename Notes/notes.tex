@@ -486,8 +486,39 @@ where the strict inequality follows since $\tilde{a}(v,v)=0$ iff $|v|_{E}=0$ iff
 
 \section{Notes 4}
 
-In Notes 1 the true joint distribution of $(u,f)$ given by (\ref{trueJoint}) gives us that the ``true" distribution of the solution $u$ to the problem (\ref{standard_conduct}) is $\nu_{1}=\mathcal{N}(\mathcal{L}^{-1}\bar{f},\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*})$. Meanwhile, in Notes 2 we worked out that ``averaged" posterior for $u$ (for the FEM prior) is $\nu_{2}=\mathcal{N}(\Phi^{*}M^{-1}\bar{F},\Phi^{*}M^{-1}K_{\mathcal{I}}M^{-1}\Phi)$ (see (\ref{average_posterior_FEM_prior})). In this section we will consider quantifying how close these two distributions $\nu_{1},\nu_{2}$ are. This will be achieved by upperbounding the Wasserstein distance between $\nu_{1},\nu_{2}$ using the connection between the Wasserstein distance between Gaussian measures and the Procrustes Metric on covariance operators (see \cite{masarotto2019procrustes})
+In Notes 1 the true joint distribution of $(u,f)$ given by (\ref{trueJoint}) gives us that the ``true" distribution of the solution $u$ to the problem (\ref{standard_conduct}) is $\nu_{1}=\mathcal{N}(\mathcal{L}^{-1}\bar{f},\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*})$. Meanwhile, in Notes 2 we worked out that ``averaged" posterior for $u$ (for the FEM prior) is $\nu_{2}=\mathcal{N}(\Phi^{*}M^{-1}\bar{F},\Phi^{*}M^{-1}K_{\mathcal{I}}M^{-1}\Phi)$ (see (\ref{average_posterior_FEM_prior})). In this section we will consider quantifying how close these two distributions $\nu_{1},\nu_{2}$ are. This will be achieved by obtaining an upperbound for the Wasserstein distance between $\nu_{1},\nu_{2}$ using the connection between the Wasserstein distance between Gaussian measures and the Procrustes Metric on covariance operators (see \cite{masarotto2019procrustes}). We start by first giving the definition of the Wasserstein distance between two probability measures $\mu,\nu$ on $\mathcal{H}$, $W(\mu,\nu)$:
+\begin{equation*}
+    W^{2}(\mu, \nu)=\inf _{\pi \in \Gamma(\mu, \nu)} \int_{\mathcal{H} \times \mathcal{H}}\|x-y\|^{2} \mathrm{d} \pi(x, y)
+\end{equation*}
+where $\Gamma(\mu,\nu)$ is the set of couplings of $\mu$ and $\nu$, i.e: \\ $$\Gamma(\mu,\nu)=\{\text{Borel probability measures } \pi \text{ on } \mathcal{H}\times\mathcal{H}|\pi(E\times\mathcal{H})=\mu(E) \text{ and } \pi(\mathcal{H}\times F)=\nu(F) \text{ for all Borel } E,F\subset\mathcal{H}\}$$
+When $\mu$ and $\nu$ are both Gaussian measures an explicit expression can be obtained for the Wasserstein distance. Suppose $\mu=\mathcal{N}(m_1,\Sigma_1)$ and $\nu=\mathcal{N}(m_2,\Sigma_2)$. One has,
+\begin{equation*}
+    W^{2}(\mu, \nu)=\left\|m_{1}-m_{2}\right\|^{2}_{\mathcal{H}}+\operatorname{tr}\left(\Sigma_{1}\right)+\operatorname{tr}\left(\Sigma_{2}\right)-2 \operatorname{tr} \sqrt{\Sigma_{1}^{1 / 2} \Sigma_{2} \Sigma_{1}^{1 / 2}}
+\end{equation*}
+This formula is true in both the finite and infinite dimensional cases. The term $\operatorname{tr} \sqrt{\Sigma_{1}^{1 / 2} \Sigma_{2} \Sigma_{1}^{1 / 2}}$ is difficult to analyse in our situation. As such we will make use of Proposition 3 from \cite{masarotto2019procrustes} which states:
+\begin{proposition}
+    The Procrustes distance between two trace-class operators $\Sigma_{1}$ and $\Sigma_{2}$ on $\mathcal{H}$ coincides with the Wasserstein distance between two second-order Gaussian processes $\mathcal{N}(0,\Sigma_{1})$ and $\mathcal{N}(0,\Sigma_2)$ on $\mathcal{H}$,
+    $$\Pi(\Sigma_{1},\Sigma_{2}):=\inf_{R:R^{*}R=I}\|\Sigma_{1}^{1/2}-R\Sigma_{2}^{1/2}\|_{2}=W(\mathcal{N}(0,\Sigma_{1}),\mathcal{N}(0,\Sigma_{2}))$$
+    where $\|\cdot\|_{2}$ is the Hilbert-Schmidt norm defined by $\|A\|_{2}=\sqrt{\operatorname{tr}(A^{*}A)}$.
+\end{proposition}
+Using this result one can obtain a simple upperbound on the Wasserstein distance by choosing $R=I$ in the infimum:
+\begin{equation*}
+    W(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2))=\inf_{R:R^{*}R=I}\|\Sigma_{1}^{1/2}-R\Sigma_{2}^{1/2}\|_{2} \leq \|\Sigma_{1}^{1/2}-\Sigma_{2}^{1/2}\|_{2}
+\end{equation*}
+Now since in our case we have un-centered Gaussian measures $\nu_{1},\nu_{2}$ we must first link the Wasserstein distance between $\nu_1,\nu_2$ to the Wasserstein distance of the centred measures $\nu_{1}^{*},\nu_{2}^{*}$ using a general result mentioned in \cite{cuesta1996lower}:
+\begin{equation*}
+    W^2(\nu_{1},\nu_{2})=\|m_1-m_2\|^{2}+W^{2}(\nu_{1}^*,\nu_{2}^{*})
+\end{equation*}
+\textit{Note: here} $m_1,m_2$ \textit{are the means of} $\nu_{1},\nu_{2}$ \textit{respectively}. \\
 
+For our particular case, the norm for the difference in means is the norm on $H_{0}^{1}(\Omega)$: $\|m_1-m_2\|^{2}=|m_1-m_2|_{H^1(\Omega)}^{2}=\|\nabla(m_1-m_2)\|_{L^2(\Omega)}^{2}$
+
+
+
+
+
+
+\clearpage
 \section{Questions}
 
 \noindent \textbf{Question 1:} I still do not see how defining $I_j$ by $I_j:=\langle g, \psi_j \rangle$ in (\ref{info_operator_def}) implies that $I_{j}\mathcal{L}u=-\int_{\Omega}a\nabla u \cdot \nabla\psi_{j}\mathrm{d}x$. The reason I am confused is because of the fact that $I_j$ is a map from $H^{-1}(\Omega)$ to $\mathbb{R}$. I do see that if I assume that $I_{j}$ acts on functions $g$ via:
