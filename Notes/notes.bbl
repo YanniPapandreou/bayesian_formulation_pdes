@@ -31,4 +31,15 @@ JA~Cuesta-Albertos, C~Matr{\'a}n-Bea, and A~Tuero-Diaz.
 \newblock On lower bounds for the l2-wasserstein metric in a hilbert space.
 \newblock {\em Journal of Theoretical Probability}, 9(2):263--283, 1996.
 
+\bibitem{larsson2008partial}
+Stig Larsson and Vidar Thom{\'e}e.
+\newblock {\em Partial differential equations with numerical methods},
+  volume~45.
+\newblock Springer Science \& Business Media, 2008.
+
+\bibitem{powers1970free}
+Robert~T Powers and Erling St{\o}rmer.
+\newblock Free states of the canonical anticommutation relations.
+\newblock {\em Communications in Mathematical Physics}, 16(1):1--33, 1970.
+
 \end{thebibliography}
