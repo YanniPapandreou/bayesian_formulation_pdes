@@ -70,7 +70,7 @@ options:
   intermediatePostScript: false
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2020-03-18T16:18:27.018Z
+    timeStamp: 2020-03-19T16:21:34.316Z
     jobNames: []
     value:
       severity: info
@@ -128,13 +128,13 @@ files:
       intermediatePostScript: false
     type: ParsedYAML
   notes.tex:
-    timeStamp: 2020-03-18T16:39:07.838Z
+    timeStamp: 2020-03-19T18:54:58.597Z
     jobNames: []
-    hash: VZgsuQHqjP/sUeJI1mbWP1sESNkyAhjRLt3WpWWLM9w=
+    hash: aDDiLSG14mHUSZy0E1qNcFTPvLxol2AbY29Fi4RWtWw=
     type: LaTeX
     subType: article
   /home/johnandrew/.config/dicy/config.yaml:
-    timeStamp: 2020-03-18T16:18:27.023Z
+    timeStamp: 2020-03-19T16:21:34.324Z
     jobNames: []
     type: YAML
   x.y-Nil:
@@ -284,7 +284,7 @@ files:
       calls: []
     type: ParsedFileListing
   notes.log-ParsedLaTeXLog:
-    timeStamp: 2020-03-18T16:39:08.515Z
+    timeStamp: 2020-03-19T18:54:59.689Z
     jobNames: []
     value:
       messages:
@@ -1627,13 +1627,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 577
-              end: 577
+              start: 615
+              end: 615
           log:
             file: notes.log
             range:
-              start: 825
-              end: 825
+              start: 830
+              end: 830
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1641,13 +1641,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 577
-              end: 577
+              start: 615
+              end: 615
           log:
             file: notes.log
             range:
-              start: 829
-              end: 829
+              start: 832
+              end: 832
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1655,13 +1655,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 577
-              end: 577
+              start: 615
+              end: 615
           log:
             file: notes.log
             range:
-              start: 833
-              end: 833
+              start: 836
+              end: 836
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1669,13 +1669,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 577
-              end: 577
+              start: 615
+              end: 615
           log:
             file: notes.log
             range:
-              start: 834
-              end: 834
+              start: 837
+              end: 837
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
@@ -1687,8 +1687,8 @@ files:
           log:
             file: notes.log
             range:
-              start: 835
-              end: 836
+              start: 838
+              end: 839
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1696,46 +1696,46 @@ files:
           source:
             file: notes.tex
             range:
-              start: 577
-              end: 577
+              start: 615
+              end: 615
           log:
             file: notes.log
             range:
-              start: 837
-              end: 837
+              start: 840
+              end: 840
       inputs: []
       outputs:
         - notes.pdf
       calls: []
     type: ParsedLaTeXLog
   notes.aux:
-    timeStamp: 2020-03-18T16:39:08.462Z
+    timeStamp: 2020-03-19T18:54:59.529Z
     jobNames: []
-    hash: LcJdOQZG5gmKsOZMjrVloaeIQId9G0PQkgjSsdd7tZ0=
+    hash: LvJGvG7OSEXvxpCFtQ3DIyD5CKk99Xl7PdZ8pgYFVBw=
     type: LaTeXAuxilary
   notes.fls:
-    timeStamp: 2020-03-18T16:39:08.478Z
+    timeStamp: 2020-03-19T18:54:59.573Z
     jobNames: []
     hash: 2pfDS2hYAyeaaGJvOKJfYJFFS7cU4L5JzOmheOgMpn4=
     type: FileListing
   notes.log:
-    timeStamp: 2020-03-18T16:39:08.486Z
+    timeStamp: 2020-03-19T18:54:59.589Z
     jobNames: []
-    hash: 73gXwWZHicybzY5HLJQ1H/cRAnapDTDDfBQuvIcJj1E=
+    hash: lZoy72pgpy0pgeCUfcBh91KPbfcLRpJgJKOURfS9GJw=
     type: LaTeXLog
     subType: pdfTeX
   notes.synctex.gz:
-    timeStamp: 2020-03-18T16:39:08.486Z
+    timeStamp: 2020-03-19T18:54:59.589Z
     jobNames: []
-    hash: UaS//e3ez6GFVf+6nLT1luDL8I3jUvwxD9BJEfWw2PM=
+    hash: lixigZi76iGaCsnGq9UuBkJK0Zq9EvRKSnBZ16eNTEE=
     type: SyncTeX
   notes.pdf:
-    timeStamp: 2020-03-18T16:39:08.486Z
+    timeStamp: 2020-03-19T18:54:59.589Z
     jobNames: []
-    hash: qp77fRGXjC8NXGxjyzIZzLC+kbwheMkKkE7QylnOtdA=
+    hash: dtuqZ6Q1bO8roh7spDDDaDCTdEPKAwfz0lKQ3W9DKPQ=
     type: PortableDocumentFormat
   notes.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2020-03-18T16:38:26.171Z
+    timeStamp: 2020-03-19T18:54:59.672Z
     jobNames: []
     value:
       commands:
@@ -1786,10 +1786,15 @@ files:
         - citation
         - citation
         - citation
+        - citation
         - '@writefile'
         - citation
         - citation
         - newlabel
+        - newlabel
+        - newlabel
+        - newlabel
+        - '@writefile'
         - bibdata
         - bibcite
         - bibcite
@@ -1800,7 +1805,6 @@ files:
         - bibcite
         - bibcite
         - bibstyle
-        - '@writefile'
     type: ParsedLaTeXAuxilary
   /etc/texmf/web2c/texmf.cnf:
     timeStamp: 2019-12-07T22:46:03.582Z
@@ -2138,11 +2142,11 @@ files:
       calls: []
     type: ParsedBibTeXLog
   notes.bbl:
-    timeStamp: 2020-03-18T16:39:08.234Z
+    timeStamp: 2020-03-19T18:54:59.977Z
     jobNames: []
     hash: ME0f2/WLfeFJHLEwWS2Wx9nN52HH0n7hG6uOYs1Xi1U=
   notes.blg:
-    timeStamp: 2020-03-18T16:39:08.234Z
+    timeStamp: 2020-03-19T18:54:59.977Z
     jobNames: []
     hash: iNDZHbxjvWb7rnUNr/20c1AaADlNBygP7A116RwSI0s=
     type: BibTeXLog
@@ -2189,7 +2193,7 @@ files:
     jobNames: []
     type: LaTeXStyle
   notes.out:
-    timeStamp: 2020-03-18T16:39:08.462Z
+    timeStamp: 2020-03-19T18:54:59.529Z
     jobNames: []
     hash: T0VbdyF94sRw3e1UlhU5F6gmh+b3RFfH0FlBvv31rDU=
     type: OUT

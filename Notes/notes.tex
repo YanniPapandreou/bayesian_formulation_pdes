@@ -491,7 +491,7 @@ In Notes 1 the true joint distribution of $(u,f)$ given by (\ref{trueJoint}) giv
     W^{2}(\mu, \nu)=\inf _{\pi \in \Gamma(\mu, \nu)} \int_{\mathcal{H} \times \mathcal{H}}\|x-y\|^{2} \mathrm{d} \pi(x, y)
 \end{equation*}
 where $\Gamma(\mu,\nu)$ is the set of couplings of $\mu$ and $\nu$, i.e: \\ $$\Gamma(\mu,\nu)=\{\text{Borel probability measures } \pi \text{ on } \mathcal{H}\times\mathcal{H}|\pi(E\times\mathcal{H})=\mu(E) \text{ and } \pi(\mathcal{H}\times F)=\nu(F) \text{ for all Borel } E,F\subset\mathcal{H}\}$$
-When $\mu$ and $\nu$ are both Gaussian measures an explicit expression can be obtained for the Wasserstein distance. Suppose $\mu=\mathcal{N}(m_1,\Sigma_1)$ and $\nu=\mathcal{N}(m_2,\Sigma_2)$. One has,
+When $\mu$ and $\nu$ are both Gaussian measures an explicit expression can be obtained for the Wasserstein distance. Suppose $\mu=\mathcal{N}(m_1,\Sigma_1)$ and $\nu=\mathcal{N}(m_2,\Sigma_2)$. One has (see \cite{masarotto2019procrustes}),
 \begin{equation*}
     W^{2}(\mu, \nu)=\left\|m_{1}-m_{2}\right\|^{2}_{\mathcal{H}}+\operatorname{tr}\left(\Sigma_{1}\right)+\operatorname{tr}\left(\Sigma_{2}\right)-2 \operatorname{tr} \sqrt{\Sigma_{1}^{1 / 2} \Sigma_{2} \Sigma_{1}^{1 / 2}}
 \end{equation*}
@@ -541,12 +541,50 @@ The RHS of the above is still difficult to deal with so we make use of Lemma 4.1
 \end{equation*}
 where $\|\cdot\|_1$ is the trace norm or nuclear norm defined by $\|A\|_{1}=\operatorname{tr}(\sqrt{A^{*}A})$.
 
+We now investigate this term:
+\begin{align*}
+    \|\Sigma_{1}-\Sigma_2\|_{1}&=\|\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}K_{\mathcal{I}}M^{-1}\Phi\|_{1} \\
+    &=\|\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}\mathcal{I}K\mathcal{I}^{*}M^{-1}\Phi\|_{1} \\
+    &=\|\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}\mathcal{I}K(\Phi^{*}M^{-1}\mathcal{I})^{*}\|_{1}
+\end{align*}
+where we have used the defintion of $K_{\mathcal{I}}$ and the fact that $M$ and hence $M^{-1}$ is self-adjoint. From this simplification we can see that we can control how ``close" the two covariance operators are because we can control how ``close" $\Phi^{*}M^{-1}\mathcal{I}$ is to $\mathcal{L}^{-1}$. To be more precise:
+\begin{align*}
+    \|\Sigma_{1}-\Sigma_{2}\|_{1}&=\|\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}\mathcal{I}K(\Phi^{*}M^{-1}\mathcal{I})^{*}\|_{1} \\
+    &=\|\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}\mathcal{I}K(\mathcal{L}^{-1})^{*}+\Phi^{*}M^{-1}\mathcal{I}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}\mathcal{I}K(\Phi^{*}M^{-1}\mathcal{I})^{*}\|_{1} \\
+    &\leq\|\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}\mathcal{I}K(\mathcal{L}^{-1})^{*}\|_{1} + \|\Phi^{*}M^{-1}\mathcal{I}K(\mathcal{L}^{-1})^{*}-\Phi^{*}M^{-1}\mathcal{I}K(\Phi^{*}M^{-1}\mathcal{I})^{*}\|_{1} \\
+    &= \|(\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I})K(\mathcal{L}^{-1})^{*}\|_{1} + \|\Phi^{*}M^{-1}\mathcal{I}K(\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I})^{*}\|_{1} \\
+    &\leq\|\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I}\|_{\infty}\|K\mathcal{L}^{-1}\|_{1}+\|\Phi^{*}M^{-1}\mathcal{I}K\|_{1}\|(\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I})^{*}\|_{\infty} \\
+    &\leq\|\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I}\|_{\infty}(\|K\mathcal{L}^{-1}\|_{1}+\|\Phi^{*}M^{-1}\mathcal{I}\|_{1}\|K\|_{1})
+\end{align*}
+where we have utilized Holder's inequality and the sub-multiplicativity of Schatten-p norms (\textit{note: the} $\|\cdot\|_{\infty}$ \textit{is the operator norm here and is a special case of the Schatten-p norm for p being infinity}). As mentioned, we can control how ``close" $\Phi^{*}M^{-1}\mathcal{I}$ is to $\mathcal{L}^{-1}$. To do this we note that (\ref{bound_on_diff_means}) holds for all $\bar{f}$ in $L^{2}(\Omega)$, i.e. we have:
+\begin{equation*}
+    |m_1-m_2|_{H^{1}(\Omega)}=|(\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I})\bar{f}|_{H^{1}(\Omega)}\leq Ch\|\bar{f}\|_{L^2(\Omega)} \hspace{0.25cm} \forall\bar{f}\in L^{2}(\Omega)
+\end{equation*}
 
+This implies that we can bound the operator norm of $\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I}$ by $Ch$, i.e.,
+\begin{equation}
+    \label{bound_on_diff_of_solution_operators}
+    \|\mathcal{L}^{-1}-\Phi^{*}M^{-1}\mathcal{I}\|_{\infty}\leq Ch
+\end{equation}
 
+Utilising this upper bound together with the fact that $\|\Phi^{*}M^{-1}\mathcal{I}\|_{1}$ is bounded (!!do I need to expand on this!!) we have:
+\begin{equation}
+    \label{bound_on_diff_cov_operators}
+    W^{2}(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2))\leq\|\Sigma_{1}-\Sigma_{2}\|_{1}\leq Ch\|K\mathcal{L}^{-1}\|_{1}
+\end{equation}
 
+Combining (\ref{bound_on_diff_means}) and (\ref{bound_on_diff_cov_operators}) we now have:
+\begin{align*}
+    W^{2}(\nu_{1},\nu_{2})&=|m_1-m_2|_{H^{1}(\Omega)}^{2}+W^{2}(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2)) \\
+    &\leq C^{2}(\|\bar{f}\|_{L^2(\Omega)}^{2}+\|K\mathcal{L}^{-1}\|_{1}^{2})h^2
+\end{align*}
 
+We thus have an upper bound on the Wasserstein distance between $\nu_{1},\nu_{2}$ in terms of the FEM mesh size $h$:
+\begin{equation}
+    \label{bound_on_distance}
+    W(\nu_{1},\nu_{2})\leq Ch\sqrt{\|\bar{f}\|_{L^{2}(\Omega)}^{2}+\|K\mathcal{L}^{-1}\|_{1}^{2}}
+\end{equation}
 
-\clearpage
 \section{Questions}
 
 \noindent \textbf{Question 1:} I still do not see how defining $I_j$ by $I_j:=\langle g, \psi_j \rangle$ in (\ref{info_operator_def}) implies that $I_{j}\mathcal{L}u=-\int_{\Omega}a\nabla u \cdot \nabla\psi_{j}\mathrm{d}x$. The reason I am confused is because of the fact that $I_j$ is a map from $H^{-1}(\Omega)$ to $\mathbb{R}$. I do see that if I assume that $I_{j}$ acts on functions $g$ via:
