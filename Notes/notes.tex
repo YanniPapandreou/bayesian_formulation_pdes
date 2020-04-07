@@ -8,7 +8,7 @@
 \usepackage{mathrsfs}
 \usepackage{dsfont}
 \usepackage{centernot}
-\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,marginparwidth=1.75cm]{geometry}
 
 % for theorems/lemmas/defs/etc
 %-------------------------------
@@ -671,9 +671,50 @@ We now proceed to obtain an upper-bound on these terms. For convenience we will 
     \|B_{1}-B_{2}\|_{\infty}&=\|S(\Sigma_{1}-\Sigma_{2})S^{*}\|_{\infty} \\
     &\leq\|S\|_{\infty}^{2}\|\Sigma_{1}-\Sigma_{2}\|_{\infty} \\
     &\leq\|\Sigma_{1}-\Sigma_{2}\|_{1} \\
-    &\leq C_{1}h\|K\mathcal{L}^{-1}\|_{1}
+    &\leq C_{1}h\|K\mathcal{L}^{-1}\|_{1}=:\lambda h
 \end{align*}
-where we have used the fact that $\|S\|_{\infty}\leq1$. Since $B_{1}$ (and $B_{2}$) is invertible and for sufficiently small $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$
+where we have used the fact that $\|S\|_{\infty}\leq1$ and where $\lambda>0$ is a constant. Since $B_{1}$ (and $B_{2}$) is invertible and for sufficiently small $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$ we can utilise Corollary 8.2 of \cite{gohberg2012basic} to deduce that:
+\begin{equation}
+    \label{bound_on_diff_inverses}
+    \|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}\leq\frac{\|B_{1}^{-1}\|_{\infty}^{2}\|B_{1}-B_{2}\|_{\infty}}{1-\|B_{1}^{-1}\|_{\infty}\|B_1-B_{2}\|_{\infty}}\leq\frac{\lambda\|B_{1}^{-1}\|_{\infty}^{2}h}{1-\lambda\|B_{1}^{-1}\|_{\infty}h}
+\end{equation}
+We are now in a good position to derive an upper bound on the Wasserstein distance between the two posteriors. We first focus on the difference of the two means:
+\begin{align*}
+    \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}&=\|m_1+\Sigma_{1}S^{*}B_{1}^{-1}(\mathbf{v}-Sm_{1})-m_2-\Sigma_{2}S^{*}B_{2}^{-1}(\mathbf{v}-Sm_{2})\|_{L^{2}(\Omega)} \\
+    &=\|m_1-m_2+\Sigma_{1}S^{*}B_{1}^{-1}\mathbf{v}-\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}\mathbf{v}+\Sigma_{2}S^{*}B_{2}^{-1}Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq\|m_1-m_2\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})\mathbf{v}\|_{L^{2}(\Omega)}+\|\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}Sm_2\|_{L^{2}(\Omega)}
+\end{align*}
+We now focus on these three terms separately. \\
+
+\noindent For the first term we already have from (\ref{bound_on_diff_means}) that
+\begin{equation*}
+    \|m_{1}-m_{2}\|_{L^{2}(\Omega)}\leq\tilde{C}h\|\bar{f}\|_{L^2(\Omega)}
+\end{equation*}
+
+\noindent For the second term we compute:
+\begin{align*}
+    \|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})\mathbf{v}\|_{L^{2}(\Omega)}&\leq \|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|\mathbf{v}\| \\
+    &=\|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{1}S^{*}B_{2}^{-1}+\Sigma_{1}S^{*}B_{2}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|\mathbf{v}\| \\
+    &\leq\left(\|\Sigma_{1}S^{*}(B_{1}^{-1}-B_{2}^{-1})\|_{\infty}+\|(\Sigma_{1}-\Sigma_{2})S^{*}B_{2}^{-1}\|_{\infty}\right)\|\mathbf{v}\| \\
+    &\leq \left(\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}+\|\Sigma_{1}-\Sigma_{2}\|_{\infty}\|B_{2}^{-1}\|_{\infty}\right)\|\mathbf{v}\| \\
+    &\leq \lambda h \left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\|\mathbf{v}\|
+\end{align*}
+
+\noindent For the third term we compute:
+\begin{align*}
+    \|\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}Sm_2\|_{L^{2}(\Omega)}&=\|\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{1}S^{*}B_{1}^{-1}Sm_2+\Sigma_{1}S^{*}B_{1}^{-1}Sm_2-\Sigma_{2}S^{*}B_{2}^{-1}Sm_2\|_{L^{2}(\Omega)} \\
+    &\leq\|\Sigma_{1}S^{*}B_{1}^{-1}S(m_1-m_2)\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq \tilde{C}h\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}\|\bar{f}\|_{L^{2}(\Omega)} + \lambda h \left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\|m_{2}\|_{L^{2}(\Omega)} \\
+    &=\left[\tilde{C}\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}\|\bar{f}\|_{L^{2}(\Omega)} + \lambda  \|m_{2}\|_{L^{2}(\Omega)}\left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\right]h
+\end{align*}
+
+Combining all these three terms together we obtain:
+\begin{align*}
+    \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}&\leq\left[\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}(1+\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty})+\right. \\
+    &\left.\lambda\left(\|\mathbf{v}\|\left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)+\|m_{2}\|_{L^{2}(\Omega)}\left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\right)\right]h
+\end{align*}
+
+
 
 
 \clearpage

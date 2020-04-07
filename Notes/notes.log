@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  7 APR 2020 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  7 APR 2020 12:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -637,14 +637,14 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
 * v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=426.79135pt
+* \textwidth=455.24411pt
 * \textheight=702.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
 * \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -697,45 +697,28 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (11.7638pt too wide) in paragraph at lines 142--144
-\OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cm
-m/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; u\OT1/cmr/m/n/10 (\OML/cm
-m/m/it/10 x[]\OT1/cmr/m/n/10 ))$ since the $\OML/cmm/m/it/10 ^^[\OMS/cmsy/m/n/1
-0 ^^@$\OT1/cmr/m/n/10 algebra gen-er-ated by cylin-der sets co-in-cides with th
-e Borel $\OML/cmm/m/it/10 ^^[\OMS/cmsy/m/n/10 ^^@$\OT1/cmr/m/n/10 algebra
+Overfull \hbox (9.20676pt too wide) in paragraph at lines 146--148
+\OT1/cmr/m/n/10 Note that $\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 = \OML/cmm/m/it
+/10 Pu$ \OT1/cmr/m/n/10 where the bounded lin-ear op-er-a-tor $\OML/cmm/m/it/10
+ P \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 H ! \U/msb/m/n/10 R[]$ \OT1/cmr/m/n/10 is
+ de-fined by $\OML/cmm/m/it/10 Ph \OT1/cmr/m/n/10 := (\OML/cmm/m/it/10 h\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; h\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ))[]$
  []
 
 
-Overfull \hbox (7.89273pt too wide) in paragraph at lines 146--148
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cm
-r/m/n/10 )\OML/cmm/m/it/10 ; [] ; h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cm
-r/m/n/10 ))[]$ for any func-tion $\OML/cmm/m/it/10 h$\OT1/cmr/m/n/10 . Thus, $\
-OML/cmm/m/it/10 u[]$ \OT1/cmr/m/n/10 is mul-ti-vari-ate nor-mal, i.e., $\OML/cm
-m/m/it/10 u[] \OMS/cmsy/m/n/10 ^^X N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Pa; P\OT1
-/cmr/m/n/10 ^^F\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 ) =:
- []
-
-
-Overfull \hbox (54.14804pt too wide) detected at line 159
+Overfull \hbox (25.69528pt too wide) detected at line 159
 []
  []
 
 
-Overfull \hbox (56.36296pt too wide) detected at line 180
+Overfull \hbox (27.9102pt too wide) detected at line 180
 []
  []
 
 [2]
-Overfull \hbox (70.52837pt too wide) detected at line 191
+Overfull \hbox (42.0756pt too wide) detected at line 191
 []
- []
-
-
-Overfull \hbox (19.65205pt too wide) in paragraph at lines 198--200
-\OT1/cmr/m/n/10 and so show-ing that it is the zero ma-trix is equiv-a-lent to 
-show-ing that $(\OML/cmm/m/it/10 BK[]B \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B 
-\OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 A[]P[]\OT1/cmr/m/n/10 ^^F[]^^F[]^^F[]\OML
-/cmm/m/it/10 PA\OT1/cmr/m/n/10 )$
  []
 
 [3]
@@ -789,7 +772,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 492--493
  []
 
 
-Overfull \hbox (67.79816pt too wide) detected at line 493
+Overfull \hbox (39.3454pt too wide) detected at line 493
 \OT1/cmr/m/n/10 ^^@(\OML/cmm/m/it/10 ^^V; ^^W\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/
 10 f[]\OML/cmm/m/it/10 ^^Y[]\OMS/cmsy/m/n/10 H ^^B Hj\OML/cmm/m/it/10 ^^Y\OT1/c
 mr/m/n/10 (\OML/cmm/m/it/10 E \OMS/cmsy/m/n/10 ^^B H\OT1/cmr/m/n/10 ) = \OML/cm
@@ -799,22 +782,17 @@ t/10 ^^Y\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 H ^^B \OML/cmm/m/it/10 F\OT1/cmr/m/n/
 []\OML/cmm/m/it/10 E; F \OMS/cmsy/m/n/10 ^^Z Hg
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 511--513
 
  []
 
-
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 529--532
 
  []
 
 [10]
-Overfull \hbox (17.29512pt too wide) detected at line 558
-[]
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 562--564
 
  []
@@ -824,41 +802,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 592--593
 
  []
 
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 691--693
+[11]
+Overfull \hbox (49.2209pt too wide) detected at line 686
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 686--688
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 697--699
+Overfull \hbox (55.87462pt too wide) detected at line 709
+[]
+ []
+
+
+Overfull \hbox (14.3229pt too wide) detected at line 715
+[]
+ []
+
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 732--734
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--740
 
  []
 
 
 (/home/johnandrew/Documents/Imperial/PhD/Bayesian_Formulation_PDE_Based_Models/
 Notes/notes.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
-[13
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 748.
+[14
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 748.
 
 (/home/johnandrew/Documents/Imperial/PhD/Bayesian_Formulation_PDE_Based_Models/
 Notes/notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 707.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 748.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 748.
 Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: E12D6239ACA8D4D852E36071CD18A39C;254.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 707.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 748.
  ) 
 Here is how much of TeX's memory you used:
- 7406 strings out of 492982
- 105063 string characters out of 6134896
- 220983 words of memory out of 5000000
- 10775 multiletter control sequences out of 15000+600000
+ 7411 strings out of 492982
+ 105146 string characters out of 6134896
+ 221055 words of memory out of 5000000
+ 10777 multiletter control sequences out of 15000+600000
  15960 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,15n,28p,1101b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,15n,28p,1101b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texli
@@ -882,10 +880,10 @@ fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb>
-Output written on notes.pdf (13 pages, 314323 bytes).
+Output written on notes.pdf (14 pages, 318690 bytes).
 PDF statistics:
- 297 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 74 named destinations out of 1000 (max. 500000)
+ 305 PDF objects out of 1000 (max. 8388607)
+ 262 compressed objects within 3 object streams
+ 77 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
