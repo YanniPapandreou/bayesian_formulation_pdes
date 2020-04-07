@@ -70,7 +70,7 @@ options:
   intermediatePostScript: false
 files:
   dicy-instance.yaml-ParsedYAML:
-    timeStamp: 2020-03-19T16:21:34.316Z
+    timeStamp: 2020-04-07T09:59:26.494Z
     jobNames: []
     value:
       severity: info
@@ -128,20 +128,20 @@ files:
       intermediatePostScript: false
     type: ParsedYAML
   notes.tex:
-    timeStamp: 2020-03-19T18:54:58.597Z
+    timeStamp: 2020-04-07T10:23:01.729Z
     jobNames: []
-    hash: aDDiLSG14mHUSZy0E1qNcFTPvLxol2AbY29Fi4RWtWw=
+    hash: xAt4A0JeT7WAGBe0IiZxTkoxtfjSS6BCMxWVO/gfqBM=
     type: LaTeX
     subType: article
   /home/johnandrew/.config/dicy/config.yaml:
-    timeStamp: 2020-03-19T16:21:34.324Z
+    timeStamp: 2020-04-07T09:59:26.500Z
     jobNames: []
     type: YAML
   x.y-Nil:
     jobNames: []
     type: Nil
   notes.fls-ParsedFileListing:
-    timeStamp: 2020-03-18T14:49:17.076Z
+    timeStamp: 2020-04-07T10:01:05.430Z
     jobNames: []
     value:
       messages: []
@@ -149,9 +149,17 @@ files:
         - /etc/texmf/web2c/texmf.cnf
         - /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
         - >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+        - >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+        - >-
           /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
         - >-
           /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+        - >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+        - >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
         - >-
           /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
         - >-
@@ -164,6 +172,7 @@ files:
           /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
         - >-
           /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+        - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
@@ -175,6 +184,7 @@ files:
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+        - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
         - /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -190,6 +200,7 @@ files:
           /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
         - >-
           /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+        - /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
         - >-
           /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
         - >-
@@ -199,6 +210,8 @@ files:
         - /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
         - /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
         - /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+        - >-
+          /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
         - /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
         - /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
         - /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
@@ -284,7 +297,7 @@ files:
       calls: []
     type: ParsedFileListing
   notes.log-ParsedLaTeXLog:
-    timeStamp: 2020-03-19T18:54:59.689Z
+    timeStamp: 2020-04-07T10:18:03.577Z
     jobNames: []
     value:
       messages:
@@ -1627,13 +1640,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 615
-              end: 615
+              start: 707
+              end: 707
           log:
             file: notes.log
             range:
-              start: 830
-              end: 830
+              start: 840
+              end: 840
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1641,13 +1654,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 615
-              end: 615
+              start: 707
+              end: 707
           log:
             file: notes.log
             range:
-              start: 832
-              end: 832
+              start: 844
+              end: 844
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1655,13 +1668,13 @@ files:
           source:
             file: notes.tex
             range:
-              start: 615
-              end: 615
+              start: 707
+              end: 707
           log:
             file: notes.log
             range:
-              start: 836
-              end: 836
+              start: 848
+              end: 848
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1669,26 +1682,26 @@ files:
           source:
             file: notes.tex
             range:
-              start: 615
-              end: 615
+              start: 707
+              end: 707
           log:
             file: notes.log
             range:
-              start: 837
-              end: 837
+              start: 849
+              end: 849
         - severity: info
           name: pdfTeX
           category: Package rerunfilecheck
           text: >-
             File `notes.out' has not changed. Checksum:
-            FA9575065E8D51FD31AC82E93FE43D4C;212.
+            E12D6239ACA8D4D852E36071CD18A39C;254.
           source:
             file: notes.tex
           log:
             file: notes.log
             range:
-              start: 838
-              end: 839
+              start: 850
+              end: 851
         - severity: info
           name: pdfTeX
           category: Package atveryend
@@ -1696,46 +1709,46 @@ files:
           source:
             file: notes.tex
             range:
-              start: 615
-              end: 615
+              start: 707
+              end: 707
           log:
             file: notes.log
             range:
-              start: 840
-              end: 840
+              start: 852
+              end: 852
       inputs: []
       outputs:
         - notes.pdf
       calls: []
     type: ParsedLaTeXLog
   notes.aux:
-    timeStamp: 2020-03-19T18:54:59.529Z
+    timeStamp: 2020-04-07T10:23:04.133Z
     jobNames: []
-    hash: LvJGvG7OSEXvxpCFtQ3DIyD5CKk99Xl7PdZ8pgYFVBw=
+    hash: 9xkn3VFsUwReOt7J3CChwFXysg0rTi1LVkLtuOsjebg=
     type: LaTeXAuxilary
   notes.fls:
-    timeStamp: 2020-03-19T18:54:59.573Z
+    timeStamp: 2020-04-07T10:23:04.181Z
     jobNames: []
-    hash: 2pfDS2hYAyeaaGJvOKJfYJFFS7cU4L5JzOmheOgMpn4=
+    hash: s3GQA6fmoXM2NaIN9zkIYVXdW2KZVk2viMnagPgp7e8=
     type: FileListing
   notes.log:
-    timeStamp: 2020-03-19T18:54:59.589Z
+    timeStamp: 2020-04-07T10:23:04.193Z
     jobNames: []
-    hash: lZoy72pgpy0pgeCUfcBh91KPbfcLRpJgJKOURfS9GJw=
+    hash: 2gORZQyFPPYmYT4BZEiYdzF2vImZofN5QwSDhy8KWfA=
     type: LaTeXLog
     subType: pdfTeX
   notes.synctex.gz:
-    timeStamp: 2020-03-19T18:54:59.589Z
+    timeStamp: 2020-04-07T10:23:04.193Z
     jobNames: []
-    hash: lixigZi76iGaCsnGq9UuBkJK0Zq9EvRKSnBZ16eNTEE=
+    hash: GkCHiUfu9wIPU5Tqr9kp037tzfZ6KX4Y5KWJNueH2Jk=
     type: SyncTeX
   notes.pdf:
-    timeStamp: 2020-03-19T18:54:59.589Z
+    timeStamp: 2020-04-07T10:23:04.193Z
     jobNames: []
-    hash: dtuqZ6Q1bO8roh7spDDDaDCTdEPKAwfz0lKQ3W9DKPQ=
+    hash: dI9AWQfCmHsLEY+IcZhAE+tDnZ7U7PPO9UMNdKx49e0=
     type: PortableDocumentFormat
   notes.aux-ParsedLaTeXAuxilary:
-    timeStamp: 2020-03-19T18:54:59.672Z
+    timeStamp: 2020-04-07T10:03:57.069Z
     jobNames: []
     value:
       commands:
@@ -1795,6 +1808,11 @@ files:
         - newlabel
         - newlabel
         - '@writefile'
+        - newlabel
+        - newlabel
+        - newlabel
+        - newlabel
+        - newlabel
         - bibdata
         - bibcite
         - bibcite
@@ -1805,6 +1823,7 @@ files:
         - bibcite
         - bibcite
         - bibstyle
+        - '@writefile'
     type: ParsedLaTeXAuxilary
   /etc/texmf/web2c/texmf.cnf:
     timeStamp: 2019-12-07T22:46:03.582Z
@@ -2142,11 +2161,11 @@ files:
       calls: []
     type: ParsedBibTeXLog
   notes.bbl:
-    timeStamp: 2020-03-19T18:54:59.977Z
+    timeStamp: 2020-04-07T10:23:03.289Z
     jobNames: []
     hash: ME0f2/WLfeFJHLEwWS2Wx9nN52HH0n7hG6uOYs1Xi1U=
   notes.blg:
-    timeStamp: 2020-03-19T18:54:59.977Z
+    timeStamp: 2020-04-07T10:23:03.289Z
     jobNames: []
     hash: iNDZHbxjvWb7rnUNr/20c1AaADlNBygP7A116RwSI0s=
     type: BibTeXLog
@@ -2193,9 +2212,9 @@ files:
     jobNames: []
     type: LaTeXStyle
   notes.out:
-    timeStamp: 2020-03-19T18:54:59.529Z
+    timeStamp: 2020-04-07T10:23:04.133Z
     jobNames: []
-    hash: T0VbdyF94sRw3e1UlhU5F6gmh+b3RFfH0FlBvv31rDU=
+    hash: 3b3CSE5sK1tS8vtzQ/lhhYMaXHAegkG6xNjSCyWjmzA=
     type: OUT
   /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb:
     timeStamp: 2016-11-25T18:32:13.000Z
@@ -2233,6 +2252,30 @@ files:
     type: FontDescription
   /usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb:
     timeStamp: 2016-11-25T18:32:24.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm:
+    timeStamp: 2016-11-25T18:31:38.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm:
+    timeStamp: 2016-11-25T18:31:38.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm:
+    timeStamp: 2016-11-25T18:31:38.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm:
+    timeStamp: 2016-11-25T18:31:38.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm:
+    timeStamp: 2016-11-25T18:31:41.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm:
+    timeStamp: 2016-11-25T18:31:41.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb:
+    timeStamp: 2016-11-25T18:32:13.000Z
+    jobNames: []
+  /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb:
+    timeStamp: 2016-11-25T18:32:13.000Z
     jobNames: []
 rules:
   - name: ApplyOptions
@@ -2583,6 +2626,27 @@ rules:
       - file: /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
         type: default
       - file: /usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb
+        type: default
+      - file: >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+        type: default
+      - file: >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+        type: default
+      - file: >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+        type: default
+      - file: >-
+          /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
+        type: default
+      - file: /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
+        type: default
+      - file: /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
+        type: default
+      - file: /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
+        type: default
+      - file: >-
+          /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
         type: default
     outputs:
       - file: notes.aux
