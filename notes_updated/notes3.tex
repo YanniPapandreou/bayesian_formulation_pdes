@@ -1,0 +1,75 @@
+We now provide details for some of the claims in Notes 1 and 2 above. \\
+
+To start we provide justification for why it is valid to condition as we did in (\ref{conditionalDistnFixed_f}). The justification for this is essentially given by Theorem 3.3 in \cite{owhadi2015conditioning}. To apply this theorem to our problem we note that our pair $(u,\mathcal{I}\mathcal{L}u)^{T}$ lies in the orthogonal direct sum $\mathcal{H}=\mathcal{H}_1\oplus\mathcal{H}_{2}$ of the separable Hilbert spaces $\mathcal{H}_{1}:=H^{1}(\Omega)\times\{0\}$ and $\mathcal{H}_{2}:=\{0\}\times\mathbb{R}^{J}$. The corresponding Gaussian measure we are dealing with on this $\mathcal{H}$ is given by (\ref{jointInfoDist}). Theorem 3.3 states that the conditional distribution is a Gaussian measure with covariance operator being the short of the covariance operator of the distribution (\ref{jointInfoDist}) to $\mathcal{H}_{2}$. This operator,
+\begin{equation}
+    \begin{pmatrix}
+    V & V\mathcal{L}^{*}\mathcal{I}^{*} \\
+    \mathcal{I}\mathcal{L}V & \mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*}
+    \end{pmatrix}
+\end{equation}
+is already written in its $(\mathcal{H}_1,\mathcal{H}_2)$ partition representation. In the section on shorted operators in \cite{owhadi2015conditioning} it is stated that provided the lower right partition of the covariance operator of (\ref{jointInfoDist}) corresponding to the covariance in $\mathcal{H}_2$, i.e. $\mathcal{I}\mathcal{L}V(\mathcal{I}\mathcal{L})^{*}$ is invertible then the shorted operator is given by:
+\begin{equation}
+    \begin{pmatrix}
+        V-V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}\mathcal{I}\mathcal{L}V & 0 \\
+        0 & 0
+    \end{pmatrix}=\begin{pmatrix}
+                    \Sigma & 0 \\
+                    0 & 0
+                  \end{pmatrix}
+\end{equation}
+We assume the invertiblity of this partition. We do note however that this part of the partition reduces to the $J\times J$ matrix $M\Lambda M^{*}$ when we choose the FEM prior and FEM information operator. The invertibility of this matrix is then equivalent to the invertibility of the Galerkin Matrix, $M$ (if we assume that the entries of $\Lambda$ are non-zero). \\
+
+We thus see that the conditional distribution (\ref{conditionalDistnFixed_f}) has the correct covariance operator. \\
+
+Theorem 3.3 also goes on to give the mean of the conditional distribution in the case that the covariance operator of the joint distribution is compatible with $\mathcal{H}_{2}$. For our problem this is in fact the case as we now show. We first denote the covariance operator of the joint distribution by:
+\begin{equation}
+    \begin{pmatrix}
+        V & V\mathcal{L}^{*}\mathcal{I}^{*} \\
+        \mathcal{I}\mathcal{L}V & \mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*}
+    \end{pmatrix}=
+    \begin{pmatrix}
+        C_{11} & C_{12} \\
+        C_{21} & C_{22}
+    \end{pmatrix}
+\end{equation}
+i.e. $C_{11}=V, C_{12}=V\mathcal{L}^{*}\mathcal{I}^{*}, C_{21}=\mathcal{I}\mathcal{L}V, C_{22}=\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*}$. If we now define the following bounded operator $Q:\mathcal{H}\rightarrow\mathcal{H}$ by
+
+\begin{equation}
+    Q = \begin{pmatrix}
+            0 & 0 \\
+            C_{22}^{-1}C_{21} & I
+        \end{pmatrix} = \begin{pmatrix}
+                            0 & 0 \\
+                            \hat{Q} & I
+                        \end{pmatrix}
+\end{equation}
+where $\hat{Q}:=C_{22}^{-1}C_{21}:\mathcal{H}_{1}\rightarrow\mathcal{H}_{2}$ we can easily check that such an operator $Q$ is an (C-symmetric) oblique projection onto $\mathcal{H}_{2}$. Since $Q$ is not $0$ we have by Theorem 3.3 that the mean of the conditional distribution (\ref{conditionalDistnFixed_f}) is given by $\hat{Q}^{*}F$ where the adjoint is defined by the relation $\left\langle\hat{Q}^{*} h_{2}, h_{1}\right\rangle_{\mathcal{H}_{1}}=\left\langle h_{2}, \hat{Q} h_{1}\right\rangle_{\mathcal{H}_{2}}$ for all $h_1\in\mathcal{H}_1,h_{2}\in\mathcal{H}_{2}$. Since we have that $C_{22}$ and hence $C_{22}^{-1}$ is self-adjoint and further that $C_{12}^{*}=C_{21}$ we can easily deduce that $\hat{Q}^{*}=C_{12}C_{22}^{-1}$ and so the mean is given by
+\begin{equation}
+    \hat{Q}^{*}F=C_{12}C_{22}^{-1}C_{21}F=V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F=a
+\end{equation}
+where $a$ is what we had in (\ref{post_mean_before_averaging}). \\
+
+We can now move on to provide conditions for the Galerkin matrix $M$ defined in Notes 2 to be invertible. A sufficient condition to ensure this invertibility is the following assumption (see Assumption 2.34 in \cite{lord2014introduction}): \\
+
+\noindent \textbf{Assumption} (regularity of coefficients) The diffusion coefficient $a(x)$ satisfies:
+\begin{equation}
+    \label{regularity_of_coeff}
+    0<a_{\text{min}}\leq a(x) \leq a_{\text{max}}<\infty \text{ for almost all } x\in\Omega
+\end{equation}
+for some real constants $a_{\text{min}},a_{\text{max}}$. In particular $a\in L^{\infty}(\Omega)$. \\
+
+If we assume that this assumption holds then it is a simple exercise to show that the following bilinear form from $H_{0}^{1}(\Omega)\times H_{0}^{1}(\Omega)$ to $\mathbb{R}$ defined by:
+\begin{equation}
+    \label{bilinear_form}
+    \tilde{a}(u,w):=\int_{\Omega}a(x)\nabla u(x)\cdot\nabla w(x)\mathrm{d}x
+\end{equation}
+defines a norm $|\cdot|_{E}$ on $H_{0}^{1}(\Omega)$ via $|u|_{E}:=\tilde{a}(u,u)^{1/2}$. To show that the Galerkin matrix $M$ is invertible we will show that it is (strictly) positive definite. To this end let $\mathbf{v}\in\mathbb{R}^{J}\backslash\{0\}$ and define $v=\sum_{i=1}^{J}v_{i}\psi_{i}$ which is a function in $H_{0}^{1}(\Omega)$. We now have:
+\begin{align*}
+    \mathbf{v}^{T}(M)\mathbf{v}&=\sum_{i,j=1}^{J}v_{j}(M_{ij})v_{i} \\
+    &=\sum_{i,j=1}^{J}v_{j}\left(\int_{\Omega}a(x)\nabla\psi_{i}(x)\cdot\nabla\psi_{j}(x)\mathrm{d}x\right)v_{i} \\
+    &=\sum_{i,j=1}^{J}v_{j}\tilde{a}(\psi_{i},\psi_{j})v_{i}\\
+    &=\tilde{a}\left(\sum_{i=1}^{J}v_{i}\psi_{i},\sum_{j=1}^{J}v_{j}\psi_{j}\right) \\
+    &=\tilde{a}(v,v) \\
+    &=|v|_{E}^{2}>0
+\end{align*}
+where the strict inequality follows since $\tilde{a}(v,v)=0$ iff $|v|_{E}=0$ iff $v=0$ (since $|\cdot|_{E}$ is a norm on $H_{0}^{1}(\Omega)$) iff $\mathbf{v}=0$ since the $\{\psi_{i}\}$ are linearly independent.

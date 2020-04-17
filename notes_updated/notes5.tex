@@ -1,0 +1,146 @@
+\noindent We now have two distributions for the solution $u$ to our boundary value problem, $\nu_{i}=\mathcal{N}(m_i,\Sigma_{i})$ for $i=1,2$. We now assume we also have sensor data which give us noisy observations of the value of $u$ at some points $y_{1},\dots,y_{s}$ in $\Omega$. We now want to update our belief in the distribution of $u$ using this sensor data. We can use $\nu_{i}$ as prior distributions. Our goal will be to investigate how different the two resulting posteriors are. \\
+
+Let $S:\mathcal{H}\rightarrow\mathbb{R}^{s}$ be the operator which maps a function $h\in\mathcal{H}$ to $(h(y_1),\dots,h(y_s))^{T}$ in $\mathbb{R}^{s}$. Assuming that the sensors make observations at each $y_j$ with a normally distributed error we have that the likelihood for our sensor readings, $\mathbf{v}$, is:
+\begin{equation}
+  \label{likelihood}
+  \mathbf{v}|u \sim \mathcal{N}(Su,\epsilon^{2}I)
+\end{equation}
+The goal is to now find the posterior $u|\mathbf{v}$ when our prior is $u\sim\nu_{i}\equiv\mathcal{N}(m_{i},\Sigma_{i}), \hspace{0.2cm} i=1,2$. In order to do so we will first find the joint distribution of $(u,\mathbf{v})$. To do this we note our assumption that $\mathbf{v}|u$ is distributed according to (\ref{likelihood}) is equivalent to the assertion that:
+\begin{equation*}
+  \mathbf{v}=Su+\boldsymbol{\delta}
+\end{equation*}
+where $\boldsymbol{\delta}\sim\mathcal{N}(\mathbf{0},\epsilon^{2}I)$ is independent of $u$. From this we can see that the joint distribution of $(u,\boldsymbol{\delta})$ is:
+\begin{equation*}
+  \begin{pmatrix}
+    u \\
+    \boldsymbol{\delta}
+  \end{pmatrix}\sim\mathcal{N}\left(\begin{pmatrix}
+                                    m \\
+                                    \mathbf{0}
+                                    \end{pmatrix},
+                                    \begin{pmatrix}
+                                      \Sigma & 0 \\
+                                      0 & \epsilon^{2}I
+                                    \end{pmatrix}
+                              \right)
+\end{equation*}
+We now note that $(u,\mathbf{v})$ can be expressed as:
+\begin{equation*}
+  \begin{pmatrix}
+    u \\
+    \mathbf{v}
+  \end{pmatrix}=\begin{pmatrix}
+                  I & 0 \\
+                  S & I
+                \end{pmatrix}\begin{pmatrix}
+                              u \\
+                              \boldsymbol{\delta}
+                             \end{pmatrix} +
+                             \begin{pmatrix}
+                                0 \\ \mathbf{0}
+                             \end{pmatrix}
+\end{equation*}
+Since this is just a linear transformation of $(u,\boldsymbol{\delta})$ we have that the joint distribution of $(u,\mathbf{v})$ is given by:
+\begin{equation}
+  \label{jointDist}
+  \begin{pmatrix}
+    u \\
+    \mathbf{v}
+  \end{pmatrix}\sim\mathcal{N}\left(
+                              \begin{pmatrix}
+                                m \\
+                                Sm
+                              \end{pmatrix},
+                              \begin{pmatrix}
+                                \Sigma & \Sigma S^{*} \\
+                                S\Sigma & \epsilon^{2}I+S\Sigma S^{*}
+                              \end{pmatrix}
+                              \right)
+\end{equation}
+From this it is simply a matter of conditioning to obtain the posterior distribution of $u|\mathbf{v}$. We thus obtain:
+\begin{equation}
+  \label{posterior}
+  u|\mathbf{v}\sim\mathcal{N}(m^{(i)}_{u|\mathbf{v}},\Sigma^{(i)}_{u|\mathbf{v}})
+\end{equation}
+where,
+\begin{align}
+  \label{posterior_mean}
+  m^{(i)}_{u|\mathbf{v}}&:=m_i+\Sigma_{i}S^{*}(\epsilon^{2}I+S\Sigma_{i}S^{*})^{-1}(\mathbf{v}-Sm_{i}) \\
+  \label{posterior_covariance}
+  \Sigma^{(i)}_{u|\mathbf{v}}&:=\Sigma_{i}-\Sigma_{i}S^{*}(\epsilon^{2}I+S\Sigma_{i}S^{*})^{-1}S\Sigma_{i}
+\end{align}
+
+Since the two posteriors are still Gaussian we can quantify how different they are by using the Wasserstein Distance again. We have,
+\begin{align*}
+    W^{2}\left(\mathcal{N}(m^{(1)}_{u|\mathbf{v}},\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(m^{(2)}_{u|\mathbf{v}},\Sigma^{(2)}_{u|\mathbf{v}})\right)&=\|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}^{2}+W^{2}\left(\mathcal{N}(0,\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(0,\Sigma^{(2)}_{u|\mathbf{v}})\right) \\
+    &\leq \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}^{2} + \|\Sigma^{(1)}_{u|\mathbf{v}}-\Sigma^{(2)}_{u|\mathbf{v}}\|_{1}
+\end{align*}
+We now proceed to obtain an upper-bound on these terms. For convenience we will use the notation $B_{i}:=\epsilon^{2}I+S\Sigma_{i}S^{*}$ for $i=1,2$. It will be helpful to first work out an upper-bound on the operator norm of the difference $B_{1}^{-1}-B_{2}^{-1}$. To this end we first compute:
+\begin{align*}
+    \|B_{1}-B_{2}\|_{\infty}&=\|S(\Sigma_{1}-\Sigma_{2})S^{*}\|_{\infty} \\
+    &\leq\|S\|_{\infty}^{2}\|\Sigma_{1}-\Sigma_{2}\|_{\infty} \\
+    &\leq\|\Sigma_{1}-\Sigma_{2}\|_{1} \\
+    &\leq C_{1}h\|K\mathcal{L}^{-1}\|_{1}=:\lambda h
+\end{align*}
+where we have used the fact that $\|S\|_{\infty}\leq1$ and where $\lambda>0$ is a constant. Since $B_{1}$ (and $B_{2}$) are invertible and for sufficiently small $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$ we can utilise Corollary 8.2 of \cite{gohberg2012basic} to deduce that:
+\begin{equation}
+    \label{bound_on_diff_inverses}
+    \|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}\leq\frac{\|B_{1}^{-1}\|_{\infty}^{2}\|B_{1}-B_{2}\|_{\infty}}{1-\|B_{1}^{-1}\|_{\infty}\|B_1-B_{2}\|_{\infty}}\leq\frac{\lambda\|B_{1}^{-1}\|_{\infty}^{2}h}{1-\lambda\|B_{1}^{-1}\|_{\infty}h}
+\end{equation}
+We are now in a good position to derive an upper bound on the Wasserstein distance between the two posteriors. We first focus on the difference of the two means:
+\begin{align*}
+    \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}&=\|m_1+\Sigma_{1}S^{*}B_{1}^{-1}(\mathbf{v}-Sm_{1})-m_2-\Sigma_{2}S^{*}B_{2}^{-1}(\mathbf{v}-Sm_{2})\|_{L^{2}(\Omega)} \\
+    &=\|m_1-m_2+\Sigma_{1}S^{*}B_{1}^{-1}\mathbf{v}-\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}\mathbf{v}+\Sigma_{2}S^{*}B_{2}^{-1}Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq\|m_1-m_2\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})\mathbf{v}\|_{L^{2}(\Omega)}+\|\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}Sm_2\|_{L^{2}(\Omega)}
+\end{align*}
+We now focus on these three terms separately. \\
+
+\noindent For the first term we already have from (\ref{bound_on_diff_means}) that
+\begin{equation*}
+    \|m_{1}-m_{2}\|_{L^{2}(\Omega)}\leq\tilde{C}h\|\bar{f}\|_{L^2(\Omega)}
+\end{equation*}
+
+\noindent For the second term we compute:
+\begin{align*}
+    \|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})\mathbf{v}\|_{L^{2}(\Omega)}&\leq \|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|\mathbf{v}\| \\
+    &=\|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{1}S^{*}B_{2}^{-1}+\Sigma_{1}S^{*}B_{2}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|\mathbf{v}\| \\
+    &\leq\left(\|\Sigma_{1}S^{*}(B_{1}^{-1}-B_{2}^{-1})\|_{\infty}+\|(\Sigma_{1}-\Sigma_{2})S^{*}B_{2}^{-1}\|_{\infty}\right)\|\mathbf{v}\| \\
+    &\leq \left(\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}+\|\Sigma_{1}-\Sigma_{2}\|_{\infty}\|B_{2}^{-1}\|_{\infty}\right)\|\mathbf{v}\| \\
+    &\leq \lambda h \left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\|\mathbf{v}\|
+\end{align*}
+
+\noindent For the third term we compute:
+\begin{align*}
+    \|\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}Sm_2\|_{L^{2}(\Omega)}&=\|\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{1}S^{*}B_{1}^{-1}Sm_2+\Sigma_{1}S^{*}B_{1}^{-1}Sm_2-\Sigma_{2}S^{*}B_{2}^{-1}Sm_2\|_{L^{2}(\Omega)} \\
+    &\leq\|\Sigma_{1}S^{*}B_{1}^{-1}S(m_1-m_2)\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq \tilde{C}h\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}\|\bar{f}\|_{L^{2}(\Omega)} + \lambda h \left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\|m_{2}\|_{L^{2}(\Omega)} \\
+    &=\left[\tilde{C}\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}\|\bar{f}\|_{L^{2}(\Omega)} + \lambda  \|m_{2}\|_{L^{2}(\Omega)}\left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\right]h
+\end{align*}
+
+Combining all these three terms together we obtain:
+\begin{align*}
+    \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}&\leq\left[\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}(1+\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty})+\right. \\
+    &\left.\lambda\left(\|\mathbf{v}\|\left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)+\|m_{2}\|_{L^{2}(\Omega)}\left(\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}+\|B_{2}^{-1}\|_{\infty}\right)\right)\right]h \\
+    &=\left[\tilde{C}\|\bar{f}\|_{L^2(\Omega)}(1+\|\Sigma_1\|_{\infty}\|B_1^{-1}\|_{\infty})+\lambda(\|\mathbf{v}\|+\|m_2\|_{L^2(\Omega)})\left(\|B_{2}^{-1}\|_{\infty}+\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|^{2}_{\infty}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}\right)\right]h
+\end{align*}
+
+We now focus on the difference of the covariance operators:
+\begin{align*}
+    \|\Sigma^{(1)}_{u|\mathbf{v}}-\Sigma^{(2)}_{u|\mathbf{v}}\|_{1} &= \|\Sigma_{1}-\Sigma_{1}S^{*}B_{1}^{-1}S\Sigma_{1}-\Sigma_{2}+\Sigma_{2}S^{*}B_{2}^{-1}S\Sigma_{2}\|_{1} \\
+    &\leq \|\Sigma_{1}-\Sigma_{2}\|_{1} + \|\Sigma_{1}S^{*}B_{1}^{-1}S\Sigma_{1}-\Sigma_{2}S^{*}B_{2}^{-1}S\Sigma_{2}\|_{1} \\
+    &=\|\Sigma_1-\Sigma_2\|_{1}+\|\Sigma_{1}S^{*}B_{1}^{-1}S\Sigma_{1}-\Sigma_{1}S^{*}B_{2}^{-1}S\Sigma_{1}+\Sigma_{1}S^{*}B_{2}^{-1}S\Sigma_{1}-\Sigma_{2}S^{*}B_{2}^{-1}S\Sigma_{2}\|_{1} \\
+    &\leq \|\Sigma_1-\Sigma_2\|_{1} + \|\Sigma_{1}S^{*}(B_{1}^{-1}-B_{2}^{-1})S\Sigma_{1}\|_{1} \\
+    &+ \|\Sigma_{1}S^{*}B_{2}^{-1}S\Sigma_{1}-\Sigma_{1}S^{*}B_{2}^{-1}S\Sigma_{2} + \Sigma_{1}S^{*}B_{2}^{-1}S\Sigma_{2} - \Sigma_{2}S^{*}B_{2}^{-1}S\Sigma_{2}\|_{1} \\
+    &\leq \|\Sigma_{1}-\Sigma_{2}\|_{1} + \|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}-B_{2}^{-2}\|_{\infty}\|\Sigma_{1}\|_{1}+\|\Sigma_{1}S^{*}B_{2}^{-1}S(\Sigma_{1}-\Sigma_{2})\|_{1}+\|(\Sigma_{1}-\Sigma_{2})S^{*}B_{2}^{-1}S\Sigma_2\|_{1} \\
+    &\leq \|\Sigma_1-\Sigma_2\|_{1} + \|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}-B_{2}^{-2}\|_{\infty}\|\Sigma_{1}\|_{1} + \|\Sigma_{1}\|_{\infty}\|B_{2}^{-1}\|_{\infty}\|\Sigma_1-\Sigma_2\|_{1}+\|\Sigma_{1}-\Sigma_{2}\|_{1}\|B_{2}^{-1}\|_{\infty}\|\Sigma_{2}\|_{\infty} \\
+    &\leq (1+(\|\Sigma_{1}\|_{\infty}+\|\Sigma_{2}\|_{\infty})\|B_{2}^{-1}\|_{\infty})\|\Sigma_{1}-\Sigma_{2}\|_{1} + \|\Sigma_{1}\|_{\infty}\|\Sigma_{1}\|_{1}\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty} \\
+    &\leq (1+(\|\Sigma_{1}\|_{\infty}+\|\Sigma_{2}\|_{\infty})\|B_{2}^{-1}\|_{\infty})\lambda h + \frac{\lambda h\|\Sigma_{1}\|_{\infty}\|\Sigma_{1}\|_{1}\|B_{1}^{-1}\|^{2}_{\infty}}{1-\lambda\|B_{1}^{-1}\|_{\infty}h} \\
+    &=\lambda h \left(1+(\|\Sigma_{1}\|_{\infty}+\|\Sigma_{2}\|_{\infty})\|B_{2}^{-1}\|_{\infty}+\frac{\|\Sigma_1\|_{\infty}\|\Sigma_1\|_{1}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}\right)
+\end{align*}
+We can now obtain an upperbound on the squared Wasserstein distance:
+\begin{align}
+    &W^{2}\left(\mathcal{N}(m^{(1)}_{u|\mathbf{v}},\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(m^{(2)}_{u|\mathbf{v}},\Sigma^{(2)}_{u|\mathbf{v}})\right) \leq \nonumber \\
+    &\leq \left[\tilde{C}\|\bar{f}\|_{L^2(\Omega)}(1+\|\Sigma_1\|_{\infty}\|B_1^{-1}\|_{\infty})+\lambda(\|\mathbf{v}\|+\|m_2\|_{L^2(\Omega)})\left(\|B_{2}^{-1}\|_{\infty}+\frac{\|\Sigma_{1}\|_{\infty}\|B_{1}^{-1}\|^{2}_{\infty}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}\right)\right]^{2}h^{2} \nonumber \\
+    &+ \lambda h \left(1+(\|\Sigma_{1}\|_{\infty}+\|\Sigma_{2}\|_{\infty})\|B_{2}^{-1}\|_{\infty}+\frac{\|\Sigma_1\|_{\infty}\|\Sigma_1\|_{1}\|B_{1}^{-1}\|_{\infty}^{2}}{1-\lambda h \|B_{1}^{-1}\|_{\infty}}\right)
+\end{align}
+From this we can see that $W^{2}\left(\mathcal{N}(m^{(1)}_{u|\mathbf{v}},\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(m^{(2)}_{u|\mathbf{v}},\Sigma^{(2)}_{u|\mathbf{v}})\right)\leq\mathcal{O}(h)$.

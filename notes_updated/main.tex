@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{centernot}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,marginparwidth=1.75cm]{geometry}
+
+% for theorems/lemmas/defs/etc
+%-------------------------------
+\usepackage[english]{babel}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{corollary1}{Corollary}[definition]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{\textbf{Remark}}  % if don't want bold face for remark remove textbf
+%-------------------------------
+
+\DeclareMathOperator{\E}{\mathds{E}}
+\DeclareMathOperator{\Var}{\mathrm{Var}}
+\DeclareMathOperator{\prob}{\mathbb{P}}
+
+\title{Gaussian Processes for PDEs}
+\author{Yanni Papandreou}
+\date{November 2019}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+
+\begin{document}
+
+\maketitle
+
+\section{Notes 1}
+\input{notes1.tex}
+
+\section{Notes 2}
+\input{notes2.tex}
+
+\section{Notes 3}
+\input{notes3.tex}
+
+\section{Notes 4}
+\input{notes4.tex}
+
+\section{Notes 5}
+\input{notes5.tex}
+
+\section{Questions}
+\input{questions.tex}
+
+\bibliography{references.bib}
+\bibliographystyle{unsrt}
+
+\end{document}

@@ -1,0 +1,161 @@
+We will now start focusing on a specific PDE. We will consider here the standard elliptic stationary conductivity problem:
+\begin{align}
+    \label{standard_conduct}
+    \begin{split}
+        \mathcal{L}u &:= -\nabla\cdot(a(x)\nabla u(x))=f(x), \hspace{0.3cm} x\in\Omega \\
+        u&=0, \hspace{0.3cm} x\in\partial\Omega
+    \end{split}
+\end{align}
+where $f$ is stochastic. In this case, standard energy estimates will give that $\mathcal{L}$ is a bounded operator from $H^1$ to $H^{-1}$ (!!!!CHECK!!!!!). Thus, we seek a solution $u\in H_{0}^{1}(\Omega)$. \\
+
+Once we assume this, we can be more precise about the choice of Gaussian prior on $u$. In particular, we want, at the very least, that the Cameron-Martin space of $\mathcal{N}(0,V)$ lies in $H^1$. Let $\mathcal{A}=-\Delta$ (with Dirichlet or Neumann boundary conditions). $\mathcal{A}$ satisfies Assumptions 2.9(i)-(iii) of \cite{stuart2010inverse}. Further, on page 474 of \cite{stuart2010inverse} it states that for such a choice of $\mathcal{A}$ the spaces $\mathcal{H}^{s}$ in (2.29) are contained in the usual Sobolev spaces $H^s$. Thus, provided we choose $\alpha>1+d/2$, Lemma 6.27 of \cite{stuart2010inverse} gives us that
+$u\sim\mathcal{N}(0,V)$, where $V=\mathcal{A}^{-\alpha}$, is in $\mathcal{H}^{s}$ almost surely for any $s\in[0,\alpha-d/2)$. In particular, since we have assumed $\alpha>1+d/2$ we have that $\alpha-d/2>1$ and so $u\sim\mathcal{N}(0,V)$ is in $\mathcal{H}^{1}$ almost surely. This gives us that $u$ is almost surely in $H^1$ since $\mathcal{H}^1\subset H^1$ for our choice of $\mathcal{A}$. \\
+
+We will now connect this to FEM. We start by introducing a choice of information operators. These operators must be consistent with the spaces we are working with. In particular, $I_j$ should lie in $\mathcal{U}^{\prime\prime}=\mathcal{U}$. i.e. $I_j$ maps $H^{-1}$ to $\mathbb{R}$. Given a finite element basis $\{\psi_{i}\}$, we can now choose to define $I_j$ as:
+\begin{equation}
+    \label{info_operator_def}
+    I_{j}g := \langle g, \psi_j \rangle
+\end{equation}
+where $\langle , \rangle$ denotes thes $H^{-1}(\Omega),H_{0}^{1}(\Omega)$ duality pairing. This can be identified with an inner product on $L^{2}$ using the Riesz Representation theorem. It can be shown that for this choice we have:
+\begin{equation}
+    \label{info_operator_def_on_Lu}
+    I_{j}\mathcal{L}u=\int_{\Omega}a(x)\nabla u(x)\cdot\nabla\psi_{j}(x)\mathrm{d}x
+\end{equation}
+
+Next we make a particular choice of prior covariance $V$ (\textit{note: this is not related to the choice discussed above and is just to relate the formulation to FEM}). We define $V:H^{-1}\rightarrow H^1$ as follows:
+\begin{equation}
+    \label{FEM_prior}
+    Vu(x) := \sum_{i=1}^{J}\lambda_{i}\psi_{i}(x)\int_{\Omega}\psi_{i}(y)u(y)\mathrm{d}y
+\end{equation}
+In order to proceed it will prove helpful to express $V$ in a different form as follows. We note that we can write:
+\begin{equation*}
+    Vu(x)=\Phi(x)^{*}\Lambda\int_{\Omega}\Phi(y)u(y)\mathrm{d}y
+\end{equation*}
+where $\Phi(x):=(\psi_{1}(x),\dots,\psi_{J}(x))^{T}$ is a vector in $\mathbb{R}^{J}$ and $\Lambda:=\text{diag}\{\lambda_{i}\}_{i=1}^{J}$ is a $J\times J$ matrix. We now introduce the following operators, $\{T_i\}_{i=1}^{J}$ defined by:
+\begin{equation*}
+    T_{i}u:=\int_{\Omega}\psi_{i}(y)u(y)\mathrm{d}y
+\end{equation*}
+If we now let $T:=(T_1,\dots,T_{J})^{T}$ we have:
+\begin{equation*}
+    Vu(x)=\Phi(x)^{*}\Lambda Tu
+\end{equation*}
+Thus,
+\begin{equation*}
+    V=\Phi^{*}\Lambda T
+\end{equation*}
+We note that $\Lambda Tu$ is a vector in $R^{J}$ which gives the coefficients of the expansion of the function $Vu$ in terms of the finite element basis. Noting this will enable us to make sense what happens to (\ref{post_mean_before_averaging}) and (\ref{post_var_before_averaging}). Before we go through this calculation we first introduce the following operators: $G_j:=I_{j}\mathcal{L}:H^{1}\rightarrow\mathbb{R}$ for $j=1,\dots,J$. We also let $G=(G_1,\dots,G_J)^{T}$ so that $G=\mathcal{I}\mathcal{L}$. Looking at the mean we have:
+\begin{align*}
+    a &= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F \\
+    &= VG^{*}(GVG^{*})^{-1}F
+\end{align*}
+Now, $G$ is a map from $H^{1}$ to $\mathbb{R}^{J}$ and so $G^{*}$ is a map from $\mathbb{R}^{J}$ to $H^{-1}$. Thus, $GVG^{*}$ is a map from $\mathbb{R}^{J}$ to $\mathbb{R}^{J}$, i.e. a $J\times J$ matrix. We first compute this matrix. We have $GV=G\Phi^{*}\Lambda T$. We observe that:
+\begin{equation*}
+    G\Phi^{*}=\begin{pmatrix}
+                G_1 \\
+                \vdots \\
+                G_{J}
+              \end{pmatrix} \begin{pmatrix}
+                                \psi_1 & \hdots & \psi_{J}
+                            \end{pmatrix}
+\end{equation*}
+is a $J\times J$ matrix. The $ij$\textit{th} entry of this matrix is:
+\begin{align*}
+    (G\Phi^{*})_{ij}&=G_{i}\psi_{j} \\
+    &=I_{i}\mathcal{L}\psi_{j} \\
+    &=\int_{\Omega}a(x)\nabla\psi_{i}(x)\cdot\nabla\psi_{j}(x)\mathrm{d}x \\
+    &=:M_{ij}
+\end{align*}
+This matrix $M$ is the standard Galerkin matrix which appears in the finite element method. Continuing we thus have,
+\begin{align*}
+    &GV=G\Phi^{*}\Lambda T = M\Lambda T \\
+    &\implies GVG^{*}=M\Lambda TG^{*}
+\end{align*}
+To figure out $TG^{*}$ we express it as $TG^{*}=(GT^{*})^{*}$ where the adjoint of $T$ is $T^{*}=(T_1^{*},\dots,T_{J}^{*})$. To figure out the adjoints $T_i^{*}$ we consider for $\alpha\in\mathbb{R}$ and for any function $u$ the following:
+\begin{align*}
+    \alpha T_{i}u &= \alpha\int_{\Omega}\psi_{i}(y)u(y)\mathrm{d}y \\
+    &=\int_{\Omega}\alpha\psi_{i}(y)u(y)\mathrm{d}y
+\end{align*}
+which suggests that $T_{i}^{*}\alpha=\alpha\psi_{i}$. I.e. $T_{i}^{*}$ is the operator which maps a real number $\alpha$ to the function $\alpha\psi_{i}$. Thus,
+\begin{equation*}
+    GT^{*}\alpha=\begin{pmatrix}
+                G_1 \\
+                \vdots \\
+                G_{J}
+              \end{pmatrix} \begin{pmatrix}
+                                T_1^{*} & \hdots & T_{J}^{*}
+                            \end{pmatrix}\alpha
+\end{equation*}
+and this has $ij$\textit{th} entry given by:
+\begin{align*}
+    (GT^{*}\alpha)_{ij}&=G_{i}T_{j}^{*}\alpha \\
+    &=G_{i}(\alpha\psi_{j}) \\
+    &=\alpha G_{i}(\psi_{j}) \\
+    &=\alpha M_{ij}
+\end{align*}
+which gives us that $GT^{*}=M$. Thus, $TG^{*}=(GT^{*})^{*}=M^{*}$. We thus have that $GVG^{*}=M\Lambda TG^{*}=M\Lambda M^{*}$ and so we can now finish the simplification of $a$:
+\begin{align*}
+    a &= VG^{*}(GVG^{*})^{-1}F \\
+    &= VG^{*}(M\Lambda M^{*})^{-1}F \\
+    &= \Phi^{*}\Lambda TG^{*}(M\Lambda M^{*})^{-1}F \\
+    &= \Phi^{*}\Lambda M^{*}(M\Lambda M^{*})^{-1}F \\
+\end{align*}
+Now using standard finite element arguments, one can identify conditions under which the matrix $M$ is non-singular. We will expand on these conditions in the next section. Under the assumption that these conditions hold everything drastically simplifies and we obtain:
+\begin{align*}
+    a &= \Phi^{*}\Lambda M^{*}(M\Lambda M^{*})^{-1}F \\
+    &= \Phi^{*}\Lambda M^{*}(M^{*})^{-1}\Lambda^{-1}M^{-1}F \\
+    &= \Phi^{*}M^{-1}F
+\end{align*}
+We thus see that when expressed in terms of the finite element basis the mean function has coefficients given by the vector $\hat{a}:=M^{-1}F$ just like FEM gives. We now turn to the covariance (\ref{post_var_before_averaging}) and compute:
+\begin{align*}
+    \Sigma &= V -V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}\mathcal{I}\mathcal{L}V \\
+    &= V - VG^{*}(GVG^{*})^{-1}GV \\
+    &= V - \Phi^{*}\Lambda TG^{*}(M\Lambda M^{*})^{-1}GV \\
+    &= V - \Phi^{*}\Lambda M^{*}(M^{*})^{-1}\Lambda^{-1}M^{-1}GV \\
+    &= V - \Phi^{*}M^{-1}GV \\
+    &= V - \Phi^{*}M^{-1}M\Lambda T \\
+    &= V - \Phi^{*}\Lambda T \\
+    &= V - V = 0
+\end{align*}
+We can thus see that when we choose our information operators according to (\ref{info_operator_def}) and our prior covariance according to (\ref{FEM_prior}) that the posterior (for a fixed realisation of $F$) collapses to a point measure located at the FEM solution to the PDE. \\
+
+We now move on to average over the distribution of $f$. Using (\ref{posteriorDist}) we can note that we should obtain a Gaussian distribution with mean and covariance given by $A\bar{F}$ and $\Sigma+AK_{\mathcal{I}}A^{*}$ respectively. We have shown in the above that for the FEM case we have $A=\Phi^{*}M^{-1}$ and $\Sigma=0$. We thus should expect to obtain
+\begin{equation*}
+    \mathcal{N}(\Phi^{*}M^{-1}\bar{F},\Phi^{*}M^{-1}K_{\mathcal{I}}M^{1}\Phi)
+\end{equation*}
+as our averaged distribution. However, we will need to verify this as in the derivation of (\ref{posteriorDist}) the calculations required the existence of the inverse of $\Sigma_{N}=P\Sigma P^{*}$ which in the FEM case is the $0$ matrix. We will thus redo the calculation of the expectation of an arbitrary bounded cylindrical test function which we performed in section 1. As before we are interested in computing:
+
+\begin{equation}
+    \int\int\phi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation}
+where now $a=\Phi^{*}M^{-1}F$ and $\Sigma=0$. Thus, $\mu_{a,\Sigma}=\delta_{a}$, that is to say that the measure is in fact a Dirac point mass at $a=\Phi^{*}M^{-1}F$. We thus have:
+\begin{equation*}
+    \int\int\phi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)=\int\int\phi(u^N)\delta_{\Phi^{*}M^{-1}F}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation*}
+Now since the posterior for $u$ for a fixed realisation of $f$ is a point mass we have that the posterior for $u^N=Pu$ is $\delta_{P\Phi^{*}M^{-1}F}$. Thus, we can write:
+\begin{equation*}
+    \int\int\phi(u^N)\delta_{\Phi^{*}M^{-1}F}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)=\int\int\phi(u^N)\delta_{P\Phi^{*}M^{-1}F}(\mathrm{d}u^N)\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation*}
+It is now important to point out that $P\Phi^{*}$ is to be interpreted\footnote{By this we mean that $P\Phi^{*}$ is actually interpreted as $P\otimes\Phi^{*}$} as the following $N\times J$ matrix:
+\begin{align*}
+    P\Phi^{*}&=P(\psi_{1},\dots,\psi_{J}) \\
+    &=(P\psi_{1},\dots,P\psi_{J}) \\
+    &=\begin{pmatrix}
+        \psi_{1}(x_1) & \dots & \psi_{J}(x_1) \\
+        \vdots & & \vdots \\
+        \psi_{1}(x_N) & \dots & \psi_{J}(x_N)
+      \end{pmatrix}=:\Psi
+\end{align*}
+i.e. the matrix with $ij$\textit{th} entry $\Psi_{i,j}:=\psi_{j}(x_{i})$ for $i\in\{1,\dots,N\},j\in\{1,\dots,J\}$. We thus have that $Y:=P\Phi^{*}M^{-1}F=\Psi M^{-1}F\sim\mathcal{N}(\Psi M^{-1}\bar{F},\Psi M^{-1}K_{\mathcal{I}}M^{-1}\Psi^{*})$. Together with this and with the fact that the posterior of $u^{N}$ only depends on $f$ through $F$ we can write:
+\begin{align*}
+    \int\int\phi(u^N)\delta_{P\Phi^{*}M^{-1}F}(\mathrm{d}u^N)\mu_{\bar{f},K}(\mathrm{d}f)&=\int\int\phi(u^N)\delta_{\Psi M^{-1}F}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F) \\
+    &=\int\int\phi(u^N)\delta_{Y}(\mathrm{d}u^N)\mu_{\Psi M^{-1}\bar{F},\Psi M^{-1}K_{\mathcal{I}}M^{-1}\Psi^{*}}(\mathrm{d}Y) \\
+    &=\int\phi(u^N)\left(\int\delta_{Y}(\mathrm{d}u^N)\mu_{\Psi M^{-1}\bar{F},\Psi M^{-1}K_{\mathcal{I}}M^{-1}\Psi^{*}}(\mathrm{d}Y)\right) \\
+    &=\int\phi(u^N)\mu_{\Psi M^{-1}\bar{F},\Psi M^{-1}K_{\mathcal{I}}M^{-1}\Psi^{*}}(\mathrm{d}u^N)
+\end{align*}
+which we recognize as a finite dimensional projection of a Gaussian measure. Thus, we conclude that ``averaging" over $f$ gives the expected Gaussian posterior under these choices:
+\begin{equation}
+    \label{average_posterior_FEM_prior}
+    \mathcal{N}(\Phi^{*}M^{-1}\bar{F},\Phi^{*}M^{-1}K_{\mathcal{I}}M^{-1}\Phi)
+\end{equation}
+
+This Gaussian measure directly links to what is found at the end of section 2 in the Statistical FEM paper.

@@ -1,0 +1,19 @@
+\noindent \textbf{Question 1:} I still do not see how defining $I_j$ by $I_j:=\langle g, \psi_j \rangle$ in (\ref{info_operator_def}) implies that $I_{j}\mathcal{L}u=-\int_{\Omega}a\nabla u \cdot \nabla\psi_{j}\mathrm{d}x$. The reason I am confused is because of the fact that $I_j$ is a map from $H^{-1}(\Omega)$ to $\mathbb{R}$. I do see that if I assume that $I_{j}$ acts on functions $g$ via:
+\begin{equation*}
+    I_{j}g=\int_{\Omega}\psi_{j}(x)g(x)\mathrm{d}x
+\end{equation*}
+then for $g=\mathcal{L}u$ I would have:
+\begin{align*}
+    I_{j}\mathcal{L}u&=\int_{\Omega}\psi_{j}(x)\nabla\cdot(a(x)\nabla u(x))\mathrm{d}x \\
+    &=-\int_{\Omega}a(x)\nabla u(x)\cdot\nabla\psi_{j}(x)\mathrm{d}x + \int_{\partial\Omega}\psi_{j}(x)a(x)\nabla u(x)\cdot\mathbf{n}\mathrm{d}S \\
+    &=-\int_{\Omega}a(x)\nabla u(x)\cdot\nabla\psi_{j}(x)\mathrm{d}x
+\end{align*}
+since the second integral is $0$ as $\psi_j$ is zero on the boundary $\partial\Omega$. This calculation however only makes sense provided the functions $g$ (and so $\mathcal{L}u$) is integrable ($L^2$ would let this work). I have tried to follow the argument using the Riesz Representation theorem in Evans in the section about $H^{-1}$ and apply it to our problem here but I cannot seem to connect the two. \\
+
+\noindent \textbf{Question 2:} In Notes 2 I defined the operators $T_{i}$ by $T_{i}u:=\int_{\Omega}\psi_{i}(y)u(y)\mathrm{d}y$. I then wanted to figure out the adjoint of this operator $T_{i}^{*}$. If I view $T_{i}$ as an operator from $L^{2}(\Omega)$ to $\mathbb{R}$ then the adjoint is clearly given by $T_{i}^{*}\alpha=\alpha \psi_{i}$. My question is basically the following: when we introduced the FEM prior $V$ it was as a map from $H^{-1}$ to $H^{1}$. This suggest that $T_{i}$ is also a map from $H^{-1}\rightarrow\mathbb{R}$. But then wouldn't the adjoint be a map from $\mathbb{R}\rightarrow H_{0}^{1}(\Omega)$ defined by:
+\begin{equation*}
+    \alpha T_{i}g=\langle T_{i}^{*}\alpha, g \rangle_{H_{0}^{1},H^{-1}}
+\end{equation*}
+for all $g\in H^{-1}$ and for all $\alpha \in \mathbb{R}$? If this is the case I cannot seem to show that $T_{i}^{*}$ is defined by $T_{i}^{*}\alpha=\alpha \psi_{i}$. \\
+
+\noindent \textbf{Question 3:} Since the particular PDE we are working with has the boundary condition that $u=0$ on $\partial\Omega$ does this mean that everywhere we mention the space $H^1$ we are talking about $H_{0}^{1}(\Omega)$? This is still a separable Hilbert space right?
