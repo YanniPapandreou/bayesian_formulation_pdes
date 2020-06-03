@@ -1,0 +1,143 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Girolami et~al.(2019)Girolami, Gregory, Yin, and
+  Cirak]{girolami2019statistical}
+Mark Girolami, Alastair Gregory, Ge~Yin, and Fehmi Cirak.
+\newblock The statistical finite element method.
+\newblock \emph{arXiv preprint arXiv:1905.06391}, 2019.
+
+\bibitem[Conrad et~al.(2017)Conrad, Girolami, S{\"a}rkk{\"a}, Stuart, and
+  Zygalakis]{conrad2017statistical}
+Patrick~R Conrad, Mark Girolami, Simo S{\"a}rkk{\"a}, Andrew Stuart, and
+  Konstantinos Zygalakis.
+\newblock Statistical analysis of differential equations: introducing
+  probability measures on numerical solutions.
+\newblock \emph{Statistics and Computing}, 27\penalty0 (4):\penalty0
+  1065--1082, 2017.
+
+\bibitem[Law et~al.(2015)Law, Stuart, and Zygalakis]{law2015data}
+Kody Law, Andrew Stuart, and Kostas Zygalakis.
+\newblock Data assimilation.
+\newblock \emph{Cham, Switzerland: Springer}, 2015.
+
+\bibitem[Stuart(2010)]{stuart2010inverse}
+Andrew~M Stuart.
+\newblock Inverse problems: a bayesian perspective.
+\newblock \emph{Acta numerica}, 19:\penalty0 451--559, 2010.
+
+\bibitem[Strang and Fix(1973)]{strang1973analysis}
+Gilbert Strang and George~J Fix.
+\newblock An analysis of the finite element method.
+\newblock \emph{Journal of Applied Mathematics and Mechanics}, 1973.
+
+\bibitem[Diaconis(1988)]{diaconis1988bayesian}
+Persi Diaconis.
+\newblock Bayesian numerical analysis.
+\newblock \emph{Statistical decision theory and related topics IV}, 1:\penalty0
+  163--175, 1988.
+
+\bibitem[O’Hagan(1992)]{o1992bayesian}
+A~O’Hagan.
+\newblock Bayesian statistics 4. some bayesian numerical analysis, 1992.
+
+\bibitem[Skilling(1992)]{skilling1992bayesian}
+John Skilling.
+\newblock Bayesian solution of ordinary differential equations.
+\newblock In \emph{Maximum entropy and Bayesian methods}, pages 23--37.
+  Springer, 1992.
+
+\bibitem[Hennig et~al.(2015)Hennig, Osborne, and
+  Girolami]{hennig2015probabilistic}
+Philipp Hennig, Michael~A Osborne, and Mark Girolami.
+\newblock Probabilistic numerics and uncertainty in computations.
+\newblock \emph{Proceedings of the Royal Society A: Mathematical, Physical and
+  Engineering Sciences}, 471\penalty0 (2179):\penalty0 20150142, 2015.
+
+\bibitem[pro()]{probNumericsSite}
+URL \url{http://probabilistic-numerics.org/}.
+
+\bibitem[Chkrebtii et~al.(2016)Chkrebtii, Campbell, Calderhead, Girolami,
+  et~al.]{chkrebtii2016bayesian}
+Oksana~A Chkrebtii, David~A Campbell, Ben Calderhead, Mark~A Girolami, et~al.
+\newblock Bayesian solution uncertainty quantification for differential
+  equations.
+\newblock \emph{Bayesian Analysis}, 11\penalty0 (4):\penalty0 1239--1267, 2016.
+
+\bibitem[Teymur et~al.(2016)Teymur, Zygalakis, and
+  Calderhead]{teymur2016probabilistic}
+Onur Teymur, Kostas Zygalakis, and Ben Calderhead.
+\newblock Probabilistic linear multistep methods.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  4321--4328, 2016.
+
+\bibitem[Lie et~al.(2019)Lie, Stuart, and Sullivan]{lie2019strong}
+Han~Cheng Lie, AM~Stuart, and TJ~Sullivan.
+\newblock Strong convergence rates of probabilistic integrators for ordinary
+  differential equations.
+\newblock \emph{Statistics and Computing}, 29\penalty0 (6):\penalty0
+  1265--1283, 2019.
+
+\bibitem[Abdulle and Garegnani(2020)]{abdulle2020random}
+Assyr Abdulle and Giacomo Garegnani.
+\newblock Random time step probabilistic methods for uncertainty quantification
+  in chaotic and geometric numerical integration.
+\newblock \emph{Statistics and Computing}, pages 1--26, 2020.
+
+\bibitem[Teymur et~al.(2018)Teymur, Lie, Sullivan, and
+  Calderhead]{teymur2018implicit}
+Onur Teymur, Han~Cheng Lie, Tim Sullivan, and Ben Calderhead.
+\newblock Implicit probabilistic integrators for odes.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pages
+  7244--7253, 2018.
+
+\bibitem[Schober et~al.(2014)Schober, Duvenaud, and
+  Hennig]{schober2014probabilistic}
+Michael Schober, David~K Duvenaud, and Philipp Hennig.
+\newblock Probabilistic ode solvers with runge-kutta means.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  739--747, 2014.
+
+\bibitem[Kersting and Hennig(2016)]{kersting2016active}
+Hans Kersting and Philipp Hennig.
+\newblock Active uncertainty calibration in bayesian ode solvers.
+\newblock \emph{arXiv preprint arXiv:1605.03364}, 2016.
+
+\bibitem[Magnani et~al.(2017)Magnani, Kersting, Schober, and
+  Hennig]{magnani2017bayesian}
+Emilia Magnani, Hans Kersting, Michael Schober, and Philipp Hennig.
+\newblock Bayesian filtering for odes with bounded derivatives.
+\newblock \emph{arXiv preprint arXiv:1709.08471}, 2017.
+
+\bibitem[Schober et~al.(2019)Schober, S{\"a}rkk{\"a}, and
+  Hennig]{schober2019probabilistic}
+Michael Schober, Simo S{\"a}rkk{\"a}, and Philipp Hennig.
+\newblock A probabilistic model for the numerical solution of initial value
+  problems.
+\newblock \emph{Statistics and Computing}, 29\penalty0 (1):\penalty0 99--122,
+  2019.
+
+\bibitem[Tronarp et~al.(2019)Tronarp, Kersting, S{\"a}rkk{\"a}, and
+  Hennig]{tronarp2019probabilistic}
+Filip Tronarp, Hans Kersting, Simo S{\"a}rkk{\"a}, and Philipp Hennig.
+\newblock Probabilistic solutions to ordinary differential equations as
+  nonlinear bayesian filtering: a new perspective.
+\newblock \emph{Statistics and Computing}, 29\penalty0 (6):\penalty0
+  1297--1315, 2019.
+
+\bibitem[Kersting et~al.(2018)Kersting, Sullivan, and
+  Hennig]{kersting2018convergence}
+Hans Kersting, TJ~Sullivan, and Philipp Hennig.
+\newblock Convergence rates of gaussian ode filters.
+\newblock \emph{arXiv preprint arXiv:1807.09737}, 2018.
+
+\bibitem[Lord et~al.(2014)Lord, Powell, and Shardlow]{lord2014introduction}
+Gabriel~J Lord, Catherine~E Powell, and Tony Shardlow.
+\newblock \emph{An introduction to computational stochastic PDEs}, volume~50.
+\newblock Cambridge University Press, 2014.
+
+\end{thebibliography}

@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{centernot}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage{parskip}
+
+% for theorems/lemmas/defs/etc
+%-------------------------------
+\usepackage[english]{babel}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{unsrtnat}
+
+\usepackage[dvipsnames]{xcolor}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{corollary1}{Corollary}[definition]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{\textbf{Remark}}  % if don't want bold face for remark remove textbf
+%-------------------------------
+
+\DeclareMathOperator{\E}{\mathds{E}}
+\DeclareMathOperator{\Var}{\mathrm{Var}}
+\DeclareMathOperator{\prob}{\mathbb{P}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{May 2020}
+\lhead{CID: 00955392}
+\cfoot{\thepage}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=false}
+
+\begin{document}
+    \begin{center}
+        \vspace*{0.5cm}
+
+        \LARGE
+        \textbf{Early Stage Assessment (ESA)}
+
+        \vspace{0.5cm}
+        \large
+        Department of Mathematics - Imperial College London \\
+        Yanni (John) Papandreou supervised by Dr Andrew Duncan \\
+        Project Title: \textit{Bayesian formulations of PDE-based models, with an aim towards physics-informed machine learning}
+    \end{center}
+
+\setlength\parskip{10pt}
+\setlength\parindent{20pt}
+
+\section{Introduction}
+\label{intro}
+\input{intro.tex}
+
+\section{Brief Overview of Background Material}
+\label{lit_review}
+\input{lit_review.tex}
+
+\section{General Framework}
+\label{general_framework}
+
+\section{FEM for Elliptic Boundary Value Problem}
+\label{elliptic_bv_prob}
+
+\section{FEM for Parabolic Problem}
+\label{parabolic_prob}
+
+\section{Conclusions and Research Plan}
+\label{conclusion}
+
+\bibliography{references.bib}
+% \bibliographystyle{unsrt}
+\end{document}
