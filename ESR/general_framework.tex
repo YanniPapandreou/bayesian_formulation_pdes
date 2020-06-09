@@ -26,18 +26,107 @@ This will be one of the two priors we will consider. One should note that this p
 
 \subsubsection{Prior from an approximation}
 
-We will now consider utilising a discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$ where $h$ is the mesh size. In particular, we will consider the following information operators:
+We will now consider placing an initial Gaussian prior on the solution $u$, $u\sim\mathcal{N}(0,V)$. The covariance operator $V$ will be chosen so as to satisfy the following assumption:
+
+\noindent \textbf{Assumption 1} $V$ is controlled so that $u$ lies almost surely in some appropriate subspace $\mathcal{U}\subset{H}$ where the linear operator $\mathcal{L}$ restricted to this subspace is bounded\footnote{$\mathcal{L}$, being a differential operator, is in general an unbounded operator when viewed on the whole function space $\mathcal{H}$.}, i.e. $\mathcal{L}:\mathcal{U}\rightarrow\mathcal{U}^{\prime}$ is bounded where $\mathcal{U}\subset\mathcal{H}\subset{\mathcal{U}^{\prime}}$.
+\begin{remark}
+    We shall assume here that the subspace $\mathcal{U}$ is reflexive so that $\mathcal{U}^{\prime\prime}$ can be identified with $\mathcal{U}$.
+\end{remark}
+
+Having placed this prior on $u$ we will now consider conditioning on the ``observation" of a suitable information operator in order to form a posterior distribution which will be taken to be our new prior. This information operator will involve the following discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$, where $h$ is the mesh size. In particular, we will consider the following information operators:
 \begin{equation*}
     I_{j}\boldsymbol{\cdot} = \int_{\Omega}\phi_{j}\boldsymbol{\cdot}\mathrm{d}x, \hspace{0.25cm} j=1,\dots,J
 \end{equation*}
-where $\phi_{j}\in\mathcal{F}_{h}$ for $j=1,\dots,J$ Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$.
+where $\phi_{j}\in\mathcal{F}_{h}$ for $j=1,\dots,J$. Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$.
 \begin{remark}
     Think of the $\{\phi_{j}\}$ as a basis for finite element spaces.
 \end{remark}
-Let $\mathcal{I}$ be the concatenation of these information operators, i.e. $\mathcal{I}=(I_1,\dots,I_J)^{T}$. We will refer to $\mathcal{I}$ as the information operator. This information operator essentially involves taking the inner product of a function with against the finite element basis functions. The probabilistic numerical method will involve conditioning on the ``observation" of this information operator. To be more specific consider $\mathcal{I}$ acting on the PDE $\mathcal{L}u=f$. We have,
+Let $\mathcal{I}$ be the concatenation of these information operators, i.e. $\mathcal{I}=(I_1,\dots,I_J)^{T}$. We will refer to $\mathcal{I}$ as the information operator. This information operator essentially involves taking the inner product against the finite element basis functions. The probabilistic numerical method will involve conditioning on the ``observation" of this information operator. To be more specific consider $\mathcal{I}$ acting on the PDE $\mathcal{L}u=f$. We have,
 \begin{equation*}
     \mathcal{I}\mathcal{L}u=\mathcal{I}f=:F
 \end{equation*}
-where both $\mathcal{I}\mathcal{L}u$ and $F$ are vectors in $\mathbb{R}^{J}$.
+where both $\mathcal{I}\mathcal{L}u$ and $F$ are vectors in $\mathbb{R}^{J}$. Since, in theory, we know the properties of the forcing term $f$ we have access to $F$. Our second prior will thus be the distribution of $u$ conditional on ``observing" $\mathcal{I}\mathcal{L}u=F$. In order to work out what this distribution is we will first consider the joint distribution of $(u,\mathcal{I}\mathcal{L}u)^{T}$. It is here that Assumption 1 is necessary, since we will utilise the fact that, under our prior, $u$ lies almost surely in a subspace where the restriction of $\mathcal{L}$ is bounded. This implies that the joint distribution is as follows:
+\begin{equation}
+    \label{jointInfoDist}
+    \begin{pmatrix}
+    u \\
+    \mathcal{I}\mathcal{L}u
+    \end{pmatrix} =
+    \begin{pmatrix}
+    I \\ \mathcal{I}\mathcal{L}
+    \end{pmatrix} u \sim \mathcal{N}\left(
+    \begin{pmatrix}
+    0 \\
+    \mathbf{0}_J
+    \end{pmatrix},
+    \begin{pmatrix}
+    V & V\mathcal{L}^{*}\mathcal{I}^{*} \\
+    \mathcal{I}\mathcal{L}V & \mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*}
+    \end{pmatrix}
+    \right)
+\end{equation}
+In order to progress we will now consider that we fix a realisation of $f$ (and so the corresponding $F$ is also fixed). Doing so allows us to perform the conditioning step (see the \textcolor{blue}{\nameref{appendix}} for a full justification of this conditioning step) yielding the Bayesian update:
+\begin{equation}
+    \label{conditionalDistnFixed_f}
+    u|\{\mathcal{I}\mathcal{L}u=F,f\}\sim\mathcal{N}(a,\Sigma)=:\mu_{a,\Sigma}
+\end{equation}
+where,
+\begin{align}
+    \label{post_mean_before_averaging}
+    a &= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F \\
+    \label{post_var_before_averaging}
+    \Sigma &= V - V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}\mathcal{I}\mathcal{L}V
+\end{align}
+\begin{remark}
+We use the notation $\mu_{m,A}$ to denote a Gaussian measure (in arbitrary dimensions) with mean $m$ and covariance $A$. The space (and hence the dimension) should be clear from the domain of the covariance operator.
+\end{remark}
+
+We will now seek to marginalize over $f$ in (\ref{conditionalDistnFixed_f}) so as to obtain the ``average" conditional distribution over all possible values of the forcing. This will give us our second prior. We state in the proposition below the result of performing this marginalization: \vspace{10pt}
+
+\begin{proposition}
+    Let $u$ satisfy problem (\ref{DirichletProb}) and suppose that we place a prior $u\sim\mathcal{N}(0,V)$ where $V$ satisfies Assumption 1. Also suppose that $g=0$ and that the forcing $f$ is distributed as $f\sim\mathcal{N}(\bar{f},K)$. Then the conditional distribution $u|\{\mathcal{I}\mathcal{L}u=F\}$ is given by:
+    \begin{equation}
+        \label{approx_prior}
+        u|\{\mathcal{I}\mathcal{L}u=F\}\sim\mathcal{N}(A\bar{F},\Sigma+AK_{\mathcal{I}}A^{*})
+    \end{equation}
+    where we have $\bar{F}:=\mathcal{I}\bar{f}$, $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$ and $A=V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$.
+\end{proposition}
+
+\noindent \textit{Proof:}
+In order to perform this marginalization over $f$ we first note:
+\begin{equation}
+    f\sim\mathcal{N}(\bar{f},K)=:\mu_{\bar{f},K} \implies \mathcal{I}f=F\sim\mathcal{N}(\mathcal{I}\bar{f},\mathcal{I}K\mathcal{I}^{*})=:\mu_{\bar{F},K_{\mathcal{I}}}
+\end{equation}
+where $\bar{F}:=\mathcal{I}\bar{f}$ and $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$. In order to specify the ``average" conditional distribution it suffices to compute the expectation of arbitrary bounded cylindrical test functions $\psi(u^{N}):=\psi(u(x_1),\dots,u(x_{N}))$ since the $\sigma-$algebra generated by cylinder sets coincides with the Borel $\sigma-$algebra (see for instance Theorem 2.1.1 in \textcolor{blue}{\cite{lunardi2015infinite}}). We must thus compute:
+\begin{equation}
+    \int\int\psi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation}
+Note that $u^{N}=Pu$ where the bounded linear operator $P:\mathcal{H}\rightarrow\mathbb{R}^{N}$ is defined by $Ph:=(h(x_1),\dots,h(x_N))^T$ for any function $h$. Thus, $u^{N}$ is multivariate normal, i.e., $u^{N}\sim\mathcal{N}(Pa,P\Sigma P^{*})=:\mu_{Pa,\Sigma_{N}}$ where $\Sigma_{N}:=P\Sigma P^{*}$ is the $N\times N$ covariance matrix of $u^{N}$. We thus have:
+\begin{equation}
+    \int\int\psi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f) = \int\int\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation}
+We note that $Pa=PAF$ where $A:= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$. Since the conditional distribution of $u$, (\ref{conditionalDistnFixed_f}), and hence of $u^{N}$ only depends on $f$ through $F\in\mathbb{R}^{J}$ we can thus write:
+\begin{equation}
+    \int\int\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{f},K}(\mathrm{d}f)=\int\int\psi(u^{N})\mu_{PAF,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)
+\end{equation}
+Both measures in the above integral are now multivariate normal and so we can utilise the well-known formula for multidimensional Gaussian integrals to conclude that our integral becomes:
+\begin{equation}
+    \int\psi(u^{N})\mu_{h^{N},\Sigma_{\mathcal{I}}}(\mathrm{d}u^{N})
+\end{equation}
+where,
+\begin{align}
+    h^{N}&:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PAB^{-1}K_{\mathcal{I}}^{-1}\bar{F}=PA\bar{F} \\
+    \Sigma_{\mathcal{I}}&=P(\Sigma+AK_{\mathcal{I}}A^{*})P^{*}
+\end{align}
+The details of this computation are left to the \textcolor{blue}{\nameref{appendix}}. From this we can see that we have obtained the expectation of $\psi$ w.r.t. a multivariate Gaussian with mean and covariance given by $h^{N}$ and $\Sigma_{\mathcal{I}}$. Thus, we can conclude that ``averaging" over $f$ gives the following Gaussian posterior:
+\begin{equation}
+    u|\{\mathcal{I}\mathcal{L}u=F\}\sim\mathcal{N}\left(A\bar{F},\Sigma+AK_{\mathcal{I}}A^{*}\right)
+\end{equation}
+\qedsymbol
+
+This posterior will be taken to be our second prior for further inference. One should note that this prior does indeed arise from an approximation to the solution of the PDE as it involves the information operator $\mathcal{I}$ which contains information on only a finite number of FE basis functions ($J$ of them to be precise). The hope is that as the mesh size $h$ decreases to $0$ (and so $J\rightarrow\infty$) this distribution will become more and more like the true prior (\ref{true_prior}). In Sections \textcolor{blue}{\ref{elliptic_bv_prob}} and \textcolor{blue}{\ref{parabolic_prob}} we will obtain, for specific examples, an upperbound on the distance between these two priors in terms of $h$ and we will see that the two priors do indeed agree in the limit $h\rightarrow 0$.
+
+It is also worth pointing out that the approximate prior (\ref{approx_prior}) contains details of $V,\mathcal{I},\bar{f},K$ i.e. it contains information from all of: the original prior on $u$, the information operator and the statistical properties of the forcing term.
+
 
 \clearpage
