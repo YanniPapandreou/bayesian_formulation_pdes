@@ -1,0 +1,97 @@
+In this section we will focus on the following standard elliptic stationary conductivity problem:
+\begin{align}
+    \label{standard_conduct}
+    \begin{split}
+        \mathcal{L}u(x) &:= -\nabla\cdot(a(x)\nabla u(x))=f(x), \hspace{0.3cm} x\in\Omega \\
+        u(x) &= 0, \hspace{0.3cm} x\in\partial\Omega
+    \end{split}
+\end{align}
+where $f$ is random and has distribution $f\sim\mathcal{N}(\bar{f},K)$ as in Section \textcolor{blue}{\ref{general_framework}}. We assume that the diffusion coefficient satisfies the following assumption:
+
+\noindent \textbf{Assumption 2} (regularity of coefficients) The diffusion coefficient $a(x)$ satisfies:
+\begin{equation}
+    \label{regularity_of_coeff}
+    0<a_{\text{min}}\leq a(x)\leq a_{\text{max}}<\infty \text{ for almost all } x\in\Omega
+\end{equation}
+for some real constants $a_{\text{min}},a_{\text{max}}$. In particular, $a\in L^{\infty}(\Omega)$.
+
+We will first work out the approximate prior for a specific choice of initial prior covariance $V$. This choice will correspond to solving the weak formulation of (\ref{standard_conduct}) via a finite element method. Once we work out this approximate prior we will give some conditions on the domain $\Omega$ so that the true prior is well-defined and so that we will be able to proceed with obtaining an upper-bound on the Wasserstein distance between these two priors. For now we will assume that $\Omega$ is a bounded domain and we will proceed to work out the approximate prior which corresponds to the FEM:
+
+\subsection{FEM prior}
+
+Throughout this section we will take the Hilbert space of functions to be $\mathcal{H}=L^{2}(\Omega)$. As noted in Section \textcolor{blue}{\ref{general_framework}} we require that the initial prior covariance operator satisfies Assumption 1. In order to check if a candidate $V$ satisfies this assumption we must first identify a subspace of $L^{2}(\Omega)$ on which the restriction of the operator $\mathcal{L}$ in (\ref{standard_conduct}) is bounded. This can easily be done in this case, as standard energy estimates give that $\mathcal{L}$ is a bounded operator from $H^{1}_{0}(\Omega)$ to $H^{-1}(\Omega)$. Thus, it suffices to check that the choice of $V$ ensures that $u$ lies almost surely in $H_{0}^{1}(\Omega)\subset L^{2}(\Omega)$. We are now in a position to define the initial prior.
+
+Let $V:L^{2}(\Omega)\rightarrow L^{2}(\Omega)$ be defined as follows:
+\begin{equation}
+    \label{FEM_prior}
+    Vu(x):=\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\int_{\Omega}\phi_{i}(y)u(y)\mathrm{d}y
+\end{equation}
+where the $\lambda_{i}$ are non-zero real numbers. Now the support of a Gaussian measure $\mathcal{N}(m,\Sigma)$ on a Hilbert space $\mathcal{H}$ is the space $m+\overline{\operatorname{Im}(\Sigma)}$ where the bar denotes closure with respect to $\mathcal{H}$ and $\operatorname{Im}(\Sigma)$ is the image of $\Sigma$. The image of $V$ can easily be seen to be contained in the span of the $\{\phi_{i}\}_{i=1}^{J}$ which itself is contained in $H_{0}^{1}(\Omega)$. Thus, the support of $\mathcal{N}(0,V)$ is clearly contained in $H_{0}^{1}(\Omega)$ and so if $u$ is distributed according to this measure then $u$ lies almost surely in $H_{0}^{1}(\Omega)$. This choice of $V$ therefore satisfies Assumption 1.
+\begin{remarks}
+    \textit{Remark 1.} Since $u$ lies almost surely in $H_{0}^{1}(\Omega)$ we can view $\mathcal{N}(0,V)$ as a Gaussian measure on $H_{0}^{1}(\Omega)\subset L^{2}(\Omega)$ and as such the covariance operator $V$ can be instead viewed as a function from $H^{-1}(\Omega)\rightarrow H_{0}^{1}(\Omega)$ defined by:
+    \begin{equation}
+        Vu := \sum_{i=1}^{J}\lambda_{i}\langle u, \phi_{i}\rangle\phi_{i} \hspace{0.25cm} \forall u\in H^{-1}(\Omega)
+    \end{equation}
+    where now $\langle\boldsymbol{\cdot},\boldsymbol{\cdot}\rangle$ is now the $H^{-1}(\Omega),H_{0}^{1}(\Omega)$ duality pairing.
+
+    \noindent \textit{Remark 2.} Note that taking $u\sim\mathcal{N}(0,V)$ is equivalent to saying that $u$ has a Gaussian process distribution $u\sim\mathcal{G}\mathcal{P}(0,k)$ where the $k$ is the covariance function $k:\Omega\times\Omega\rightarrow\mathbb{R}$ given by:
+    \begin{equation}
+        \label{cov_function_FEM_prior}
+        k(x,y):=\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)
+    \end{equation}
+    To link this with the covariance operator $V$ note that we have:
+    \begin{equation}
+        Vu(x)=\langle k(x,\boldsymbol{\cdot}),u(\boldsymbol{\cdot})\rangle
+    \end{equation}
+    This connection between the two frameworks will be useful when we move to time-dependent PDEs.
+    $\mathbin{\blacklozenge}$
+\end{remarks}
+Now we recall the information operators. Let $\{\phi_{j}\}_{j=1}^{J}$ be a truncated set of FE basis functions. Since we have taken $\mathcal{U}=H_{0}^{1}(\Omega)$ we have that $\mathcal{U}^{\prime}=H^{-1}(\Omega)$ and thus our info operators are maps $I_{j}:H^{-1}(\Omega)\rightarrow\mathbb{R}$ given by $I_{j}\boldsymbol{\cdot}=\langle\boldsymbol{\cdot},\phi_{j}\rangle$. \vspace{10pt}
+
+\begin{remark}
+    Note that when $v\in L^{2}(\Omega)\subset H^{-1}(\Omega)$ we have, since $\phi_{j}\in H^{1}_{0}(\Omega)$, that
+    \begin{equation*}
+        I_{j}v=\langle v,\phi_{j}\rangle=(v,\phi_{j})_{L^2}
+    \end{equation*}
+    where $(\boldsymbol{\cdot},\boldsymbol{\cdot})_{L^2}$ is the standard $L^2(\Omega)$ inner product. This is essentially because of the identification of $L^2$ functions with linear functionals on $H^{1}_{0}(\Omega)$.
+    $\mathbin{\blacklozenge}$
+\end{remark}
+
+It can be shown that for these information operators we have:
+\begin{equation}
+    I_{j}\mathcal{L}u=\int_{\Omega}a(x)\nabla u(x)\cdot\nabla \phi_{j}(x)\mathrm{d}x
+\end{equation}
+In order to continue with the derivation of the approximate prior as in Section \textcolor{blue}{\ref{general_framework}} it will prove useful to express $V$ in a different form as follows. We note that we can write:
+\begin{equation}
+    Vu = \Phi^{*}\Lambda\left\langle u, \Phi\right\rangle
+\end{equation}
+where $\Phi:=(\phi_{1},\dots,\phi_{J})^{T}$ and $\Lambda:=\text{diag}\{\lambda_{i}\}_{i=1}^{J}$ is a $J\times J$ matrix. To be precise we note that the above equation means:
+\begin{equation}
+    Vu(x) = \Phi(x)^{*}\Lambda\left\langle u,\Phi\right\rangle
+\end{equation}
+where $\Phi(x)^{*}=(\phi_{1}(x),\dots,\phi_{J}(x))^{T}$ is a vector in $R^{J}$. It should also be pointed out that $\left\langle u,\Phi\right\rangle$ should be interpreted as the following column vector in $\mathbb{R}^{J}$:
+\begin{equation}
+    (\langle u,\phi_{1}\rangle,\dots,\langle u,\phi_{J}\rangle)^{T}=\mathcal{I}u
+\end{equation}
+thus we see that we can write:
+\begin{equation}
+    Vu=\Phi^{*}\Lambda\mathcal{I}u \hspace{0.25cm} \forall u\in H^{-1}(\Omega)
+\end{equation}
+i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. It is also worth pointing out that $\Phi^{*}$ is actually the same operator as $\mathcal{I}^{*}$. To see this we note that $\Phi^{*}:\mathbb{R}^{J}\rightarrow H_{0}^{1}(\Omega)$ is given by:
+\begin{equation}
+    \Phi^{*}\mathbf{v}:=\sum_{i=1}^{J}v_{i}\phi_{i}
+\end{equation}
+where the vector $\mathbf{v}$ has components $v_{i}, \hspace{0.25cm} i=1,\dots,J$. Thus, $\Phi$, the adjoint of $\Phi^{*}$ is a mapping from $H^{-1}(\Omega)\rightarrow\mathbb{R}^{J}$ which is determined by the relation:
+\begin{equation}
+    \langle u,\Phi^{*}\mathbf{v}\rangle = \left(\Phi u,\mathbf{v}\right) \hspace{0.25cm} \forall u\in\ H^{-1}(\Omega) \hspace{0.1cm} \forall \mathbf{v}\in\mathbb{R}^{J}
+\end{equation}
+where $(\boldsymbol{\cdot},\boldsymbol{\cdot})$ is the standard inner product in $\mathbb{R}^{J}$. Using this equation it is a simple matter to show that $\Phi=\mathcal{I}$ and so $\Phi^{*}=\mathcal{I}^{*}$ as claimed. We can thus write $V=\mathcal{I}^{*}\Lambda\mathcal{I}$.
+
+We are now in a position to work out the distribution of $u$ conditional on ``observing" $\mathcal{I}\mathcal{L}u=F$ for a fixed realistion of $f$. This distribution is given by $\mathcal{N}(a,\Sigma)$ where the definitions of $a$ and $\Sigma$ are given by equations (\ref{post_mean_before_averaging}) and (\ref{post_var_before_averaging}) respectively. We work out each of these separately. First we compute the mean:
+\begin{align*}
+    a &= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F \\
+    &= \mathcal{I}^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}\mathcal{I}^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F
+\end{align*}
+
+
+\clearpage

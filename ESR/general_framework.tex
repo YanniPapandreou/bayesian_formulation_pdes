@@ -31,17 +31,19 @@ We will now consider placing an initial Gaussian prior on the solution $u$, $u\s
 \noindent \textbf{Assumption 1} $V$ is controlled so that $u$ lies almost surely in some appropriate subspace $\mathcal{U}\subset{H}$ where the linear operator $\mathcal{L}$ restricted to this subspace is bounded\footnote{$\mathcal{L}$, being a differential operator, is in general an unbounded operator when viewed on the whole function space $\mathcal{H}$.}, i.e. $\mathcal{L}:\mathcal{U}\rightarrow\mathcal{U}^{\prime}$ is bounded where $\mathcal{U}\subset\mathcal{H}\subset{\mathcal{U}^{\prime}}$.
 \begin{remark}
     We shall assume here that the subspace $\mathcal{U}$ is reflexive so that $\mathcal{U}^{\prime\prime}$ can be identified with $\mathcal{U}$.
+    $\mathbin{\blacklozenge}$
 \end{remark}
 
-Having placed this prior on $u$ we will now consider conditioning on the ``observation" of a suitable information operator in order to form a posterior distribution which will be taken to be our new prior. This information operator will involve the following discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$, where $h$ is the mesh size. In particular, we will consider the following information operators:
+Having placed this prior on $u$ we will now consider conditioning on the ``observation" of a suitable information operator in order to form a posterior distribution which will be taken to be our new prior. This information operator will involve the following discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$, where $h$ is the mesh size. In particular, we will consider the following information operators $I_{j}:\mathcal{U}^{\prime}\rightarrow\mathbb{R}$ defined by:
 \begin{equation*}
-    I_{j}\boldsymbol{\cdot} = \int_{\Omega}\phi_{j}\boldsymbol{\cdot}\mathrm{d}x, \hspace{0.25cm} j=1,\dots,J
+    I_{j}\boldsymbol{\cdot} = \langle\boldsymbol{\cdot},\phi_{j}\rangle
 \end{equation*}
-where $\phi_{j}\in\mathcal{F}_{h}$ for $j=1,\dots,J$. Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$.
+where $\langle\boldsymbol{\cdot},\boldsymbol{\cdot}\rangle$ is the duality pairing between $\mathcal{U}$ and $\mathcal{U}^{\prime}$ and where the $\phi_{j}\in\mathcal{F}_{h}$ for $j=1,\dots,J$. Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$. It is also important to emphasise that $I_{j}\in\mathcal{U}^{\prime\prime}$ and so they are bounded linear operators.
 \begin{remark}
     Think of the $\{\phi_{j}\}$ as a basis for finite element spaces.
+    $\mathbin{\blacklozenge}$
 \end{remark}
-Let $\mathcal{I}$ be the concatenation of these information operators, i.e. $\mathcal{I}=(I_1,\dots,I_J)^{T}$. We will refer to $\mathcal{I}$ as the information operator. This information operator essentially involves taking the inner product against the finite element basis functions. The probabilistic numerical method will involve conditioning on the ``observation" of this information operator. To be more specific consider $\mathcal{I}$ acting on the PDE $\mathcal{L}u=f$. We have,
+Let $\mathcal{I}$ be the concatenation of these information operators, i.e. $\mathcal{I}=(I_1,\dots,I_J)^{T}$. We will refer to $\mathcal{I}$ as the information operator. The probabilistic numerical method will involve conditioning on the ``observation" of this information operator. To be more specific consider $\mathcal{I}$ acting on the PDE $\mathcal{L}u=f$. We have,
 \begin{equation*}
     \mathcal{I}\mathcal{L}u=\mathcal{I}f=:F
 \end{equation*}
@@ -57,7 +59,7 @@ where both $\mathcal{I}\mathcal{L}u$ and $F$ are vectors in $\mathbb{R}^{J}$. Si
     \end{pmatrix} u \sim \mathcal{N}\left(
     \begin{pmatrix}
     0 \\
-    \mathbf{0}_J
+    \mathbf{0}
     \end{pmatrix},
     \begin{pmatrix}
     V & V\mathcal{L}^{*}\mathcal{I}^{*} \\
@@ -79,11 +81,13 @@ where,
 \end{align}
 \begin{remark}
 We use the notation $\mu_{m,A}$ to denote a Gaussian measure (in arbitrary dimensions) with mean $m$ and covariance $A$. The space (and hence the dimension) should be clear from the domain of the covariance operator.
+$\mathbin{\blacklozenge}$
 \end{remark}
 
 We will now seek to marginalize over $f$ in (\ref{conditionalDistnFixed_f}) so as to obtain the ``average" conditional distribution over all possible values of the forcing. This will give us our second prior. We state in the proposition below the result of performing this marginalization: \vspace{10pt}
 
 \begin{proposition}
+    \label{first_prop}
     Let $u$ satisfy problem (\ref{DirichletProb}) and suppose that we place a prior $u\sim\mathcal{N}(0,V)$ where $V$ satisfies Assumption 1. Also suppose that $g=0$ and that the forcing $f$ is distributed as $f\sim\mathcal{N}(\bar{f},K)$. Then the conditional distribution $u|\{\mathcal{I}\mathcal{L}u=F\}$ is given by:
     \begin{equation}
         \label{approx_prior}
@@ -128,5 +132,90 @@ This posterior will be taken to be our second prior for further inference. One s
 
 It is also worth pointing out that the approximate prior (\ref{approx_prior}) contains details of $V,\mathcal{I},\bar{f},K$ i.e. it contains information from all of: the original prior on $u$, the information operator and the statistical properties of the forcing term.
 
+\subsubsection{Incorporating Observational Data}
 
-\clearpage
+We now have two prior distributions for the solution $u$ to our boundary value problem (\ref{DirichletProb}), $\nu_{i}=\mathcal{N}(m_{i},\Sigma_{i})$ for $i=1,2$. The first is the prior from the true solution to (\ref{DirichletProb}) which has mean and covariance given by:
+\begin{align}
+    m_{1} &= \mathcal{L}^{-1}\bar{f} \\
+    \Sigma_{1} &= \mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}
+\end{align}
+The second is the prior from using an approximation to the solution of (\ref{DirichletProb}) and this has mean and covariance given by:
+\begin{align}
+    m_{2} &= A\bar{F} \\
+    \Sigma_{2} &= \Sigma + AK_{\mathcal{I}}A^{*}
+\end{align}
+with $A$ as in Proposition \textcolor{blue}{\ref{first_prop}}.
+
+We will now also assume that we have observational data, coming from sensors say, which give us noisy observations of the value of $u$ at some points $y_{1},\dots,y_{s}$ in $\Omega$. We wish to update our belief in the distribution of $u$ using this sensor data. In theory we can use either of the $\nu_{i}$ as prior distributions. However, as mentioned previously the true prior will often be intractable and as such we will be forced to use the second approximate prior. Our goal will thus be to investigate how different the two resulting posteriors are. This analysis will be carried out in the next section where we will consider a particular PDE and a particular choice of $V$ which will correspond to a statistical version of FEM. For now we will outline the computation of the posterior distributions for the general framework under consideration.
+
+Let $S:\mathcal{H}\rightarrow\mathbb{R}^{s}$ be the operator which maps a function $h\in\mathcal{H}$ to $(h(y_1),\dots,h(y_s))^{T}$ in $\mathbb{R}^{s}$. Assuming that the sensors make observations at each $y_j$ with a normally distributed error we have that the likelihood for our sensor readings, $\mathbf{v}$, is:
+\begin{equation}
+  \label{likelihood}
+  \mathbf{v}|u \sim \mathcal{N}(Su,\epsilon^{2}I)
+\end{equation}
+The goal is to now find the posterior $u|\mathbf{v}$ when our prior is $u\sim\nu_{i}\equiv\mathcal{N}(m_{i},\Sigma_{i}), \hspace{0.2cm} i=1,2$. In order to do so we will first find the joint distribution of $(u,\mathbf{v})^{T}$. To do this we note that our assumption that $\mathbf{v}|u$ is distributed according to (\ref{likelihood}) is equivalent to the assertion that:
+\begin{equation*}
+  \mathbf{v}=Su+\boldsymbol{\delta}
+\end{equation*}
+where $\boldsymbol{\delta}\sim\mathcal{N}(\mathbf{0},\epsilon^{2}I)$ is independent of $u$. From this we can see that the joint distribution of $(u,\boldsymbol{\delta})^{T}$ is:
+\begin{equation*}
+  \begin{pmatrix}
+    u \\
+    \boldsymbol{\delta}
+  \end{pmatrix}\sim\mathcal{N}\left(\begin{pmatrix}
+                                    m_{i} \\
+                                    \mathbf{0}
+                                    \end{pmatrix},
+                                    \begin{pmatrix}
+                                      \Sigma_{i} & 0 \\
+                                      0 & \epsilon^{2}I
+                                    \end{pmatrix}
+                              \right)
+\end{equation*}
+We now note that $(u,\mathbf{v})$ can be expressed as:
+\begin{equation*}
+  \begin{pmatrix}
+    u \\
+    \mathbf{v}
+  \end{pmatrix}=\begin{pmatrix}
+                  I & 0 \\
+                  S & I
+                \end{pmatrix}\begin{pmatrix}
+                              u \\
+                              \boldsymbol{\delta}
+                             \end{pmatrix} +
+                             \begin{pmatrix}
+                                0 \\ \mathbf{0}
+                             \end{pmatrix}
+\end{equation*}
+Since this is just a linear transformation of $(u,\boldsymbol{\delta})^{T}$ we have that the joint distribution of $(u,\mathbf{v})^{T}$ is given by:
+\begin{equation}
+  \label{jointDist}
+  \begin{pmatrix}
+    u \\
+    \mathbf{v}
+  \end{pmatrix}\sim\mathcal{N}\left(
+                              \begin{pmatrix}
+                                m_{i} \\
+                                Sm_{i}
+                              \end{pmatrix},
+                              \begin{pmatrix}
+                                \Sigma_{i} & \Sigma_{i} S^{*} \\
+                                S\Sigma_{i} & \epsilon^{2}I+S\Sigma_{i} S^{*}
+                              \end{pmatrix}
+                              \right)
+\end{equation}
+From this it is simply a matter of conditioning to obtain the posterior distribution of $u|\mathbf{v}$. We thus obtain:
+\begin{equation}
+  \label{posterior}
+  u|\mathbf{v}\sim\mathcal{N}(m^{(i)}_{u|\mathbf{v}},\Sigma^{(i)}_{u|\mathbf{v}})
+\end{equation}
+where,
+\begin{align}
+  \label{posterior_mean}
+  m^{(i)}_{u|\mathbf{v}}&:=m_i+\Sigma_{i}S^{*}(\epsilon^{2}I+S\Sigma_{i}S^{*})^{-1}(\mathbf{v}-Sm_{i}) \\
+  \label{posterior_covariance}
+  \Sigma^{(i)}_{u|\mathbf{v}}&:=\Sigma_{i}-\Sigma_{i}S^{*}(\epsilon^{2}I+S\Sigma_{i}S^{*})^{-1}S\Sigma_{i}
+\end{align}
+
+The next step in the analysis will be to quantify how different these two posteriors are by utilizing the Wasserstein Distance. In order to do this we must first investigate the distance between the priors $\nu_{i}$. This will be done in the next section where we look at a particular PDE and a particular choice of $V$. We note that the presentation here has been quite general and that with a little bit of work it will even be possible to generalise this procedure to PDEs which have time dependence.
