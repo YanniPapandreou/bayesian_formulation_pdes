@@ -91,9 +91,9 @@ We will now seek to marginalize over $f$ in (\ref{conditionalDistnFixed_f}) so a
     Let $u$ satisfy problem (\ref{DirichletProb}) and suppose that we place a prior $u\sim\mathcal{N}(0,V)$ where $V$ satisfies Assumption 1. Also suppose that $g=0$ and that the forcing $f$ is distributed as $f\sim\mathcal{N}(\bar{f},K)$. Then the conditional distribution $u|\{\mathcal{I}\mathcal{L}u=F\}$ is given by:
     \begin{equation}
         \label{approx_prior}
-        u|\{\mathcal{I}\mathcal{L}u=F\}\sim\mathcal{N}(A\bar{F},\Sigma+AK_{\mathcal{I}}A^{*})
+        u|\{\mathcal{I}\mathcal{L}u=F\}\sim\mathcal{N}(Q\bar{F},\Sigma+QK_{\mathcal{I}}Q^{*})
     \end{equation}
-    where we have $\bar{F}:=\mathcal{I}\bar{f}$, $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$ and $A=V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$.
+    where we have $\bar{F}:=\mathcal{I}\bar{f}$, $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$ and $Q:=V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$.
 \end{proposition}
 
 \noindent \textit{Proof:}
@@ -109,9 +109,9 @@ Note that $u^{N}=Pu$ where the bounded linear operator $P:\mathcal{H}\rightarrow
 \begin{equation}
     \int\int\psi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f) = \int\int\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{f},K}(\mathrm{d}f)
 \end{equation}
-We note that $Pa=PAF$ where $A:= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$. Since the conditional distribution of $u$, (\ref{conditionalDistnFixed_f}), and hence of $u^{N}$ only depends on $f$ through $F\in\mathbb{R}^{J}$ we can thus write:
+We note that $Pa=PQF$ where $Q:= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$. Since the conditional distribution of $u$, (\ref{conditionalDistnFixed_f}), and hence of $u^{N}$ only depends on $f$ through $F\in\mathbb{R}^{J}$ we can thus write:
 \begin{equation}
-    \int\int\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{f},K}(\mathrm{d}f)=\int\int\psi(u^{N})\mu_{PAF,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)
+    \int\int\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{f},K}(\mathrm{d}f)=\int\int\psi(u^{N})\mu_{PQF,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)
 \end{equation}
 Both measures in the above integral are now multivariate normal and so we can utilise the well-known formula for multidimensional Gaussian integrals to conclude that our integral becomes:
 \begin{equation}
@@ -119,12 +119,12 @@ Both measures in the above integral are now multivariate normal and so we can ut
 \end{equation}
 where,
 \begin{align}
-    h^{N}&:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PAB^{-1}K_{\mathcal{I}}^{-1}\bar{F}=PA\bar{F} \\
-    \Sigma_{\mathcal{I}}&=P(\Sigma+AK_{\mathcal{I}}A^{*})P^{*}
+    h^{N}&:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F}=PQ\bar{F} \\
+    \Sigma_{\mathcal{I}}&:=P(\Sigma+QK_{\mathcal{I}}Q^{*})P^{*}
 \end{align}
 The details of this computation are left to the \textcolor{blue}{\nameref{appendix}}. From this we can see that we have obtained the expectation of $\psi$ w.r.t. a multivariate Gaussian with mean and covariance given by $h^{N}$ and $\Sigma_{\mathcal{I}}$. Thus, we can conclude that ``averaging" over $f$ gives the following Gaussian posterior:
 \begin{equation}
-    u|\{\mathcal{I}\mathcal{L}u=F\}\sim\mathcal{N}\left(A\bar{F},\Sigma+AK_{\mathcal{I}}A^{*}\right)
+    u|\{\mathcal{I}\mathcal{L}u=F\}\sim\mathcal{N}\left(Q\bar{F},\Sigma+QK_{\mathcal{I}}Q^{*}\right)
 \end{equation}
 \qedsymbol
 
@@ -141,8 +141,8 @@ We now have two prior distributions for the solution $u$ to our boundary value p
 \end{align}
 The second is the prior from using an approximation to the solution of (\ref{DirichletProb}) and this has mean and covariance given by:
 \begin{align}
-    m_{2} &= A\bar{F} \\
-    \Sigma_{2} &= \Sigma + AK_{\mathcal{I}}A^{*}
+    m_{2} &= Q\bar{F} \\
+    \Sigma_{2} &= \Sigma + QK_{\mathcal{I}}Q^{*}
 \end{align}
 with $A$ as in Proposition \textcolor{blue}{\ref{first_prop}}.
 

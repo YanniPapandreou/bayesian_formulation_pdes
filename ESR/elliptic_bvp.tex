@@ -59,6 +59,7 @@ Now we recall the information operators. Let $\{\phi_{j}\}_{j=1}^{J}$ be a trunc
 
 It can be shown that for these information operators we have:
 \begin{equation}
+    \label{info_operator_with_pde_op}
     I_{j}\mathcal{L}u=\int_{\Omega}a(x)\nabla u(x)\cdot\nabla \phi_{j}(x)\mathrm{d}x
 \end{equation}
 In order to continue with the derivation of the approximate prior as in Section \textcolor{blue}{\ref{general_framework}} it will prove useful to express $V$ in a different form as follows. We note that we can write:
@@ -77,21 +78,69 @@ thus we see that we can write:
 \begin{equation}
     Vu=\Phi^{*}\Lambda\mathcal{I}u \hspace{0.25cm} \forall u\in H^{-1}(\Omega)
 \end{equation}
-i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. It is also worth pointing out that $\Phi^{*}$ is actually the same operator as $\mathcal{I}^{*}$. To see this we note that $\Phi^{*}:\mathbb{R}^{J}\rightarrow H_{0}^{1}(\Omega)$ is given by:
-\begin{equation}
-    \Phi^{*}\mathbf{v}:=\sum_{i=1}^{J}v_{i}\phi_{i}
-\end{equation}
-where the vector $\mathbf{v}$ has components $v_{i}, \hspace{0.25cm} i=1,\dots,J$. Thus, $\Phi$, the adjoint of $\Phi^{*}$ is a mapping from $H^{-1}(\Omega)\rightarrow\mathbb{R}^{J}$ which is determined by the relation:
-\begin{equation}
-    \langle u,\Phi^{*}\mathbf{v}\rangle = \left(\Phi u,\mathbf{v}\right) \hspace{0.25cm} \forall u\in\ H^{-1}(\Omega) \hspace{0.1cm} \forall \mathbf{v}\in\mathbb{R}^{J}
-\end{equation}
-where $(\boldsymbol{\cdot},\boldsymbol{\cdot})$ is the standard inner product in $\mathbb{R}^{J}$. Using this equation it is a simple matter to show that $\Phi=\mathcal{I}$ and so $\Phi^{*}=\mathcal{I}^{*}$ as claimed. We can thus write $V=\mathcal{I}^{*}\Lambda\mathcal{I}$.
+i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. \vspace{10pt}
+
+\begin{remark}
+    It will also prove useful later to notice that $\Phi^{*}$ is actually the same operator as $\mathcal{I}^{*}$. To see this we note that $\Phi^{*}:\mathbb{R}^{J}\rightarrow H_{0}^{1}(\Omega)$ is given by:
+    \begin{equation}
+        \Phi^{*}\mathbf{v}:=\sum_{i=1}^{J}v_{i}\phi_{i}
+    \end{equation}
+    where the vector $\mathbf{v}$ has components $v_{i}, \hspace{0.25cm} i=1,\dots,J$. Thus, $\Phi$, the adjoint of $\Phi^{*}$ is a mapping from $H^{-1}(\Omega)\rightarrow\mathbb{R}^{J}$ which is determined by the relation:
+    \begin{equation}
+        \langle u,\Phi^{*}\mathbf{v}\rangle = \left(\Phi u,\mathbf{v}\right) \hspace{0.25cm} \forall u\in\ H^{-1}(\Omega) \hspace{0.1cm} \forall \mathbf{v}\in\mathbb{R}^{J}
+    \end{equation}
+    where $(\boldsymbol{\cdot},\boldsymbol{\cdot})$ is the standard inner product in $\mathbb{R}^{J}$. Using this equation it is a simple matter to show that $\Phi=\mathcal{I}$ and so $\Phi^{*}=\mathcal{I}^{*}$ as claimed. We can thus also express $V$ as write $V=\mathcal{I}^{*}\Lambda\mathcal{I}=\Phi^{*}\Lambda\Phi$.
+    $\mathbin{\blacklozenge}$
+\end{remark}
 
 We are now in a position to work out the distribution of $u$ conditional on ``observing" $\mathcal{I}\mathcal{L}u=F$ for a fixed realistion of $f$. This distribution is given by $\mathcal{N}(a,\Sigma)$ where the definitions of $a$ and $\Sigma$ are given by equations (\ref{post_mean_before_averaging}) and (\ref{post_var_before_averaging}) respectively. We work out each of these separately. First we compute the mean:
 \begin{align*}
     a &= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F \\
-    &= \mathcal{I}^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}\mathcal{I}^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F
+    &= \Phi^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}\Phi^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*})^{-1}F \\
+    &=\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\mathcal{I}^{*})^{*}(\mathcal{I}\mathcal{L}\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\mathcal{I}^{*})^{*})^{-1}F \\
+    &=\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\Phi^{*})^{*}(\mathcal{I}\mathcal{L}\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\Phi^{*})^{*})^{-1}F
 \end{align*}
+where we have used that $\mathcal{I}^{*}=\Phi^{*}$.
 
+In order to simplify the mean we will work out what $\mathcal{I}\mathcal{L}\Phi^{*}$ is. We compute:
+\begin{align*}
+    \mathcal{I}\mathcal{L}\Phi^{*} &= \begin{pmatrix}
+                                        I_{1} \\
+                                        \vdots \\
+                                        I_{J}
+                                      \end{pmatrix}
+                                      \begin{pmatrix}
+                                          \mathcal{L}\phi_{1} & \dots & \mathcal{L}\phi_{J}
+                                      \end{pmatrix} \\
+                                      &=: A
+\end{align*}
+where the $J\times J$ matrix $A$ has $ij-$\textit{th} entry given by:
+\begin{align}
+    A_{ij}&:=I_{i}\mathcal{L}\phi_{j} \\
+          &= \int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x
+\end{align}
+where we have utilised equation (\ref{info_operator_with_pde_op}). This matrix $A$ is the standard Galerkin stiffness matrix which appears in the finite element method. This matrix is a real symmetric matrix and so $A^{*}=A$. Further, this matrix can be shown to be invertible since the diffusion coefficient $a(x)$ satisfies Assumption 2 (for details of this see the \textcolor{blue}{\nameref{appendix}}). We can thus simplify the mean as follows:
+\begin{align*}
+    a &= \Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\Phi^{*})^{*}(\mathcal{I}\mathcal{L}\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\Phi^{*})^{*})^{-1}F \\
+    &=\Phi^{*}\Lambda A^{*}(A\Lambda A^{*})^{-1}F \\
+    &=\Phi^{*}\Lambda A A^{-1} \Lambda^{-1}A^{-1}F \\
+    &=\Phi^{*}A^{-1}F
+\end{align*}
+We thus see that when expressed in terms of the finite element basis the mean function has coefficients given by the vector $\hat{a}:=A^{-1}F$ just like FEM gives. We now turn to the covariance and compute:
+\begin{align*}
+    \Sigma &= V-V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}\mathcal{I}\mathcal{L}V \\
+    &= V - \Phi^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*}(A\Lambda A)^{-1}\mathcal{I}\mathcal{L}\Phi^{*}\Lambda\mathcal{I} \\
+    &=V-\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\mathcal{I}^{*})^{*}A^{-1}\Lambda^{-1}A^{-1}A\Lambda\mathcal{I} \\
+    &= V - \Phi^{*}\Lambda AA^{-1}\mathcal{I} \\
+    &= V - \Phi^{*}\Lambda\mathcal{I} = V-V = 0
+\end{align*}
+We can thus see that when we choose our covariance operator $V$ as above that the posterior (for a fixed realisation of $F$) collapses to a point measure located at the FEM solution to the PDE.
+
+We now move on to work out the marginalization over $f$. Proposition \textcolor{blue}{\ref{first_prop}} tells us that we should expect to obtain a Gaussian distribution with mean and covariance given by $Q\bar{F}$ and $\Sigma+QK_{\mathcal{I}}Q^{*}$ respectively. We have shown by the above that for the FEM case we have $Q=\Phi^{*}A^{-1}$ and $\Sigma=0$. We thus should expect to obtain the following:
+\begin{equation}
+    \label{approximate_fem_prior}
+    \mathcal{N}(\Phi^{*}A^{-1}\bar{F},\Phi^{*}A^{-1}K_{\mathcal{I}}A^{-1}\Phi)
+\end{equation}
+as our averaged distribution. However, in the proof of Proposition \textcolor{blue}{\ref{first_prop}} the calculations required the existence of the inverse of $\Sigma_{N}=P\Sigma P^{*}$ which in the FEM case is the $0$ matrix since $\Sigma=0$. However, it is still possible to redo the calculation of the expectation of an arbitrary bounded cylindrical test function which we performed in Section \textcolor{blue}{\ref{general_framework}}. The details of this are left to the \textcolor{blue}{\nameref{appendix}}, but the result is the same as expected from Proposition \textcolor{blue}{\ref{first_prop}}. Thus, the approximate prior arising from this choice of $V$ is given by (\ref{approximate_fem_prior}). It should be noted that this Gaussian measure directly links to what is found at the end of section 2 in the Statistical FEM paper \textcolor{blue}{\cite{girolami2019statistical}}. It is also worth pointing out that this probabilistic numerical method for solving the BVP (\ref{standard_conduct}) gives a distribution whose mean coincides with the solution obtained by solving the problem with forcing given by $\bar{f}$ using FEM. Thus, this PNM recovers a classical method.
 
 \clearpage

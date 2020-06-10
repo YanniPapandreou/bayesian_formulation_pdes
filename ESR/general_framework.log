@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  9 JUN 2020 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  10 JUN 2020 13:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6221,8 +6221,8 @@ Overfull \hbox (12.81947pt too wide) in paragraph at lines 91--92
  []
 
 
-Overfull \hbox (157.58403pt too wide) detected at line 95
-[]\OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 jfIL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F\OMS/cmsy/m/n/10 g ^^X N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A[]; \OT1/cmr/m/n/10 ^^F + \OML/cmm/m/it/10 AK[]A[]\OT1/cmr/m/n/10 )
+Overfull \hbox (158.80063pt too wide) detected at line 95
+[]\OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 jfIL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F\OMS/cmsy/m/n/10 g ^^X N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Q[]; \OT1/cmr/m/n/10 ^^F + \OML/cmm/m/it/10 QK[]Q[]\OT1/cmr/m/n/10 )
  []
 
 Missing character: There is no w in font nullfont!
@@ -6275,8 +6275,8 @@ Overfull \hbox (26.17229pt too wide) in paragraph at lines 95--98
  []
 
 
-Overfull \hbox (18.05553pt too wide) in paragraph at lines 95--98
-\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 =
+Overfull \hbox (21.23885pt too wide) in paragraph at lines 95--98
+\OML/cmm/m/it/10 Q \OT1/cmr/m/n/10 :=
  []
 
 
@@ -7062,13 +7062,13 @@ Overfull \hbox (23.65044pt too wide) in paragraph at lines 111--113
  []
 
 
-Overfull \hbox (23.12851pt too wide) in paragraph at lines 111--113
-\OML/cmm/m/it/10 PAF$
+Overfull \hbox (23.53404pt too wide) in paragraph at lines 111--113
+\OML/cmm/m/it/10 PQF$
  []
 
 
-Overfull \hbox (20.83331pt too wide) in paragraph at lines 111--113
-\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 :=
+Overfull \hbox (21.23885pt too wide) in paragraph at lines 111--113
+\OML/cmm/m/it/10 Q \OT1/cmr/m/n/10 :=
  []
 
 
@@ -7107,7 +7107,7 @@ Overfull \hbox (13.25487pt too wide) in paragraph at lines 111--113
  []
 
 
-Overfull \hbox (327.12273pt too wide) detected at line 115
+Overfull \hbox (327.40659pt too wide) detected at line 115
 [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 )
  []
 
@@ -7300,13 +7300,13 @@ Missing character: There is no h in font nullfont!
 <inserted text> 
                 $
 l.122     h^
-            {N}&:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PAB^{-1}K_{\mathcal{I}}...
+            {N}&:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:122: Misplaced alignment tab character &.
 l.122     h^{N}&
-                :=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PAB^{-1}K_{\mathcal{I}}...
+                :=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -7316,7 +7316,7 @@ might try typing `S' now just to see what is salvageable.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:123: Misplaced alignment tab character &.
 l.123     \Sigma_{\mathcal{I}}&
-                               =P(\Sigma+AK_{\mathcal{I}}A^{*})P^{*}
+                               :=P(\Sigma+QK_{\mathcal{I}}Q^{*})P^{*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -7606,18 +7606,18 @@ Overfull \hbox (20.91803pt too wide) in paragraph at lines 119--126
  []
 
 
-Overfull \hbox (103.11208pt too wide) in paragraph at lines 119--126
-\OT1/cmr/m/n/10 ^^F[]^^F[]\OML/cmm/m/it/10 PAB[]K[][] \OT1/cmr/m/n/10 =
+Overfull \hbox (103.51761pt too wide) in paragraph at lines 119--126
+\OT1/cmr/m/n/10 ^^F[]^^F[]\OML/cmm/m/it/10 PQB[]K[][] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (23.12851pt too wide) in paragraph at lines 119--126
-\OML/cmm/m/it/10 PA[][] 
+Overfull \hbox (23.53404pt too wide) in paragraph at lines 119--126
+\OML/cmm/m/it/10 PQ[][] 
  []
 
 
-Overfull \hbox (23.25777pt too wide) in paragraph at lines 119--126
-\OT1/cmr/m/n/10 ^^F[] =
+Overfull \hbox (26.03555pt too wide) in paragraph at lines 119--126
+\OT1/cmr/m/n/10 ^^F[] :=
  []
 
 
@@ -7626,8 +7626,8 @@ Overfull \hbox (26.69797pt too wide) in paragraph at lines 119--126
  []
 
 
-Overfull \hbox (49.86551pt too wide) in paragraph at lines 119--126
-\OML/cmm/m/it/10 AK[]A[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P[]$
+Overfull \hbox (50.67657pt too wide) in paragraph at lines 119--126
+\OML/cmm/m/it/10 QK[]Q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P[]$
  []
 
 
@@ -7651,7 +7651,7 @@ Overfull \hbox (5.97226pt too wide) in paragraph at lines 119--126
  []
 
 
-Overfull \hbox (165.08391pt too wide) detected at line 128
+Overfull \hbox (166.3005pt too wide) detected at line 128
 \OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 jfIL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F\OMS/cmsy/m/n/10 g ^^X N []
  []
 
@@ -8991,13 +8991,13 @@ Missing character: There is no m in font nullfont!
 <inserted text> 
                 $
 l.144     m_
-            {2} &= A\bar{F} \\
+            {2} &= Q\bar{F} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:144: Misplaced alignment tab character &.
 l.144     m_{2} &
-                 = A\bar{F} \\
+                 = Q\bar{F} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -9007,7 +9007,7 @@ might try typing `S' now just to see what is salvageable.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:145: Misplaced alignment tab character &.
 l.145     \Sigma_{2} &
-                      = \Sigma + AK_{\mathcal{I}}A^{*}
+                      = \Sigma + QK_{\mathcal{I}}Q^{*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -9157,8 +9157,8 @@ Overfull \hbox (15.04164pt too wide) in paragraph at lines 137--148
  []
 
 
-Overfull \hbox (15.31947pt too wide) in paragraph at lines 137--148
-\OML/cmm/m/it/10 A[][] 
+Overfull \hbox (15.725pt too wide) in paragraph at lines 137--148
+\OML/cmm/m/it/10 Q[][] 
  []
 
 
@@ -9172,8 +9172,8 @@ Overfull \hbox (15.00003pt too wide) in paragraph at lines 137--148
  []
 
 
-Overfull \hbox (33.57034pt too wide) in paragraph at lines 137--148
-\OML/cmm/m/it/10 AK[]A[]$
+Overfull \hbox (34.38141pt too wide) in paragraph at lines 137--148
+\OML/cmm/m/it/10 QK[]Q[]$
  []
 
 
