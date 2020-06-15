@@ -52,27 +52,28 @@
 \citation{sullivan2015introduction}
 \citation{law2015data,sullivan2015introduction,sarkka2013bayesian}
 \citation{stuart2010inverse}
+\citation{da2006introduction}
 \@writefile{toc}{\contentsline {section}{\numberline {3}General Framework}{4}{section.3}}
 \newlabel{general_framework}{{3}{4}{General Framework}{section.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Spatial Boundary Value Problems}{4}{subsection.3.1}}
 \newlabel{DirichletProb}{{1}{4}{Spatial Boundary Value Problems}{equation.3.1}{}}
-\citation{da2006introduction}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Prior from the true solution}{5}{subsubsection.3.1.1}}
-\newlabel{prior_true_solution}{{3.1.1}{5}{Prior from the true solution}{subsubsection.3.1.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Prior from the true solution}{5}{subsection.3.2}}
+\newlabel{prior_true_solution}{{3.2}{5}{Prior from the true solution}{subsection.3.2}{}}
 \newlabel{true_prior}{{2}{5}{Prior from the true solution}{equation.3.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}Prior from an approximation}{5}{subsubsection.3.1.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Prior from an approximation}{5}{subsection.3.3}}
 \newlabel{jointInfoDist}{{3}{5}{Prior from an approximation}{equation.3.3}{}}
 \newlabel{conditionalDistnFixed_f}{{4}{5}{Prior from an approximation}{equation.3.4}{}}
+\newlabel{post_mean_before_averaging}{{5}{5}{Prior from an approximation}{equation.3.5}{}}
+\newlabel{post_var_before_averaging}{{6}{5}{Prior from an approximation}{equation.3.6}{}}
 \citation{lunardi2015infinite}
-\newlabel{post_mean_before_averaging}{{5}{6}{Prior from an approximation}{equation.3.5}{}}
-\newlabel{post_var_before_averaging}{{6}{6}{Prior from an approximation}{equation.3.6}{}}
 \newlabel{first_prop}{{3.1}{6}{}{proposition.3.1}{}}
 \newlabel{approx_prior}{{7}{6}{}{equation.3.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Incorporating Observational Data}{7}{subsubsection.3.1.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Incorporating Observational Data}{7}{subsection.3.4}}
+\newlabel{incorporating_obs_data}{{3.4}{7}{Incorporating Observational Data}{subsection.3.4}{}}
 \newlabel{likelihood}{{20}{7}{Incorporating Observational Data}{equation.3.20}{}}
 \newlabel{jointDist}{{21}{7}{Incorporating Observational Data}{equation.3.21}{}}
+\newlabel{posterior}{{22}{7}{Incorporating Observational Data}{equation.3.22}{}}
 \citation{vakhania1975topological}
-\newlabel{posterior}{{22}{8}{Incorporating Observational Data}{equation.3.22}{}}
 \newlabel{posterior_mean}{{23}{8}{Incorporating Observational Data}{equation.3.23}{}}
 \newlabel{posterior_covariance}{{24}{8}{Incorporating Observational Data}{equation.3.24}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Statistical FEM for Elliptic Boundary Value Problem}{8}{section.4}}
@@ -84,10 +85,11 @@
 \newlabel{cov_function_FEM_prior}{{29}{9}{}{equation.4.29}{}}
 \newlabel{info_operator_with_pde_op}{{31}{9}{FEM prior}{equation.4.31}{}}
 \citation{girolami2019statistical}
+\newlabel{approximate_fem_prior}{{40}{10}{FEM prior}{equation.4.40}{}}
 \citation{masarotto2019procrustes}
 \citation{masarotto2019procrustes}
 \citation{masarotto2019procrustes}
-\newlabel{approximate_fem_prior}{{40}{11}{FEM prior}{equation.4.40}{}}
+\citation{cuesta1996lower}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Prior from the true solution}{11}{subsection.4.2}}
 \newlabel{true_prior_elliptic}{{41}{11}{Prior from the true solution}{equation.4.41}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Upperbound on the Wasserstein Distance between the two priors}{11}{subsection.4.3}}
@@ -96,7 +98,6 @@
 \newlabel{true_fem_cov}{{44}{11}{Upperbound on the Wasserstein Distance between the two priors}{equation.4.44}{}}
 \newlabel{approx_fem_cov}{{45}{11}{Upperbound on the Wasserstein Distance between the two priors}{equation.4.45}{}}
 \newlabel{wasserstein_def}{{46}{11}{Upperbound on the Wasserstein Distance between the two priors}{equation.4.46}{}}
-\citation{cuesta1996lower}
 \citation{larsson2008partial}
 \citation{powers1970free}
 \newlabel{bound_on_diff_means}{{51}{12}{Upperbound on the Wasserstein Distance between the two priors}{equation.4.51}{}}
@@ -104,6 +105,9 @@
 \newlabel{bound_on_diff_of_solution_operators}{{54}{13}{Upperbound on the Wasserstein Distance between the two priors}{equation.4.54}{}}
 \newlabel{bound_on_diff_cov_operators}{{55}{13}{Upperbound on the Wasserstein Distance between the two priors}{equation.4.55}{}}
 \newlabel{bound_on_distance}{{56}{13}{Upperbound on the Wasserstein Distance between the two priors}{equation.4.56}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Upperbound on the Wasserstein Distance between the two posteriors}{13}{subsection.4.4}}
+\citation{gohberg2012basic}
+\newlabel{bound_on_diff_inverses}{{57}{14}{Upperbound on the Wasserstein Distance between the two posteriors}{equation.4.57}{}}
 \bibdata{references.bib}
 \bibcite{girolami2019statistical}{{1}{2019}{{Girolami et~al.}}{{Girolami, Gregory, Yin, and Cirak}}}
 \bibcite{conrad2017statistical}{{2}{2017}{{Conrad et~al.}}{{Conrad, Girolami, S{\"a}rkk{\"a}, Stuart, and Zygalakis}}}
@@ -125,13 +129,11 @@
 \bibcite{magnani2017bayesian}{{18}{2017}{{Magnani et~al.}}{{Magnani, Kersting, Schober, and Hennig}}}
 \bibcite{schober2019probabilistic}{{19}{2019}{{Schober et~al.}}{{Schober, S{\"a}rkk{\"a}, and Hennig}}}
 \bibcite{tronarp2019probabilistic}{{20}{2019}{{Tronarp et~al.}}{{Tronarp, Kersting, S{\"a}rkk{\"a}, and Hennig}}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}FEM for Parabolic Problem}{14}{section.5}}
-\newlabel{parabolic_prob}{{5}{14}{FEM for Parabolic Problem}{section.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions and Research Plan}{14}{section.6}}
-\newlabel{conclusion}{{6}{14}{Conclusions and Research Plan}{section.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Appendix}{14}{section.7}}
-\newlabel{appendix}{{7}{14}{Appendix}{section.7}{}}
 \bibcite{kersting2018convergence}{{21}{2018}{{Kersting et~al.}}{{Kersting, Sullivan, and Hennig}}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions and Research Plan}{15}{section.5}}
+\newlabel{conclusion}{{5}{15}{Conclusions and Research Plan}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Appendix}{15}{section.6}}
+\newlabel{appendix}{{6}{15}{Appendix}{section.6}{}}
 \bibcite{lord2014introduction}{{22}{2014}{{Lord et~al.}}{{Lord, Powell, and Shardlow}}}
 \bibcite{bieri2010sparse}{{23}{2010}{{Bieri et~al.}}{{Bieri, Andreev, and Schwab}}}
 \bibcite{cockayne2016probabilistic}{{24}{2016}{{Cockayne et~al.}}{{Cockayne, Oates, Sullivan, and Girolami}}}
@@ -147,3 +149,4 @@
 \bibcite{masarotto2019procrustes}{{34}{2019}{{Masarotto et~al.}}{{Masarotto, Panaretos, and Zemel}}}
 \bibcite{cuesta1996lower}{{35}{1996}{{Cuesta-Albertos et~al.}}{{Cuesta-Albertos, Matr{\'a}n-Bea, and Tuero-Diaz}}}
 \bibcite{powers1970free}{{36}{1970}{{Powers and St{\o }rmer}}{{}}}
+\bibcite{gohberg2012basic}{{37}{2012}{{Gohberg et~al.}}{{Gohberg, Goldberg, and Kaashoek}}}

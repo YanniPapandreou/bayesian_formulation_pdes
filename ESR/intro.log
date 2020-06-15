@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  8 JUN 2020 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  15 JUN 2020 16:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -5010,68 +5010,6 @@ Missing character: There is no e in font nullfont!
 <write> ...ce `elliptic_bv_prob' on page \thepage 
                                                   \space undefined\on@line .
 l.12 ...on \textcolor{blue}{\ref{elliptic_bv_prob}
-                                                  } and then to a parabolic ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Reference `elliptic_bv_prob' on page  undefined on input line 12.
-
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no S in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/intro.tex:12: Undefined control sequence.
-l.12 ... a parabolic problem in Section \textcolor
-                                                  {blue}{\ref{parabolic_prob...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/intro.tex:12: Undefined control sequence.
-<write> ...ence `parabolic_prob' on page \thepage 
-                                                  \space undefined\on@line .
-l.12 ...tion \textcolor{blue}{\ref{parabolic_prob}
                                                   }. Section \textcolor{blue...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5080,7 +5018,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `parabolic_prob' on page  undefined on input line 12.
+LaTeX Warning: Reference `elliptic_bv_prob' on page  undefined on input line 12.
 
 Missing character: There is no . in font nullfont!
 Missing character: There is no S in font nullfont!
@@ -5091,7 +5029,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/intro.tex:12: Undefined control sequence.
-l.12 ...{\ref{parabolic_prob}}. Section \textcolor
+l.12 ...ref{elliptic_bv_prob}}. Section \textcolor
                                                   {blue}{\ref{conclusion}} f...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5220,10 +5158,10 @@ Missing character: There is no . in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 21 strings out of 492982
- 523 string characters out of 6134896
+ 20 strings out of 492982
+ 507 string characters out of 6134896
  54888 words of memory out of 5000000
- 3684 multiletter control sequences out of 15000+600000
+ 3683 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  20i,2n,26p,1559b,106s stack positions out of 5000i,500n,10000p,200000b,80000s

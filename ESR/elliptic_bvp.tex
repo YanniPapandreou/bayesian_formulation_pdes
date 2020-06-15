@@ -273,10 +273,55 @@ Combining (\ref{bound_on_diff_means}) and (\ref{bound_on_diff_cov_operators}) we
 We thus have an upper bound on the Wasserstein distance between $\nu_{1},\nu_{2}$ in terms of the FEM mesh size $h$:
 \begin{equation}
     \label{bound_on_distance}
-    W(\nu_{1},\nu_{2})\leq h \sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}+\mathcal{O}(h^2)}\leq \gamma h +\mathcal{O}(h)
+    W(\nu_{1},\nu_{2})\leq h \sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}+\mathcal{O}(h^2)}\leq \gamma h +\mathcal{O}(h^2)
 \end{equation}
-where $\gamma>0$ is a constant. We also see that as $h\rightarrow 0$ the Wasserstein distance between $\nu_1,\nu_2$ goes to 0 and so the approximate prior converges (in distribution) to the true prior as $h\rightarrow 0$ (see Proposition 4 in \textcolor{blue}{\cite{masarotto2019procrustes}}).
+where $\gamma:=\sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}}>0$ is a constant. Note that we have also used that both\footnote{$K$ is trace-class since it is a covariance operator and thus its trace-norm is bounded.} $\|K\|_{1}$ and $\|\mathcal{L}^{-1}\|_{\infty}$ are bounded and independent of $h$. We also see that as $h\rightarrow 0$ the Wasserstein distance between $\nu_1,\nu_2$ goes to 0 and so the approximate prior converges (in distribution) to the true prior as $h\rightarrow 0$ (see Proposition 4 in \textcolor{blue}{\cite{masarotto2019procrustes}}). Having obtained this upperbound on the distance between the true priors we are now in a position to investigate how this ``propagates" forwards to further inference. In particular, we will now look at incorporating sensor data and seeing how different the two resulting posteriors are from using the two different priors $\nu_1,\nu_2$ above.
 
+\subsection{Upperbound on the Wasserstein Distance between the two posteriors}
+
+As discussed in Section \textcolor{blue}{\ref{incorporating_obs_data}} we will now assume that we have noisy observations of the value of $u$ at some points $y_1,\dots,y_s\in\Omega$ coming from a sensor. We wish to update our belief in the distribution of $u$ using this sensor data, and as discussed either of the $\nu_i$ can be used as prior distributions. We thus obtain two different posteriors and these are given by $u|\mathbf{v}\sim\mathcal{N}(m^{(i)}_{u|\mathbf{v}},\Sigma^{(i)}_{u|\mathbf{v}})$ where $m^{(i)}_{u|\mathbf{v}}:=m_{i}+\Sigma_{i}S^{*}B_{i}^{-1}(\mathbf{v}-Sm_{i})$ and $\Sigma^{(i)}_{u|\mathbf{v}}:=\Sigma_{i}-\Sigma_{i}S^{*}B_{i}^{-1}S\Sigma_{i}$ as shown in Section \textcolor{blue}{\ref{incorporating_obs_data}}. We have denoted $B_{i}:=\epsilon^{2}I+S\Sigma_{i}S^{*}$ for convenience. We can no go about obtaining an upperbound for the Wasserstein distance between these two posteriors. We have,
+\begin{align*}
+    W^{2}\left(\mathcal{N}(m^{(1)}_{u|\mathbf{v}},\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(m^{(2)}_{u|\mathbf{v}},\Sigma^{(2)}_{u|\mathbf{v}})\right)&=\|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}^{2}+W^{2}\left(\mathcal{N}(0,\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(0,\Sigma^{(2)}_{u|\mathbf{v}})\right) \\
+    &\leq \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}^{2} + \|\Sigma^{(1)}_{u|\mathbf{v}}-\Sigma^{(2)}_{u|\mathbf{v}}\|_{1}
+\end{align*}
+In order to obtain on upperbound on each of these terms it will help to first figure out an upperbound on $\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}$. To this end we first compute:
+\begin{align*}
+    \|B_{1}-B_{2}\|_{\infty}&=\|S(\Sigma_{1}-\Sigma_{2})S^{*}\|_{\infty} \\
+    &\leq\|S\|_{\infty}^{2}\|\Sigma_{1}-\Sigma_{2}\|_{\infty} \\
+    &\leq\|\Sigma_{1}-\Sigma_{2}\|_{1} \\
+    &\leq \gamma^{2}h^{2}+\mathcal{O}(h^4)
+\end{align*}
+where we have used the fact that $\|S\|_{\infty}\leq 1$ since it is a projection. Since $B_{1}$ (and $B_{2}$) are invertible and for sufficiently small\footnote{It suffices to take $h<h_{*}$ where $h_{*}$ satisfies $\gamma^{2}h_{*}^{2}+\tilde{C}^{2}h_{*}^{4}<1/\|B_{1}^{-1}\|_{\infty}$.} $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$ we can utilise Corollary 8.2 of \textcolor{blue}{\cite{gohberg2012basic}} to deduce that:
+\begin{equation}
+    \label{bound_on_diff_inverses}
+    \|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}\leq\frac{\|B_{1}^{-1}\|_{\infty}^{2}\|B_{1}-B_{2}\|_{\infty}}{1-\|B_{1}^{-1}\|_{\infty}\|B_1-B_{2}\|_{\infty}}\leq\|B_{1}^{-1}\|_{\infty}^{2}\gamma^{2}h^{2}+\mathcal{O}(h^4)
+\end{equation}
+Note that $\|B_{1}^{-1}\|_{\infty}$ is a bounded constant independent of $h$ (but dependent on $\epsilon$).
+
+We are now in a good position to derive an upper bound on the Wasserstein distance between the two posteriors. We first focus on the difference of the two means:
+\begin{align*}
+    \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}&=\|m_1+\Sigma_{1}S^{*}B_{1}^{-1}(\mathbf{v}-Sm_{1})-m_2-\Sigma_{2}S^{*}B_{2}^{-1}(\mathbf{v}-Sm_{2})\|_{L^{2}(\Omega)} \\
+    &=\|m_1-m_2+\Sigma_{1}S^{*}B_{1}^{-1}\mathbf{v}-\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}\mathbf{v}+\Sigma_{2}S^{*}B_{2}^{-1}Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq\|m_1-m_2\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})\mathbf{v}\|_{L^{2}(\Omega)}+\|\Sigma_{1}S^{*}B_{1}^{-1}Sm_1-\Sigma_{2}S^{*}B_{2}^{-1}Sm_2\|_{L^{2}(\Omega)}
+\end{align*}
+
+We now focus on these three terms separately. For the first term we already have from (\ref{bound_on_diff_means}) that
+\begin{equation*}
+    \|m_{1}-m_{2}\|_{L^{2}(\Omega)}\leq\tilde{C}h^{2}\|\bar{f}\|_{L^2(\Omega)}
+\end{equation*}
+The other two terms can be bounded above by utilising the bounds on $\|\Sigma_1-\Sigma_{2}\|_{1}$ and $\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}$. Details of these calculations are left to the \textcolor{blue}{\nameref{appendix}}. Upon performing these calculations we obtain:
+\begin{equation}
+    \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}\leq\tilde{\gamma}h^{2}+\mathcal{O}(h^4)
+\end{equation}
+where $\tilde{\gamma}>0$ is a constant independent of $h$. Similarly one can obtain the following upperbound for the difference of the covariance operators:
+\begin{equation}
+    \|\Sigma^{(1)}_{u|\mathbf{v}}-\Sigma^{(2)}_{u|\mathbf{v}}\|_{1}\leq \kappa h^{2}+\mathcal{O}(h^4)
+\end{equation}
+where $\kappa>0$ is a constant independent of $h$. Combining these two upper bounds we obtain,
+\begin{equation}
+    W^{2}\left(\mathcal{N}(m^{(1)}_{u|\mathbf{v}},\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(m^{(2)}_{u|\mathbf{v}},\Sigma^{(2)}_{u|\mathbf{v}})\right)\leq\kappa h^{2} + \mathcal{O}(h^4)
+\end{equation}
+and so the Wasserstein distance between the posteriors is bounded above by $\mathcal{O}(h)$ and thus goes to $0$ as $h\rightarrow 0$. Thus, the posterior obtained using the approximate prior converges in distribution to the posterior obtained using the true prior as the mesh size goes to 0.
 
 
 \clearpage

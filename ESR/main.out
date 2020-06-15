@@ -2,13 +2,13 @@
 \BOOKMARK [1][-]{section.2}{Brief Overview of Background Material}{}% 2
 \BOOKMARK [1][-]{section.3}{General Framework}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{Spatial Boundary Value Problems}{section.3}% 4
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Prior from the true solution}{subsection.3.1}% 5
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Prior from an approximation}{subsection.3.1}% 6
-\BOOKMARK [3][-]{subsubsection.3.1.3}{Incorporating Observational Data}{subsection.3.1}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Prior from the true solution}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Prior from an approximation}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Incorporating Observational Data}{section.3}% 7
 \BOOKMARK [1][-]{section.4}{Statistical FEM for Elliptic Boundary Value Problem}{}% 8
 \BOOKMARK [2][-]{subsection.4.1}{FEM prior}{section.4}% 9
 \BOOKMARK [2][-]{subsection.4.2}{Prior from the true solution}{section.4}% 10
 \BOOKMARK [2][-]{subsection.4.3}{Upperbound on the Wasserstein Distance between the two priors}{section.4}% 11
-\BOOKMARK [1][-]{section.5}{FEM for Parabolic Problem}{}% 12
-\BOOKMARK [1][-]{section.6}{Conclusions and Research Plan}{}% 13
-\BOOKMARK [1][-]{section.7}{Appendix}{}% 14
+\BOOKMARK [2][-]{subsection.4.4}{Upperbound on the Wasserstein Distance between the two posteriors}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Conclusions and Research Plan}{}% 13
+\BOOKMARK [1][-]{section.6}{Appendix}{}% 14

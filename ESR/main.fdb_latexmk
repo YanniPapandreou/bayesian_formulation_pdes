@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex main"] 1592222735 "main.aux" "main.bbl" "main" 1592222736
+["bibtex main"] 1592235463 "main.aux" "main.bbl" "main" 1592235525
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1480098435 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "main.aux" 1592222736 10297 d604cb4eb3fa2ee7d1437f7ee105cb8d ""
+  "main.aux" 1592235524 10579 af7a891e263c0e9f913f5cd666218a5b ""
   "main.bcf" 0 -1 0 ""
   "references.bib" 1591876654 9641 73b7b5d7ff7f2cfdb029fb44686a95c0 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1592222735 "main.tex" "/home/johnandrew/Documents/Imperial/PhD/ESR/main.pdf" "main" 1592222736
+["pdflatex"] 1592235524 "main.tex" "/home/johnandrew/Documents/Imperial/PhD/ESR/main.pdf" "main" 1592235525
   "/etc/texmf/web2c/texmf.cnf" 1575758763 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/johnandrew/Documents/Imperial/PhD/ESR/main.aux" 1592222736 10297 d604cb4eb3fa2ee7d1437f7ee105cb8d ""
+  "/home/johnandrew/Documents/Imperial/PhD/ESR/main.aux" 1592235524 10579 af7a891e263c0e9f913f5cd666218a5b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1480098698 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1480098698 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -136,18 +136,18 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1575758802 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1575758824 4126031 aa0a8c217411538a16645ad434273014 ""
-  "elliptic_bvp.tex" 1592222731 26215 14f8eb5cdb9f85471e2f301ee72c627d ""
-  "general_framework.tex" 1591880377 18609 3c8f2bd382569d8fcdaa018e366424a2 ""
-  "intro.tex" 1591613401 6066 7b42ca14437d1d5cd5adbe55467313ac ""
+  "elliptic_bvp.tex" 1592234834 31900 33c044165f13abfffd23b9924ad3559d ""
+  "general_framework.tex" 1592235512 18650 8785094a93ba24cb4a622407fe82ebad ""
+  "intro.tex" 1592235179 5984 5ad0e34c240a649dfb144a46138a6b8b ""
   "lit_review.tex" 1591622644 12401 7f73f958804b348c39be380b86fe1924 ""
-  "main.aux" 1592222736 10297 d604cb4eb3fa2ee7d1437f7ee105cb8d ""
-  "main.bbl" 1592222735 9461 7c9ac027b4537b7437365e819d01d838 "bibtex main"
-  "main.out" 1592222736 1018 e85f93320a7ef4fbe859fb725d12d15e ""
-  "main.tex" 1592222734 2422 d5873df76d6c6a8b85709762795d740c ""
+  "main.aux" 1592235524 10579 af7a891e263c0e9f913f5cd666218a5b ""
+  "main.bbl" 1592235463 9682 19964e503c35ee5339304952dcd72bfc "bibtex main"
+  "main.out" 1592235524 1042 43946fda455c2ea4a01e2bf181b49f2b ""
+  "main.tex" 1592235523 2362 9ee2189af39eaf2575e4d668ceafe694 ""
   (generated)
-  "main.pdf"
   "/home/johnandrew/Documents/Imperial/PhD/ESR/main.log"
-  "main.out"
   "main.aux"
-  "/home/johnandrew/Documents/Imperial/PhD/ESR/main.pdf"
   "main.log"
+  "/home/johnandrew/Documents/Imperial/PhD/ESR/main.pdf"
+  "main.pdf"
+  "main.out"

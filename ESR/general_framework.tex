@@ -1,9 +1,9 @@
-We now introduce the general framework we will be considering. This will be split into two parts. In the first we shall be considering spatial problems without any time dependence, while in the second part we will consider problems with time dependence. We aim to describe how the two priors will be formed and then discuss how further inference will be carried out when observational data from the physical system is available.
+We now introduce the general framework we will be considering. This will be split into several parts. We first outline the general type of problem we will be considering in this report. Having done this we will then aim to describe how two priors for the solution to this problem will be formed and then discuss how further inference will be carried out when observational data from the physical system is available.
 
 
 \subsection{Spatial Boundary Value Problems}
 
-We first consider PDEs which do not have any time dependence. Let $\Omega$ be a domain with boundary $\partial\Omega$ and let $\mathcal{L}$ be a suitable linear differential operator. We will focus on the following Dirichlet problem:
+We will consider PDEs which do not have any time dependence in this report. Future work will deal with the case of time dependent PDEs. Let $\Omega$ be a domain with boundary $\partial\Omega$ and let $\mathcal{L}$ be a suitable linear differential operator. We will focus on the following Dirichlet problem:
 \begin{equation}
 \label{DirichletProb}
     \left\{
@@ -15,7 +15,7 @@ We first consider PDEs which do not have any time dependence. Let $\Omega$ be a 
 \end{equation}
 where the functions $f,g$ may be noisy, typically Gaussian. The operator $\mathcal{L}$ may also be random. For simplicity we will take $g=0$ and will assume that $\mathcal{L}$ is deterministic. We will also now assume that $f$ is Gaussian, i.e. $f\sim\mathcal{N}(\bar{f},K)$. We seek the solution in some appropriate Hilbert space of functions $\mathcal{H}$. We now discuss how the two priors over the solution space are formed. The first prior will essentially come from the true solution of the PDE while the second will be the ``output" of a probabilistic numerical method\footnote{Note that in our discussion of probabilistic numerical methods we referred to the output as being a posterior distribution over the solution of the problem; here we are viewing the output as what we will set our prior to be for further inference.} for solving the problem (\ref{DirichletProb}). As such we will initially place an appropriate prior on the solution $u$ which encapsulates our prior belief on the solution (such as its smoothness) before utilising detailed knowledge of the specific PDE. We will then consider using an approximation to obtain a posterior distribution which will then become our prior for further inference. We start with utilising the true solution:
 
-\subsubsection{Prior from the true solution}
+\subsection{Prior from the true solution}
 \label{prior_true_solution}
 
 Formally we have $u=\mathcal{L}^{-1}f$, where $\mathcal{L}^{-1}$ is the solution operator (Green's function) for the problem (\ref{DirichletProb}). Since $f$ is random we see that the solution is also random; in particular it is the push-forward of $f$ by the \textbf{linear} operator $\mathcal{L}^{-1}$. Provided that the linear operator $\mathcal{L}^{-1}$ is bounded it follows from the theory of Gaussian measures (see Proposition 1.18 of \textcolor{blue}{\cite{da2006introduction}}) that $u$ is also Gaussian and in particular has the following distribution:
@@ -25,7 +25,7 @@ Formally we have $u=\mathcal{L}^{-1}f$, where $\mathcal{L}^{-1}$ is the solution
 \end{equation}
 This will be one of the two priors we will consider. One should note that this prior indeed utilises the true solution to the PDE. However, for most PDEs it will be intractable to actually compute this prior due to the fact that $\mathcal{L}^{-1}$ is inaccessible. This leads us instead to consider a prior based on a probabilistic numerical method for solving (\ref{DirichletProb}):
 
-\subsubsection{Prior from an approximation}
+\subsection{Prior from an approximation}
 
 We will now consider placing an initial Gaussian prior on the solution $u$, $u\sim\mathcal{N}(0,V)$. The covariance operator $V$ will be chosen so as to satisfy the following assumption:
 
@@ -129,11 +129,12 @@ The details of this computation are left to the \textcolor{blue}{\nameref{append
 \end{equation}
 \qedsymbol
 
-This posterior will be taken to be our second prior for further inference. One should note that this prior does indeed arise from an approximation to the solution of the PDE as it involves the information operator $\mathcal{I}$ which contains information on only a finite number of FE basis functions ($J$ of them to be precise). The hope is that as the mesh size $h$ decreases to $0$ (and so $J\rightarrow\infty$) this distribution will become more and more like the true prior (\ref{true_prior}). In Sections \textcolor{blue}{\ref{elliptic_bv_prob}} and \textcolor{blue}{\ref{parabolic_prob}} we will obtain, for specific examples, an upperbound on the distance between these two priors in terms of $h$ and we will see that the two priors do indeed agree in the limit $h\rightarrow 0$.
+This posterior will be taken to be our second prior for further inference. One should note that this prior does indeed arise from an approximation to the solution of the PDE as it involves the information operator $\mathcal{I}$ which contains information on only a finite number of FE basis functions ($J$ of them to be precise). The hope is that as the mesh size $h$ decreases to $0$ (and so $J\rightarrow\infty$) this distribution will become more and more like the true prior (\ref{true_prior}). In Section \textcolor{blue}{\ref{elliptic_bv_prob}} we will obtain, for a specific example, an upperbound on the distance between these two priors in terms of $h$ and we will see that the two priors do indeed agree in the limit $h\rightarrow 0$.
 
 It is also worth pointing out that the approximate prior (\ref{approx_prior}) contains details of $V,\mathcal{I},\bar{f},K$ i.e. it contains information from all of: the original prior on $u$, the information operator and the statistical properties of the forcing term.
 
-\subsubsection{Incorporating Observational Data}
+\subsection{Incorporating Observational Data}
+\label{incorporating_obs_data}
 
 We now have two prior distributions for the solution $u$ to our boundary value problem (\ref{DirichletProb}), $\nu_{i}=\mathcal{N}(m_{i},\Sigma_{i})$ for $i=1,2$. The first is the prior from the true solution to (\ref{DirichletProb}) which has mean and covariance given by:
 \begin{align}

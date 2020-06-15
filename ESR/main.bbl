@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -223,5 +223,10 @@ Robert~T Powers and Erling St{\o}rmer.
 \newblock Free states of the canonical anticommutation relations.
 \newblock \emph{Communications in Mathematical Physics}, 16\penalty0
   (1):\penalty0 1--33, 1970.
+
+\bibitem[Gohberg et~al.(2012)Gohberg, Goldberg, and Kaashoek]{gohberg2012basic}
+Israel Gohberg, Seymour Goldberg, and Marinus Kaashoek.
+\newblock \emph{Basic classes of linear operators}.
+\newblock Birkh{\"a}user, 2012.
 
 \end{thebibliography}
