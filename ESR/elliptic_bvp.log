@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  10 JUN 2020 14:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  15 JUN 2020 13:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -14,11 +14,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1 I
-     n this section we will focus on the following standard elliptic station...
+l.1 A
+     AIn this section we will focus on the following standard elliptic stati...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+Missing character: There is no A in font nullfont!
+Missing character: There is no A in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -1914,13 +1916,97 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:29: Undefined control sequence.
 l.29 ...}$ is the space $m+\overline{\operatorname
-                                                  {Im}(\Sigma)}$ where the b...
+                                                  {Im}(\Sigma)}$ (see \textc...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+Missing character: There is no ( in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:29: Undefined control sequence.
+l.29 ...operatorname{Im}(\Sigma)}$ (see \textcolor
+                                                  {blue}{\cite{vakhania1975t...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{vakhania1975topological}
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:29: Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.29 ...color{blue}{\cite{vakhania1975topological}
+                                                  } for the general case of ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `vakhania1975topological' on page  undefined on input line 29.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no B in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -2051,6 +2137,14 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no y in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -2208,17 +2302,122 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no . in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:30: LaTeX Error: Environment remarks undefined.
+Overfull \hbox (9.16264pt too wide) in paragraph at lines 28--30
+  $\OML/cmm/m/it/10 ^^U[]$
+ []
+
+
+Overfull \hbox (37.90306pt too wide) in paragraph at lines 28--30
+\OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m; \OT1/cmr/m/n/10 ^^F)$
+ []
+
+
+Overfull \hbox (8.5417pt too wide) in paragraph at lines 28--30
+\OMS/cmsy/m/n/10 H$
+ []
+
+
+Overfull \hbox (16.55794pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 m \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (28.96071pt too wide) in paragraph at lines 28--30
+[]$
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 28--30
+[]
+ []
+
+
+Overfull \hbox (8.5417pt too wide) in paragraph at lines 28--30
+\OMS/cmsy/m/n/10 H$
+ []
+
+
+Overfull \hbox (28.96071pt too wide) in paragraph at lines 28--30
+[]\OT1/cmr/m/n/10 (^^F)$
+ []
+
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 28--30
+\OT1/cmr/m/n/10 ^^F$
+ []
+
+
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 V$
+ []
+
+
+Overfull \hbox (32.74199pt too wide) in paragraph at lines 28--30
+\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g[]$
+ []
+
+
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
+)$
+ []
+
+
+Overfull \hbox (34.95627pt too wide) in paragraph at lines 28--30
+\OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; V\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
+)$
+ []
+
+
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 u$
+ []
+
+
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 u$
+ []
+
+
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
+)$
+ []
+
+
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 V$
+ []
+
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:31: LaTeX Error: Environment remarks undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 \begin{remarks}
+l.31 \begin{remarks}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:32: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32     \textit{Remark 1.}
+                            Since $u$ lies almost surely in $H_{0}^{1}(\Omeg...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no S in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2346,155 +2545,62 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (9.16264pt too wide) in paragraph at lines 28--32
-  $\OML/cmm/m/it/10 ^^U[]$
+Overfull \hbox (53.48865pt too wide) in paragraph at lines 32--33
+[]\OT1/cmr/m/it/10 Remark
  []
 
 
-Overfull \hbox (37.90306pt too wide) in paragraph at lines 28--32
-\OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m; \OT1/cmr/m/n/10 ^^F)$
- []
-
-
-Overfull \hbox (8.5417pt too wide) in paragraph at lines 28--32
-\OMS/cmsy/m/n/10 H$
- []
-
-
-Overfull \hbox (16.55794pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 m \OT1/cmr/m/n/10 +
- []
-
-
-Overfull \hbox (28.96071pt too wide) in paragraph at lines 28--32
-[]$
- []
-
-
-Overfull \hbox (8.5417pt too wide) in paragraph at lines 28--32
-\OMS/cmsy/m/n/10 H$
- []
-
-
-Overfull \hbox (28.96071pt too wide) in paragraph at lines 28--32
-[]\OT1/cmr/m/n/10 (^^F)$
- []
-
-
-Overfull \hbox (7.22223pt too wide) in paragraph at lines 28--32
-\OT1/cmr/m/n/10 ^^F$
- []
-
-
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 V$
- []
-
-
-Overfull \hbox (32.74199pt too wide) in paragraph at lines 28--32
-\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g[]$
- []
-
-
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
-)$
- []
-
-
-Overfull \hbox (34.95627pt too wide) in paragraph at lines 28--32
-\OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; V\OT1/cmr/m/n/10 )$
- []
-
-
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
-)$
- []
-
-
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 u$
- []
-
-
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 u$
- []
-
-
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
-)$
- []
-
-
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 28--32
-\OML/cmm/m/it/10 V$
- []
-
-
-Overfull \hbox (14.96098pt too wide) in paragraph at lines 28--32
-\OT1/cmr/m/it/10 Re-
- []
-
-
-Overfull \hbox (22.10541pt too wide) in paragraph at lines 28--32
-\OT1/cmr/m/it/10 mark
- []
-
-
-Overfull \hbox (8.17773pt too wide) in paragraph at lines 28--32
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 32--33
 \OT1/cmr/m/it/10 1.
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 28--32
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 32--33
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--32
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 32--33
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (34.95627pt too wide) in paragraph at lines 28--32
+Overfull \hbox (34.95627pt too wide) in paragraph at lines 32--33
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; V\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (39.16664pt too wide) in paragraph at lines 28--32
+Overfull \hbox (39.16664pt too wide) in paragraph at lines 32--33
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 ) \OMS/cmsy/m/n/10 ^^Z
  []
 
 
-Overfull \hbox (26.29173pt too wide) in paragraph at lines 28--32
+Overfull \hbox (26.29173pt too wide) in paragraph at lines 32--33
 \OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 28--32
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 32--33
 \OML/cmm/m/it/10 V$
  []
 
 
-Overfull \hbox (47.63887pt too wide) in paragraph at lines 28--32
+Overfull \hbox (47.63887pt too wide) in paragraph at lines 32--33
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 ) \OMS/cmsy/m/n/10 !
  []
 
 
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--32
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 32--33
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (157.16351pt too wide) detected at line 34
+Overfull \hbox (157.16351pt too wide) detected at line 35
 \OML/cmm/m/it/10 Vu \OT1/cmr/m/n/10 := [] \OML/cmm/m/it/10 ^^U[]\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 u; ^^^[]\OMS/cmsy/m/n/10 i\OML/cmm/m/it/10 ^^^[] \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )
  []
@@ -2507,8 +2613,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:35: Undefined control sequence.
-l.35     where now $\langle\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:36: Undefined control sequence.
+l.36     where now $\langle\boldsymbol
                                       {\cdot},\boldsymbol{\cdot}\rangle$ is ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2516,8 +2622,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:35: Undefined control sequence.
-l.35 ...now $\langle\boldsymbol{\cdot},\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:36: Undefined control sequence.
+l.36 ...now $\langle\boldsymbol{\cdot},\boldsymbol
                                                   {\cdot}\rangle$ is now the...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2549,25 +2655,25 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (17.77779pt too wide) in paragraph at lines 34--36
+Overfull \hbox (17.77779pt too wide) in paragraph at lines 35--37
   $\OMS/cmsy/m/n/10 h[]\OML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 i$
  []
 
 
-Overfull \hbox (67.91669pt too wide) in paragraph at lines 34--36
+Overfull \hbox (67.91669pt too wide) in paragraph at lines 35--37
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )\OML/cmm/m/it/10 ; H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:37: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:38: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37     \noindent
+l.38     \noindent
                    \textit{Remark 2.} Note that taking $u\sim\mathcal{N}(0,V...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2672,8 +2778,8 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:37: Undefined control sequence.
-l.37 ...on $k:\Omega\times\Omega\rightarrow\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:38: Undefined control sequence.
+l.38 ...on $k:\Omega\times\Omega\rightarrow\mathbb
                                                   {R}$ given by:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2690,69 +2796,69 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (33.48865pt too wide) in paragraph at lines 37--38
+Overfull \hbox (33.48865pt too wide) in paragraph at lines 38--39
 \OT1/cmr/m/it/10 Remark
  []
 
 
-Overfull \hbox (8.17773pt too wide) in paragraph at lines 37--38
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 38--39
 \OT1/cmr/m/it/10 2.
  []
 
 
-Overfull \hbox (16.28009pt too wide) in paragraph at lines 37--38
+Overfull \hbox (16.28009pt too wide) in paragraph at lines 38--39
 \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (34.95627pt too wide) in paragraph at lines 37--38
+Overfull \hbox (34.95627pt too wide) in paragraph at lines 38--39
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; V\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 37--38
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 38--39
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (16.28009pt too wide) in paragraph at lines 37--38
+Overfull \hbox (16.28009pt too wide) in paragraph at lines 38--39
 \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (37.06256pt too wide) in paragraph at lines 37--38
+Overfull \hbox (37.06256pt too wide) in paragraph at lines 38--39
 \OMS/cmsy/m/n/10 GP\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; k\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (5.52084pt too wide) in paragraph at lines 37--38
+Overfull \hbox (5.52084pt too wide) in paragraph at lines 38--39
 \OML/cmm/m/it/10 k$
  []
 
 
-Overfull \hbox (11.07634pt too wide) in paragraph at lines 37--38
+Overfull \hbox (11.07634pt too wide) in paragraph at lines 38--39
 \OML/cmm/m/it/10 k \OT1/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (15.00003pt too wide) in paragraph at lines 37--38
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 38--39
 \OT1/cmr/m/n/10 
  \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Overfull \hbox (19.99995pt too wide) in paragraph at lines 37--38
+Overfull \hbox (19.99995pt too wide) in paragraph at lines 38--39
 \OT1/cmr/m/n/10 
  \OMS/cmsy/m/n/10 !
  []
 
 
-Overfull \hbox (7.67015pt too wide) in paragraph at lines 37--38
+Overfull \hbox (7.67015pt too wide) in paragraph at lines 38--39
 \OML/cmm/m/it/10 R$
  []
 
 
-Overfull \hbox (115.2124pt too wide) detected at line 41
+Overfull \hbox (115.2124pt too wide) detected at line 42
 []\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; y\OT1/cmr/m/n/10 ) := [] \OML/cmm/m/it/10 ^^U[]^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y\OT1/cmr/m/n/10 )
  []
 
@@ -2807,21 +2913,21 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 41--43
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 42--44
        $\OML/cmm/m/it/10 V$
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:44: Undefined control sequence.
-l.44         Vu(x)=\langle k(x,\boldsymbol
-                                          {\cdot}),u(\boldsymbol{\cdot})\rangle
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:45: Undefined control sequence.
+l.45         Vu(x)=\langle u(\boldsymbol
+                                        {\cdot}), k(x,\boldsymbol{\cdot})\ra...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:44: Undefined control sequence.
-l.44 ...ngle k(x,\boldsymbol{\cdot}),u(\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:45: Undefined control sequence.
+l.45 ...gle u(\boldsymbol{\cdot}), k(x,\boldsymbol
                                                   {\cdot})\rangle
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2830,8 +2936,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (95.34492pt too wide) detected at line 45
-\OML/cmm/m/it/10 Vu\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 k\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; []\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; u\OT1/cmr/m/n/10 ([])\OMS/cmsy/m/n/10 i
+Overfull \hbox (95.34492pt too wide) detected at line 46
+\OML/cmm/m/it/10 Vu\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ; k\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; []\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 i
  []
 
 Missing character: There is no T in font nullfont!
@@ -2914,8 +3020,8 @@ Missing character: There is no D in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:47: Undefined control sequence.
-l.47     $\mathbin{\blacklozenge
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:48: Undefined control sequence.
+l.48     $\mathbin{\blacklozenge
                                 }$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2924,13 +3030,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:48: LaTeX Error: \begin{document} ended by \end{remarks}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:49: LaTeX Error: \begin{document} ended by \end{remarks}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.48 \end{remarks}
+l.49 \end{remarks}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3064,8 +3170,8 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no s in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:49: Undefined control sequence.
-l.49 ...ps $I_{j}:H^{-1}(\Omega)\rightarrow\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:50: Undefined control sequence.
+l.50 ...ps $I_{j}:H^{-1}(\Omega)\rightarrow\mathbb
                                                   {R}$ given by $I_{j}\bolds...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3080,8 +3186,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:49: Undefined control sequence.
-l.49 ...rrow\mathbb{R}$ given by $I_{j}\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:50: Undefined control sequence.
+l.50 ...rrow\mathbb{R}$ given by $I_{j}\boldsymbol
                                                   {\cdot}=\langle\boldsymbol...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3089,8 +3195,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:49: Undefined control sequence.
-l.49 ...I_{j}\boldsymbol{\cdot}=\langle\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:50: Undefined control sequence.
+l.50 ...I_{j}\boldsymbol{\cdot}=\langle\boldsymbol
                                                   {\cdot},\phi_{j}\rangle$. ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3100,79 +3206,79 @@ and I'll forget about whatever was undefined.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (34.51054pt too wide) in paragraph at lines 45--50
+Overfull \hbox (34.51054pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g[]$
  []
 
 
-Overfull \hbox (17.80688pt too wide) in paragraph at lines 45--50
+Overfull \hbox (17.80688pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 U \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 45--50
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (20.61244pt too wide) in paragraph at lines 45--50
+Overfull \hbox (20.61244pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 U[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (34.86115pt too wide) in paragraph at lines 45--50
+Overfull \hbox (34.86115pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (14.1649pt too wide) in paragraph at lines 45--50
+Overfull \hbox (14.1649pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (47.63887pt too wide) in paragraph at lines 45--50
+Overfull \hbox (47.63887pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 ) \OMS/cmsy/m/n/10 !
  []
 
 
-Overfull \hbox (7.67015pt too wide) in paragraph at lines 45--50
+Overfull \hbox (7.67015pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 R$
  []
 
 
-Overfull \hbox (21.9427pt too wide) in paragraph at lines 45--50
+Overfull \hbox (21.9427pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 I[][] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (25.1719pt too wide) in paragraph at lines 45--50
+Overfull \hbox (25.1719pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 h[]\OML/cmm/m/it/10 ; ^^^[]\OMS/cmsy/m/n/10 i$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:51: LaTeX Error: Environment remark undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:52: LaTeX Error: Environment remark undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 \begin{remark}
+l.52 \begin{remark}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:52: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:53: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52     N
+l.53     N
           ote that when $v\in L^{2}(\Omega)\subset H^{-1}(\Omega)$ we have, ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3207,44 +3313,44 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:53: LaTeX Error: Environment equation* undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:54: LaTeX Error: Environment equation* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53     \begin{equation*}
+l.54     \begin{equation*}
                           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no I in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:54: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:55: Missing $ inserted.
 <inserted text> 
                 $
-l.54         I_
+l.55         I_
                {j}v=\langle v,\phi_{j}\rangle=(v,\phi_{j})_{L^2}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:55: LaTeX Error: \begin{document} ended by \end{equation*}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:56: LaTeX Error: \begin{document} ended by \end{equation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55     \end{equation*}
+l.56     \end{equation*}
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:55: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:56: Missing $ inserted.
 <inserted text> 
                 $
-l.55     \end{equation*}
+l.56     \end{equation*}
                         
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3257,8 +3363,8 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:56: Undefined control sequence.
-l.56     where $(\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:57: Undefined control sequence.
+l.57     where $(\boldsymbol
                             {\cdot},\boldsymbol{\cdot})_{L^2}$ is the standa...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3266,8 +3372,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:56: Undefined control sequence.
-l.56     where $(\boldsymbol{\cdot},\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:57: Undefined control sequence.
+l.57     where $(\boldsymbol{\cdot},\boldsymbol
                                                {\cdot})_{L^2}$ is the standa...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3379,8 +3485,8 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:57: Undefined control sequence.
-l.57     $\mathbin{\blacklozenge
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:58: Undefined control sequence.
+l.58     $\mathbin{\blacklozenge
                                 }$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3389,107 +3495,107 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:58: LaTeX Error: \begin{document} ended by \end{remark}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:59: LaTeX Error: \begin{document} ended by \end{remark}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 \end{remark}
+l.59 \end{remark}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 52--59
+Overfull \hbox (20.0pt too wide) in paragraph at lines 53--60
 []
  []
 
 
-Overfull \hbox (14.6504pt too wide) in paragraph at lines 52--59
+Overfull \hbox (14.6504pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 v \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (36.84724pt too wide) in paragraph at lines 52--59
+Overfull \hbox (36.84724pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (
 ) \OMS/cmsy/m/n/10 ^^Z
  []
 
 
-Overfull \hbox (34.86115pt too wide) in paragraph at lines 52--59
+Overfull \hbox (34.86115pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (19.6163pt too wide) in paragraph at lines 52--59
+Overfull \hbox (19.6163pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 ^^^[] \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 52--59
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (19.97508pt too wide) in paragraph at lines 52--59
+Overfull \hbox (19.97508pt too wide) in paragraph at lines 53--60
 []\OML/cmm/m/it/10 v \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (38.15564pt too wide) in paragraph at lines 52--59
+Overfull \hbox (38.15564pt too wide) in paragraph at lines 53--60
 \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 v; ^^^[]\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (37.4891pt too wide) in paragraph at lines 52--59
+Overfull \hbox (37.4891pt too wide) in paragraph at lines 53--60
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 v; ^^^[]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (27.66676pt too wide) in paragraph at lines 52--59
+Overfull \hbox (27.66676pt too wide) in paragraph at lines 53--60
 \OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (26.29173pt too wide) in paragraph at lines 52--59
+Overfull \hbox (26.29173pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (11.2917pt too wide) in paragraph at lines 52--59
+Overfull \hbox (11.2917pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 L[]$
  []
 
 
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 52--59
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 53--60
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:59: LaTeX Error: The font size command \normalsize is not defined:
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 
+l.60 
      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [1
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:59: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
 <write> \newlabel{standard_conduct}{{}{\thepage 
                                                 }}
-l.59 
+l.60 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3499,10 +3605,10 @@ and I'll forget about whatever was undefined.
 
 \newlabel{standard_conduct}{{}{}}
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:59: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
 <write> ...abel{regularity_of_coeff}{{1}{\thepage 
                                                   }}
-l.59 
+l.60 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3511,10 +3617,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 \newlabel{regularity_of_coeff}{{1}{}}
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:59: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
 <write> \newlabel{FEM_prior}{{2}{\thepage 
                                           }}
-l.59 
+l.60 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3523,10 +3629,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 \newlabel{FEM_prior}{{2}{}}
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:59: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
 <write> ...l{cov_function_FEM_prior}{{4}{\thepage 
                                                   }}
-l.59 
+l.60 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3537,13 +3643,13 @@ and I'll forget about whatever was undefined.
 \newlabel{cov_function_FEM_prior}{{4}{}}
 ]
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:61: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 I
+l.61 I
       t can be shown that for these information operators we have:
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3600,12 +3706,12 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 60--61
+Overfull \hbox (20.0pt too wide) in paragraph at lines 61--62
 []
  []
 
 
-Overfull \hbox (140.37195pt too wide) detected at line 64
+Overfull \hbox (140.37195pt too wide) detected at line 65
 []\OML/cmm/m/it/10 I[]\OMS/cmsy/m/n/10 L\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 a\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 r\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^A r\OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )d\OML/cmm/m/it/10 x
  []
 
@@ -3675,8 +3781,8 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:65: Undefined control sequence.
-l.65 ...approximate prior as in Section \textcolor
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:66: Undefined control sequence.
+l.66 ...approximate prior as in Section \textcolor
                                                   {blue}{\ref{general_framew...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3688,10 +3794,10 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:65: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:66: Undefined control sequence.
 <write> ...e `general_framework' on page \thepage 
                                                   \space undefined\on@line .
-l.65 ...n \textcolor{blue}{\ref{general_framework}
+l.66 ...n \textcolor{blue}{\ref{general_framework}
                                                   } it will prove useful to ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3700,7 +3806,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `general_framework' on page  undefined on input line 65.
+LaTeX Warning: Reference `general_framework' on page  undefined on input line 66.
 
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -3776,17 +3882,17 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 64--66
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 65--67
               []
  []
 
 
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 64--66
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 65--67
 \OML/cmm/m/it/10 V$
  []
 
 
-Overfull \hbox (72.7129pt too wide) detected at line 68
+Overfull \hbox (72.7129pt too wide) detected at line 69
 \OML/cmm/m/it/10 Vu \OT1/cmr/m/n/10 = ^^H[]^^C []
  []
 
@@ -3798,8 +3904,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:69: Undefined control sequence.
-l.69 ...},\dots,\phi_{J})^{T}$ and $\Lambda:=\text
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:70: Undefined control sequence.
+l.70 ...},\dots,\phi_{J})^{T}$ and $\Lambda:=\text
                                                   {diag}\{\lambda_{i}\}_{i=1...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3861,37 +3967,37 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.55553pt too wide) in paragraph at lines 68--70
+Overfull \hbox (20.55553pt too wide) in paragraph at lines 69--71
  $\OT1/cmr/m/n/10 ^^H :=
  []
 
 
-Overfull \hbox (58.28705pt too wide) in paragraph at lines 68--70
+Overfull \hbox (58.28705pt too wide) in paragraph at lines 69--71
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^^[]; [] ; ^^^[]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (20.27774pt too wide) in paragraph at lines 68--70
+Overfull \hbox (20.27774pt too wide) in paragraph at lines 69--71
 \OT1/cmr/m/n/10 ^^C :=
  []
 
 
-Overfull \hbox (51.68135pt too wide) in paragraph at lines 68--70
+Overfull \hbox (51.68135pt too wide) in paragraph at lines 69--71
 []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^U[]\OMS/cmsy/m/n/10 g[]$
  []
 
 
-Overfull \hbox (14.28474pt too wide) in paragraph at lines 68--70
+Overfull \hbox (14.28474pt too wide) in paragraph at lines 69--71
 \OML/cmm/m/it/10 J \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Overfull \hbox (6.50694pt too wide) in paragraph at lines 68--70
+Overfull \hbox (6.50694pt too wide) in paragraph at lines 69--71
 \OML/cmm/m/it/10 J$
  []
 
 
-Overfull \hbox (99.69905pt too wide) detected at line 72
+Overfull \hbox (99.69905pt too wide) detected at line 73
 \OML/cmm/m/it/10 Vu\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = ^^H(\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[]^^C []
  []
 
@@ -3987,10 +4093,10 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:73: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:74: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.73 ...as the following column vector in $\mathbb
+l.74 ...as the following column vector in $\mathbb
                                                   {R}^{J}$:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4000,32 +4106,32 @@ and I'll forget about whatever was undefined.
 
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (35.86804pt too wide) in paragraph at lines 72--74
+Overfull \hbox (35.86804pt too wide) in paragraph at lines 73--75
  $\OT1/cmr/m/n/10 ^^H(\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[] =
  []
 
 
-Overfull \hbox (85.2732pt too wide) in paragraph at lines 72--74
+Overfull \hbox (85.2732pt too wide) in paragraph at lines 73--75
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; ^^^[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ))[]$
  []
 
 
-Overfull \hbox (13.25487pt too wide) in paragraph at lines 72--74
+Overfull \hbox (13.25487pt too wide) in paragraph at lines 73--75
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (25.16902pt too wide) in paragraph at lines 72--74
+Overfull \hbox (25.16902pt too wide) in paragraph at lines 73--75
 []$
  []
 
 
-Overfull \hbox (13.25487pt too wide) in paragraph at lines 72--74
+Overfull \hbox (13.25487pt too wide) in paragraph at lines 73--75
 \OML/cmm/m/it/10 R[]$ 
  []
 
 
-Overfull \hbox (119.4218pt too wide) detected at line 76
+Overfull \hbox (119.4218pt too wide) detected at line 77
 \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 u; ^^^[]\OMS/cmsy/m/n/10 i\OML/cmm/m/it/10 ; [] ; \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 u; ^^^[]\OMS/cmsy/m/n/10 i\OT1/cmr/m/n/10 )[] = \OMS/cmsy/m/n/10 I\OML/cmm/m/it/10 u
  []
 
@@ -4054,7 +4160,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (123.26178pt too wide) detected at line 80
+Overfull \hbox (123.26178pt too wide) detected at line 81
 \OML/cmm/m/it/10 Vu \OT1/cmr/m/n/10 = ^^H[]^^C\OMS/cmsy/m/n/10 I\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )
  []
@@ -4065,36 +4171,36 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (18.61107pt too wide) in paragraph at lines 80--82
+Overfull \hbox (18.61107pt too wide) in paragraph at lines 81--83
  $\OML/cmm/m/it/10 V \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (24.94727pt too wide) in paragraph at lines 80--82
+Overfull \hbox (24.94727pt too wide) in paragraph at lines 81--83
 \OT1/cmr/m/n/10 ^^H[]^^C\OMS/cmsy/m/n/10 I$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:83: LaTeX Error: Environment remark undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:84: LaTeX Error: Environment remark undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 \begin{remark}
+l.84 \begin{remark}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:84: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:85: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84     I
+l.85     I
           t will also prove useful later to notice that $\Phi^{*}$ is actual...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4184,8 +4290,8 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:84: Undefined control sequence.
-l.84 ...To see this we note that $\Phi^{*}:\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:85: Undefined control sequence.
+l.85 ...To see this we note that $\Phi^{*}:\mathbb
                                                   {R}^{J}\rightarrow H_{0}^{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4204,38 +4310,38 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 84--85
+Overfull \hbox (20.0pt too wide) in paragraph at lines 85--86
 []
  []
 
 
-Overfull \hbox (11.81946pt too wide) in paragraph at lines 84--85
+Overfull \hbox (11.81946pt too wide) in paragraph at lines 85--86
 \OT1/cmr/m/n/10 ^^H[]$
  []
 
 
-Overfull \hbox (10.7806pt too wide) in paragraph at lines 84--85
+Overfull \hbox (10.7806pt too wide) in paragraph at lines 85--86
 \OMS/cmsy/m/n/10 I[]$
  []
 
 
-Overfull \hbox (17.37495pt too wide) in paragraph at lines 84--85
+Overfull \hbox (17.37495pt too wide) in paragraph at lines 85--86
 \OT1/cmr/m/n/10 ^^H[] :
  []
 
 
-Overfull \hbox (26.0326pt too wide) in paragraph at lines 84--85
+Overfull \hbox (26.0326pt too wide) in paragraph at lines 85--86
 \OML/cmm/m/it/10 R[] \OMS/cmsy/m/n/10 !
  []
 
 
-Overfull \hbox (28.61113pt too wide) in paragraph at lines 84--85
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 85--86
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 )$
  []
 
 
-Overfull \hbox (67.73485pt too wide) detected at line 87
+Overfull \hbox (67.73485pt too wide) detected at line 88
 \OT1/cmr/m/n/10 ^^H[]\OT1/cmr/bx/n/10 v \OT1/cmr/m/n/10 := [] \OML/cmm/m/it/10 v[]^^^[]
  []
 
@@ -4299,8 +4405,8 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:88: Undefined control sequence.
-l.88 ...ing from $H^{-1}(\Omega)\rightarrow\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:89: Undefined control sequence.
+l.89 ...ing from $H^{-1}(\Omega)\rightarrow\mathbb
                                                   {R}^{J}$ which is determin...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4340,43 +4446,43 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (6.22914pt too wide) in paragraph at lines 87--89
+Overfull \hbox (6.22914pt too wide) in paragraph at lines 88--90
    $\OT1/cmr/bx/n/10 v$
  []
 
 
-Overfull \hbox (33.73474pt too wide) in paragraph at lines 87--89
+Overfull \hbox (33.73474pt too wide) in paragraph at lines 88--90
 \OML/cmm/m/it/10 v[];  i \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (33.72902pt too wide) in paragraph at lines 87--89
+Overfull \hbox (33.72902pt too wide) in paragraph at lines 88--90
 \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; [] ; J$
  []
 
 
-Overfull \hbox (7.22223pt too wide) in paragraph at lines 87--89
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 88--90
 \OT1/cmr/m/n/10 ^^H$
  []
 
 
-Overfull \hbox (11.81946pt too wide) in paragraph at lines 87--89
+Overfull \hbox (11.81946pt too wide) in paragraph at lines 88--90
 \OT1/cmr/m/n/10 ^^H[]$
  []
 
 
-Overfull \hbox (47.63887pt too wide) in paragraph at lines 87--89
+Overfull \hbox (47.63887pt too wide) in paragraph at lines 88--90
 \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 ) \OMS/cmsy/m/n/10 !
  []
 
 
-Overfull \hbox (13.25487pt too wide) in paragraph at lines 87--89
+Overfull \hbox (13.25487pt too wide) in paragraph at lines 88--90
 \OML/cmm/m/it/10 R[]$
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:90: Undefined control sequence.
-l.90 ...hspace{0.1cm} \forall \mathbf{v}\in\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:91: Undefined control sequence.
+l.91 ...hspace{0.1cm} \forall \mathbf{v}\in\mathbb
                                                   {R}^{J}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4385,7 +4491,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (187.97711pt too wide) detected at line 91
+Overfull \hbox (187.97711pt too wide) detected at line 92
 \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 u; \OT1/cmr/m/n/10 ^^H[]\OT1/cmr/bx/n/10 v\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = []  \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 2  \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
 ) \OMS/cmsy/m/n/10 8\OT1/cmr/bx/n/10 v \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 R[]
  []
@@ -4395,8 +4501,8 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:92: Undefined control sequence.
-l.92     where $(\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:93: Undefined control sequence.
+l.93     where $(\boldsymbol
                             {\cdot},\boldsymbol{\cdot})$ is the standard inn...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4404,8 +4510,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:92: Undefined control sequence.
-l.92     where $(\boldsymbol{\cdot},\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:93: Undefined control sequence.
+l.93     where $(\boldsymbol{\cdot},\boldsymbol
                                                {\cdot})$ is the standard inn...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4440,10 +4546,10 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:92: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:93: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.92 ... is the standard inner product in $\mathbb
+l.93 ... is the standard inner product in $\mathbb
                                                   {R}^{J}$. Using this equat...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4533,14 +4639,9 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:93: Undefined control sequence.
-l.93     $\mathbin{\blacklozenge
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:94: Undefined control sequence.
+l.94     $\mathbin{\blacklozenge
                                 }$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4549,76 +4650,76 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:94: LaTeX Error: \begin{document} ended by \end{remark}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:95: LaTeX Error: \begin{document} ended by \end{remark}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.94 \end{remark}
+l.95 \end{remark}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (17.77779pt too wide) in paragraph at lines 91--95
+Overfull \hbox (17.77779pt too wide) in paragraph at lines 92--96
  $\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (13.25487pt too wide) in paragraph at lines 91--95
+Overfull \hbox (13.25487pt too wide) in paragraph at lines 92--96
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (17.77774pt too wide) in paragraph at lines 91--95
+Overfull \hbox (17.77774pt too wide) in paragraph at lines 92--96
 \OT1/cmr/m/n/10 ^^H =
  []
 
 
-Overfull \hbox (6.18336pt too wide) in paragraph at lines 91--95
+Overfull \hbox (6.18336pt too wide) in paragraph at lines 92--96
 \OMS/cmsy/m/n/10 I$
  []
 
 
-Overfull \hbox (22.37497pt too wide) in paragraph at lines 91--95
+Overfull \hbox (22.37497pt too wide) in paragraph at lines 92--96
 \OT1/cmr/m/n/10 ^^H[] =
  []
 
 
-Overfull \hbox (10.7806pt too wide) in paragraph at lines 91--95
+Overfull \hbox (10.7806pt too wide) in paragraph at lines 92--96
 \OMS/cmsy/m/n/10 I[]$
  []
 
 
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 91--95
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 92--96
 \OML/cmm/m/it/10 V$
  []
 
 
-Overfull \hbox (18.61107pt too wide) in paragraph at lines 91--95
+Overfull \hbox (18.61107pt too wide) in paragraph at lines 92--96
 \OML/cmm/m/it/10 V \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (34.46391pt too wide) in paragraph at lines 91--95
+Overfull \hbox (34.46391pt too wide) in paragraph at lines 92--96
 \OMS/cmsy/m/n/10 I[]\OT1/cmr/m/n/10 ^^C\OMS/cmsy/m/n/10 I \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (25.98613pt too wide) in paragraph at lines 91--95
+Overfull \hbox (25.98613pt too wide) in paragraph at lines 92--96
 \OT1/cmr/m/n/10 ^^H[]^^C^^H$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:96: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:97: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96 W
+l.97 W
       e are now in a position to work out the distribution of $u$ conditiona...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4784,10 +4885,10 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:96: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:97: Undefined control sequence.
 <write> ...ean_before_averaging' on page \thepage 
                                                   \space undefined\on@line .
-l.96 ...quations (\ref{post_mean_before_averaging}
+l.97 ...quations (\ref{post_mean_before_averaging}
                                                   ) and (\ref{post_var_befor...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4796,17 +4897,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `post_mean_before_averaging' on page  undefined on input line 96.
+LaTeX Warning: Reference `post_mean_before_averaging' on page  undefined on input line 97.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:96: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:97: Undefined control sequence.
 <write> ...var_before_averaging' on page \thepage 
                                                   \space undefined\on@line .
-l.96 ...ing}) and (\ref{post_var_before_averaging}
+l.97 ...ing}) and (\ref{post_var_before_averaging}
                                                   ) respectively. We work ou...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4815,7 +4916,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `post_var_before_averaging' on page  undefined on input line 96.
+LaTeX Warning: Reference `post_var_before_averaging' on page  undefined on input line 97.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -4885,21 +4986,21 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:97: LaTeX Error: Environment align* undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:98: LaTeX Error: Environment align* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.97 \begin{align*}
+l.98 \begin{align*}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no a in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:98: Misplaced alignment tab character &.
-l.98     a &
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:99: Misplaced alignment tab character &.
+l.99     a &
             = V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathca...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4911,43 +5012,31 @@ might try typing `S' now just to see what is salvageable.
 Missing character: There is no = in font nullfont!
 Missing character: There is no V in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:98: LaTeX Error: \mathcal allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:99: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98     a &= V\mathcal
+l.99     a &= V\mathcal
                        {L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathca...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no L in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:98: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:99: Missing $ inserted.
 <inserted text> 
                 $
-l.98     a &= V\mathcal{L}^
+l.99     a &= V\mathcal{L}^
                            {*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathca...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
-
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:99: Misplaced alignment tab character &.
-<recently read> &
-                 
-l.99     &
-          = \Phi^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*}(\mathca...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:100: Misplaced alignment tab character &.
 <recently read> &
                  
 l.100     &
-           =\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\mathcal{I}^{*})^{*}(\math...
+           = \Phi^{*}\Lambda\mathcal{I}\mathcal{L}^{*}\mathcal{I}^{*}(\mathc...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -4959,6 +5048,18 @@ might try typing `S' now just to see what is salvageable.
 <recently read> &
                  
 l.101     &
+           =\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\mathcal{I}^{*})^{*}(\math...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:102: Misplaced alignment tab character &.
+<recently read> &
+                 
+l.102     &
            =\Phi^{*}\Lambda(\mathcal{I}\mathcal{L}\Phi^{*})^{*}(\mathcal{I}\...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -4968,22 +5069,22 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:102: LaTeX Error: \begin{document} ended by \end{align*}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:103: LaTeX Error: \begin{document} ended by \end{align*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.102 \end{align*}
+l.103 \end{align*}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:102: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:103: Missing $ inserted.
 <inserted text> 
                 $
-l.102 \end{align*}
+l.103 \end{align*}
                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5012,108 +5113,108 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 96--104
+Overfull \hbox (20.0pt too wide) in paragraph at lines 97--105
 []
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 96--104
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 97--105
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (29.3607pt too wide) in paragraph at lines 96--104
+Overfull \hbox (29.3607pt too wide) in paragraph at lines 97--105
 \OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (7.81946pt too wide) in paragraph at lines 96--104
+Overfull \hbox (7.81946pt too wide) in paragraph at lines 97--105
 \OML/cmm/m/it/10 F$
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 96--104
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 97--105
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (34.40881pt too wide) in paragraph at lines 96--104
+Overfull \hbox (34.40881pt too wide) in paragraph at lines 97--105
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OT1/cmr/m/n/10 ^^F)$
  []
 
 
-Overfull \hbox (5.28589pt too wide) in paragraph at lines 96--104
+Overfull \hbox (5.28589pt too wide) in paragraph at lines 97--105
 \OML/cmm/m/it/10 a$
  []
 
 
-Overfull \hbox (7.22223pt too wide) in paragraph at lines 96--104
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 ^^F$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 96--104
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 97--105
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 96--104
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 97--105
 []
  []
 
 
-Overfull \hbox (85.12247pt too wide) in paragraph at lines 96--104
+Overfull \hbox (85.12247pt too wide) in paragraph at lines 97--105
 []\OMS/cmsy/m/n/10 I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 F[] 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 96--104
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (133.85869pt too wide) in paragraph at lines 96--104
+Overfull \hbox (133.85869pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 ^^H[]^^C\OMS/cmsy/m/n/10 IL[]I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OT1/cmr/m/n/10 ^^H[]^^C\OMS/cmsy/m/n/10 IL[]I[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 F[] 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 96--104
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (149.41429pt too wide) in paragraph at lines 96--104
+Overfull \hbox (149.41429pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 ^^H[]^^C(\OMS/cmsy/m/n/10 ILI[]\OT1/cmr/m/n/10 )[](\OMS/cmsy/m/n/10 IL\OT1/cmr/m/n/10 ^^H[]^^C(\OMS/cmsy/m/n/10 ILI[]\OT1/cmr/m/n/10 )[])[]\OML/cmm/m/it/10 F[] 
  []
 
 
-Overfull \hbox (7.7778pt too wide) in paragraph at lines 96--104
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (151.49202pt too wide) in paragraph at lines 96--104
+Overfull \hbox (151.49202pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 ^^H[]^^C(\OMS/cmsy/m/n/10 IL\OT1/cmr/m/n/10 ^^H[])[](\OMS/cmsy/m/n/10 IL\OT1/cmr/m/n/10 ^^H[]^^C(\OMS/cmsy/m/n/10 IL\OT1/cmr/m/n/10 ^^H[])[])[]\OML/cmm/m/it/10 F$
  []
 
 
-Overfull \hbox (21.3361pt too wide) in paragraph at lines 96--104
+Overfull \hbox (21.3361pt too wide) in paragraph at lines 97--105
 \OMS/cmsy/m/n/10 I[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (11.81946pt too wide) in paragraph at lines 96--104
+Overfull \hbox (11.81946pt too wide) in paragraph at lines 97--105
 \OT1/cmr/m/n/10 ^^H[]$ 
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:105: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:106: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105 I
+l.106 I
        n order to simplify the mean we will work out what $\mathcal{I}\mathc...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5173,54 +5274,54 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:106: LaTeX Error: Environment align* undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:107: LaTeX Error: Environment align* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.106 \begin{align*}
+l.107 \begin{align*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:107: LaTeX Error: \mathcal allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:108: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107     \mathcal
+l.108     \mathcal
                   {I}\mathcal{L}\Phi^{*} &= \begin{pmatrix}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no I in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:107: LaTeX Error: \mathcal allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:108: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107     \mathcal{I}\mathcal
+l.108     \mathcal{I}\mathcal
                              {L}\Phi^{*} &= \begin{pmatrix}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no L in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:107: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:108: Missing $ inserted.
 <inserted text> 
                 $
-l.107     \mathcal{I}\mathcal{L}\Phi
+l.108     \mathcal{I}\mathcal{L}\Phi
                                     ^{*} &= \begin{pmatrix}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:107: Misplaced alignment tab character &.
-l.107     \mathcal{I}\mathcal{L}\Phi^{*} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:108: Misplaced alignment tab character &.
+l.108     \mathcal{I}\mathcal{L}\Phi^{*} &
                                           = \begin{pmatrix}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -5232,10 +5333,10 @@ might try typing `S' now just to see what is salvageable.
 Missing character: There is no . in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no . in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing } inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing } inserted.
 <inserted text> 
                 }
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5243,17 +5344,17 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5261,17 +5362,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5279,17 +5380,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5297,17 +5398,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5315,17 +5416,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5333,17 +5434,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5351,17 +5452,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5369,17 +5470,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5387,17 +5488,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5405,17 +5506,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5423,17 +5524,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5441,17 +5542,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5459,17 +5560,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5477,17 +5578,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5495,17 +5596,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5513,17 +5614,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5531,17 +5632,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5549,17 +5650,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5567,17 +5668,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5585,17 +5686,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5603,17 +5704,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5621,17 +5722,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5639,17 +5740,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5657,17 +5758,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5675,17 +5776,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5693,17 +5794,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5711,17 +5812,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5729,17 +5830,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5747,17 +5848,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5765,17 +5866,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5783,17 +5884,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5801,17 +5902,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5819,17 +5920,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5837,17 +5938,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5855,17 +5956,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5873,17 +5974,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5891,17 +5992,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5909,17 +6010,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5927,17 +6028,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5945,17 +6046,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5963,17 +6064,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5981,17 +6082,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -5999,17 +6100,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -6017,17 +6118,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -6035,17 +6136,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -6053,17 +6154,17 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I'm guessing that you meant to end an alignment here.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Misplaced \cr.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Misplaced \cr.
 <inserted text> \cr 
                     
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 I can't figure out why you would want to use a tab mark
 or \cr or \span just now. If something like a right brace
@@ -6071,19 +6172,19 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113: Missing \cr inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114: Missing \cr inserted.
 <inserted text> 
                 \cr 
-l.113 ...                                 \mathcal
+l.114 ...                                 \mathcal
                                                   {L}\phi_{1} & \dots & \mat...
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 38 strings out of 492982
- 724 string characters out of 6134896
+ 39 strings out of 492982
+ 749 string characters out of 6134896
  59888 words of memory out of 5000000
- 3697 multiletter control sequences out of 15000+600000
+ 3698 multiletter control sequences out of 15000+600000
  4913 words of font info for 18 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,11n,16p,836b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,11n,21p,891b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:113:  ==> Fatal error occurred, no output PDF file produced!
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:114:  ==> Fatal error occurred, no output PDF file produced!

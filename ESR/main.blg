@@ -7,45 +7,45 @@ Warning--entry type for "probNumericsSite" isn't style-file defined
 --line 160 of file references.bib.bib
 Warning--empty year in probNumericsSite
 Warning--empty booktitle in Rasmussen06gaussianprocesses
-You've used 32 entries,
+You've used 36 entries,
             2481 wiz_defined-function locations,
-            721 strings with 9411 characters,
-and the built_in function-call counts, 11990 in all, are:
-= -- 1007
-> -- 555
-< -- 24
-+ -- 224
-- -- 160
-* -- 854
-:= -- 1855
-add.period$ -- 95
-call.type$ -- 32
-change.case$ -- 58
-chr.to.int$ -- 32
-cite$ -- 35
-duplicate$ -- 661
-empty$ -- 1162
-format.name$ -- 199
-if$ -- 2593
+            748 strings with 10078 characters,
+and the built_in function-call counts, 13507 in all, are:
+= -- 1145
+> -- 619
+< -- 26
++ -- 250
+- -- 178
+* -- 976
+:= -- 2092
+add.period$ -- 107
+call.type$ -- 36
+change.case$ -- 66
+chr.to.int$ -- 36
+cite$ -- 39
+duplicate$ -- 737
+empty$ -- 1308
+format.name$ -- 223
+if$ -- 2913
 int.to.chr$ -- 1
-int.to.str$ -- 33
-missing$ -- 35
-newline$ -- 165
-num.names$ -- 93
-pop$ -- 308
+int.to.str$ -- 37
+missing$ -- 39
+newline$ -- 185
+num.names$ -- 105
+pop$ -- 336
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 36
 quote$ -- 0
-skip$ -- 409
+skip$ -- 452
 stack$ -- 0
-substring$ -- 518
-swap$ -- 121
+substring$ -- 611
+swap$ -- 129
 text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 209
+type$ -- 237
 warning$ -- 2
-while$ -- 99
+while$ -- 115
 width$ -- 0
-write$ -- 407
+write$ -- 459
 (There were 3 warnings)

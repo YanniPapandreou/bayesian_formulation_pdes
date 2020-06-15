@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -198,5 +198,30 @@ Timothy~John Sullivan.
 Simo S{\"a}rkk{\"a}.
 \newblock \emph{Bayesian filtering and smoothing}, volume~3.
 \newblock Cambridge University Press, 2013.
+
+\bibitem[Vakhania(1975)]{vakhania1975topological}
+NN~Vakhania.
+\newblock The topological support of gaussian measure in banach space.
+\newblock \emph{Nagoya Mathematical Journal}, 57:\penalty0 59--63, 1975.
+
+\bibitem[Masarotto et~al.(2019)Masarotto, Panaretos, and
+  Zemel]{masarotto2019procrustes}
+Valentina Masarotto, Victor~M Panaretos, and Yoav Zemel.
+\newblock Procrustes metrics on covariance operators and optimal transportation
+  of gaussian processes.
+\newblock \emph{Sankhya A}, 81\penalty0 (1):\penalty0 172--213, 2019.
+
+\bibitem[Cuesta-Albertos et~al.(1996)Cuesta-Albertos, Matr{\'a}n-Bea, and
+  Tuero-Diaz]{cuesta1996lower}
+JA~Cuesta-Albertos, C~Matr{\'a}n-Bea, and A~Tuero-Diaz.
+\newblock On lower bounds for the l2-wasserstein metric in a hilbert space.
+\newblock \emph{Journal of Theoretical Probability}, 9\penalty0 (2):\penalty0
+  263--283, 1996.
+
+\bibitem[Powers and St{\o}rmer(1970)]{powers1970free}
+Robert~T Powers and Erling St{\o}rmer.
+\newblock Free states of the canonical anticommutation relations.
+\newblock \emph{Communications in Mathematical Physics}, 16\penalty0
+  (1):\penalty0 1--33, 1970.
 
 \end{thebibliography}
