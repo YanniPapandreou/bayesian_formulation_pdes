@@ -30,16 +30,20 @@ This will be one of the two priors we will consider. One should note that this p
 We will now consider placing an initial Gaussian prior on the solution $u$, $u\sim\mathcal{N}(0,V)$. The covariance operator $V$ will be chosen so as to satisfy the following assumption:
 
 \noindent \textbf{Assumption 1} $V$ is controlled so that $u$ lies almost surely in some appropriate subspace $\mathcal{U}\subset\mathcal{H}$ where the linear operator $\mathcal{L}$ restricted to this subspace is bounded\footnote{$\mathcal{L}$, being a differential operator, is in general an unbounded operator when viewed on the whole function space $\mathcal{H}$.}, i.e. $\mathcal{L}:\mathcal{U}\rightarrow\mathcal{U}^{\prime}$ is bounded where $\mathcal{U}\subset\mathcal{H}\subset{\mathcal{U}^{\prime}}$.
+\vspace{10pt}
+
 \begin{remark}
     We shall assume here that the subspace $\mathcal{U}$ is reflexive so that $\mathcal{U}^{\prime\prime}$ can be identified with $\mathcal{U}$.
     $\mathbin{\blacklozenge}$
 \end{remark}
 
-Having placed this prior on $u$ we will now consider conditioning on the ``observation" of a suitable information operator in order to form a posterior distribution which will be taken to be our new prior. This information operator will involve the following discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$, where $h$ is the mesh size. In particular, we will consider the following information operators $I_{j}:\mathcal{U}^{\prime}\rightarrow\mathbb{R}$ defined by:
+Having placed this prior on $u$ we will now consider conditioning on the ``observation" of a suitable information operator in order to form a posterior distribution which will be taken to be our new prior. This information operator will involve a discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$, where $h$ is the mesh size. In particular, we will consider the following information operators $I_{j}:\mathcal{U}^{\prime}\rightarrow\mathbb{R}$ defined by:
 \begin{equation*}
     I_{j}\boldsymbol{\cdot} = \langle\boldsymbol{\cdot},\phi_{j}\rangle
 \end{equation*}
 where $\langle\boldsymbol{\cdot},\boldsymbol{\cdot}\rangle$ is the duality pairing between $\mathcal{U}$ and $\mathcal{U}^{\prime}$ and where the $\phi_{j}\in\mathcal{F}_{h}$ for $j=1,\dots,J$. Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$. It is also important to emphasise that $I_{j}\in\mathcal{U}^{\prime\prime}$ and so they are bounded linear operators.
+\vspace{10pt}
+
 \begin{remark}
     Think of the $\{\phi_{j}\}$ as a basis for finite element spaces.
     $\mathbin{\blacklozenge}$
@@ -146,7 +150,7 @@ The second is the prior from using an approximation to the solution of (\ref{Dir
     m_{2} &= Q\bar{F} \\
     \Sigma_{2} &= \Sigma + QK_{\mathcal{I}}Q^{*}
 \end{align}
-with $A$ as in Proposition \textcolor{blue}{\ref{first_prop}}.
+with $Q$ as in Proposition \textcolor{blue}{\ref{first_prop}}.
 
 We will now also assume that we have observational data, coming from sensors say, which give us noisy observations of the value of $u$ at some points $y_{1},\dots,y_{s}$ in $\Omega$. We wish to update our belief in the distribution of $u$ using this sensor data. In theory we can use either of the $\nu_{i}$ as prior distributions. However, as mentioned previously the true prior will often be intractable and as such we will be forced to use the second approximate prior. Our goal will thus be to investigate how different the two resulting posteriors are. This analysis will be carried out in the next section where we will consider a particular PDE and a particular choice of $V$ which will correspond to a statistical version of FEM. For now we will outline the computation of the posterior distributions for the general framework under consideration.
 
