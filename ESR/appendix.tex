@@ -1,1 +1,170 @@
+In this section we provide the omitted details for the proofs and methodology presented in Sections \textcolor{blue}{\ref{general_framework}} and \textcolor{blue}{\ref{elliptic_bv_prob}}.
 
+\subsection{Justification of the conditioning step yielding equation (\ref{conditionalDistnFixed_f}) in Section \textcolor{blue}{\ref{general_framework}}}
+
+\subsection{Detailed computations for the proof of Proposition \textcolor{blue}{\ref{first_prop}}}
+
+We provide here details of the computation of the following integral needed for the proof of Proposition \textcolor{blue}{\ref{first_prop}}:
+\begin{equation*}
+    \int\int\psi(u^{N})\mu_{PQF,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)
+\end{equation*}
+Both measures in the above integral are multivariate normal and so we have:
+\begin{align}
+    \int\int&\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)= \nonumber \\ &=\frac{1}{Z_u}\int\int\psi(u^{N})\exp\left(-\frac{1}{2}\left\langle u^{N}-PQF,\Sigma_{N}^{-1}(u^{N}-PQF) \right\rangle\right)\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)\mathrm{d}u^{N} \nonumber \\
+    &=\frac{1}{Z_{u}Z_{f}}\int\int\psi(u^{N})\exp\left(-\frac{1}{2}\left\langle u^{N}-PQF,\Sigma_{N}^{-1}(u^{N}-PQF)\right\rangle\right)\exp\left(-\frac{1}{2}\left\langle F-\bar{F},K_{\mathcal{I}}^{-1}(F-\bar{F}) \right\rangle\right)\mathrm{d}F\mathrm{d}u^{N}
+\end{align}
+where the normalization constants are $Z_u:=(2\pi)^{N/2}\det(\Sigma_N)^{1/2}$ and $Z_f:=(2\pi)^{J/2}\det(K_\mathcal{I})^{1/2}$. We now need to compute the integral over $F$. In order to do so we combine the exponents in (11) into a quadratic in $F$ in order to be able to use the well-known formula of a multidimensional Gaussian integral. Going through the algebra we obtain:
+
+\begin{align}
+    \frac{1}{Z_{u}Z_{f}}&\int\int\psi(u^{N})\exp\Bigg(-\frac{1}{2}\Big(\left\langle u^{N},\Sigma_{N}^{-1}u^{N} \right\rangle - 2\left\langle \Sigma_{N}^{-1}PQF,u^{N}\right\rangle + \left\langle F,Q^{*}P^{*}\Sigma_{N}^{-1}PQF\right\rangle \nonumber \\
+    &+ \left\langle F,K_{\mathcal{I}}^{-1}F\right\rangle - 2 \left\langle K_{\mathcal{I}}^{-1}\bar{F},F \right\rangle + \left\langle \bar{F},K_{\mathcal{I}}^{-1}\bar{F}\right\rangle \Big)\Bigg)\mathrm{d}F\mathrm{d}u^{N} = \nonumber \\
+    &=\frac{1}{Z_{u}Z_{f}}\int\psi(u^{N})\exp\left(-\frac{1}{2}\left(\left\langle u^{N},\Sigma_{N}^{-1} u^{N} \right\rangle + \left\langle \bar{F},K_{\mathcal{I}}^{-1}\bar{F} \right\rangle\right)\right) \cdot \nonumber \\
+    &\left(\int\exp\left(-\frac{1}{2}\left\langle F,BF \right\rangle + \left\langle Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} + K_{\mathcal{I}}^{-1}\bar{F},F \right\rangle\right)\mathrm{d}F\right)\mathrm{d}u^{N}
+\end{align}
+where $B:=\left(Q^{*}P^{*}\Sigma_{N}^{-1}PQ+K_{\mathcal{I}}^{-1}\right)$. Computing the inner integral over $F$ we thus obtain:
+\begin{align}
+    \frac{(2\pi)^{J/2}}{Z_{u}Z_{f}\det(B)^{1/2}}\int\psi(u^{N})\exp&\left(\frac{1}{2}\left\langle Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} + K_{\mathcal{I}}^{-1}\bar{F}, B^{-1}\left(Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} + K_{\mathcal{I}}^{-1}\bar{F}\right) \right\rangle\right. \nonumber \\
+    &\left.-\frac{1}{2}\left(\left\langle u^{N}, \Sigma_{N}^{-1}u^{N}\right\rangle + \left\langle \bar{F},K_{\mathcal{I}}^{-1}\bar{F} \right\rangle \right)\right)\mathrm{d}u^{N}
+\end{align}
+We now focus on the terms in the exponent and simplify these as follows:
+\begin{align}
+    &\frac{1}{2}\left\langle Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} + K_{\mathcal{I}}^{-1}\bar{F}, B^{-1}\left(Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} + K_{\mathcal{I}}^{-1}\bar{F}\right) \right\rangle -\frac{1}{2}\left(\left\langle u^{N}, \Sigma_{N}^{-1}u^{N}\right\rangle + \left\langle \bar{F},K_{\mathcal{I}}^{-1}\bar{F} \right\rangle \right) =  \nonumber \\
+    &=-\frac{1}{2}\Big( \left\langle u^{N}, \Sigma_{N}^{-1}u^{N}\right\rangle + \left\langle \bar{F}, K_{\mathcal{I}}^{-1}\bar{F} \right\rangle - \left\langle Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} + K_{\mathcal{I}}^{-1}\bar{F}, B^{-1}\left(Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} + K_{\mathcal{I}}^{-1}\bar{F}\right) \right\rangle \Big) \nonumber \\
+    &=-\frac{1}{2}\Big(\left\langle u^{N}, \Sigma_{N}^{-1}u^{N}\right\rangle + \left\langle \bar{F}, K_{\mathcal{I}}^{-1}\bar{F} \right\rangle - \left\langle u^{N},\Sigma_{N}^{-1}PQB^{-1}Q^{*}P^{*}\Sigma_{N}^{-1}u^{N} \right\rangle \nonumber \\
+    &- 2\left\langle u^{N},\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F} \right\rangle - \left\langle \bar{F}, K_{\mathcal{I}}^{-1}B^{-1}K_{\mathcal{I}}^{-1}\bar{F} \right\rangle \Big) \nonumber \\
+    &= -\frac{1}{2}\Big( \left\langle u^{N}, (\Sigma_{N}^{-1} - \Sigma_{N}^{-1}PQB^{-1}Q^{*}P^{*}\Sigma_{N}^{-1})u^{N} \right\rangle - 2 \left\langle u^{N},\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F} \right\rangle + \left\langle \bar{F}, (K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}K_{\mathcal{I}}^{-1})\bar{F} \right\rangle \Big) \nonumber \\
+    &=-\frac{1}{2}\Big( \left\langle u^{N}, \Sigma_{\mathcal{I}}^{-1}u^{N} \right\rangle - 2 \left\langle u^{N},\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F} \right\rangle + \left\langle \bar{F}, (K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}K_{\mathcal{I}}^{-1})\bar{F} \right\rangle \Big) \label{exponent}
+\end{align}
+where $\Sigma_{\mathcal{I}}:=\Sigma_{N} + PQK_{\mathcal{I}}Q^{*}P^{*}$. The inverse of $\Sigma_{\mathcal{I}}$ is indeed the coefficient matrix for the quadratic term in $u^{N}$ in (\ref{exponent}). This can be seen by utilizing the Woodbury matrix identity as follows:
+\begin{align*}
+    \Sigma_{\mathcal{I}}^{-1}&=(\Sigma_{N} + PQK_{\mathcal{I}}Q^{*}P^{*})^{-1} \\
+    &=\Sigma_{N}^{-1}-\Sigma_{N}^{-1}PQ(K_{\mathcal{I}}^{-1}+Q^{*}P^{*}\Sigma_{N}^{-1}PQ)^{-1}Q^{*}P^{*}\Sigma_{N}^{-1} \\
+    &=\Sigma_{N}^{-1}-\Sigma_{N}^{-1}PQB^{-1}Q^{*}P^{*}\Sigma_{N}^{-1}
+\end{align*}
+We now complete the square (in terms of $u^{N}$) to obtain:
+\begin{align}
+    -&\frac{1}{2}\Big(\left\langle u^{N}-h^{N},\Sigma_{\mathcal{I}}^{-1}(u^{N}-h^{N}) \right\rangle + \left\langle \bar{F}, (K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}K_{\mathcal{I}}^{-1})\bar{F} \right\rangle - \left\langle \Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F},\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F} \right\rangle \Big) = \nonumber \\
+    &=-\frac{1}{2}\Big(\left\langle u^{N}-h^{N},\Sigma_{\mathcal{I}}^{-1}(u^{N}-h^{N}) \right\rangle + \left\langle \bar{F}, (K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1})\bar{F} \right\rangle\Big)
+\end{align}
+where $h^{N}:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F}$. We now show that the term quadratic in $\bar{F}$ vanishes by showing that the coefficient matrix of $\bar{F}$ is equal to the zero matrix. Note that this coefficent matrix can be rewritten as:
+\begin{align*}
+    &K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1} = \\
+    &=K_{\mathcal{I}}^{-1}K_{\mathcal{I}}K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}K_{\mathcal{I}}^{-1}-K_{\mathcal{I}}^{-1}B^{-1}Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1} \\
+    &= K_{\mathcal{I}}^{-1}(K_{\mathcal{I}}-B^{-1}-B^{-1}Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1})K_{\mathcal{I}}^{-1} \\
+    &=K_{\mathcal{I}}^{-1}B^{-1}(BK_{\mathcal{I}}B-B-Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQ)B^{-1}K_{\mathcal{I}}^{-1}
+\end{align*}
+and so showing that it is the zero matrix is equivalent to showing that $(BK_{\mathcal{I}}B-B-Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQ)$ is the zero matrix. This can be shown as follows:
+\begin{align*}
+    &BK_{\mathcal{I}}B-B-Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQ = \\
+    &=(Q^{*}P^{*}\Sigma_{N}^{-1}PQ+K_{\mathcal{I}}^{-1})K_{\mathcal{I}}B-B-Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQ \\
+    &=Q^{*}P^{*}\Sigma_{N}^{-1}PQK_{\mathcal{I}}B+B-B-Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQ \\
+    &=Q^{*}P^{*}\Sigma_{N}^{-1}PQK_{\mathcal{I}}(Q^{*}P^{*}\Sigma_{N}^{-1}PQ+K_{\mathcal{I}}^{-1})-Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQ \\
+    &=Q^{*}P^{*}\Sigma_{N}^{-1}PQK_{\mathcal{I}}Q^{*}P^{*}\Sigma_{N}^{-1}PQ + Q^{*}P^{*}\Sigma_{N}^{-1}PQ - Q^{*}P^{*}\Sigma_{N}^{-1}\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQ \\
+    &= Q^{*}P^{*}\Sigma_{N}^{-1}(PQK_{\mathcal{I}}Q^{*}P^{*}+\Sigma_{N}-\Sigma_{\mathcal{I}})\Sigma_{N}^{-1}PQ = 0
+\end{align*}
+where the last equality follows by the definition of $\Sigma_{\mathcal{I}}$. Thus, our integral simplifies to:
+\begin{equation}
+    \frac{(2\pi)^{J/2}}{Z_{u}Z_{f}\det(B)^{1/2}}\int\psi(u^{N})\exp\Big(-\frac{1}{2}\left\langle u^{N}-h^{N},\Sigma_{\mathcal{I}}^{-1}(u^{N}-h^{N}) \right\rangle\Big)\mathrm{d}u^{N}
+\end{equation}
+We now focus on simplifying the normalizing constants in front of the integral:
+\begin{align*}
+    \frac{(2\pi)^{J/2}}{Z_{u}Z_{f}\det(B)^{1/2}}&=\frac{(2\pi)^{J/2}}{(2\pi)^{N/2}\det(\Sigma_N)^{1/2}(2\pi)^{J/2}\det(K_\mathcal{I})^{1/2}\det(B)^{1/2}}= \\
+    &=\frac{1}{(2\pi)^{N/2}\det(\Sigma_N)^{1/2}\det(K_\mathcal{I})^{1/2}\det(B)^{1/2}}
+\end{align*}
+To proceed we note that $\det{B}$ can be rewritten as follows:
+\begin{align*}
+    \det(B)&=\det(Q^{*}P^{*}\Sigma_{N}^{-1}PQ + K_{\mathcal{I}}^{-1}) \\
+    &=\det(K_{\mathcal{I}}^{-1}(I+K_{\mathcal{I}}Q^{*}P^{*}\Sigma_{N}^{-1}PQ)) \\
+    &=\det(K_{\mathcal{I}}^{-1})\det(I+(K_{\mathcal{I}}Q^{*}P^{*})(\Sigma_{N}^{-1}PQ))) \\
+    &=\det(K_{\mathcal{I}})^{-1}\det(I+\Sigma_{N}^{-1}PQK_{\mathcal{I}}Q^{*}P^{*})
+\end{align*}
+where we have utilized Sylvester's determinant theorem (\textit{note: the identity matrices in the last two lines are of different sizes}). We can now finish up the simplification of the constants outside the integral:
+\begin{align*}
+    &\frac{1}{(2\pi)^{N/2}\det(\Sigma_N)^{1/2}\det(K_\mathcal{I})^{1/2}\det(B)^{1/2}} \\
+    &=\frac{1}{(2\pi)^{N/2}\det(\Sigma_N)^{1/2}\det(K_\mathcal{I})^{1/2}\det(K_{\mathcal{I}})^{-1/2}\det(I+\Sigma_{N}^{-1}PQK_{\mathcal{I}}Q^{*}P^{*})^{1/2}} \\
+    &= \frac{1}{(2\pi)^{N/2}\det(\Sigma_{N} + PQK_{\mathcal{I}}Q^{*}P^{*})^{1/2}} \\
+    &=\frac{1}{(2\pi)^{N/2}\det(\Sigma_{\mathcal{I}})^{1/2}}
+\end{align*}
+Thus, our integral becomes:
+\begin{align}
+    \int&\psi(u^{N})\frac{1}{(2\pi)^{N/2}\det(\Sigma_{\mathcal{I}})^{1/2}}\exp\left(-\frac{1}{2}\left\langle u^{N}-h^{N}, \Sigma_{\mathcal{I}}^{-1}(u^{N}-h^{N}) \right\rangle\right)\mathrm{d}u^N = \nonumber \\
+    =&\int\psi(u^{N})\mu_{h^{N},\Sigma_{\mathcal{I}}}(\mathrm{d}u^N)
+\end{align}
+from which we see that we have obtained the expectation of $\psi$ w.r.t. a multivariate Gaussian with mean and covariance given by:
+\begin{equation}
+    h^{N}:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F}=PQ\bar{F}
+\end{equation}
+\begin{equation}
+    \Sigma_{\mathcal{I}}=P(\Sigma+QK_{\mathcal{I}}Q^{*})P^{*}
+\end{equation}
+
+\noindent Note that we have simplified the mean $h^N$ of this multivariate Gaussian as follows:
+\begin{align*}
+    h^N &= \Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F} \\
+    &=(\Sigma_N+PQK_{\mathcal{I}}Q^{*}P^{*})\Sigma_{N}^{-1}PQ(K_{\mathcal{I}}B)^{-1}\bar{F} \\
+    &=PQ(K_{\mathcal{I}}B)^{-1}\bar{F}+PQK_{\mathcal{I}}Q^{*}P^{*}\Sigma_{N}^{-1}PQ(K_{\mathcal{I}}B)^{-1}\bar{F} \\
+    &=PQ(I+K_{\mathcal{I}}Q^{*}P^{*}\Sigma_{N}^{-1}PQ)(K_{\mathcal{I}}B)^{-1}\bar{F} \\
+    &=PQ(I+K_{\mathcal{I}}Q^{*}P^{*}\Sigma_{N}^{-1}PQ)(K_{\mathcal{I}}(K_{\mathcal{I}}^{-1}+Q^{*}P^{*}\Sigma_{N}^{-1}PQ))^{-1}\bar{F}\\
+    &=PQ(I+K_{\mathcal{I}}Q^{*}P^{*}\Sigma_{N}^{-1}PQ)(I+K_{\mathcal{I}}Q^{*}P^{*}\Sigma_{N}^{-1}PQ)^{-1}\bar{F}\\
+    &=PQ\bar{F}
+\end{align*}
+We thus obtain (\ref{psi_integral_one}) as claimed in the proof of Proposition \textcolor{blue}{\ref{first_prop}}. \qedsymbol
+
+\subsection{Proof of the invertibility of the Galerkin Stiffness matrix $A$ introduced in Section \textcolor{blue}{\ref{elliptic_bv_prob}}}
+
+We prove here that that Galerkin Stiffness matrix $A$ with $ij$-\textit{th} entry given by $A_{ij}:=\int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x$ is invertible. The proof comes from \textcolor{blue}{\cite{lord2014introduction}}. As mentioned we assume that the diffusion coefficent $a(x)$ satisfies Assumption 2.
+
+\noindent \textit{Proof:} In order to show that $A$ is invertible we shall show that it is (strictly) positive definite. Under Assumption 2 it is a simple exercise to show that the following bilinear form from $H_{0}^{1}(\Omega)\times H_{0}^{1}(\Omega)$ to $\mathbb{R}$ defined by:
+\begin{equation}
+    \tilde{a}(u,w):=\int_{\Omega}a(x)\nabla u(x)\cdot\nabla w(x)\mathrm{d}x
+\end{equation}
+defines a norm $|\boldsymbol{\cdot}|_{E}$ on $H_{0}^{1}(\Omega)$ via $|v|_{E}:=\tilde{a}(u,u)^{1/2}$. We can now show that the Galerkin stiffness matrix $A$ is (strictly) positive definite. To this end let $\mathbf{v}\in\mathbb{R}^{J}\backslash\{0\}$ and define $v=\Phi^{*}\mathbf{v}=\sum_{i=1}^{J}v_{i}\phi_{i}$ where $\Phi^{*}$ is the operator in Section \textcolor{blue}{\ref{elliptic_bv_prob}} defined by equation (\ref{projection_into_fem_space}). Note that $v$ so defined is a function in $H_{0}^{1}(\Omega)$. We can now compute:
+\begin{align*}
+    \mathbf{v}^{T}A\mathbf{v} &= \sum_{i,j=1}^{J}v_{j}A_{ij}v_{i} \\
+    &=\sum_{i,j=1}^{J}v_{j}(\int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x)v_{i} \\
+    &=\sum_{i,j=1}^{J}v_{j}\tilde{a}(\phi_{i},\phi_{j})v_{i} \\
+    &=\tilde{a}\left(\sum_{i=1}^{J}v_{i}\phi_{i},\sum_{j=1}^{J}v_{j}\phi_{j}\right) \\
+    &= \tilde{a}(v,v) \\
+    &= |v|_{E}^{2}>0
+\end{align*}
+where the strict inequality follows since $\tilde{a}(v,v)=0$ iff $|v|_{E}=0$ iff $v=0$ (since $|\boldsymbol{\cdot}|_{E}$ is a norm of $H_{0}^{1}(\Omega)$) iff $\mathbf{v}=0$ since the $\{\phi_{i}\}$ are linearly independent. \qedsymbol
+
+\subsection{Detailed computations for proving equation (\ref{approximate_fem_prior}) in Section \textcolor{blue}{\ref{elliptic_bv_prob}}}
+
+We provide here the detailed computation for showing that the averaged distribution is indeed given by (\ref{approximate_fem_prior}). As explained in Section \textcolor{blue}{\ref{elliptic_bv_prob}} we must redo the calculation of the expectation of an arbitrary bounded cylindrical test function. We are thus again interested in computing the following integral:
+\begin{equation}
+    \int\int\psi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation}
+where now $a=\Phi^{*}A^{-1}F$ and $\Sigma=0$. Thus, $\mu_{a,\Sigma}=\delta_{a}$, that is to say that the measure is in fact a Dirac point mass at $a=\Phi^{*}A^{-1}F$. We thus have:
+\begin{equation*}
+    \int\int\psi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)=\int\int\psi(u^N)\delta_{\Phi^{*}A^{-1}F}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation*}
+Now since the posterior for $u$ for a fixed realisation of $f$ is a point mass we have that the posterior for $u^N=Pu$ is $\delta_{P\Phi^{*}A^{-1}F}$. Thus, we can write:
+\begin{equation*}
+    \int\int\psi(u^N)\delta_{\Phi^{*}A^{-1}F}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)=\int\int\phi(u^N)\delta_{P\Phi^{*}A^{-1}F}(\mathrm{d}u^N)\mu_{\bar{f},K}(\mathrm{d}f)
+\end{equation*}
+It is now important to point out that $P\Phi^{*}$ is to be interpreted\footnote{By this we mean that $P\Phi^{*}$ is actually interpreted as $P\otimes\Phi^{*}$} as the following $N\times J$ matrix:
+\begin{align*}
+    P\Phi^{*}&=P(\phi_{1},\dots,\phi_{J}) \\
+    &=(P\phi_{1},\dots,P\phi_{J}) \\
+    &=\begin{pmatrix}
+        \phi_{1}(x_1) & \dots & \phi_{J}(x_1) \\
+        \vdots & & \vdots \\
+        \phi_{1}(x_N) & \dots & \phi_{J}(x_N)
+      \end{pmatrix}=:\Theta
+\end{align*}
+i.e. the matrix with $ij$\textit{th} entry $\Theta_{i,j}:=\phi_{j}(x_{i})$ for $i\in\{1,\dots,N\},j\in\{1,\dots,J\}$. We thus have that $Y:=P\Phi^{*}A^{-1}F=\Theta A^{-1}F\sim\mathcal{N}(\Theta A^{-1}\bar{F},\Theta A^{-1}K_{\mathcal{I}}A^{-1}\Theta^{*})$. Together with this and with the fact that the posterior of $u^{N}$ only depends on $f$ through $F$ we can write:
+\begin{align*}
+    \int\int\psi(u^N)\delta_{P\Phi^{*}A^{-1}F}(\mathrm{d}u^N)\mu_{\bar{f},K}(\mathrm{d}f)&=\int\int\phi(u^N)\delta_{\Theta A^{-1}F}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F) \\
+    &=\int\int\psi(u^N)\delta_{Y}(\mathrm{d}u^N)\mu_{\Theta A^{-1}\bar{F},\Theta A^{-1}K_{\mathcal{I}}A^{-1}\Theta^{*}}(\mathrm{d}Y) \\
+    &=\int\psi(u^N)\left(\int\delta_{Y}(\mathrm{d}u^N)\mu_{\Theta A^{-1}\bar{F},\Theta A^{-1}K_{\mathcal{I}}A^{-1}\Theta^{*}}(\mathrm{d}Y)\right) \\
+    &=\int\psi(u^N)\mu_{\Theta A^{-1}\bar{F},\Theta A^{-1}K_{\mathcal{I}}A^{-1}\Theta^{*}}(\mathrm{d}u^N)
+\end{align*}
+which we recognize as a finite dimensional projection of a Gaussian measure. Thus, we conclude that ``averaging" over $f$ gives the expected Gaussian posterior under these choices:
+\begin{equation}
+    \label{average_posterior_FEM_prior}
+    \mathcal{N}(\Phi^{*}A^{-1}\bar{F},\Phi^{*}A^{-1}K_{\mathcal{I}}A^{-1}\Phi)
+\end{equation}
+\qedsymbol
+
+\subsection{Detailed computations for the proof of Theorem \textcolor{blue}{\ref{posterior_difference_bound}}}

@@ -12,3 +12,8 @@
 \BOOKMARK [2][-]{subsection.4.4}{Upperbound on the Wasserstein Distance between the two posteriors}{section.4}% 12
 \BOOKMARK [1][-]{section.5}{Conclusions and Research Plan}{}% 13
 \BOOKMARK [1][-]{section.6}{Appendix}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Justification of the conditioning step yielding equation \(4\) in Section 3}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Detailed computations for the proof of Proposition 3.1}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.3}{Proof of the invertibility of the Galerkin Stiffness matrix A introduced in Section 4}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.4}{Detailed computations for proving equation \(41\) in Section 4}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.5}{Detailed computations for the proof of Theorem 4.2}{section.6}% 19

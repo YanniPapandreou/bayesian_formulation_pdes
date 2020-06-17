@@ -6,7 +6,7 @@ In this section we will focus on the following standard elliptic stationary cond
         u(x) &= 0, \hspace{0.3cm} x\in\partial\Omega
     \end{split}
 \end{align}
-where $f$ is random and has distribution $f\sim\mathcal{N}(\bar{f},K)$ as in Section \textcolor{blue}{\ref{general_framework}}. We assume that the diffusion coefficient satisfies the following assumption:
+where $f$ is random and has distribution $f\sim\mathcal{N}(\bar{f},K)$ as in Section \textcolor{blue}{\ref{general_framework}}. We assume that the diffusion coefficient satisfies the following assumption taken from \textcolor{blue}{\cite{lord2014introduction}}:
 
 \noindent \textbf{Assumption 2} (regularity of coefficients) The diffusion coefficient $a(x)$ satisfies:
 \begin{equation}
@@ -84,6 +84,7 @@ i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. \vspace{10pt}
 \begin{remark}
     It will also prove useful later to notice that $\Phi^{*}$ is actually the same operator as $\mathcal{I}^{*}$. To see this we note that $\Phi^{*}:\mathbb{R}^{J}\rightarrow H_{0}^{1}(\Omega)$ is defined by:
     \begin{equation}
+        \label{projection_into_fem_space}
         \Phi^{*}\mathbf{v}:=\sum_{i=1}^{J}v_{i}\phi_{i}
     \end{equation}
     where the vector $\mathbf{v}$ has components $v_{i}, \hspace{0.1cm} i=1,\dots,J$. Thus, $\Phi$, the adjoint of $\Phi^{*}$ is a mapping from $H^{-1}(\Omega)\rightarrow\mathbb{R}^{J}$ which is determined by the relation:
@@ -288,7 +289,7 @@ We thus have an upper bound on the Wasserstein distance between $\nu_{1},\nu_{2}
     W(\nu_{1},\nu_{2})\leq h \sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}+\mathcal{O}(h^2)}\leq \gamma h +\mathcal{O}(h^2)
 \end{equation}
 where $\gamma:=\sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}}>0$ is a constant. Note that we have also used that both\footnote{$K$ is trace-class since it is a covariance operator and thus its trace-norm is bounded.} $\|K\|_{1}$ and $\|\mathcal{L}^{-1}\|_{\infty}$ are bounded and independent of $h$. We also see that as $h\rightarrow 0$ the Wasserstein distance between $\nu_1,\nu_2$ goes to 0 and so the approximate prior converges (in distribution) to the true prior as $h\rightarrow 0$ (see Proposition 4 in \textcolor{blue}{\cite{masarotto2019procrustes}}).
-$\mathbin{\blacklozenge}$
+\qedsymbol
 
 Having obtained this upperbound on the distance between the true priors we are now in a position to investigate how this ``propagates" forwards to further inference. In particular, we will now look at incorporating sensor data and seeing how different the two resulting posteriors are from using the two different priors $\nu_1,\nu_2$ above.
 
@@ -350,4 +351,4 @@ where $\kappa>0$ is a constant independent of $h$. Combining these two upper bou
     W^{2}\left(\mathcal{N}(m^{(1)}_{u|\mathbf{v}},\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(m^{(2)}_{u|\mathbf{v}},\Sigma^{(2)}_{u|\mathbf{v}})\right)\leq\kappa h^{2} + \mathcal{O}(h^4)
 \end{equation}
 and so the Wasserstein distance between the posteriors is bounded above by $\mathcal{O}(h)$ and thus goes to $0$ as $h\rightarrow 0$. Thus, the posterior obtained using the approximate prior converges in distribution to the posterior obtained using the true prior as the mesh size goes to 0.
-$\mathbin{\blacklozenge}$
+\qedsymbol

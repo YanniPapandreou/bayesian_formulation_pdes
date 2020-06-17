@@ -120,12 +120,14 @@ We note that $Pa=PQF$ where $Q:= V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mat
 \end{equation}
 Both measures in the above integral are now multivariate normal and so we can utilise the well-known formula for multidimensional Gaussian integrals to conclude that our integral becomes:
 \begin{equation}
+    \label{psi_integral_one}
     \int\psi(u^{N})\mu_{h^{N},\Sigma_{\mathcal{I}}}(\mathrm{d}u^{N})
 \end{equation}
 where,
 \begin{align}
     h^{N}&:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}^{-1}\bar{F}=PQ\bar{F} \\
-    \Sigma_{\mathcal{I}}&:=P(\Sigma+QK_{\mathcal{I}}Q^{*})P^{*}
+    \Sigma_{\mathcal{I}}&:=P(\Sigma+QK_{\mathcal{I}}Q^{*})P^{*} \\
+    B &:= \left(Q^{*}P^{*}\Sigma_{N}^{-1}PQ+K_{\mathcal{I}}^{-1}\right)
 \end{align}
 The details of this computation are left to the \textcolor{blue}{\nameref{appendix}}. From this we can see that we have obtained the expectation of $\psi$ w.r.t. a multivariate Gaussian with mean and covariance given by $h^{N}$ and $\Sigma_{\mathcal{I}}$. Thus, we can conclude that ``averaging" over $f$ gives the following Gaussian posterior:
 \begin{equation}
