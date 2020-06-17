@@ -168,3 +168,39 @@ which we recognize as a finite dimensional projection of a Gaussian measure. Thu
 \qedsymbol
 
 \subsection{Detailed computations for the proof of Theorem \textcolor{blue}{\ref{posterior_difference_bound}}}
+
+Detailed computations to obtain the upper-bounds in Theorem \textcolor{blue}{\ref{posterior_difference_bound}} are now presented. For convenience we will denote $\beta:=\|B_{1}^{-1}\|_{\infty}$ which, as mentioned in Section \textcolor{blue}{\ref{elliptic_bv_prob}} is a bounded constant independent of $h$. We will now give a detailed derivation of the upper-bound on the two remaining terms in the bound on $\|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)}$. We start with the second term:
+\begin{equation*}
+    \|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})\mathbf{v}\|_{L^{2}(\Omega)}\leq\|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|\mathbf{v}\|
+\end{equation*}
+where $\|\mathbf{v}\|$ denotes the standard Euclidean norm of $\mathbf{v}$. We proceed by bounding the operator norm in the inequality above:
+\begin{align*}
+    \|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty} &= \|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{1}^{-1}+\Sigma_{2}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty} \\
+    &\leq \|(\Sigma_1-\Sigma_2)S^{*}B_{1}^{-1}\|_{\infty}+\|\Sigma_{2}S^{*}(B_{1}^{-1}-B_{2}^{-1})\|_{\infty} \\
+    &\leq\|\Sigma_1-\Sigma_2\|_{\infty}\|B_{1}^{-1}\|_{\infty}+\|\Sigma_{2}\|_{\infty}\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty} \\
+    &\leq \|\Sigma_{1}-\Sigma_{2}\|_{1}\beta+(\|\Sigma_2-\Sigma_{1}\|_{1}+\|\Sigma_{1}\|_{\infty})(\beta^{2}\gamma^{2}h^{2}+\mathcal{O}(h^{4})) \\
+    &\leq\beta(\gamma^{2}h^{2}+\mathcal{O}(h^4))+(\|\Sigma_1\|_{\infty}+\gamma^{2}h^{2}+\mathcal{O}(h^4))(\beta^{2}\gamma^{2}h^{2}+\mathcal{O}(h^4)) \\
+    &=(\beta\gamma^{2}+\|\Sigma_1\|_{\infty}\beta^{2}\gamma^{2})h^{2}+\mathcal{O}(h^4) \\
+    &=\gamma_{1}h^{2}+\mathcal{O}(h^4)
+\end{align*}
+where $\gamma_{1}:=\beta\gamma^{2}+\|\Sigma_{1}\|_{\infty}\beta^{2}\gamma^{2}>0$ is a constant independent of $h$. Note that we have utilised the fact that the operator norm is bounded above by the trace norm together with the bounds on $\|\Sigma_{1}-\Sigma_{2}\|_{1}$ and $\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}$. Thus, the second term in the bound on the norm of the difference in posterior means is bounded above as follows:
+\begin{equation*}
+    \|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})\mathbf{v}\|_{L^{2}(\Omega)}\leq\gamma_{1}\|\mathbf{v}\|h^{2}+\mathcal{O}(h^4)
+\end{equation*}
+
+We now proceed to obtain an upper-bound on the third and final term in the bound on the norm of the difference in means:
+\begin{align*}
+    \|\Sigma_{1}S^{*}B_{1}^{-1}Sm_{1}-\Sigma_{2}S^{*}B_{2}^{-1}Sm_{2}\|_{L^{2}(\Omega)} &= \|\Sigma_{1}S^{*}B_{1}^{-1}Sm_{1}-\Sigma_{1}S^{*}B_{1}^{-1}Sm_{2}+\Sigma_{1}S^{*}B_{1}^{-1}Sm_{2}-\Sigma_{2}S^{*}B_{2}^{-1}Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq\|\Sigma_{1}S^{*}B_{1}^{-1}(m_1-m_2)\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq\|\Sigma_{1}\|_{\infty}\beta\|m_{1}-m_{2}\|_{L^{2}(\Omega)}+\|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|m_{2}\|_{L^{2}(\Omega)} \\
+    &\leq\beta\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}\|\Sigma_{1}\|_{\infty}h^{2}+(\gamma_{1}h^{2}+\mathcal{O}(h^4))(\|m_{1}\|_{L^{2}(\Omega)}+\tilde{C}h^{2}\|\bar{f}\|_{L^{2}(\Omega)}) \\
+    &= (\beta\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}\|\Sigma_{1}\|_{\infty}+\|m_{1}\|_{L^{2}(\Omega)}\gamma_{1})h^{2}+\mathcal{O}(h^4) \\
+    &=\gamma_{2}h^{2}+\mathcal{O}(h^4)
+\end{align*}
+where $\gamma_{2}:=\beta\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}\|\Sigma_{1}\|_{\infty}+\|m_{1}\|_{L^{2}(\Omega)}\gamma_{1}>0$ is a constant independent of $h$. Now, using these two bounds, together with the bound on $\|m_1-m_2\|_{L^{2}(\Omega)}$ we have:
+\begin{align*}
+    \|m^{(1)}_{u|\mathbf{v}}-m^{(2)}_{u|\mathbf{v}}\|_{L^{2}(\Omega)} &\leq \tilde{C}h^{2}\|\bar{f}\|_{L^{2}(\Omega)}+\gamma_{1}\|\mathbf{v}\|h^{2}+\gamma_{2}h^{2}+\mathcal{O}(h^{4}) \\
+    &=(\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}+\gamma_{1}\|\mathb{v}\|+\gamma_{2})h^{2}+\mathcal{O}(h^4) \\
+    &=\tilde{\gamma}h^{2}+\mathcal{O}(h^4)
+\end{align*}
+where $\tilde{\gamma}:=\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}+\gamma_{1}\|\mathb{v}\|+\gamma_{2}>0$ is a constant independent of $h$.
