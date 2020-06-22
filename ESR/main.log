@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  17 JUN 2020 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  22 JUN 2020 12:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -738,64 +738,38 @@ Overfull \hbox (20.76814pt too wide) detected at line 335
 []
  []
 
-[14]) (/home/johnandrew/Documents/Imperial/PhD/ESR/conclusions.tex) (/home/johnandrew/Documents/Imperial/PhD/ESR/main.bbl [15] [16]) (/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex [17]
-Overfull \hbox (0.67404pt too wide) detected at line 37
+[14]) (/home/johnandrew/Documents/Imperial/PhD/ESR/conclusions.tex) (/home/johnandrew/Documents/Imperial/PhD/ESR/main.bbl [15] [16]) (/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex [17] [18]
+Overfull \hbox (0.67404pt too wide) detected at line 105
 []
  []
 
 
-Overfull \hbox (14.43391pt too wide) detected at line 48
+Overfull \hbox (14.43391pt too wide) detected at line 116
 []
  []
 
-[18] [19]
+[19] [20]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 181.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 181.
 
-[20] [21]
-Overfull \hbox (13.08829pt too wide) detected at line 199
+[21] [22]
+Overfull \hbox (13.08829pt too wide) detected at line 267
 []
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:205: Undefined control sequence.
-<argument> ...L^{2}(\Omega )}+\gamma _{1}\|\mathb 
-                                                  {v}\|+\gamma _{2})h^{2}+\m...
-l.205 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:205: Undefined control sequence.
-<argument> ...L^{2}(\Omega )}+\gamma _{1}\|\mathb 
-                                                  {v}\|+\gamma _{2})h^{2}+\m...
-l.205 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:206: Undefined control sequence.
-l.206 ...r{f}\|_{L^{2}(\Omega)}+\gamma_{1}\|\mathb
-                                                  {v}\|+\gamma_{2}>0$ is a c...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (49.73216pt too wide) detected at line 288
+[]
+ []
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 99.
- [22]
+ [23]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 99.
  (/home/johnandrew/Documents/Imperial/PhD/ESR/main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 99.
@@ -805,20 +779,20 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 99.
  ) 
 Here is how much of TeX's memory you used:
- 8637 strings out of 492982
- 122293 string characters out of 6134896
- 247476 words of memory out of 5000000
- 11871 multiletter control sequences out of 15000+600000
+ 8644 strings out of 492982
+ 122464 string characters out of 6134896
+ 248541 words of memory out of 5000000
+ 11874 multiletter control sequences out of 15000+600000
  17089 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,15n,43p,1639b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/johnandrew/Documents/Imperial/PhD/ESR/main.pdf (22 pages, 420828 bytes).
+Output written on /home/johnandrew/Documents/Imperial/PhD/ESR/main.pdf (23 pages, 429452 bytes).
 PDF statistics:
- 610 PDF objects out of 1000 (max. 8388607)
- 552 compressed objects within 6 object streams
- 166 named destinations out of 1000 (max. 500000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 575 compressed objects within 6 object streams
+ 170 named destinations out of 1000 (max. 500000)
  153 words of extra memory for PDF output out of 10000 (max. 10000000)
 

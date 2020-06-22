@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -228,5 +228,10 @@ Robert~T Powers and Erling St{\o}rmer.
 Israel Gohberg, Seymour Goldberg, and Marinus Kaashoek.
 \newblock \emph{Basic classes of linear operators}.
 \newblock Birkh{\"a}user, 2012.
+
+\bibitem[Owhadi and Scovel(2015)]{owhadi2015conditioning}
+Houman Owhadi and Clint Scovel.
+\newblock Conditioning gaussian measure on hilbert space.
+\newblock \emph{arXiv preprint arXiv:1506.04208}, 2015.
 
 \end{thebibliography}
