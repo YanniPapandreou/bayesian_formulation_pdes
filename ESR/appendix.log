@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  22 JUN 2020 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  22 JUN 2020 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -499,7 +499,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:5: Undefined control sequence.
 l.5 ...ally follows from Theorem 3.3 in \textcolor
-                                                  {blue}{\cite{owhadi2015con...
+                                                  {blue}{\citep{owhadi2015co...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -510,23 +510,37 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{owhadi2015conditioning}
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:5: Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.5 ...xtcolor{blue}{\cite{owhadi2015conditioning}
-                                                  }. This theorem is given b...
+l.5 ...from Theorem 3.3 in \textcolor{blue}{\citep
+                                                  {owhadi2015conditioning}}....
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-LaTeX Warning: Citation `owhadi2015conditioning' on page  undefined on input line 5.
-
-Missing character: There is no ] in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -604,11 +618,6 @@ Overfull \hbox (10.86105pt too wide) in paragraph at lines 5--6
 
 
 Overfull \hbox (10.86105pt too wide) in paragraph at lines 5--6
-[]
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 5--6
 []
  []
 
@@ -1176,7 +1185,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no . in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:24: Undefined control sequence.
 l.24 ...projections are all defined in} \textcolor
-                                                  {blue}{\cite{owhadi2015con...
+                                                  {blue}{\citep{owhadi2015co...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1187,23 +1196,37 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{owhadi2015conditioning}
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:24: Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.24 ...tcolor{blue}{\cite{owhadi2015conditioning}
-                                                  }.
+l.24 ...re all defined in} \textcolor{blue}{\citep
+                                                  {owhadi2015conditioning}}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-LaTeX Warning: Citation `owhadi2015conditioning' on page  undefined on input line 24.
-
-Missing character: There is no ] in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
 Missing character: There is no . in font nullfont!
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:25: LaTeX Error: \begin{document} ended by \end{theorem}.
@@ -1756,7 +1779,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:33: Undefined control sequence.
 l.33 ...section on shorted operators in \textcolor
-                                                  {blue}{\cite{owhadi2015con...
+                                                  {blue}{\citep{owhadi2015co...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1767,23 +1790,37 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{owhadi2015conditioning}
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:33: Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.33 ...tcolor{blue}{\cite{owhadi2015conditioning}
-                                                  } it is stated that provid...
+l.33 ...orted operators in \textcolor{blue}{\citep
+                                                  {owhadi2015conditioning}} ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-LaTeX Warning: Citation `owhadi2015conditioning' on page  undefined on input line 33.
-
-Missing character: There is no ] in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2250,11 +2287,6 @@ Overfull \hbox (8.68884pt too wide) in paragraph at lines 11--41
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 11--41
-[]
- []
-
-
 Overfull \hbox (43.05164pt too wide) in paragraph at lines 11--41
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; \OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 )[]$
  []
@@ -2332,11 +2364,6 @@ Overfull \hbox (64.54741pt too wide) in paragraph at lines 11--41
 
 Overfull \hbox (38.08482pt too wide) in paragraph at lines 11--41
 \OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 H[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 H[]\OT1/cmr/m/n/10 )$
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 11--41
-[]
  []
 
 
@@ -3796,25 +3823,30 @@ Overfull \hbox (34.21811pt too wide) in paragraph at lines 43--68
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:68: LaTeX Error: The font size command \normalsize is not defined:
+Overfull \hbox (207.72063pt too wide) detected at line 70
+[]\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 C[]C[]F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a
+ []
+
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:70: LaTeX Error: The font size command \normalsize is not defined:
                there is probably something wrong with the class file.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 \begin{equation}
-                     
+l.70 \end{equation}
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:68: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:70: Undefined control sequence.
 <write> ...ondition_gaussian_hilbert}{{}{\thepage 
                                                   }}
-l.68 \begin{equation}
-                     
+l.70 \end{equation}
+                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3823,10 +3855,6 @@ and I'll forget about whatever was undefined.
 
 \newlabel{condition_gaussian_hilbert}{{}{}}
 ]
-Overfull \hbox (207.72063pt too wide) detected at line 70
-[]\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 C[]C[]F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a
- []
-
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -3846,6 +3874,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ( in font nullfont!
+
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:71: Undefined control sequence.
 <write> ...ean_before_averaging' on page \thepage 
                                                   \space undefined\on@line .
@@ -7073,12 +7102,12 @@ l.160 \end{align}
                  
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 36 strings out of 492982
- 868 string characters out of 6134896
+ 35 strings out of 492982
+ 844 string characters out of 6134896
  75888 words of memory out of 5000000
- 3696 multiletter control sequences out of 15000+600000
+ 3695 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 19i,11n,21p,706b,127s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 19i,11n,19p,706b,121s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:160:  ==> Fatal error occurred, no output PDF file produced!

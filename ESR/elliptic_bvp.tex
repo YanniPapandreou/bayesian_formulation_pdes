@@ -1,12 +1,12 @@
-In this section we will focus on the following standard elliptic stationary conductivity problem:
+Let $(\Omega,\mathcal{B},\mathbb{P})$ be a probability space. In this section we will focus on the following standard elliptic stationary conductivity problem:
 \begin{align}
     \label{standard_conduct}
     \begin{split}
-        \mathcal{L}u(x) &:= -\nabla\cdot(a(x)\nabla u(x))=f(x), \hspace{0.3cm} x\in\Omega \\
-        u(x) &= 0, \hspace{0.3cm} x\in\partial\Omega
+        \mathcal{L}u(x) &:= -\nabla\cdot(a(x)\nabla u(x))=f(x), \hspace{0.3cm} \text{for } \mathbb{P}\text{-a.s. } x\in\Omega \\
+        u(x) &= 0, \hspace{0.3cm} \mathbb{P}\text{-a.s. } x\in\partial\Omega
     \end{split}
 \end{align}
-where $f$ is random and has distribution $f\sim\mathcal{N}(\bar{f},K)$ as in Section \textcolor{blue}{\ref{general_framework}}. We assume that the diffusion coefficient satisfies the following assumption taken from \textcolor{blue}{\cite{lord2014introduction}}:
+where $f$ is random and has distribution $f\sim\mathcal{N}(\bar{f},K)$ as in Section \textcolor{blue}{\ref{general_framework}}. We assume that the diffusion coefficient satisfies the following assumption taken from \textcolor{blue}{\citep{lord2014introduction}}:
 
 \noindent \textbf{Assumption 2} (regularity of coefficients) The diffusion coefficient $a(x)$ satisfies:
 \begin{equation}
@@ -26,7 +26,7 @@ Let $V:L^{2}(\Omega)\rightarrow L^{2}(\Omega)$ be defined as follows:
     \label{FEM_prior}
     Vu(x):=\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\int_{\Omega}\phi_{i}(y)u(y)\mathrm{d}y
 \end{equation}
-where the $\lambda_{i}$ are non-zero real numbers. Now the support of a Gaussian measure $\mathcal{N}(m,\Sigma)$ on a Hilbert space $\mathcal{H}$ is the space $m+\overline{\operatorname{Im}(\Sigma)}$ (see \textcolor{blue}{\cite{vakhania1975topological}} for the general case of a Gaussian measure on a Banach space) where the bar denotes closure with respect to $\mathcal{H}$ and $\operatorname{Im}(\Sigma)$ is the image of $\Sigma$. The image of $V$ can easily be seen to be contained in the span of the $\{\phi_{i}\}_{i=1}^{J}$ which itself is strictly contained in $H_{0}^{1}(\Omega)$. Thus, the support of $\mathcal{N}(0,V)$ is clearly contained in $H_{0}^{1}(\Omega)$ and so if $u$ is distributed according to this measure then $u$ lies almost surely in $H_{0}^{1}(\Omega)$. This choice of $V$ therefore satisfies Assumption 1. \vspace{10pt}
+where the $\lambda_{i}$ are non-zero real numbers. Now the support of a Gaussian measure $\mathcal{N}(m,\Sigma)$ on a Hilbert space $\mathcal{H}$ is the space $m+\overline{\operatorname{Im}(\Sigma)}$ (see \textcolor{blue}{\citep{vakhania1975topological}} for the general case of a Gaussian measure on a Banach space) where the bar denotes closure with respect to $\mathcal{H}$ and $\operatorname{Im}(\Sigma)$ is the image of $\Sigma$. The image of $V$ can easily be seen to be contained in the span of the $\{\phi_{i}\}_{i=1}^{J}$ which itself is strictly contained in $H_{0}^{1}(\Omega)$. Thus, the support of $\mathcal{N}(0,V)$ is clearly contained in $H_{0}^{1}(\Omega)$ and so if $u$ is distributed according to this measure then $u$ lies almost surely in $H_{0}^{1}(\Omega)$. This choice of $V$ therefore satisfies Assumption 1. \vspace{8pt}
 
 \begin{remarks}
     \textit{Remark 1.} Since $u$ lies almost surely in $H_{0}^{1}(\Omega)$ we can view $\mathcal{N}(0,V)$ as a Gaussian measure on $H_{0}^{1}(\Omega)\subset L^{2}(\Omega)$ and as such the covariance operator $V$ can be instead viewed as a function from $H^{-1}(\Omega)\rightarrow H_{0}^{1}(\Omega)$ defined by:
@@ -44,10 +44,10 @@ where the $\lambda_{i}$ are non-zero real numbers. Now the support of a Gaussian
     \begin{equation}
         Vu(x)=\langle u(\boldsymbol{\cdot}), k(x,\boldsymbol{\cdot})\rangle
     \end{equation}
-    This connection between the two frameworks will be useful when we move to time-dependent PDEs.
+    This connection between the two frameworks will be useful when we move to time-dependent PDEs. The second framework is also important for computation as it is often easier to work with covariance functions.
     $\mathbin{\blacklozenge}$
 \end{remarks}
-Now we recall the information operators. Let $\{\phi_{j}\}_{j=1}^{J}$ be a truncated set of FE basis functions. Since we have taken $\mathcal{U}=H_{0}^{1}(\Omega)$ we have that $\mathcal{U}^{\prime}=H^{-1}(\Omega)$ and thus our info operators are maps $I_{j}:H^{-1}(\Omega)\rightarrow\mathbb{R}$ given by $I_{j}\boldsymbol{\cdot}=\langle\boldsymbol{\cdot},\phi_{j}\rangle$. \vspace{10pt}
+Now we recall the information operators. Let $\{\phi_{j}\}_{j=1}^{J}$ be a truncated set of FE basis functions. Since we have taken $\mathcal{U}=H_{0}^{1}(\Omega)$ we have that $\mathcal{U}^{\prime}=H^{-1}(\Omega)$ and thus our information operators are maps $I_{j}:H^{-1}(\Omega)\rightarrow\mathbb{R}$ given by $I_{j}\boldsymbol{\cdot}=\langle\boldsymbol{\cdot},\phi_{j}\rangle$. \vspace{8pt}
 
 \begin{remark}
     Note that when $v\in L^{2}(\Omega)\subset H^{-1}(\Omega)$ we have, since $\phi_{j}\in H^{1}_{0}(\Omega)$, that
@@ -79,7 +79,7 @@ thus we see that we can write:
 \begin{equation}
     Vu=\Phi^{*}\Lambda\mathcal{I}u \hspace{0.25cm} \forall u\in H^{-1}(\Omega)
 \end{equation}
-i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. \vspace{10pt}
+i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. \vspace{8pt}
 
 \begin{remark}
     It will also prove useful later to notice that $\Phi^{*}$ is actually the same operator as $\mathcal{I}^{*}$. To see this we note that $\Phi^{*}:\mathbb{R}^{J}\rightarrow H_{0}^{1}(\Omega)$ is defined by:
@@ -143,7 +143,7 @@ We now move on to work out the marginalization over $f$. Proposition \textcolor{
     \label{approximate_fem_prior}
     \mathcal{N}(\Phi^{*}A^{-1}\bar{F},\Phi^{*}A^{-1}K_{\mathcal{I}}A^{-1}\Phi)
 \end{equation}
-as our averaged distribution. However, in the proof of Proposition \textcolor{blue}{\ref{first_prop}} the calculations required the existence of the inverse of $\Sigma_{N}=P\Sigma P^{*}$ which in the FEM case is the $0$ matrix since $\Sigma=0$. However, it is still possible to redo the calculation of the expectation of an arbitrary bounded cylindrical test function which we performed in Section \textcolor{blue}{\ref{general_framework}}. The details of this are left to the \textcolor{blue}{\nameref{appendix}}, but the result is the same as expected from Proposition \textcolor{blue}{\ref{first_prop}}. Thus, the approximate prior arising from this choice of $V$ is given by (\ref{approximate_fem_prior}). It should be noted that this Gaussian measure directly links to what is found at the end of section 2 in the Statistical FEM paper \textcolor{blue}{\cite{girolami2019statistical}}. It is also worth pointing out that this probabilistic numerical method for solving the BVP (\ref{standard_conduct}) gives a distribution whose mean coincides with the weak solution obtained by solving the problem with forcing given by $\bar{f}$ using FEM. Thus, this PNM recovers a classical method. We now move onto discussing the true prior.
+as our averaged distribution. However, in the proof of Proposition \textcolor{blue}{\ref{first_prop}} the calculations required the existence of the inverse of $\Sigma_{N}=P\Sigma P^{*}$ which in the FEM case is the $0$ matrix since $\Sigma=0$. However, it is still possible to redo the calculation of the expectation of an arbitrary bounded cylindrical test function which we performed in Section \textcolor{blue}{\ref{general_framework}}. The details of this are left to the \textcolor{blue}{\nameref{appendix}}, but the result is the same as expected from Proposition \textcolor{blue}{\ref{first_prop}}. Thus, the approximate prior arising from this choice of $V$ is given by (\ref{approximate_fem_prior}). It should be noted that this Gaussian measure directly links to what is found at the end of section 2 in the Statistical FEM paper \textcolor{blue}{\citep{girolami2019statistical}}. It is important to point out that here we still have a distribution over our function space as opposed to what is done in \textcolor{blue}{\citep{girolami2019statistical}} where they instead consider the distribution to be over a finite dimensional projection of the function space. By working over the entire function space we will be able to investigate in more detail how the true prior differs from this approximate prior. This conforms with the principle of ``\textit{avoiding discretization until the the last possible moment}". It is also worth pointing out that this probabilistic numerical method for solving the BVP (\ref{standard_conduct}) gives a distribution whose mean coincides with the weak solution obtained by solving the problem with forcing given by $\bar{f}$ using FEM. Thus, this PNM recovers a classical method. We now move onto discussing the true prior.
 
 \subsection{Prior from the true solution}
 
@@ -172,20 +172,21 @@ We now have two Gaussian priors for the BVP (\ref{standard_conduct}) given by $\
     \label{approx_fem_cov}
     \Sigma_{2} &:= \Phi^{*}A^{-1}K_{\mathcal{I}}A^{-1}\Phi
 \end{align}
-We will now consider quantifying how close these two distributions $\nu_1,\nu_2$ are as a function of the FEM mesh size $h$. This will be achieved by obtaining an upperbound for the Wasserstein distance between $\nu_1,\nu_2$. In order to establish this upperbound a connection between the Wasserstein distance between Gaussian measures and the Procrustes Metric on covariance operators \textcolor{blue}{\cite{masarotto2019procrustes}} will be exploited. We start by first giving the definition of the Wasserstein distance between two probability measures $\mu,\nu$ on a normed space $\mathcal{H}$, $W(\mu,\nu)$:
+We will now consider quantifying how close these two distributions $\nu_1,\nu_2$ are as a function of the FEM mesh size $h$. This will be achieved by obtaining an upperbound for the Wasserstein distance between $\nu_1,\nu_2$. In order to establish this upperbound a connection between the Wasserstein distance between Gaussian measures and the Procrustes Metric on covariance operators \textcolor{blue}{\citep{masarotto2019procrustes}} will be exploited. We start by first giving the definition of the Wasserstein distance between two probability measures $\mu,\nu$ on a normed space $\mathcal{H}$, $W(\mu,\nu)$:
 \begin{equation}
     \label{wasserstein_def}
     W^{2}(\mu,\nu)=\inf_{\pi\in\Gamma(\mu,\nu)}\int_{\mathcal{H}\times\mathcal{H}}\|x-y\|^{2}_{\mathcal{H}}\mathrm{d}\pi(x,y)
 \end{equation}
 where $\Gamma(\mu,\nu)$ is the set of couplings of $\mu$ and $\nu$, i.e.
-\begin{equation*}
-    \Gamma(\mu,\nu):=\{\text{Borel probability measures } \pi \text{ on } \mathcal{H}\times\mathcal{H} \hspace{0.2cm} | \hspace{0.2cm} \pi(E\times\mathcal{H})=\mu(E) \text{ and } \pi(\mathcal{H}\times F)=\nu(F) \text{ for all Borel } E,F\subset\mathcal{H} \}
-\end{equation*}
-When $\mu,\nu$ are both Gaussian measures an explicit expression can be obtained for the Wasserstein distance. Suppose $\mu=\mathcal{N}(m_1,\Sigma_1)$ and $\nu=\mathcal{N}(m_2,\Sigma_2)$. One has \textcolor{blue}{\cite{masarotto2019procrustes}},
+\begin{align*}
+    \Gamma(\mu,\nu):=&\{\text{Borel probability measures } \pi \text{ on } \mathcal{H}\times\mathcal{H} \hspace{0.2cm} | \\
+    &\hspace{0.2cm} \pi(E\times\mathcal{H})=\mu(E) \text{ and } \pi(\mathcal{H}\times F)=\nu(F) \text{ for all Borel } E,F\subset\mathcal{H} \}
+\end{align*}
+When $\mu,\nu$ are both Gaussian measures an explicit expression can be obtained for the Wasserstein distance. Suppose $\mu=\mathcal{N}(m_1,\Sigma_1)$ and $\nu=\mathcal{N}(m_2,\Sigma_2)$. One has \textcolor{blue}{\citep{masarotto2019procrustes}},
 \begin{equation}
     W^{2}(\mu,\nu)=\|m_1-m_2\|^{2}_{\mathcal{H}}+\operatorname{tr}(\Sigma_1)+\operatorname{tr}(\Sigma_2)-2\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}
 \end{equation}
-This formula is true in both the finite and infinite dimensional cases. The term $\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}$ is difficult to analyse in our situation and as such we will make use of Proposition 3 from \textcolor{blue}{\cite{masarotto2019procrustes}} which states: \vspace{10pt}
+This formula is true in both the finite and infinite dimensional cases. The term $\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}$ is difficult to analyse in our situation and as such we will make use of Proposition 3 from \textcolor{blue}{\citep{masarotto2019procrustes}} which states: \vspace{8pt}
 \begin{proposition}
     The Procrustes distance between two trace-class operators $\Sigma_{1}$ and $\Sigma_{2}$ on $\mathcal{H}$ coincides with the Wasserstein distance between two second-order Gaussian processes $\mathcal{N}(0,\Sigma_{1})$ and $\mathcal{N}(0,\Sigma_2)$ on $\mathcal{H}$,
     $$\Pi(\Sigma_{1},\Sigma_{2}):=\inf_{R:R^{*}R=I}\|\Sigma_{1}^{1/2}-R\Sigma_{2}^{1/2}\|_{2}=W(\mathcal{N}(0,\Sigma_{1}),\mathcal{N}(0,\Sigma_{2}))$$
@@ -196,7 +197,7 @@ Using this result one can obtain a simple upperbound on the Wasserstein distance
 \begin{equation}
     W(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2))=\inf_{R:R^{*}R=I}\|\Sigma_{1}^{1/2}-R\Sigma_{2}^{1/2}\|_{2} \leq \|\Sigma_{1}^{1/2}-\Sigma_{2}^{1/2}\|_{2}
 \end{equation}
-Now since in our case we have un-centered Gaussian measures $\nu_1,\nu_2$ we must first link the Wasserstein distance between $\nu_1,\nu_2$ to the Wasserstein distance of the centred measures $\nu_{1}^{*},\nu_{2}^{*}$ using a general result mentioned in \textcolor{blue}{\cite{cuesta1996lower}}:
+Now since in our case we have un-centered Gaussian measures $\nu_1,\nu_2$ we must first link the Wasserstein distance between $\nu_1,\nu_2$ to the Wasserstein distance of the centred measures $\nu_{1}^{*},\nu_{2}^{*}$ using a general result mentioned in \textcolor{blue}{\citep{cuesta1996lower}}:
 \begin{equation}
     W^{2}(\nu_1,\nu_2)=\|m_1-m_2\|_{\mathcal{H}}^{2}+W^{2}(\nu_{1}^{*},\nu_{2}^{*})
 \end{equation}
@@ -210,16 +211,15 @@ where now the $m_{i},\Sigma_{i}, i=1,2$ are given by equations (\ref{true_fem_me
 \noindent \textbf{Assumption 4 } The meshes under consideration remain regular in the sense that as we refine the mesh by decreasing $h$ to 0 the angles of all triangles are bounded below independently of $h$.
 
 Under all of these assumptions we have the following Theorem:
-\vspace{10pt}
+\vspace{8pt}
 
 \begin{theorem}
     \label{prior_distance_bound}
-    Let $u$ satisfy (\ref{standard_conduct}). Assuming that Assumptions 2-4 hold we have that the Wasserstein distance between the two priors $\nu_1,\nu_2$ is bounded above by $\mathcal{O}(h)$ as $h\rightarrow 0$. In particular, there exists a constant $\gamma>0$, independent of $h$, such that the following holds:
+    Let $u$ satisfy (\ref{standard_conduct}). Assuming that Assumptions 2-4 hold, there exists a constant $\gamma>0$, independent of $h$, such that the following holds:
     \begin{equation}
         \label{bound_on_distance}
         W(\nu_{1},\nu_{2})\leq \gamma h +\mathcal{O}(h^2)
     \end{equation}
-    Furthermore, we observe that as $h\rightarrow 0$ the approximate FEM prior $\nu_2$ converges in distribution to the true prior $\nu_1$.
 \end{theorem}
 
 \noindent \textit{Proof:} Since $m_1=\mathcal{L}^{-1}\bar{f}$ is the solution to the following elliptic BVP:
@@ -232,14 +232,14 @@ and since $m_2=\Phi^{*}A^{-1}\bar{F}=\Phi^{*}A^{-1}\mathcal{I}\bar{f}$ is the FE
     \label{bound_on_diff_means}
     \|m_1-m_2\|_{L^{2}(\Omega)}\leq Ch^{2}\|m_{1}\|_{H^{2}(\Omega)}\leq\tilde{C}h^{2}\|\bar{f}\|_{L^{2}(\Omega)}
 \end{equation}
-for some constances $C,\tilde{C}>0$. We have utilised in the last inequality above the assumption that the $H^2$ norm of the true solution can be controlled by the $L^2$ norm of $\bar{f}$. The assumptions and error analysis is taken from Chapter 5 of \textcolor{blue}{\cite{larsson2008partial}} (see in particular Theorem 5.4).
+for some constances $C,\tilde{C}>0$. We have utilised in the last inequality above the assumption that the $H^2$ norm of the true solution can be controlled by the $L^2$ norm of $\bar{f}$. The assumptions and error analysis is taken from Chapter 5 of \textcolor{blue}{\citep{larsson2008partial}} (see in particular Theorem 5.4).
 
 We now move on to getting an upperbound for the second term. Using the link with the Procrustes distance discussed above we have:
 \begin{equation}
     W^2(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2))\leq\|\Sigma_{1}^{1/2}-\Sigma_{2}^{1/2}\|_{2}^{2}
 \end{equation}
 
-The RHS of the above is still difficult to deal with so we make use of Lemma 4.1 from \textcolor{blue}{\cite{powers1970free}} to obtain:
+The RHS of the above is still difficult to deal with so we make use of Lemma 4.1 from \textcolor{blue}{\citep{powers1970free}} to obtain:
 \begin{equation}
     W^2(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2))\leq\|\Sigma_{1}^{1/2}-\Sigma_{2}^{1/2}\|_{2}^{2}\leq\|\Sigma_1-\Sigma_2\|_{1}
 \end{equation}
@@ -288,7 +288,7 @@ We thus have an upper bound on the Wasserstein distance between $\nu_{1},\nu_{2}
 \begin{equation}
     W(\nu_{1},\nu_{2})\leq h \sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}+\mathcal{O}(h^2)}\leq \gamma h +\mathcal{O}(h^2)
 \end{equation}
-where $\gamma:=\sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}}>0$ is a constant. Note that we have also used that both\footnote{$K$ is trace-class since it is a covariance operator and thus its trace-norm is bounded.} $\|K\|_{1}$ and $\|\mathcal{L}^{-1}\|_{\infty}$ are bounded and independent of $h$. We also see that as $h\rightarrow 0$ the Wasserstein distance between $\nu_1,\nu_2$ goes to 0 and so the approximate prior converges (in distribution) to the true prior as $h\rightarrow 0$ (see Proposition 4 in \textcolor{blue}{\cite{masarotto2019procrustes}}).
+where $\gamma:=\sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}}>0$ is a constant. Note that we have also used that both\footnote{$K$ is trace-class since it is a covariance operator and thus its trace-norm is bounded.} $\|K\|_{1}$ and $\|\mathcal{L}^{-1}\|_{\infty}$ are bounded and independent of $h$. We also see that as $h\rightarrow 0$ the Wasserstein distance between $\nu_1,\nu_2$ goes to 0 and so the approximate prior converges (in distribution) to the true prior as $h\rightarrow 0$ (see Proposition 4 in \textcolor{blue}{\citep{masarotto2019procrustes}}).
 \qedsymbol
 
 Having obtained this upperbound on the distance between the true priors we are now in a position to investigate how this ``propagates" forwards to further inference. In particular, we will now look at incorporating sensor data and seeing how different the two resulting posteriors are from using the two different priors $\nu_1,\nu_2$ above.
@@ -296,16 +296,15 @@ Having obtained this upperbound on the distance between the true priors we are n
 \subsection{Upperbound on the Wasserstein Distance between the two posteriors}
 
 As discussed in Section \textcolor{blue}{\ref{incorporating_obs_data}} we will now assume that we have noisy observations of the value of $u$ at some points $y_1,\dots,y_s\in\Omega$ coming from a sensor. We wish to update our belief in the distribution of $u$ using this sensor data, and as discussed either of the $\nu_i$ can be used as prior distributions. We thus obtain two different posteriors and these are given by $u|\mathbf{v}\sim\mathcal{N}(m^{(i)}_{u|\mathbf{v}},\Sigma^{(i)}_{u|\mathbf{v}})$ where $m^{(i)}_{u|\mathbf{v}}:=m_{i}+\Sigma_{i}S^{*}B_{i}^{-1}(\mathbf{v}-Sm_{i})$ and $\Sigma^{(i)}_{u|\mathbf{v}}:=\Sigma_{i}-\Sigma_{i}S^{*}B_{i}^{-1}S\Sigma_{i}$ as shown in Section \textcolor{blue}{\ref{incorporating_obs_data}}. We have denoted $B_{i}:=\epsilon^{2}I+S\Sigma_{i}S^{*}$ for convenience. We can no go about obtaining an upperbound for the Wasserstein distance between these two posteriors. The result is given in the following Theorem and we outline a proof of this.
-\vspace{10pt}
+\vspace{8pt}
 
 \begin{theorem}
     \label{posterior_difference_bound}
-    Let $u$ satisfy (\ref{standard_conduct}). Assuming that Assumptions 2-4 hold we have that the Wasserstein distance between the two posteriors is bounded above by $\mathcal{O}(h)$ as $h\rightarrow 0$. In particular, there exists a constant $\kappa>0$, independent of $h$, such that the following holds:
+    Let $u$ satisfy (\ref{standard_conduct}). Assuming that Assumptions 2-4 hold, there exists a constant $\kappa>0$, independent of $h$, such that the following holds:
     \begin{equation}
         \label{post_bound}
         W\left(\mathcal{N}(m^{(1)}_{u|\mathbf{v}},\Sigma^{(1)}_{u|\mathbf{v}}),\mathcal{N}(m^{(2)}_{u|\mathbf{v}},\Sigma^{(2)}_{u|\mathbf{v}})\right)\leq\sqrt{\kappa} h + \mathcal{O}(h^2)
     \end{equation}
-    Furthermore, we observe that as $h\rightarrow 0$ the second posterior obtained using the prior $\nu_2$ converges in distribution to the first posterior obtained using the prior $\nu_1$.
 \end{theorem}
 
 \noindent \textit{Proof:} We have,
@@ -320,7 +319,7 @@ In order to obtain on upperbound on each of these terms it will help to first fi
     &\leq\|\Sigma_{1}-\Sigma_{2}\|_{1} \\
     &\leq \gamma^{2}h^{2}+\mathcal{O}(h^4)
 \end{align*}
-where we have used the fact that $\|S\|_{\infty}\leq 1$ since it is a projection. Since $B_{1}$ (and $B_{2}$) are invertible and for sufficiently small\footnote{It suffices to take $h<h_{*}$ where $h_{*}$ satisfies $\gamma^{2}h_{*}^{2}+\tilde{C}^{2}h_{*}^{4}<1/\|B_{1}^{-1}\|_{\infty}$.} $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$ we can utilise Corollary 8.2 of \textcolor{blue}{\cite{gohberg2012basic}} to deduce that:
+where we have used the fact that $\|S\|_{\infty}\leq 1$ since it is a projection. Since $B_{1}$ (and $B_{2}$) are invertible and for sufficiently small\footnote{It suffices to take $h<h_{*}$ where $h_{*}$ satisfies $\gamma^{2}h_{*}^{2}+\tilde{C}^{2}h_{*}^{4}<1/\|B_{1}^{-1}\|_{\infty}$.} $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$ we can utilise Corollary 8.2 of \textcolor{blue}{\citep{gohberg2012basic}} to deduce that:
 \begin{equation}
     \label{bound_on_diff_inverses}
     \|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}\leq\frac{\|B_{1}^{-1}\|_{\infty}^{2}\|B_{1}-B_{2}\|_{\infty}}{1-\|B_{1}^{-1}\|_{\infty}\|B_1-B_{2}\|_{\infty}}\leq\|B_{1}^{-1}\|_{\infty}^{2}\gamma^{2}h^{2}+\mathcal{O}(h^4)

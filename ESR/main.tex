@@ -15,7 +15,7 @@
 % for theorems/lemmas/defs/etc
 %-------------------------------
 \usepackage[english]{babel}
-\usepackage[square,numbers]{natbib}
+\usepackage[sort&compress,square,numbers]{natbib}
 \bibliographystyle{unsrtnat}
 
 \usepackage[dvipsnames]{xcolor}
@@ -66,7 +66,7 @@
         Project Title: \textit{Bayesian formulations of PDE-based models, with an aim towards physics-informed machine learning}
     \end{center}
 
-\setlength\parskip{10pt}
+\setlength\parskip{8pt}
 \setlength\parindent{20pt}
 
 \section{Introduction}
@@ -88,12 +88,13 @@
 \section{Conclusions and Research Plan}
 \label{conclusion}
 \input{conclusions.tex}
-
-\bibliography{references.bib}
+\clearpage
 
 \section{Appendix}
 \label{appendix}
 \input{appendix.tex}
+
+\bibliography{references.bib}
 
 % \bibliographystyle{unsrt}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  19 JUN 2020 16:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  22 JUN 2020 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -14,8 +14,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1 W
-     e now introduce the general framework we will be considering. This will...
+l.1 \vspace{8pt}W
+                 e now introduce the general framework we will be considerin...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2244,7 +2244,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:21: Undefined control sequence.
 l.21 ...asures (see Proposition 1.18 of \textcolor
-                                                  {blue}{\cite{da2006introdu...
+                                                  {blue}{\citep{da2006introd...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2255,23 +2255,33 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{da2006introduction}
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:21: Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.21 ...\textcolor{blue}{\cite{da2006introduction}
-                                                  }) that $u$ is also Gaussi...
+l.21 ...roposition 1.18 of \textcolor{blue}{\citep
+                                                  {da2006introduction}}) tha...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-LaTeX Warning: Citation `da2006introduction' on page  undefined on input line 21.
-
-Missing character: There is no ] in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -2387,11 +2397,6 @@ Overfull \hbox (17.63339pt too wide) in paragraph at lines 21--22
 
 Overfull \hbox (17.63339pt too wide) in paragraph at lines 21--22
 \OMS/cmsy/m/n/10 L[]$
- []
-
-
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 21--22
-[]
  []
 
 
@@ -3328,7 +3333,7 @@ Overfull \hbox (10.05693pt too wide) in paragraph at lines 32--34
  []
 
 
-Underfull \vbox (badness 6188) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -3766,25 +3771,6 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no z in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -3994,6 +3980,40 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -4136,218 +4156,142 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 40--46
+Overfull \hbox (20.0pt too wide) in paragraph at lines 40--45
 []
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 40--46
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (12.36922pt too wide) in paragraph at lines 40--46
+Overfull \hbox (12.36922pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 F[]$
  []
 
 
-Overfull \hbox (8.5417pt too wide) in paragraph at lines 40--46
+Overfull \hbox (8.5417pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 H$
  []
 
 
-Overfull \hbox (5.76158pt too wide) in paragraph at lines 40--46
-\OML/cmm/m/it/10 h$
- []
-
-
-Overfull \hbox (14.1649pt too wide) in paragraph at lines 40--46
+Overfull \hbox (14.1649pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 I[] \OT1/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (22.83466pt too wide) in paragraph at lines 40--46
+Overfull \hbox (22.83466pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 U[] !
  []
 
 
-Overfull \hbox (7.67015pt too wide) in paragraph at lines 40--46
+Overfull \hbox (7.67015pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 R$
  []
 
 
-Overfull \hbox (17.54686pt too wide) in paragraph at lines 40--46
+Overfull \hbox (17.54686pt too wide) in paragraph at lines 40--45
 [][] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (25.1719pt too wide) in paragraph at lines 40--46
+Overfull \hbox (25.1719pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 h[]\OML/cmm/m/it/10 ; ^^^[]\OMS/cmsy/m/n/10 i$
  []
 
 
-Overfull \hbox (17.77779pt too wide) in paragraph at lines 40--46
+Overfull \hbox (17.77779pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 h[]\OML/cmm/m/it/10 ; []\OMS/cmsy/m/n/10 i$
  []
 
 
-Overfull \hbox (7.25137pt too wide) in paragraph at lines 40--46
+Overfull \hbox (7.25137pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 U$
  []
 
 
-Overfull \hbox (10.05693pt too wide) in paragraph at lines 40--46
+Overfull \hbox (10.05693pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 U[]$
  []
 
 
-Overfull \hbox (19.6163pt too wide) in paragraph at lines 40--46
+Overfull \hbox (19.6163pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 ^^^[] \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (12.36922pt too wide) in paragraph at lines 40--46
+Overfull \hbox (12.36922pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 F[]$
  []
 
 
-Overfull \hbox (15.246pt too wide) in paragraph at lines 40--46
+Overfull \hbox (15.246pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 j \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (33.72902pt too wide) in paragraph at lines 40--46
+Overfull \hbox (33.72902pt too wide) in paragraph at lines 40--45
 \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; [] ; J$
  []
 
 
-Overfull \hbox (6.50694pt too wide) in paragraph at lines 40--46
+Overfull \hbox (12.36922pt too wide) in paragraph at lines 40--45
+\OMS/cmsy/m/n/10 F[]$
+ []
+
+
+Overfull \hbox (6.50694pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 J$
  []
 
 
-Overfull \hbox (5.76158pt too wide) in paragraph at lines 40--46
+Overfull \hbox (5.76158pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 h$
  []
 
 
-Overfull \hbox (17.77774pt too wide) in paragraph at lines 40--46
+Overfull \hbox (17.77774pt too wide) in paragraph at lines 40--45
 \OT1/cmr/m/n/10 
  \OMS/cmsy/m/n/10 ^^Z
  []
 
 
-Overfull \hbox (12.15628pt too wide) in paragraph at lines 40--46
+Overfull \hbox (12.15628pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (17.06245pt too wide) in paragraph at lines 40--46
+Overfull \hbox (17.06245pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 J \OMS/cmsy/m/n/10 /
  []
 
 
-Overfull \hbox (20.24774pt too wide) in paragraph at lines 40--46
+Overfull \hbox (20.24774pt too wide) in paragraph at lines 40--45
 \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 =h[]$
  []
 
 
-Overfull \hbox (18.0538pt too wide) in paragraph at lines 40--46
+Overfull \hbox (18.0538pt too wide) in paragraph at lines 40--45
 \OML/cmm/m/it/10 I[] \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (12.36249pt too wide) in paragraph at lines 40--46
+Overfull \hbox (12.36249pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 U[]$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:47: LaTeX Error: Environment remark undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:46: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 \begin{remark}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:48: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48     T
-          hink of the $\{\phi_{j}\}$ as a basis for finite element spaces.
+l.46 L
+      et $\mathcal{I}$ be the concatenation of these information operators, ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no T in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no . in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:49: Undefined control sequence.
-l.49     $\mathbin{\blacklozenge
-                                }$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:50: LaTeX Error: \begin{document} ended by \end{remark}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 \end{remark}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 Missing character: There is no L in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -4587,39 +4531,39 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no , in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:52: LaTeX Error: Environment equation* undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:47: LaTeX Error: Environment equation* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 \begin{equation*}
+l.47 \begin{equation*}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:53: LaTeX Error: \mathcal allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:48: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53     \mathcal
+l.48     \mathcal
                  {I}\mathcal{L}u=\mathcal{I}f=:F
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no I in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:53: LaTeX Error: \mathcal allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:48: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53     \mathcal{I}\mathcal
+l.48     \mathcal{I}\mathcal
                             {L}u=\mathcal{I}f=:F
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4628,13 +4572,13 @@ Missing character: There is no L in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no = in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:53: LaTeX Error: \mathcal allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:48: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53     \mathcal{I}\mathcal{L}u=\mathcal
+l.48     \mathcal{I}\mathcal{L}u=\mathcal
                                          {I}f=:F
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4645,13 +4589,13 @@ Missing character: There is no = in font nullfont!
 Missing character: There is no : in font nullfont!
 Missing character: There is no F in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:54: LaTeX Error: \begin{document} ended by \end{equation*}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:49: LaTeX Error: \begin{document} ended by \end{equation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54 \end{equation*}
+l.49 \end{equation*}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4681,10 +4625,10 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:55: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:50: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.55 ...thcal{L}u$ and $F$ are vectors in $\mathbb
+l.50 ...thcal{L}u$ and $F$ are vectors in $\mathbb
                                                   {R}^{J}$. Since, in theory...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5090,107 +5034,102 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 48--56
+Overfull \hbox (20.0pt too wide) in paragraph at lines 46--51
 []
  []
 
 
-Overfull \hbox (20.17194pt too wide) in paragraph at lines 48--56
-\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g$
- []
-
-
-Overfull \hbox (6.18336pt too wide) in paragraph at lines 48--56
+Overfull \hbox (6.18336pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 I$
  []
 
 
-Overfull \hbox (16.73888pt too wide) in paragraph at lines 48--56
+Overfull \hbox (16.73888pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 I \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (55.16205pt too wide) in paragraph at lines 48--56
+Overfull \hbox (55.16205pt too wide) in paragraph at lines 46--51
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 I[]; [] ; I[]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (6.18336pt too wide) in paragraph at lines 48--56
+Overfull \hbox (6.18336pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 I$
  []
 
 
-Overfull \hbox (6.18336pt too wide) in paragraph at lines 48--56
+Overfull \hbox (6.18336pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 I$
  []
 
 
-Overfull \hbox (23.17734pt too wide) in paragraph at lines 48--56
+Overfull \hbox (23.17734pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 L\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 48--56
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (18.80519pt too wide) in paragraph at lines 48--56
+Overfull \hbox (18.80519pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (7.81946pt too wide) in paragraph at lines 48--56
+Overfull \hbox (7.81946pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 F$
  []
 
 
-Overfull \hbox (13.25487pt too wide) in paragraph at lines 48--56
+Overfull \hbox (13.25487pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 48--56
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (7.81946pt too wide) in paragraph at lines 48--56
+Overfull \hbox (7.81946pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 F$
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 48--56
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (29.3607pt too wide) in paragraph at lines 48--56
+Overfull \hbox (29.3607pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (7.81946pt too wide) in paragraph at lines 48--56
+Overfull \hbox (7.81946pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 F$
  []
 
 
-Overfull \hbox (43.05164pt too wide) in paragraph at lines 48--56
+Overfull \hbox (43.05164pt too wide) in paragraph at lines 46--51
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; \OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 48--56
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 46--51
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (6.89725pt too wide) in paragraph at lines 48--56
+Overfull \hbox (6.89725pt too wide) in paragraph at lines 46--51
 \OMS/cmsy/m/n/10 L$
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:70: Misplaced alignment tab character &.
-l.70     V &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:65: Misplaced alignment tab character &.
+l.65     V &
              V\mathcal{L}^{*}\mathcal{I}^{*} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -5199,8 +5138,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:71: Misplaced alignment tab character &.
-l.71     \mathcal{I}\mathcal{L}V &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:66: Misplaced alignment tab character &.
+l.66     \mathcal{I}\mathcal{L}V &
                                    \mathcal{I}\mathcal{L}V\mathcal{L}^{*}\ma...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -5210,7 +5149,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (263.54356pt too wide) detected at line 74
+Overfull \hbox (263.54356pt too wide) detected at line 69
 [][] [] \OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = [] [] \OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ^^X N []
  []
 
@@ -5356,8 +5295,8 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:75: Undefined control sequence.
-l.75 ... the conditioning step (see the \textcolor
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:70: Undefined control sequence.
+l.70 ... the conditioning step (see the \textcolor
                                                   {blue}{\nameref{appendix}}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5369,8 +5308,8 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:75: Undefined control sequence.
-l.75 ...ng step (see the \textcolor{blue}{\nameref
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:70: Undefined control sequence.
+l.70 ...ng step (see the \textcolor{blue}{\nameref
                                                   {appendix}} for a full jus...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5457,17 +5396,17 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 74--76
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 69--71
               $\OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (7.81946pt too wide) in paragraph at lines 74--76
+Overfull \hbox (7.81946pt too wide) in paragraph at lines 69--71
 \OML/cmm/m/it/10 F$
  []
 
 
-Overfull \hbox (150.56534pt too wide) detected at line 79
+Overfull \hbox (150.56534pt too wide) detected at line 74
 []\OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 jfIL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F; f\OMS/cmsy/m/n/10 g ^^X N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; \OT1/cmr/m/n/10 ^^F) =: \OML/cmm/m/it/10 ^^V[]
  []
 
@@ -5478,21 +5417,21 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no , in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:81: LaTeX Error: Environment align undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:76: LaTeX Error: Environment align undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.81 \begin{align}
+l.76 \begin{align}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no a in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:83: Misplaced alignment tab character &.
-l.83     a &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:78: Misplaced alignment tab character &.
+l.78     a &
             = V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathca...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -5504,28 +5443,28 @@ might try typing `S' now just to see what is salvageable.
 Missing character: There is no = in font nullfont!
 Missing character: There is no V in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:83: LaTeX Error: \mathcal allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:78: LaTeX Error: \mathcal allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83     a &= V\mathcal
+l.78     a &= V\mathcal
                        {L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathca...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no L in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:83: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:78: Missing $ inserted.
 <inserted text> 
                 $
-l.83     a &= V\mathcal{L}^
+l.78     a &= V\mathcal{L}^
                            {*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathca...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:85: Misplaced alignment tab character &.
-l.85     \Sigma &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:80: Misplaced alignment tab character &.
+l.80     \Sigma &
                  = V - V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -5535,22 +5474,22 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:86: LaTeX Error: \begin{document} ended by \end{align}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:81: LaTeX Error: \begin{document} ended by \end{align}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.86 \end{align}
+l.81 \end{align}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:86: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:81: Missing $ inserted.
 <inserted text> 
                 $
-l.86 \end{align}
+l.81 \end{align}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -5559,13 +5498,13 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:87: LaTeX Error: Environment remark undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:82: LaTeX Error: Environment remark undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.87 \begin{remark}
+l.82 \begin{remark}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -5736,8 +5675,8 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no . in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:89: Undefined control sequence.
-l.89 $\mathbin{\blacklozenge
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:84: Undefined control sequence.
+l.84 $\mathbin{\blacklozenge
                             }$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5746,61 +5685,61 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:90: LaTeX Error: \begin{document} ended by \end{remark}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:85: LaTeX Error: \begin{document} ended by \end{remark}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.90 \end{remark}
+l.85 \end{remark}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (85.12247pt too wide) in paragraph at lines 79--91
+Overfull \hbox (85.12247pt too wide) in paragraph at lines 74--86
 []\OMS/cmsy/m/n/10 I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 F[] 
  []
 
 
-Overfull \hbox (17.77774pt too wide) in paragraph at lines 79--91
+Overfull \hbox (17.77774pt too wide) in paragraph at lines 74--86
 []\OT1/cmr/m/n/10 ^^F =
  []
 
 
-Overfull \hbox (15.83336pt too wide) in paragraph at lines 79--91
+Overfull \hbox (15.83336pt too wide) in paragraph at lines 74--86
 \OML/cmm/m/it/10 V \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (113.39198pt too wide) in paragraph at lines 79--91
+Overfull \hbox (113.39198pt too wide) in paragraph at lines 74--86
 \OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V$
  []
 
 
-Overfull \hbox (22.01051pt too wide) in paragraph at lines 79--91
+Overfull \hbox (22.01051pt too wide) in paragraph at lines 74--86
 \OML/cmm/m/it/10 ^^V[]$
  []
 
 
-Overfull \hbox (8.78014pt too wide) in paragraph at lines 79--91
+Overfull \hbox (8.78014pt too wide) in paragraph at lines 74--86
 \OML/cmm/m/it/10 m$
  []
 
 
-Overfull \hbox (7.50002pt too wide) in paragraph at lines 79--91
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 74--86
 \OML/cmm/m/it/10 A$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:92: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:87: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.92 W
+l.87 W
       e will now seek to marginalize over $f$ in (\ref{conditionalDistnFixed...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5838,10 +5777,10 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:92: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:87: Undefined control sequence.
 <write> ...ditionalDistnFixed_f' on page \thepage 
                                                   \space undefined\on@line .
-l.92 ...over $f$ in (\ref{conditionalDistnFixed_f}
+l.87 ...over $f$ in (\ref{conditionalDistnFixed_f}
                                                   ) so as to obtain the ``av...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5850,7 +5789,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `conditionalDistnFixed_f' on page  undefined on input line 92.
+LaTeX Warning: Reference `conditionalDistnFixed_f' on page  undefined on input line 87.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -6034,41 +5973,41 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 92--93
+Overfull \hbox (20.0pt too wide) in paragraph at lines 87--88
 []
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 92--93
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 87--88
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 92--93
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 87--88
 []
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:94: LaTeX Error: Environment proposition undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:89: LaTeX Error: Environment proposition undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.94 \begin{proposition}
+l.89 \begin{proposition}
                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:96: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:91: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.96     L
+l.91     L
           et $u$ satisfy problem (\ref{DirichletProb}) and suppose that we p...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6091,10 +6030,10 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:96: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:91: Undefined control sequence.
 <write> ...rence `DirichletProb' on page \thepage 
                                                   \space undefined\on@line .
-l.96 ...t $u$ satisfy problem (\ref{DirichletProb}
+l.91 ...t $u$ satisfy problem (\ref{DirichletProb}
                                                   ) and suppose that we plac...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6103,7 +6042,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 96.
+LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 91.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -6248,72 +6187,72 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 96--97
+Overfull \hbox (20.0pt too wide) in paragraph at lines 91--92
 []
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 96--97
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 96--97
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 91--92
 []
  []
 
 
-Overfull \hbox (16.28009pt too wide) in paragraph at lines 96--97
+Overfull \hbox (16.28009pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (34.95627pt too wide) in paragraph at lines 96--97
+Overfull \hbox (34.95627pt too wide) in paragraph at lines 91--92
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; V\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 96--97
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 V$
  []
 
 
-Overfull \hbox (15.68398pt too wide) in paragraph at lines 96--97
+Overfull \hbox (15.68398pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 g \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 96--97
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 91--92
 \OT1/cmr/m/n/10 0$
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 96--97
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (16.52777pt too wide) in paragraph at lines 96--97
+Overfull \hbox (16.52777pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (37.08128pt too wide) in paragraph at lines 96--97
+Overfull \hbox (37.08128pt too wide) in paragraph at lines 91--92
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; K\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (42.86308pt too wide) in paragraph at lines 96--97
+Overfull \hbox (42.86308pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 jfIL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (12.81947pt too wide) in paragraph at lines 96--97
+Overfull \hbox (12.81947pt too wide) in paragraph at lines 91--92
 \OML/cmm/m/it/10 F\OMS/cmsy/m/n/10 g$
  []
 
 
-Overfull \hbox (158.80063pt too wide) detected at line 100
+Overfull \hbox (158.80063pt too wide) detected at line 95
 []\OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 jfIL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F\OMS/cmsy/m/n/10 g ^^X N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Q[]; \OT1/cmr/m/n/10 ^^F + \OML/cmm/m/it/10 QK[]Q[]\OT1/cmr/m/n/10 )
  []
 
@@ -6334,57 +6273,57 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no . in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:102: LaTeX Error: \begin{document} ended by \end{proposition}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:97: LaTeX Error: \begin{document} ended by \end{proposition}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.102 \end{proposition}
-                       
+l.97 \end{proposition}
+                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (21.15276pt too wide) in paragraph at lines 100--103
+Overfull \hbox (21.15276pt too wide) in paragraph at lines 95--98
    $[] \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (12.15562pt too wide) in paragraph at lines 100--103
+Overfull \hbox (12.15562pt too wide) in paragraph at lines 95--98
 \OMS/cmsy/m/n/10 I[]$
  []
 
 
-Overfull \hbox (27.30638pt too wide) in paragraph at lines 100--103
+Overfull \hbox (27.30638pt too wide) in paragraph at lines 95--98
 \OML/cmm/m/it/10 K[] \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (26.17229pt too wide) in paragraph at lines 100--103
+Overfull \hbox (26.17229pt too wide) in paragraph at lines 95--98
 \OMS/cmsy/m/n/10 I\OML/cmm/m/it/10 K\OMS/cmsy/m/n/10 I[]$
  []
 
 
-Overfull \hbox (21.23885pt too wide) in paragraph at lines 100--103
+Overfull \hbox (21.23885pt too wide) in paragraph at lines 95--98
 \OML/cmm/m/it/10 Q \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (92.25581pt too wide) in paragraph at lines 100--103
+Overfull \hbox (92.25581pt too wide) in paragraph at lines 95--98
 \OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:104: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:99: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 \noindent
-                \textit{Proof:}
+l.99 \noindent
+               \textit{Proof:}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -6440,17 +6379,17 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (26.33315pt too wide) in paragraph at lines 104--106
+Overfull \hbox (26.33315pt too wide) in paragraph at lines 99--101
 \OT1/cmr/m/it/10 Proof:
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 104--106
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 99--101
 \OML/cmm/m/it/10 f$
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:107: Undefined control sequence.
-l.107 ...l{N}(\bar{f},K)=:\mu_{\bar{f},K} \implies
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:102: Undefined control sequence.
+l.102 ...l{N}(\bar{f},K)=:\mu_{\bar{f},K} \implies
                                                    \mathcal{I}f=F\sim\mathca...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6459,7 +6398,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (242.89958pt too wide) detected at line 108
+Overfull \hbox (242.89958pt too wide) detected at line 103
 \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 ^^X N\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; K\OT1/cmr/m/n/10 ) =: \OML/cmm/m/it/10 ^^V[]\OMS/cmsy/m/n/10 I\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F \OMS/cmsy/m/n/10 ^^X N\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 I[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 I\OML/cmm/m/it/10 K\OMS/cmsy/m/n/10 I[]\OT1/cmr/m/n/10 ) =: \OML/cmm/m/it/10 ^^V[]
  []
 
@@ -6694,9 +6633,9 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:109: Undefined control sequence.
-l.109 ... for instance Theorem 2.1.1 in \textcolor
-                                                  {blue}{\cite{lunardi2015in...
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:104: Undefined control sequence.
+l.104 ... for instance Theorem 2.1.1 in \textcolor
+                                                  {blue}{\citep{lunardi2015i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -6707,23 +6646,34 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no [ in font nullfont!
-\citation{lunardi2015infinite}
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:109: Undefined control sequence.
-<write> ...: Citation `\@citeb ' on page \thepage 
-                                                  \space undefined\on@line .
-l.109 ...extcolor{blue}{\cite{lunardi2015infinite}
-                                                  }). We must thus compute:
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:104: Undefined control sequence.
+l.104 ... Theorem 2.1.1 in \textcolor{blue}{\citep
+                                                  {lunardi2015infinite}}). W...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-LaTeX Warning: Citation `lunardi2015infinite' on page  undefined on input line 109.
-
-Missing character: There is no ] in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no W in font nullfont!
@@ -6745,52 +6695,47 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (21.15276pt too wide) in paragraph at lines 108--110
+Overfull \hbox (21.15276pt too wide) in paragraph at lines 103--105
  $[] \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (12.15562pt too wide) in paragraph at lines 108--110
+Overfull \hbox (12.15562pt too wide) in paragraph at lines 103--105
 \OMS/cmsy/m/n/10 I[]$
  []
 
 
-Overfull \hbox (27.30638pt too wide) in paragraph at lines 108--110
+Overfull \hbox (27.30638pt too wide) in paragraph at lines 103--105
 \OML/cmm/m/it/10 K[] \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (26.17229pt too wide) in paragraph at lines 108--110
+Overfull \hbox (26.17229pt too wide) in paragraph at lines 103--105
 \OMS/cmsy/m/n/10 I\OML/cmm/m/it/10 K\OMS/cmsy/m/n/10 I[]$
  []
 
 
-Overfull \hbox (41.2931pt too wide) in paragraph at lines 108--110
+Overfull \hbox (41.2931pt too wide) in paragraph at lines 103--105
 \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 ) :=
  []
 
 
-Overfull \hbox (87.37872pt too wide) in paragraph at lines 108--110
+Overfull \hbox (87.37872pt too wide) in paragraph at lines 103--105
 \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; u\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ))$
  []
 
 
-Overfull \hbox (13.85071pt too wide) in paragraph at lines 108--110
+Overfull \hbox (13.85071pt too wide) in paragraph at lines 103--105
 \OML/cmm/m/it/10 ^^[\OMS/cmsy/m/n/10 ^^@$
  []
 
 
-Overfull \hbox (13.85071pt too wide) in paragraph at lines 108--110
+Overfull \hbox (13.85071pt too wide) in paragraph at lines 103--105
 \OML/cmm/m/it/10 ^^[\OMS/cmsy/m/n/10 ^^@$
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 108--110
-[]
- []
-
-
-Overfull \hbox (129.39749pt too wide) detected at line 112
+Overfull \hbox (129.39749pt too wide) detected at line 107
 [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 )
  []
 
@@ -6831,8 +6776,8 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:113: Undefined control sequence.
-l.113 ...operator $P:\mathcal{H}\rightarrow\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:108: Undefined control sequence.
+l.108 ...operator $P:\mathcal{H}\rightarrow\mathbb
                                                   {R}^{N}$ is defined by $Ph...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6938,92 +6883,92 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (23.86482pt too wide) in paragraph at lines 112--114
+Overfull \hbox (23.86482pt too wide) in paragraph at lines 107--109
   $\OML/cmm/m/it/10 u[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (13.53362pt too wide) in paragraph at lines 112--114
+Overfull \hbox (13.53362pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 Pu$
  []
 
 
-Overfull \hbox (13.36453pt too wide) in paragraph at lines 112--114
+Overfull \hbox (13.36453pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 P \OT1/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (21.31943pt too wide) in paragraph at lines 112--114
+Overfull \hbox (21.31943pt too wide) in paragraph at lines 107--109
 \OMS/cmsy/m/n/10 H !
  []
 
 
-Overfull \hbox (15.25488pt too wide) in paragraph at lines 112--114
+Overfull \hbox (15.25488pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (26.90392pt too wide) in paragraph at lines 112--114
+Overfull \hbox (26.90392pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 Ph \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (86.87968pt too wide) in paragraph at lines 112--114
+Overfull \hbox (86.87968pt too wide) in paragraph at lines 107--109
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ))[]$
  []
 
 
-Overfull \hbox (5.76158pt too wide) in paragraph at lines 112--114
+Overfull \hbox (5.76158pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 h$
  []
 
 
-Overfull \hbox (13.30931pt too wide) in paragraph at lines 112--114
+Overfull \hbox (13.30931pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 u[]$
  []
 
 
-Overfull \hbox (23.86482pt too wide) in paragraph at lines 112--114
+Overfull \hbox (23.86482pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 u[] \OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (75.76645pt too wide) in paragraph at lines 112--114
+Overfull \hbox (75.76645pt too wide) in paragraph at lines 107--109
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Pa; P\OT1/cmr/m/n/10 ^^F\OML/cmm/m/it/10 P[]\OT1/cmr/m/n/10 ) =:
  []
 
 
-Overfull \hbox (31.53786pt too wide) in paragraph at lines 112--114
+Overfull \hbox (31.53786pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 ^^V[]$
  []
 
 
-Overfull \hbox (28.14026pt too wide) in paragraph at lines 112--114
+Overfull \hbox (28.14026pt too wide) in paragraph at lines 107--109
 \OT1/cmr/m/n/10 ^^F[] :=
  []
 
 
-Overfull \hbox (27.43753pt too wide) in paragraph at lines 112--114
+Overfull \hbox (27.43753pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 ^^F\OML/cmm/m/it/10 P[]$
  []
 
 
-Overfull \hbox (16.90277pt too wide) in paragraph at lines 112--114
+Overfull \hbox (16.90277pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 ^^B
  []
 
 
-Overfull \hbox (9.12497pt too wide) in paragraph at lines 112--114
+Overfull \hbox (9.12497pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 N$
  []
 
 
-Overfull \hbox (13.30931pt too wide) in paragraph at lines 112--114
+Overfull \hbox (13.30931pt too wide) in paragraph at lines 107--109
 \OML/cmm/m/it/10 u[]$
  []
 
 
-Overfull \hbox (292.3043pt too wide) detected at line 116
+Overfull \hbox (292.3043pt too wide) detected at line 111
 [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 )
  []
 
@@ -7078,10 +7023,10 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:117: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:112: Undefined control sequence.
 <write> ...ditionalDistnFixed_f' on page \thepage 
                                                   \space undefined\on@line .
-l.117 ...on of $u$, (\ref{conditionalDistnFixed_f}
+l.112 ...on of $u$, (\ref{conditionalDistnFixed_f}
                                                   ), and hence of $u^{N}$ on...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7090,7 +7035,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `conditionalDistnFixed_f' on page  undefined on input line 117.
+LaTeX Warning: Reference `conditionalDistnFixed_f' on page  undefined on input line 112.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -7124,8 +7069,8 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no h in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:117: Undefined control sequence.
-l.117 ... only depends on $f$ through $F\in\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:112: Undefined control sequence.
+l.112 ... only depends on $f$ through $F\in\mathbb
                                                   {R}^{J}$ we can thus write:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7149,57 +7094,57 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (23.65044pt too wide) in paragraph at lines 116--118
+Overfull \hbox (23.65044pt too wide) in paragraph at lines 111--113
    $\OML/cmm/m/it/10 Pa \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (23.53404pt too wide) in paragraph at lines 116--118
+Overfull \hbox (23.53404pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 PQF$
  []
 
 
-Overfull \hbox (21.23885pt too wide) in paragraph at lines 116--118
+Overfull \hbox (21.23885pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 Q \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (92.25581pt too wide) in paragraph at lines 116--118
+Overfull \hbox (92.25581pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 116--118
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 116--118
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 111--113
 []
  []
 
 
-Overfull \hbox (13.30931pt too wide) in paragraph at lines 116--118
+Overfull \hbox (13.30931pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 u[]$
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 116--118
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (17.26385pt too wide) in paragraph at lines 116--118
+Overfull \hbox (17.26385pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 F \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (13.25487pt too wide) in paragraph at lines 116--118
+Overfull \hbox (13.25487pt too wide) in paragraph at lines 111--113
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (327.40659pt too wide) detected at line 120
+Overfull \hbox (327.40659pt too wide) detected at line 115
 [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 ) = [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 )
  []
 
@@ -7364,7 +7309,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (96.8418pt too wide) detected at line 125
+Overfull \hbox (96.8418pt too wide) detected at line 120
 [][] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )
  []
 
@@ -7375,29 +7320,29 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no , in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:127: LaTeX Error: Environment align undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:122: LaTeX Error: Environment align undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 \begin{align}
+l.122 \begin{align}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no h in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:128: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:123: Missing $ inserted.
 <inserted text> 
                 $
-l.128     h^
+l.123     h^
             {N}&:=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:128: Misplaced alignment tab character &.
-l.128     h^{N}&
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:123: Misplaced alignment tab character &.
+l.123     h^{N}&
                 :=\Sigma_{\mathcal{I}}\Sigma_{N}^{-1}PQB^{-1}K_{\mathcal{I}}...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -7406,8 +7351,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:129: Misplaced alignment tab character &.
-l.129     \Sigma_{\mathcal{I}}&
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:124: Misplaced alignment tab character &.
+l.124     \Sigma_{\mathcal{I}}&
                                :=P(\Sigma+QK_{\mathcal{I}}Q^{*})P^{*} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -7416,8 +7361,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:130: Misplaced alignment tab character &.
-l.130     B &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:125: Misplaced alignment tab character &.
+l.125     B &
              := \left(Q^{*}P^{*}\Sigma_{N}^{-1}PQ+K_{\mathcal{I}}^{-1}\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -7427,22 +7372,22 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:131: LaTeX Error: \begin{document} ended by \end{align}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:126: LaTeX Error: \begin{document} ended by \end{align}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 \end{align}
+l.126 \end{align}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:131: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:126: Missing $ inserted.
 <inserted text> 
                 $
-l.131 \end{align}
+l.126 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -7489,8 +7434,8 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:132: Undefined control sequence.
-l.132 ...is computation are left to the \textcolor
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:127: Undefined control sequence.
+l.127 ...is computation are left to the \textcolor
                                                   {blue}{\nameref{appendix}}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7502,8 +7447,8 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:132: Undefined control sequence.
-l.132 ...are left to the \textcolor{blue}{\nameref
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:127: Undefined control sequence.
+l.127 ...are left to the \textcolor{blue}{\nameref
                                                   {appendix}}. From this we ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7703,72 +7648,72 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.91803pt too wide) in paragraph at lines 125--133
+Overfull \hbox (20.91803pt too wide) in paragraph at lines 120--128
   $[] \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (103.51761pt too wide) in paragraph at lines 125--133
+Overfull \hbox (103.51761pt too wide) in paragraph at lines 120--128
 \OT1/cmr/m/n/10 ^^F[]^^F[]\OML/cmm/m/it/10 PQB[]K[][] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (23.53404pt too wide) in paragraph at lines 125--133
+Overfull \hbox (23.53404pt too wide) in paragraph at lines 120--128
 \OML/cmm/m/it/10 PQ[][] 
  []
 
 
-Overfull \hbox (26.03555pt too wide) in paragraph at lines 125--133
+Overfull \hbox (26.03555pt too wide) in paragraph at lines 120--128
 \OT1/cmr/m/n/10 ^^F[] :=
  []
 
 
-Overfull \hbox (26.69797pt too wide) in paragraph at lines 125--133
+Overfull \hbox (26.69797pt too wide) in paragraph at lines 120--128
 \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (^^F +
  []
 
 
-Overfull \hbox (50.67657pt too wide) in paragraph at lines 125--133
+Overfull \hbox (50.67657pt too wide) in paragraph at lines 120--128
 \OML/cmm/m/it/10 QK[]Q[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 P[][] 
  []
 
 
-Overfull \hbox (21.4201pt too wide) in paragraph at lines 125--133
+Overfull \hbox (21.4201pt too wide) in paragraph at lines 120--128
 \OML/cmm/m/it/10 B \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (99.91533pt too wide) in paragraph at lines 125--133
+Overfull \hbox (99.91533pt too wide) in paragraph at lines 120--128
 []$
  []
 
 
-Overfull \hbox (6.8727pt too wide) in paragraph at lines 125--133
+Overfull \hbox (6.8727pt too wide) in paragraph at lines 120--128
 \OML/cmm/m/it/10  $
  []
 
 
-Overfull \hbox (13.34631pt too wide) in paragraph at lines 125--133
+Overfull \hbox (13.34631pt too wide) in paragraph at lines 120--128
 \OML/cmm/m/it/10 h[]$
  []
 
 
-Overfull \hbox (12.70226pt too wide) in paragraph at lines 125--133
+Overfull \hbox (12.70226pt too wide) in paragraph at lines 120--128
 \OT1/cmr/m/n/10 ^^F[]$
  []
 
 
-Overfull \hbox (5.97226pt too wide) in paragraph at lines 125--133
+Overfull \hbox (5.97226pt too wide) in paragraph at lines 120--128
 \OML/cmm/m/it/10 f$
  []
 
 
-Overfull \hbox (166.3005pt too wide) detected at line 135
+Overfull \hbox (166.3005pt too wide) detected at line 130
 \OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 jfIL\OML/cmm/m/it/10 u \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 F\OMS/cmsy/m/n/10 g ^^X N []
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:136: Undefined control sequence.
-l.136 \qedsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:131: Undefined control sequence.
+l.131 \qedsymbol
                 
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7777,13 +7722,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:138: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:133: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.138 T
+l.133 T
        his posterior will be taken to be our second prior for further infere...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8144,10 +8089,10 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:138: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:133: Undefined control sequence.
 <write> ...eference `true_prior' on page \thepage 
                                                   \space undefined\on@line .
-l.138 ...ore like the true prior (\ref{true_prior}
+l.133 ...ore like the true prior (\ref{true_prior}
                                                   ). In Section \textcolor{b...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8156,7 +8101,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `true_prior' on page  undefined on input line 138.
+LaTeX Warning: Reference `true_prior' on page  undefined on input line 133.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -8169,8 +8114,8 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:138: Undefined control sequence.
-l.138 ...(\ref{true_prior}). In Section \textcolor
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:133: Undefined control sequence.
+l.133 ...(\ref{true_prior}). In Section \textcolor
                                                   {blue}{\ref{elliptic_bv_pr...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8182,10 +8127,10 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:138: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:133: Undefined control sequence.
 <write> ...ce `elliptic_bv_prob' on page \thepage 
                                                   \space undefined\on@line .
-l.138 ...n \textcolor{blue}{\ref{elliptic_bv_prob}
+l.133 ...n \textcolor{blue}{\ref{elliptic_bv_prob}
                                                   } we will obtain, for a sp...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8194,7 +8139,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `elliptic_bv_prob' on page  undefined on input line 138.
+LaTeX Warning: Reference `elliptic_bv_prob' on page  undefined on input line 133.
 
 Missing character: There is no w in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -8337,73 +8282,73 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 138--139
+Overfull \hbox (20.0pt too wide) in paragraph at lines 133--134
 []
  []
 
 
-Overfull \hbox (6.18336pt too wide) in paragraph at lines 138--139
+Overfull \hbox (6.18336pt too wide) in paragraph at lines 133--134
 \OMS/cmsy/m/n/10 I$
  []
 
 
-Overfull \hbox (6.50694pt too wide) in paragraph at lines 138--139
+Overfull \hbox (6.50694pt too wide) in paragraph at lines 133--134
 \OML/cmm/m/it/10 J$
  []
 
 
-Overfull \hbox (5.76158pt too wide) in paragraph at lines 138--139
+Overfull \hbox (5.76158pt too wide) in paragraph at lines 133--134
 \OML/cmm/m/it/10 h$
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 138--139
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 133--134
 \OT1/cmr/m/n/10 0$
  []
 
 
-Overfull \hbox (19.28467pt too wide) in paragraph at lines 138--139
+Overfull \hbox (19.28467pt too wide) in paragraph at lines 133--134
 \OML/cmm/m/it/10 J \OMS/cmsy/m/n/10 !
  []
 
 
-Overfull \hbox (10.00002pt too wide) in paragraph at lines 138--139
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 133--134
 \OMS/cmsy/m/n/10 1$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 138--139
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 133--134
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 138--139
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 133--134
 []
  []
 
 
-Overfull \hbox (5.76158pt too wide) in paragraph at lines 138--139
+Overfull \hbox (5.76158pt too wide) in paragraph at lines 133--134
 \OML/cmm/m/it/10 h$
  []
 
 
-Overfull \hbox (18.5393pt too wide) in paragraph at lines 138--139
+Overfull \hbox (18.5393pt too wide) in paragraph at lines 133--134
 \OML/cmm/m/it/10 h \OMS/cmsy/m/n/10 !
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 138--139
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 133--134
 \OT1/cmr/m/n/10 0$ 
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:140: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:135: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.140 I
+l.135 I
        t is also worth pointing out that the approximate prior (\ref{approx_...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8456,10 +8401,10 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:140: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:135: Undefined control sequence.
 <write> ...erence `approx_prior' on page \thepage 
                                                   \space undefined\on@line .
-l.140 ...the approximate prior (\ref{approx_prior}
+l.135 ...the approximate prior (\ref{approx_prior}
                                                   ) contains details of $V,\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8468,7 +8413,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `approx_prior' on page  undefined on input line 140.
+LaTeX Warning: Reference `approx_prior' on page  undefined on input line 135.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no c in font nullfont!
@@ -8609,27 +8554,27 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 140--141
+Overfull \hbox (20.0pt too wide) in paragraph at lines 135--136
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 140--141
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 135--136
 []
  []
 
 
-Overfull \hbox (41.08607pt too wide) in paragraph at lines 140--141
+Overfull \hbox (41.08607pt too wide) in paragraph at lines 135--136
 \OML/cmm/m/it/10 V; \OMS/cmsy/m/n/10 I\OML/cmm/m/it/10 ; []; K$
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 140--141
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 135--136
 \OML/cmm/m/it/10 u$
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:142: Undefined control sequence.
-l.142 \subsection
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:137: Undefined control sequence.
+l.137 \subsection
                  {Incorporating Observational Data}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8638,13 +8583,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:142: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:137: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.142 \subsection{I
+l.137 \subsection{I
                    ncorporating Observational Data}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8680,18 +8625,18 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no a in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 142--144
+Overfull \hbox (20.0pt too wide) in paragraph at lines 137--139
 []
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:145: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:140: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.145 W
+l.140 W
        e now have two prior distributions for the solution $u$ to our bounda...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -8766,10 +8711,10 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:145: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:140: Undefined control sequence.
 <write> ...rence `DirichletProb' on page \thepage 
                                                   \space undefined\on@line .
-l.145 ...undary value problem (\ref{DirichletProb}
+l.140 ...undary value problem (\ref{DirichletProb}
                                                   ), $\nu_{i}=\mathcal{N}(m_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8778,7 +8723,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 145.
+LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 140.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no , in font nullfont!
@@ -8826,10 +8771,10 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:145: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:140: Undefined control sequence.
 <write> ...rence `DirichletProb' on page \thepage 
                                                   \space undefined\on@line .
-l.145 ...the true solution to (\ref{DirichletProb}
+l.140 ...the true solution to (\ref{DirichletProb}
                                                   ) which has mean and covar...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -8838,7 +8783,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 145.
+LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 140.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no w in font nullfont!
@@ -8875,29 +8820,29 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:146: LaTeX Error: Environment align undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:141: LaTeX Error: Environment align undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 \begin{align}
+l.141 \begin{align}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no m in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:147: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:142: Missing $ inserted.
 <inserted text> 
                 $
-l.147     m_
+l.142     m_
             {1} &= \mathcal{L}^{-1}\bar{f} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:147: Misplaced alignment tab character &.
-l.147     m_{1} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:142: Misplaced alignment tab character &.
+l.142     m_{1} &
                  = \mathcal{L}^{-1}\bar{f} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -8906,8 +8851,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:148: Misplaced alignment tab character &.
-l.148     \Sigma_{1} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:143: Misplaced alignment tab character &.
+l.143     \Sigma_{1} &
                       = \mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -8917,22 +8862,22 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:149: LaTeX Error: \begin{document} ended by \end{align}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:144: LaTeX Error: \begin{document} ended by \end{align}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.149 \end{align}
+l.144 \end{align}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:149: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:144: Missing $ inserted.
 <inserted text> 
                 $
-l.149 \end{align}
+l.144 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -8999,10 +8944,10 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:150: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:145: Undefined control sequence.
 <write> ...rence `DirichletProb' on page \thepage 
                                                   \space undefined\on@line .
-l.150 ...n to the solution of (\ref{DirichletProb}
+l.145 ...n to the solution of (\ref{DirichletProb}
                                                   ) and this has mean and co...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9011,7 +8956,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 150.
+LaTeX Warning: Reference `DirichletProb' on page  undefined on input line 145.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -9050,29 +8995,29 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:151: LaTeX Error: Environment align undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:146: LaTeX Error: Environment align undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.151 \begin{align}
+l.146 \begin{align}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no m in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:147: Missing $ inserted.
 <inserted text> 
                 $
-l.152     m_
+l.147     m_
             {2} &= Q\bar{F} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Misplaced alignment tab character &.
-l.152     m_{2} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:147: Misplaced alignment tab character &.
+l.147     m_{2} &
                  = Q\bar{F} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -9081,8 +9026,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:153: Misplaced alignment tab character &.
-l.153     \Sigma_{2} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:148: Misplaced alignment tab character &.
+l.148     \Sigma_{2} &
                       = \Sigma + QK_{\mathcal{I}}Q^{*}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -9092,22 +9037,22 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:154: LaTeX Error: \begin{document} ended by \end{align}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:149: LaTeX Error: \begin{document} ended by \end{align}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.154 \end{align}
+l.149 \end{align}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:154: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:149: Missing $ inserted.
 <inserted text> 
                 $
-l.154 \end{align}
+l.149 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -9134,8 +9079,8 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:155: Undefined control sequence.
-l.155 with $Q$ as in Proposition \textcolor
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:150: Undefined control sequence.
+l.150 with $Q$ as in Proposition \textcolor
                                            {blue}{\ref{first_prop}}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9147,10 +9092,10 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:155: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:150: Undefined control sequence.
 <write> ...eference `first_prop' on page \thepage 
                                                   \space undefined\on@line .
-l.155 ...osition \textcolor{blue}{\ref{first_prop}
+l.150 ...osition \textcolor{blue}{\ref{first_prop}
                                                   }.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9159,117 +9104,117 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `first_prop' on page  undefined on input line 155.
+LaTeX Warning: Reference `first_prop' on page  undefined on input line 150.
 
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 145--156
+Overfull \hbox (20.0pt too wide) in paragraph at lines 140--151
 []
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 145--156
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 140--151
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 145--156
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 140--151
 []
  []
 
 
-Overfull \hbox (18.82462pt too wide) in paragraph at lines 145--156
+Overfull \hbox (18.82462pt too wide) in paragraph at lines 140--151
 \OML/cmm/m/it/10 ^^W[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (44.56163pt too wide) in paragraph at lines 145--156
+Overfull \hbox (44.56163pt too wide) in paragraph at lines 140--151
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]; \OT1/cmr/m/n/10 ^^F[])$
  []
 
 
-Overfull \hbox (14.00064pt too wide) in paragraph at lines 145--156
+Overfull \hbox (14.00064pt too wide) in paragraph at lines 140--151
 \OML/cmm/m/it/10 i \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (14.44444pt too wide) in paragraph at lines 145--156
+Overfull \hbox (14.44444pt too wide) in paragraph at lines 140--151
 \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 145--156
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 140--151
 []
  []
 
 
-Overfull \hbox (15.04164pt too wide) in paragraph at lines 145--156
+Overfull \hbox (15.04164pt too wide) in paragraph at lines 140--151
 [] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (23.60565pt too wide) in paragraph at lines 145--156
+Overfull \hbox (23.60565pt too wide) in paragraph at lines 140--151
 \OMS/cmsy/m/n/10 L[][][] 
  []
 
 
-Overfull \hbox (22.26387pt too wide) in paragraph at lines 145--156
+Overfull \hbox (22.26387pt too wide) in paragraph at lines 140--151
 \OT1/cmr/m/n/10 ^^F[] =
  []
 
 
-Overfull \hbox (56.85014pt too wide) in paragraph at lines 145--156
+Overfull \hbox (56.85014pt too wide) in paragraph at lines 140--151
 \OMS/cmsy/m/n/10 L[]\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 L[]\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 145--156
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 140--151
 []
  []
 
 
-Overfull \hbox (15.04164pt too wide) in paragraph at lines 145--156
+Overfull \hbox (15.04164pt too wide) in paragraph at lines 140--151
 [] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (15.725pt too wide) in paragraph at lines 145--156
+Overfull \hbox (15.725pt too wide) in paragraph at lines 140--151
 \OML/cmm/m/it/10 Q[][] 
  []
 
 
-Overfull \hbox (22.26387pt too wide) in paragraph at lines 145--156
+Overfull \hbox (22.26387pt too wide) in paragraph at lines 140--151
 \OT1/cmr/m/n/10 ^^F[] =
  []
 
 
-Overfull \hbox (15.00003pt too wide) in paragraph at lines 145--156
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 140--151
 \OT1/cmr/m/n/10 ^^F +
  []
 
 
-Overfull \hbox (34.38141pt too wide) in paragraph at lines 145--156
+Overfull \hbox (34.38141pt too wide) in paragraph at lines 140--151
 \OML/cmm/m/it/10 QK[]Q[]$
  []
 
 
-Overfull \hbox (7.90555pt too wide) in paragraph at lines 145--156
+Overfull \hbox (7.90555pt too wide) in paragraph at lines 140--151
 \OML/cmm/m/it/10 Q$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 145--156
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 140--151
 [] 
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:157: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.157 W
+l.152 W
        e will now also assume that we have observational data, coming from s...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -9623,6 +9568,273 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.152 ...ximate prior is tractable as seen above.}
+                                                  . Our goal will thus be to...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.152 ...ximate prior is tractable as seen above.}
+                                                  . Our goal will thus be to...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (21.8056pt too wide) in paragraph at lines 152--152
+[][]\OT1/cmr/m/n/10 Even
+ []
+
+
+Overfull \hbox (16.1667pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 this
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 ap-
+ []
+
+
+Overfull \hbox (22.8056pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 prox-
+ []
+
+
+Overfull \hbox (6.11111pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 i-
+ []
+
+
+Overfull \hbox (21.66672pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 mate
+ []
+
+
+Overfull \hbox (21.16672pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 prior
+ []
+
+
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 can
+ []
+
+
+Overfull \hbox (10.2778pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 be
+ []
+
+
+Overfull \hbox (11.66669pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 in-
+ []
+
+
+Overfull \hbox (41.69453pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 tractable,
+ []
+
+
+Overfull \hbox (21.16669pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 since
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 the
+ []
+
+
+Overfull \hbox (21.11115pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 com-
+ []
+
+
+Overfull \hbox (14.44447pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 pu-
+ []
+
+
+Overfull \hbox (12.22224pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 ta-
+ []
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 tion
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 of
+ []
+
+
+Overfull \hbox (21.13617pt too wide) in paragraph at lines 152--152
+\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V$
+ []
+
+
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 can
+ []
+
+
+Overfull \hbox (10.2778pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 be
+ []
+
+
+Overfull \hbox (14.72226pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 dif-
+ []
+
+
+Overfull \hbox (8.8889pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 fi-
+ []
+
+
+Overfull \hbox (16.6667pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 cult
+ []
+
+
+Overfull \hbox (8.33336pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 in
+ []
+
+
+Overfull \hbox (18.33336pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 gen-
+ []
+
+
+Overfull \hbox (18.9167pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 eral.
+ []
+
+
+Overfull \hbox (22.7778pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 How-
+ []
+
+
+Overfull \hbox (20.58336pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 ever,
+ []
+
+
+Overfull \hbox (11.97226pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 for
+ []
+
+
+Overfull \hbox (14.47226pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 our
+ []
+
+
+Overfull \hbox (21.38895pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 BVP
+ []
+
+
+Overfull \hbox (16.11116pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 and
+ []
+
+
+Overfull \hbox (26.38892pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 choice
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 of
+ []
+
+
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 152--152
+\OML/cmm/m/it/10 V$
+ []
+
+
+Overfull \hbox (16.11116pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 and
+ []
+
+
+Overfull \hbox (6.18336pt too wide) in paragraph at lines 152--152
+\OMS/cmsy/m/n/10 I$
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 the
+ []
+
+
+Overfull \hbox (13.88892pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 ap-
+ []
+
+
+Overfull \hbox (22.8056pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 prox-
+ []
+
+
+Overfull \hbox (6.11111pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 i-
+ []
+
+
+Overfull \hbox (21.66672pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 mate
+ []
+
+
+Overfull \hbox (21.16672pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 prior
+ []
+
+
+Overfull \hbox (6.72223pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 is
+ []
+
+
+Overfull \hbox (38.91675pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 tractable
+ []
+
+
+Overfull \hbox (8.94446pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 as
+ []
+
+
+Overfull \hbox (18.3889pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 seen
+ []
+
+
+Overfull \hbox (27.77785pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 above.| 
+ []
+
 Missing character: There is no . in font nullfont!
 Missing character: There is no O in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -9839,6 +10051,65 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no E in font nullfont!
 Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
+l.152 ...ersion of FEM as introduced in \textcolor
+                                                  {blue}{\citep{girolami2019...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no b in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
+l.152 ... as introduced in \textcolor{blue}{\citep
+                                                  {girolami2019statistical}}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -9942,49 +10213,54 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 157--158
+Overfull \hbox (20.0pt too wide) in paragraph at lines 152--153
 []
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 157--158
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 152--153
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (40.78815pt too wide) in paragraph at lines 157--158
+Overfull \hbox (40.78815pt too wide) in paragraph at lines 152--153
 \OML/cmm/m/it/10 y[]; [] ; y[]$
  []
 
 
-Overfull \hbox (7.22223pt too wide) in paragraph at lines 157--158
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 152--153
 \OT1/cmr/m/n/10 
 $
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 157--158
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 152--153
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (8.2691pt too wide) in paragraph at lines 157--158
+Overfull \hbox (8.2691pt too wide) in paragraph at lines 152--153
 \OML/cmm/m/it/10 ^^W[]$
  []
 
 
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 157--158
+Overfull \hbox (4.48613pt too wide) in paragraph at lines 152--153
+[]
+ []
+
+
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 152--153
 \OML/cmm/m/it/10 V$
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:159: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:154: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.159 L
+l.154 L
        et $S:\mathcal{H}\rightarrow\mathbb{R}^{s}$ be the operator which map...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -9992,8 +10268,8 @@ If that doesn't work, type  X <return>  to quit.
 Missing character: There is no L in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:159: Undefined control sequence.
-l.159 Let $S:\mathcal{H}\rightarrow\mathbb
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:154: Undefined control sequence.
+l.154 Let $S:\mathcal{H}\rightarrow\mathbb
                                           {R}^{s}$ be the operator which map...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10036,10 +10312,10 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:159: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:154: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.159 ...o $(h(y_1),\dots,h(y_s))^{T}$ in $\mathbb
+l.154 ...o $(h(y_1),\dots,h(y_s))^{T}$ in $\mathbb
                                                   {R}^{s}$. Assuming that th...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10170,57 +10446,57 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 159--160
+Overfull \hbox (20.0pt too wide) in paragraph at lines 154--155
 []
  []
 
 
-Overfull \hbox (12.26381pt too wide) in paragraph at lines 159--160
+Overfull \hbox (12.26381pt too wide) in paragraph at lines 154--155
 \OML/cmm/m/it/10 S \OT1/cmr/m/n/10 :
  []
 
 
-Overfull \hbox (21.31943pt too wide) in paragraph at lines 159--160
+Overfull \hbox (21.31943pt too wide) in paragraph at lines 154--155
 \OMS/cmsy/m/n/10 H !
  []
 
 
-Overfull \hbox (11.94447pt too wide) in paragraph at lines 159--160
+Overfull \hbox (11.94447pt too wide) in paragraph at lines 154--155
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (15.20598pt too wide) in paragraph at lines 159--160
+Overfull \hbox (15.20598pt too wide) in paragraph at lines 154--155
 \OML/cmm/m/it/10 h \OMS/cmsy/m/n/10 2
  []
 
 
-Overfull \hbox (8.5417pt too wide) in paragraph at lines 159--160
+Overfull \hbox (8.5417pt too wide) in paragraph at lines 154--155
 \OMS/cmsy/m/n/10 H$
  []
 
 
-Overfull \hbox (81.94437pt too wide) in paragraph at lines 159--160
+Overfull \hbox (81.94437pt too wide) in paragraph at lines 154--155
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; [] ; h\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 ))[]$
  []
 
 
-Overfull \hbox (11.94447pt too wide) in paragraph at lines 159--160
+Overfull \hbox (11.94447pt too wide) in paragraph at lines 154--155
 \OML/cmm/m/it/10 R[]$
  []
 
 
-Overfull \hbox (9.11638pt too wide) in paragraph at lines 159--160
+Overfull \hbox (9.11638pt too wide) in paragraph at lines 154--155
 \OML/cmm/m/it/10 y[]$
  []
 
 
-Overfull \hbox (6.22914pt too wide) in paragraph at lines 159--160
+Overfull \hbox (6.22914pt too wide) in paragraph at lines 154--155
 \OT1/cmr/bx/n/10 v$
  []
 
 
-Overfull \hbox (76.12402pt too wide) detected at line 163
+Overfull \hbox (76.12402pt too wide) detected at line 158
 []\OT1/cmr/bx/n/10 v\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ^^X N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 Su; ^^O[]I\OT1/cmr/m/n/10 )
  []
 
@@ -10380,10 +10656,10 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no ( in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:164: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:159: Undefined control sequence.
 <write> ...eference `likelihood' on page \thepage 
                                                   \space undefined\on@line .
-l.164 ...istributed according to (\ref{likelihood}
+l.159 ...istributed according to (\ref{likelihood}
                                                   ) is equivalent to the ass...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10392,7 +10668,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `likelihood' on page  undefined on input line 164.
+LaTeX Warning: Reference `likelihood' on page  undefined on input line 159.
 
 Missing character: There is no ) in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -10427,26 +10703,26 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no : in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:165: LaTeX Error: Environment equation* undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:160: LaTeX Error: Environment equation* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.165 \begin{equation*}
+l.160 \begin{equation*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:166: LaTeX Error: \mathbf allowed only in math mode.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:161: LaTeX Error: \mathbf allowed only in math mode.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.166   \mathbf{v}
+l.161   \mathbf{v}
                   =Su+\boldsymbol{\delta}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -10456,8 +10732,8 @@ Missing character: There is no = in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no + in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:166: Undefined control sequence.
-l.166   \mathbf{v}=Su+\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:161: Undefined control sequence.
+l.161   \mathbf{v}=Su+\boldsymbol
                                  {\delta}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10465,16 +10741,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:166: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:161: Missing $ inserted.
 <inserted text> 
                 $
-l.166   \mathbf{v}=Su+\boldsymbol{\delta
+l.161   \mathbf{v}=Su+\boldsymbol{\delta
                                         }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:166: Extra }, or forgotten $.
-l.166   \mathbf{v}=Su+\boldsymbol{\delta}
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:161: Extra }, or forgotten $.
+l.161   \mathbf{v}=Su+\boldsymbol{\delta}
                                          
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -10483,22 +10759,22 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:167: LaTeX Error: \begin{document} ended by \end{equation*}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:162: LaTeX Error: \begin{document} ended by \end{equation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.167 \end{equation*}
+l.162 \end{equation*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:167: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:162: Missing $ inserted.
 <inserted text> 
                 $
-l.167 \end{equation*}
+l.162 \end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10506,10 +10782,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:167: Missing } inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:162: Missing } inserted.
 <inserted text> 
                 }
-l.167 \end{equation*}
+l.162 \end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10522,10 +10798,10 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:168: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:163: Undefined control sequence.
 <recently read> \boldsymbol 
                             
-l.168 where $\boldsymbol
+l.163 where $\boldsymbol
                         {\delta}\sim\mathcal{N}(\mathbf{0},\epsilon^{2}I)$ i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10591,8 +10867,8 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:168: Undefined control sequence.
-l.168 ...the joint distribution of $(u,\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:163: Undefined control sequence.
+l.163 ...the joint distribution of $(u,\boldsymbol
                                                   {\delta})^{T}$ is:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10604,30 +10880,30 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:169: LaTeX Error: Environment equation* undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:164: LaTeX Error: Environment equation* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.169 \begin{equation*}
+l.164 \begin{equation*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:171: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:166: Missing $ inserted.
 <inserted text> 
                 $
-l.171     u
+l.166     u
             \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:172: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:167: Undefined control sequence.
 <recently read> \boldsymbol 
                             
-l.172     \boldsymbol
+l.167     \boldsymbol
                      {\delta}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10635,10 +10911,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:173: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:168: Missing $ inserted.
 <inserted text> 
                 $
-l.173   \end{pmatrix}
+l.168   \end{pmatrix}
                      \sim\mathcal{N}\left(\begin{pmatrix}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10646,16 +10922,16 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:173: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:168: Missing $ inserted.
 <inserted text> 
                 $
-l.173   \end{pmatrix}\sim
+l.168   \end{pmatrix}\sim
                          \mathcal{N}\left(\begin{pmatrix}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:178: Misplaced alignment tab character &.
-l.178 ...                             \Sigma_{i} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:173: Misplaced alignment tab character &.
+l.173 ...                             \Sigma_{i} &
                                                    0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -10664,8 +10940,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:179: Misplaced alignment tab character &.
-l.179                                       0 &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:174: Misplaced alignment tab character &.
+l.174                                       0 &
                                                 \epsilon^{2}I
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -10675,22 +10951,22 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:182: LaTeX Error: \begin{document} ended by \end{equation*}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:177: LaTeX Error: \begin{document} ended by \end{equation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.182 \end{equation*}
+l.177 \end{equation*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:182: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:177: Missing $ inserted.
 <inserted text> 
                 $
-l.182 \end{equation*}
+l.177 \end{equation*}
                      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10729,30 +11005,30 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:184: LaTeX Error: Environment equation* undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:179: LaTeX Error: Environment equation* undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184 \begin{equation*}
+l.179 \begin{equation*}
                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:186: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:181: Missing $ inserted.
 <inserted text> 
                 $
-l.186     u
+l.181     u
             \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:188: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:183: Missing $ inserted.
 <inserted text> 
                 $
-l.188   \end{pmatrix}
+l.183   \end{pmatrix}
                      =\begin{pmatrix}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10761,16 +11037,16 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 Missing character: There is no = in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:189: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:184: Missing $ inserted.
 <inserted text> 
                 $
-l.189                   I
+l.184                   I
                           & 0 \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:189: Misplaced alignment tab character &.
-l.189                   I &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:184: Misplaced alignment tab character &.
+l.184                   I &
                             0 \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -10779,8 +11055,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:190: Misplaced alignment tab character &.
-l.190                   S &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:185: Misplaced alignment tab character &.
+l.185                   S &
                             I
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -10789,10 +11065,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:191: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:186: Missing $ inserted.
 <inserted text> 
                 $
-l.191                 \end{pmatrix}
+l.186                 \end{pmatrix}
                                    \begin{pmatrix}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10800,18 +11076,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:192: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:187: Missing $ inserted.
 <inserted text> 
                 $
-l.192                               u
+l.187                               u
                                       \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:193: Undefined control sequence.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:188: Undefined control sequence.
 <recently read> \boldsymbol 
                             
-l.193                               \boldsymbol
+l.188                               \boldsymbol
                                                {\delta}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10819,10 +11095,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:194: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:189: Missing $ inserted.
 <inserted text> 
                 $
-l.194                              \end{pmatrix}
+l.189                              \end{pmatrix}
                                                  +
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10831,18 +11107,18 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 Missing character: There is no + in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:196: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:191: Missing $ inserted.
 <inserted text> 
                 $
-l.196                                 0
+l.191                                 0
                                         \\ \mathbf{0}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:197: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:192: Missing $ inserted.
 <inserted text> 
                 $
-l.197                              \end{pmatrix}
+l.192                              \end{pmatrix}
                                                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -10851,13 +11127,13 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:198: LaTeX Error: \begin{document} ended by \end{equation*}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:193: LaTeX Error: \begin{document} ended by \end{equation*}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.198 \end{equation*}
+l.193 \end{equation*}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -10901,8 +11177,8 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:199: Undefined control sequence.
-l.199 ... linear transformation of $(u,\boldsymbol
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:194: Undefined control sequence.
+l.194 ... linear transformation of $(u,\boldsymbol
                                                   {\delta})^{T}$ we have tha...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10953,132 +11229,132 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (14.7315pt too wide) in paragraph at lines 163--200
+Overfull \hbox (14.7315pt too wide) in paragraph at lines 158--195
         $\OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 j\OT1/cmr/bx/n/10 v$
  []
 
 
-Overfull \hbox (16.28009pt too wide) in paragraph at lines 163--200
+Overfull \hbox (16.28009pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 u \OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (18.82462pt too wide) in paragraph at lines 163--200
+Overfull \hbox (18.82462pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 ^^W[] \OMS/cmsy/m/n/10 ^^Q
  []
 
 
-Overfull \hbox (68.69714pt too wide) in paragraph at lines 163--200
+Overfull \hbox (68.69714pt too wide) in paragraph at lines 158--195
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]; \OT1/cmr/m/n/10 ^^F[])\OML/cmm/m/it/10 ;  i \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (14.44444pt too wide) in paragraph at lines 163--200
+Overfull \hbox (14.44444pt too wide) in paragraph at lines 158--195
 \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2$
  []
 
 
-Overfull \hbox (30.47559pt too wide) in paragraph at lines 163--200
+Overfull \hbox (30.47559pt too wide) in paragraph at lines 158--195
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; \OT1/cmr/bx/n/10 v\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (14.7315pt too wide) in paragraph at lines 163--200
+Overfull \hbox (14.7315pt too wide) in paragraph at lines 158--195
 \OT1/cmr/bx/n/10 v\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 163--200
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 158--195
 []
  []
 
 
-Overfull \hbox (4.8229pt too wide) in paragraph at lines 163--200
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 ^^N$
  []
 
 
-Overfull \hbox (15.37842pt too wide) in paragraph at lines 163--200
+Overfull \hbox (15.37842pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 ^^N \OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (41.37637pt too wide) in paragraph at lines 163--200
+Overfull \hbox (41.37637pt too wide) in paragraph at lines 158--195
 \OMS/cmsy/m/n/10 N\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 0\OML/cmm/m/it/10 ; ^^O[]I\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (5.72458pt too wide) in paragraph at lines 163--200
+Overfull \hbox (5.72458pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 u$
  []
 
 
-Overfull \hbox (29.06935pt too wide) in paragraph at lines 163--200
+Overfull \hbox (29.06935pt too wide) in paragraph at lines 158--195
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; ^^N\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (18.50226pt too wide) in paragraph at lines 163--200
+Overfull \hbox (18.50226pt too wide) in paragraph at lines 158--195
 [] [] 
  []
 
 
-Overfull \hbox (12.60071pt too wide) in paragraph at lines 163--200
+Overfull \hbox (12.60071pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 ^^N$$\OMS/cmsy/m/n/10 ^^X
  []
 
 
-Overfull \hbox (102.64824pt too wide) in paragraph at lines 163--200
+Overfull \hbox (102.64824pt too wide) in paragraph at lines 158--195
 \OMS/cmsy/m/n/10 N []$
  []
 
 
-Overfull \hbox (24.17593pt too wide) in paragraph at lines 163--200
+Overfull \hbox (24.17593pt too wide) in paragraph at lines 158--195
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; \OT1/cmr/bx/n/10 v\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (18.50226pt too wide) in paragraph at lines 163--200
+Overfull \hbox (18.50226pt too wide) in paragraph at lines 158--195
 [] [] 
  []
 
 
-Overfull \hbox (29.18738pt too wide) in paragraph at lines 163--200
+Overfull \hbox (29.18738pt too wide) in paragraph at lines 158--195
 \OT1/cmr/bx/n/10 v$$[] \OT1/cmr/m/n/10 0[] 
  []
 
 
-Overfull \hbox (30.39111pt too wide) in paragraph at lines 163--200
+Overfull \hbox (30.39111pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 SI$$[] [] 
  []
 
 
-Overfull \hbox (4.8229pt too wide) in paragraph at lines 163--200
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 158--195
 \OML/cmm/m/it/10 ^^N$
  []
 
 
-Overfull \hbox (17.7777pt too wide) in paragraph at lines 163--200
+Overfull \hbox (17.7777pt too wide) in paragraph at lines 158--195
 [] [] 
  []
 
 
-Overfull \hbox (5.74997pt too wide) in paragraph at lines 163--200
+Overfull \hbox (5.74997pt too wide) in paragraph at lines 158--195
 \OT1/cmr/bx/n/10 0$
  []
 
 
-Overfull \hbox (29.06935pt too wide) in paragraph at lines 163--200
+Overfull \hbox (29.06935pt too wide) in paragraph at lines 158--195
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; ^^N\OT1/cmr/m/n/10 )[]$
  []
 
 
-Overfull \hbox (30.47559pt too wide) in paragraph at lines 163--200
+Overfull \hbox (30.47559pt too wide) in paragraph at lines 158--195
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u; \OT1/cmr/bx/n/10 v\OT1/cmr/m/n/10 )[]$
  []
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:211: Misplaced alignment tab character &.
-l.211                                 \Sigma_{i} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:206: Misplaced alignment tab character &.
+l.206                                 \Sigma_{i} &
                                                    \Sigma_{i} S^{*} \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -11087,8 +11363,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:212: Misplaced alignment tab character &.
-l.212 ...                            S\Sigma_{i} &
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:207: Misplaced alignment tab character &.
+l.207 ...                            S\Sigma_{i} &
                                                    \epsilon^{2}I+S\Sigma_{i}...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -11098,7 +11374,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (223.68498pt too wide) detected at line 215
+Overfull \hbox (223.68498pt too wide) detected at line 210
 [][] [] \OT1/cmr/bx/n/10 v \OMS/cmsy/m/n/10 ^^X N []
  []
 
@@ -11190,12 +11466,12 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (14.7315pt too wide) in paragraph at lines 215--217
+Overfull \hbox (14.7315pt too wide) in paragraph at lines 210--212
                $\OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 j\OT1/cmr/bx/n/10 v$
  []
 
 
-Overfull \hbox (90.98085pt too wide) detected at line 220
+Overfull \hbox (90.98085pt too wide) detected at line 215
 []\OML/cmm/m/it/10 u\OMS/cmsy/m/n/10 j\OT1/cmr/bx/n/10 v \OMS/cmsy/m/n/10 ^^X N\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]; \OT1/cmr/m/n/10 ^^F[])
  []
 
@@ -11206,29 +11482,29 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no , in font nullfont!
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:222: LaTeX Error: Environment align undefined.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:217: LaTeX Error: Environment align undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.222 \begin{align}
+l.217 \begin{align}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no m in font nullfont!
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:224: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:219: Missing $ inserted.
 <inserted text> 
                 $
-l.224   m^
+l.219   m^
           {(i)}_{u|\mathbf{v}}&:=m_i+\Sigma_{i}S^{*}(\epsilon^{2}I+S\Sigma_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:224: Misplaced alignment tab character &.
-l.224   m^{(i)}_{u|\mathbf{v}}&
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:219: Misplaced alignment tab character &.
+l.219   m^{(i)}_{u|\mathbf{v}}&
                                :=m_i+\Sigma_{i}S^{*}(\epsilon^{2}I+S\Sigma_{...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -11237,8 +11513,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:226: Misplaced alignment tab character &.
-l.226   \Sigma^{(i)}_{u|\mathbf{v}}&
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:221: Misplaced alignment tab character &.
+l.221   \Sigma^{(i)}_{u|\mathbf{v}}&
                                     :=\Sigma_{i}-\Sigma_{i}S^{*}(\epsilon^{2...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -11248,22 +11524,22 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:227: LaTeX Error: \begin{document} ended by \end{align}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:222: LaTeX Error: \begin{document} ended by \end{align}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.227 \end{align}
+l.222 \end{align}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:227: Missing $ inserted.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:222: Missing $ inserted.
 <inserted text> 
                 $
-l.227 \end{align}
+l.222 \end{align}
                  
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -11272,58 +11548,58 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (25.83983pt too wide) in paragraph at lines 220--228
+Overfull \hbox (25.83983pt too wide) in paragraph at lines 215--223
 [] \OT1/cmr/m/n/10 :=
  []
 
 
-Overfull \hbox (19.88722pt too wide) in paragraph at lines 220--228
+Overfull \hbox (19.88722pt too wide) in paragraph at lines 215--223
 \OML/cmm/m/it/10 m[] \OT1/cmr/m/n/10 +
  []
 
 
-Overfull \hbox (47.24947pt too wide) in paragraph at lines 220--228
+Overfull \hbox (47.24947pt too wide) in paragraph at lines 215--223
 \OT1/cmr/m/n/10 ^^F[]\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^O[]I \OT1/cmr/m/n/10 +
  []
 
 
-Overfull \hbox (61.08626pt too wide) in paragraph at lines 220--228
+Overfull \hbox (61.08626pt too wide) in paragraph at lines 215--223
 \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 ^^F[]\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 )[](\OT1/cmr/bx/n/10 v \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (22.70663pt too wide) in paragraph at lines 220--228
+Overfull \hbox (22.70663pt too wide) in paragraph at lines 215--223
 \OML/cmm/m/it/10 Sm[]\OT1/cmr/m/n/10 )[] 
  []
 
 
-Overfull \hbox (33.06206pt too wide) in paragraph at lines 220--228
+Overfull \hbox (33.06206pt too wide) in paragraph at lines 215--223
 []\OT1/cmr/m/n/10 ^^F[] :=
  []
 
 
-Overfull \hbox (18.32932pt too wide) in paragraph at lines 220--228
+Overfull \hbox (18.32932pt too wide) in paragraph at lines 215--223
 \OT1/cmr/m/n/10 ^^F[] \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (47.24947pt too wide) in paragraph at lines 220--228
+Overfull \hbox (47.24947pt too wide) in paragraph at lines 215--223
 \OT1/cmr/m/n/10 ^^F[]\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^O[]I \OT1/cmr/m/n/10 +
  []
 
 
-Overfull \hbox (60.45024pt too wide) in paragraph at lines 220--228
+Overfull \hbox (60.45024pt too wide) in paragraph at lines 215--223
 \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 ^^F[]\OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 ^^F[]$ 
  []
 
 
-/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:229: LaTeX Error: Missing \begin{document}.
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:224: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.229 T
+l.224 T
        he next step in the analysis will be to quantify how different these ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -11639,18 +11915,17 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -11738,11 +12013,11 @@ Missing character: There is no . in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 40 strings out of 492982
- 788 string characters out of 6134896
- 72888 words of memory out of 5000000
- 3699 multiletter control sequences out of 15000+600000
+ 38 strings out of 492982
+ 747 string characters out of 6134896
+ 73888 words of memory out of 5000000
+ 3697 multiletter control sequences out of 15000+600000
  4913 words of font info for 18 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,12n,21p,1315b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,12n,16p,1315b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

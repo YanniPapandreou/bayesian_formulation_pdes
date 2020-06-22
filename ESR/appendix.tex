@@ -2,7 +2,7 @@ In this section we provide the omitted details for the proofs and methodology pr
 
 \subsection{Justification of the conditioning step yielding equation (\ref{conditionalDistnFixed_f}) in Section \textcolor{blue}{\ref{general_framework}}}
 
-We now provide a full justification for the conditioning step yielding equation (\ref{conditionalDistnFixed_f}) in Section \textcolor{blue}{\ref{general_framework}}. The justification essentially follows from Theorem 3.3 in \textcolor{blue}{\cite{owhadi2015conditioning}}. This theorem is given below (we only give the part of the theorem we require): \vspace{10pt}
+We now provide a full justification for the conditioning step yielding equation (\ref{conditionalDistnFixed_f}) in Section \textcolor{blue}{\ref{general_framework}}. The justification essentially follows from Theorem 3.3 in \textcolor{blue}{\citep{owhadi2015conditioning}}. This theorem is given below (we only give the part of the theorem we require): \vspace{8pt}
 
 \begin{theorem}
     \label{condition_gaussian_hilbert}
@@ -21,7 +21,7 @@ We now provide a full justification for the conditioning step yielding equation 
                 \hat{Q} & I
               \end{pmatrix}
           \end{equation*}
-   and $\mathcal{P}(C,H_2)$ is the set of (C-symmetric) oblique projections onto $H_2$. \textit{Note: the terms shorted operator, compatible and oblique projections are all defined in} \textcolor{blue}{\cite{owhadi2015conditioning}}.
+   and $\mathcal{P}(C,H_2)$ is the set of (C-symmetric) oblique projections onto $H_2$. \textit{Note: the terms shorted operator, compatible and oblique projections are all defined in} \textcolor{blue}{\citep{owhadi2015conditioning}}.
 \end{theorem}
 To apply this theorem to our problem we note that our pair $(u,\mathcal{I}\mathcal{L}u)^{T}$ lies in the orthogonal direct sum $\mathcal{H}_{1}\oplus\mathcal{H}_{2}$ of the separable Hilbert spaces $\mathcal{H}_{1}:=\mathcal{H}\times\{0\}$ and $\mathcal{H}_{2}:=\{0\}\times\mathbb{R}^{J}$. The corresponding Gaussian measure we are dealing with on this space is given by (\ref{jointInfoDist}). Theorem \textcolor{blue}{\ref{condition_gaussian_hilbert}} states that the conditional distribution is a Gaussian measure with covariance operator being the short of the covariance operator of the distribution (\ref{jointInfoDist}) to $\mathcal{H}_{2}$. This operator,
 \begin{equation*}
@@ -30,14 +30,14 @@ To apply this theorem to our problem we note that our pair $(u,\mathcal{I}\mathc
         \mathcal{I}\mathcal{L}V & \mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*}
     \end{pmatrix}
 \end{equation*}
-is already written in its $(\mathcal{H}_{1},\mathcal{H}_{2})$ partition representation. In the section on shorted operators in \textcolor{blue}{\cite{owhadi2015conditioning}} it is stated that provided the lower right partition of the covariance operator of (\ref{jointInfoDist}) corresponding to the covariance in $\mathcal{H}_{2}$, i.e. $\mathcal{I}\mathcal{L}V(\mathcal{I}\mathcal{L})^{*}$, is invertible then the shorted operator is given by:
+is already written in its $(\mathcal{H}_{1},\mathcal{H}_{2})$ partition representation. In the section on shorted operators in \textcolor{blue}{\citep{owhadi2015conditioning}} it is stated that provided the lower right partition of the covariance operator of (\ref{jointInfoDist}) corresponding to the covariance in $\mathcal{H}_{2}$, i.e. $\mathcal{I}\mathcal{L}V(\mathcal{I}\mathcal{L})^{*}$, is invertible then the shorted operator is given by:
 \begin{equation*}
     \begin{pmatrix}
         V-V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}\mathcal{I}\mathcal{L}V & 0 \\
         0 & 0
     \end{pmatrix}
 \end{equation*}
-We assume the invertibility of this partition. \vspace{10pt}
+We assume the invertibility of this partition. \vspace{8pt}
 
 \begin{remark}
     This part of the partition reduces to the $J\times J$ matrix $A\Lambda A^{*}$ when we choose the FEM prior and FEM information operator as was discussed in Section \textcolor{blue}{\ref{elliptic_bv_prob}}. The invertibility of this matrix is then equivalent to the invertibility of the Galerkin Stiffness Matrix $A$ (since we assume the entries of $\Lambda$ are non-zero). $\mathbin{\blacklozenge}$
@@ -180,7 +180,7 @@ We thus obtain (\ref{psi_integral_one}) as claimed in the proof of Proposition \
 
 \subsection{Proof of the invertibility of the Galerkin Stiffness matrix $A$ introduced in Section \textcolor{blue}{\ref{elliptic_bv_prob}}}
 
-We prove here that that Galerkin Stiffness matrix $A$ with $ij$-\textit{th} entry given by $A_{ij}:=\int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x$ is invertible. The proof comes from \textcolor{blue}{\cite{lord2014introduction}}. As mentioned we assume that the diffusion coefficent $a(x)$ satisfies Assumption 2.
+We prove here that that Galerkin Stiffness matrix $A$ with $ij$-\textit{th} entry given by $A_{ij}:=\int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x$ is invertible. The proof comes from \textcolor{blue}{\citep{lord2014introduction}}. As mentioned we assume that the diffusion coefficent $a(x)$ satisfies Assumption 2.
 
 \noindent \textit{Proof:} In order to show that $A$ is invertible we shall show that it is (strictly) positive definite. Under Assumption 2 it is a simple exercise to show that the following bilinear form from $H_{0}^{1}(\Omega)\times H_{0}^{1}(\Omega)$ to $\mathbb{R}$ defined by:
 \begin{equation}

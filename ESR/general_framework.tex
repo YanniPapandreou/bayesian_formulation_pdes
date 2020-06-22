@@ -1,4 +1,4 @@
-We now introduce the general framework we will be considering. This will be split into several parts. We first outline the general type of problem we will be considering in this report. Having done this we will then aim to describe how two priors for the solution to this problem will be formed and then discuss how further inference will be carried out when observational data from the physical system is available.
+\vspace{8pt}We now introduce the general framework we will be considering. This will be split into several parts. We first outline the general type of problem we will be considering in this report. Having done this we will then aim to describe how two priors for the solution to this problem will be formed and then discuss how further inference will be carried out when observational data from the physical system is available.
 
 
 \subsection{Spatial Boundary Value Problems}
@@ -18,7 +18,7 @@ where the functions $f,g$ may be noisy, typically Gaussian. The operator $\mathc
 \subsection{Prior from the true solution}
 \label{prior_true_solution}
 
-Formally we have $u=\mathcal{L}^{-1}f$, where $\mathcal{L}^{-1}$ is the solution operator (Green's function) for the problem (\ref{DirichletProb}). Since $f$ is random we see that the solution is also random; in particular it is the push-forward of $f$ by the \textbf{linear} operator $\mathcal{L}^{-1}$. Provided that the linear operator $\mathcal{L}^{-1}$ is bounded it follows from the theory of Gaussian measures (see Proposition 1.18 of \textcolor{blue}{\cite{da2006introduction}}) that $u$ is also Gaussian and in particular has the following distribution:
+Formally we have $u=\mathcal{L}^{-1}f$, where $\mathcal{L}^{-1}$ is the solution operator (Green's function) for the problem (\ref{DirichletProb}). Since $f$ is random we see that the solution is also random; in particular it is the push-forward of $f$ by the \textbf{linear} operator $\mathcal{L}^{-1}$. Provided that the linear operator $\mathcal{L}^{-1}$ is bounded it follows from the theory of Gaussian measures (see Proposition 1.18 of \textcolor{blue}{\citep{da2006introduction}}) that $u$ is also Gaussian and in particular has the following distribution:
 \begin{equation}
     \label{true_prior}
     u\sim\mathcal{N}(\mathcal{L}^{-1}\bar{f},\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*})
@@ -30,24 +30,19 @@ This will be one of the two priors we will consider. One should note that this p
 We will now consider placing an initial Gaussian prior on the solution $u$, $u\sim\mathcal{N}(0,V)$. The covariance operator $V$ will be chosen so as to satisfy the following assumption:
 
 \noindent \textbf{Assumption 1} $V$ is controlled so that $u$ lies almost surely in some appropriate subspace $\mathcal{U}\subset\mathcal{H}$ where the linear operator $\mathcal{L}$ restricted to this subspace is bounded\footnote{$\mathcal{L}$, being a differential operator, is in general an unbounded operator when viewed on the whole function space $\mathcal{H}$.}, i.e. $\mathcal{L}:\mathcal{U}\rightarrow\mathcal{U}^{\prime}$ is bounded where $\mathcal{U}\subset\mathcal{H}\subset{\mathcal{U}^{\prime}}$.
-\vspace{10pt}
+\vspace{8pt}
 
 \begin{remark}
     We shall assume here that the subspace $\mathcal{U}$ is reflexive so that $\mathcal{U}^{\prime\prime}$ can be identified with $\mathcal{U}$.
     $\mathbin{\blacklozenge}$
 \end{remark}
 
-Having placed this prior on $u$ we will now consider conditioning on the ``observation" of a suitable information operator in order to form a posterior distribution which will be taken to be our new prior. This information operator will involve a discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$, where $h$ is the mesh size. In particular, we will consider the following information operators $I_{j}:\mathcal{U}^{\prime}\rightarrow\mathbb{R}$ defined by:
+Having placed this prior on $u$ we will now consider conditioning on the ``observation" of a suitable information operator in order to form a posterior distribution which will be taken to be our new prior. This information operator will involve a discretization $\mathcal{F}_{h}$ of the function space $\mathcal{H}$. In particular, we will consider the following information operators $I_{j}:\mathcal{U}^{\prime}\rightarrow\mathbb{R}$ defined by:
 \begin{equation*}
     I_{j}\boldsymbol{\cdot} = \langle\boldsymbol{\cdot},\phi_{j}\rangle
 \end{equation*}
-where $\langle\boldsymbol{\cdot},\boldsymbol{\cdot}\rangle$ is the duality pairing between $\mathcal{U}$ and $\mathcal{U}^{\prime}$ and where the $\phi_{j}\in\mathcal{F}_{h}$ for $j=1,\dots,J$. Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$. It is also important to emphasise that $I_{j}\in\mathcal{U}^{\prime\prime}$ and so they are bounded linear operators.
-\vspace{10pt}
+where $\langle\boldsymbol{\cdot},\boldsymbol{\cdot}\rangle$ is the duality pairing between $\mathcal{U}$ and $\mathcal{U}^{\prime}$ and where the $\phi_{j}\in\mathcal{F}_{h}$ for $j=1,\dots,J$ form a basis for the finite element space $\mathcal{F}_{h}$. Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$. It is also important to emphasise that $I_{j}\in\mathcal{U}^{\prime\prime}$ and so they are bounded linear operators.
 
-\begin{remark}
-    Think of the $\{\phi_{j}\}$ as a basis for finite element spaces.
-    $\mathbin{\blacklozenge}$
-\end{remark}
 Let $\mathcal{I}$ be the concatenation of these information operators, i.e. $\mathcal{I}=(I_1,\dots,I_J)^{T}$. We will refer to $\mathcal{I}$ as the information operator. The probabilistic numerical method will involve conditioning on the ``observation" of this information operator. To be more specific consider $\mathcal{I}$ acting on the PDE $\mathcal{L}u=f$. We have,
 \begin{equation*}
     \mathcal{I}\mathcal{L}u=\mathcal{I}f=:F
@@ -89,7 +84,7 @@ We use the notation $\mu_{m,A}$ to denote a Gaussian measure (in arbitrary dimen
 $\mathbin{\blacklozenge}$
 \end{remark}
 
-We will now seek to marginalize over $f$ in (\ref{conditionalDistnFixed_f}) so as to obtain the ``average" conditional distribution over all possible values of the forcing. This will give us our second prior. We state in the proposition below the result of performing this marginalization: \vspace{10pt}
+We will now seek to marginalize over $f$ in (\ref{conditionalDistnFixed_f}) so as to obtain the ``average" conditional distribution over all possible values of the forcing. This will give us our second prior. We state in the proposition below the result of performing this marginalization: \vspace{8pt}
 
 \begin{proposition}
     \label{first_prop}
@@ -106,7 +101,7 @@ In order to perform this marginalization over $f$ we first note:
 \begin{equation}
     f\sim\mathcal{N}(\bar{f},K)=:\mu_{\bar{f},K} \implies \mathcal{I}f=F\sim\mathcal{N}(\mathcal{I}\bar{f},\mathcal{I}K\mathcal{I}^{*})=:\mu_{\bar{F},K_{\mathcal{I}}}
 \end{equation}
-where $\bar{F}:=\mathcal{I}\bar{f}$ and $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$. In order to specify the ``average" conditional distribution it suffices to compute the expectation of arbitrary bounded cylindrical test functions $\psi(u^{N}):=\psi(u(x_1),\dots,u(x_{N}))$ since the $\sigma-$algebra generated by cylinder sets coincides with the Borel $\sigma-$algebra (see for instance Theorem 2.1.1 in \textcolor{blue}{\cite{lunardi2015infinite}}). We must thus compute:
+where $\bar{F}:=\mathcal{I}\bar{f}$ and $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$. In order to specify the ``average" conditional distribution it suffices to compute the expectation of arbitrary bounded cylindrical test functions $\psi(u^{N}):=\psi(u(x_1),\dots,u(x_{N}))$ since the $\sigma-$algebra generated by cylinder sets coincides with the Borel $\sigma-$algebra (see for instance Theorem 2.1.1 in \textcolor{blue}{\citep{lunardi2015infinite}}). We must thus compute:
 \begin{equation}
     \int\int\psi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)
 \end{equation}
@@ -154,7 +149,7 @@ The second is the prior from using an approximation to the solution of (\ref{Dir
 \end{align}
 with $Q$ as in Proposition \textcolor{blue}{\ref{first_prop}}.
 
-We will now also assume that we have observational data, coming from sensors say, which give us noisy observations of the value of $u$ at some points $y_{1},\dots,y_{s}$ in $\Omega$. We wish to update our belief in the distribution of $u$ using this sensor data. In theory we can use either of the $\nu_{i}$ as prior distributions. However, as mentioned previously the true prior will often be intractable and as such we will be forced to use the second approximate prior. Our goal will thus be to investigate how different the two resulting posteriors are. This analysis will be carried out in the next section where we will consider a particular PDE and a particular choice of $V$ which will correspond to a statistical version of FEM. For now we will outline the computation of the posterior distributions for the general framework under consideration.
+We will now also assume that we have observational data, coming from sensors say, which give us noisy observations of the value of $u$ at some points $y_{1},\dots,y_{s}$ in $\Omega$. We wish to update our belief in the distribution of $u$ using this sensor data. In theory we can use either of the $\nu_{i}$ as prior distributions. However, as mentioned previously the true prior will often be intractable and as such we will be forced to use the second approximate prior\footnote{Even this approximate prior can be intractable, since the computation of $\mathcal{I}\mathcal{L}V$ can be difficult in general. However, for our BVP and choice of $V$ and $\mathcal{I}$ the approximate prior is tractable as seen above.}. Our goal will thus be to investigate how different the two resulting posteriors are. This analysis will be carried out in the next section where we will consider a particular PDE and a particular choice of $V$ which will correspond to a statistical version of FEM as introduced in \textcolor{blue}{\citep{girolami2019statistical}}. For now we will outline the computation of the posterior distributions for the general framework under consideration.
 
 Let $S:\mathcal{H}\rightarrow\mathbb{R}^{s}$ be the operator which maps a function $h\in\mathcal{H}$ to $(h(y_1),\dots,h(y_s))^{T}$ in $\mathbb{R}^{s}$. Assuming that the sensors make observations at each $y_j$ with a normally distributed error we have that the likelihood for our sensor readings, $\mathbf{v}$, is:
 \begin{equation}
@@ -226,4 +221,4 @@ where,
   \Sigma^{(i)}_{u|\mathbf{v}}&:=\Sigma_{i}-\Sigma_{i}S^{*}(\epsilon^{2}I+S\Sigma_{i}S^{*})^{-1}S\Sigma_{i}
 \end{align}
 
-The next step in the analysis will be to quantify how different these two posteriors are by utilizing the Wasserstein Distance. In order to do this we must first investigate the distance between the priors $\nu_{i}$. This will be done in the next section where we look at a particular PDE and a particular choice of $V$. We note that the presentation here has been quite general and that with a little bit of work it will even be possible to generalise this procedure to PDEs which have time dependence.
+The next step in the analysis will be to quantify how different these two posteriors are by utilizing the Wasserstein Distance. In order to do this we must first investigate the distance between the priors $\nu_{i}$. This will be done in the next section where we look at a particular PDE and a particular choice of $V$. We note that the presentation here has been quite general and that with some further work it will even be possible to generalise this procedure to PDEs which have time dependence.
