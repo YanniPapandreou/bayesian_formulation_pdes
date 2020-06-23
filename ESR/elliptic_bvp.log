@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  22 JUN 2020 16:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  23 JUN 2020 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2304,6 +2304,165 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no . in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:29: Undefined control sequence.
+<recently read> \operatorname 
+                              
+l.29 ... $H_{0}^{1}(\Omega)$. Since $\operatorname
+                                                  {span}\{\phi_{i}\}_{i=1}^{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:29: Undefined control sequence.
+l.29 ...hich is contained $\overline{\operatorname
+                                                  {span}\{\phi_{i}\}_{i=1}^{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:29: Undefined control sequence.
+l.29 ...span}\{\phi_{i}\}_{i=1}^{J}}=\operatorname
+                                                  {span}\{\phi_{i}\}_{i=1}^{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no . in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -2323,13 +2482,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no y in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -2496,6 +2648,38 @@ Overfull \hbox (8.05556pt too wide) in paragraph at lines 28--30
 
 Overfull \hbox (32.74199pt too wide) in paragraph at lines 28--30
 \OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g[]$
+ []
+
+
+Overfull \hbox (28.61113pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (
+)$
+ []
+
+
+Overfull \hbox (53.74898pt too wide) in paragraph at lines 28--30
+[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g[]$
+ []
+
+
+Overfull \hbox (26.29173pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (
+)$
+ []
+
+
+Overfull \hbox (8.05556pt too wide) in paragraph at lines 28--30
+\OML/cmm/m/it/10 V$
+ []
+
+
+Overfull \hbox (64.30449pt too wide) in paragraph at lines 28--30
+[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (53.74898pt too wide) in paragraph at lines 28--30
+[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g[]$
  []
 
 
@@ -3502,6 +3686,70 @@ Overfull \hbox (25.1719pt too wide) in paragraph at lines 46--51
  []
 
 
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:51: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 
+     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:51: Undefined control sequence.
+<write> \newlabel{standard_conduct}{{}{\thepage 
+                                                }}
+l.51 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{standard_conduct}{{}{}}
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:51: Undefined control sequence.
+<write> ...abel{regularity_of_coeff}{{1}{\thepage 
+                                                  }}
+l.51 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{regularity_of_coeff}{{1}{}}
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:51: Undefined control sequence.
+<write> \newlabel{FEM_prior}{{2}{\thepage 
+                                          }}
+l.51 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{FEM_prior}{{2}{}}
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:51: Undefined control sequence.
+<write> ...l{cov_function_FEM_prior}{{4}{\thepage 
+                                                  }}
+l.51 
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{cov_function_FEM_prior}{{4}{}}
+]
+
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:52: LaTeX Error: Environment remark undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -3820,70 +4068,6 @@ Overfull \hbox (28.61113pt too wide) in paragraph at lines 53--60
 )$
  []
 
-
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 
-     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
-<write> \newlabel{standard_conduct}{{}{\thepage 
-                                                }}
-l.60 
-     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{standard_conduct}{{}{}}
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
-<write> ...abel{regularity_of_coeff}{{1}{\thepage 
-                                                  }}
-l.60 
-     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{regularity_of_coeff}{{1}{}}
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
-<write> \newlabel{FEM_prior}{{2}{\thepage 
-                                          }}
-l.60 
-     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{FEM_prior}{{2}{}}
-/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:60: Undefined control sequence.
-<write> ...l{cov_function_FEM_prior}{{4}{\thepage 
-                                                  }}
-l.60 
-     
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{cov_function_FEM_prior}{{4}{}}
-]
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:61: LaTeX Error: Missing \begin{document}.
 
@@ -6429,6 +6613,6 @@ Here is how much of TeX's memory you used:
  3697 multiletter control sequences out of 15000+600000
  4913 words of font info for 18 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,11n,16p,871b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,11n,16p,1204b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:115:  ==> Fatal error occurred, no output PDF file produced!

@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{41}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -135,6 +135,18 @@ Hans Kersting, TJ~Sullivan, and Philipp Hennig.
 \newblock Convergence rates of gaussian ode filters.
 \newblock \emph{arXiv preprint arXiv:1807.09737}, 2018.
 
+\bibitem[Wang et~al.(2018)Wang, Cockayne, Oates, et~al.]{wang2018role}
+Junyang Wang, Jon Cockayne, Chris~J Oates, et~al.
+\newblock A role for symmetry in the bayesian solution of differential
+  equations.
+\newblock \emph{Bayesian Analysis}, 2018.
+
+\bibitem[Cockayne et~al.(2019)Cockayne, Oates, Sullivan, and
+  Girolami]{cockayne2019bayesian}
+Jon Cockayne, Chris~J Oates, Timothy~John Sullivan, and Mark Girolami.
+\newblock Bayesian probabilistic numerical methods.
+\newblock \emph{SIAM Review}, 61\penalty0 (4):\penalty0 756--789, 2019.
+
 \bibitem[Lord et~al.(2014)Lord, Powell, and Shardlow]{lord2014introduction}
 Gabriel~J Lord, Catherine~E Powell, and Tony Shardlow.
 \newblock \emph{An introduction to computational stochastic PDEs}, volume~50.
@@ -145,6 +157,12 @@ Marcel Bieri, Roman Andreev, and Christoph Schwab.
 \newblock Sparse tensor discretization of elliptic spdes.
 \newblock \emph{SIAM Journal on Scientific Computing}, 31\penalty0
   (6):\penalty0 4281--4304, 2010.
+
+\bibitem[Schwab and Gittelson(2011)]{schwab2011sparse}
+Christoph Schwab and Claude~Jeffrey Gittelson.
+\newblock Sparse tensor discretizations of high-dimensional parametric and
+  stochastic pdes.
+\newblock \emph{Acta Numerica}, 20:\penalty0 291--467, 2011.
 
 \bibitem[Cockayne et~al.(2016)Cockayne, Oates, Sullivan, and
   Girolami]{cockayne2016probabilistic}

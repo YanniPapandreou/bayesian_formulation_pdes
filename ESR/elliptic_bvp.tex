@@ -26,7 +26,7 @@ Let $V:L^{2}(\Omega)\rightarrow L^{2}(\Omega)$ be defined as follows:
     \label{FEM_prior}
     Vu(x):=\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\int_{\Omega}\phi_{i}(y)u(y)\mathrm{d}y
 \end{equation}
-where the $\lambda_{i}$ are non-zero real numbers. Now the support of a Gaussian measure $\mathcal{N}(m,\Sigma)$ on a Hilbert space $\mathcal{H}$ is the space $m+\overline{\operatorname{Im}(\Sigma)}$ (see \textcolor{blue}{\citep{vakhania1975topological}} for the general case of a Gaussian measure on a Banach space) where the bar denotes closure with respect to $\mathcal{H}$ and $\operatorname{Im}(\Sigma)$ is the image of $\Sigma$. The image of $V$ can easily be seen to be contained in the span of the $\{\phi_{i}\}_{i=1}^{J}$ which itself is strictly contained in $H_{0}^{1}(\Omega)$. Thus, the support of $\mathcal{N}(0,V)$ is clearly contained in $H_{0}^{1}(\Omega)$ and so if $u$ is distributed according to this measure then $u$ lies almost surely in $H_{0}^{1}(\Omega)$. This choice of $V$ therefore satisfies Assumption 1. \vspace{8pt}
+where the $\lambda_{i}$ are non-zero real numbers. Now the support of a Gaussian measure $\mathcal{N}(m,\Sigma)$ on a Hilbert space $\mathcal{H}$ is the space $m+\overline{\operatorname{Im}(\Sigma)}$ (see \textcolor{blue}{\citep{vakhania1975topological}} for the general case of a Gaussian measure on a Banach space) where the bar denotes closure with respect to $\mathcal{H}$ and $\operatorname{Im}(\Sigma)$ is the image of $\Sigma$. The image of $V$ can easily be seen to be contained in the span of the $\{\phi_{i}\}_{i=1}^{J}$ which itself is strictly contained in $H_{0}^{1}(\Omega)$. Since $\operatorname{span}\{\phi_{i}\}_{i=1}^{J}$ is a finite dimensional subspace of the normed space $L^{2}(\Omega)$ it is closed. Thus, the closure of the image of $V$, which is contained $\overline{\operatorname{span}\{\phi_{i}\}_{i=1}^{J}}=\operatorname{span}\{\phi_{i}\}_{i=1}^{J}$, can be seen to be contained in $H_{0}^{1}(\Omega)$. Thus, the support of $\mathcal{N}(0,V)$ is contained in $H_{0}^{1}(\Omega)$ and so if $u$ is distributed according to this measure then $u$ lies almost surely in $H_{0}^{1}(\Omega)$. This choice of $V$ therefore satisfies Assumption 1. \vspace{5pt}
 
 \begin{remarks}
     \textit{Remark 1.} Since $u$ lies almost surely in $H_{0}^{1}(\Omega)$ we can view $\mathcal{N}(0,V)$ as a Gaussian measure on $H_{0}^{1}(\Omega)\subset L^{2}(\Omega)$ and as such the covariance operator $V$ can be instead viewed as a function from $H^{-1}(\Omega)\rightarrow H_{0}^{1}(\Omega)$ defined by:
@@ -47,7 +47,7 @@ where the $\lambda_{i}$ are non-zero real numbers. Now the support of a Gaussian
     This connection between the two frameworks will be useful when we move to time-dependent PDEs. The second framework is also important for computation as it is often easier to work with covariance functions.
     $\mathbin{\blacklozenge}$
 \end{remarks}
-Now we recall the information operators. Let $\{\phi_{j}\}_{j=1}^{J}$ be a truncated set of FE basis functions. Since we have taken $\mathcal{U}=H_{0}^{1}(\Omega)$ we have that $\mathcal{U}^{\prime}=H^{-1}(\Omega)$ and thus our information operators are maps $I_{j}:H^{-1}(\Omega)\rightarrow\mathbb{R}$ given by $I_{j}\boldsymbol{\cdot}=\langle\boldsymbol{\cdot},\phi_{j}\rangle$. \vspace{8pt}
+Now we recall the information operators. Let $\{\phi_{j}\}_{j=1}^{J}$ be a truncated set of FE basis functions. Since we have taken $\mathcal{U}=H_{0}^{1}(\Omega)$ we have that $\mathcal{U}^{\prime}=H^{-1}(\Omega)$ and thus our information operators are maps $I_{j}:H^{-1}(\Omega)\rightarrow\mathbb{R}$ given by $I_{j}\boldsymbol{\cdot}=\langle\boldsymbol{\cdot},\phi_{j}\rangle$. \vspace{5pt}
 
 \begin{remark}
     Note that when $v\in L^{2}(\Omega)\subset H^{-1}(\Omega)$ we have, since $\phi_{j}\in H^{1}_{0}(\Omega)$, that
@@ -79,7 +79,7 @@ thus we see that we can write:
 \begin{equation}
     Vu=\Phi^{*}\Lambda\mathcal{I}u \hspace{0.25cm} \forall u\in H^{-1}(\Omega)
 \end{equation}
-i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. \vspace{8pt}
+i.e. $V=\Phi^{*}\Lambda\mathcal{I}$. \vspace{5pt}
 
 \begin{remark}
     It will also prove useful later to notice that $\Phi^{*}$ is actually the same operator as $\mathcal{I}^{*}$. To see this we note that $\Phi^{*}:\mathbb{R}^{J}\rightarrow H_{0}^{1}(\Omega)$ is defined by:
@@ -186,7 +186,7 @@ When $\mu,\nu$ are both Gaussian measures an explicit expression can be obtained
 \begin{equation}
     W^{2}(\mu,\nu)=\|m_1-m_2\|^{2}_{\mathcal{H}}+\operatorname{tr}(\Sigma_1)+\operatorname{tr}(\Sigma_2)-2\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}
 \end{equation}
-This formula is true in both the finite and infinite dimensional cases. The term $\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}$ is difficult to analyse in our situation and as such we will make use of Proposition 3 from \textcolor{blue}{\citep{masarotto2019procrustes}} which states: \vspace{8pt}
+This formula is true in both the finite and infinite dimensional cases. The term $\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}$ is difficult to analyse in our situation and as such we will make use of Proposition 3 from \textcolor{blue}{\citep{masarotto2019procrustes}} which states: \vspace{5pt}
 \begin{proposition}
     The Procrustes distance between two trace-class operators $\Sigma_{1}$ and $\Sigma_{2}$ on $\mathcal{H}$ coincides with the Wasserstein distance between two second-order Gaussian processes $\mathcal{N}(0,\Sigma_{1})$ and $\mathcal{N}(0,\Sigma_2)$ on $\mathcal{H}$,
     $$\Pi(\Sigma_{1},\Sigma_{2}):=\inf_{R:R^{*}R=I}\|\Sigma_{1}^{1/2}-R\Sigma_{2}^{1/2}\|_{2}=W(\mathcal{N}(0,\Sigma_{1}),\mathcal{N}(0,\Sigma_{2}))$$
@@ -211,7 +211,7 @@ where now the $m_{i},\Sigma_{i}, i=1,2$ are given by equations (\ref{true_fem_me
 \noindent \textbf{Assumption 4 } The meshes under consideration remain regular in the sense that as we refine the mesh by decreasing $h$ to 0 the angles of all triangles are bounded below independently of $h$.
 
 Under all of these assumptions we have the following Theorem:
-\vspace{8pt}
+\vspace{5pt}
 
 \begin{theorem}
     \label{prior_distance_bound}
@@ -296,7 +296,7 @@ Having obtained this upperbound on the distance between the true priors we are n
 \subsection{Upperbound on the Wasserstein Distance between the two posteriors}
 
 As discussed in Section \textcolor{blue}{\ref{incorporating_obs_data}} we will now assume that we have noisy observations of the value of $u$ at some points $y_1,\dots,y_s\in\Omega$ coming from a sensor. We wish to update our belief in the distribution of $u$ using this sensor data, and as discussed either of the $\nu_i$ can be used as prior distributions. We thus obtain two different posteriors and these are given by $u|\mathbf{v}\sim\mathcal{N}(m^{(i)}_{u|\mathbf{v}},\Sigma^{(i)}_{u|\mathbf{v}})$ where $m^{(i)}_{u|\mathbf{v}}:=m_{i}+\Sigma_{i}S^{*}B_{i}^{-1}(\mathbf{v}-Sm_{i})$ and $\Sigma^{(i)}_{u|\mathbf{v}}:=\Sigma_{i}-\Sigma_{i}S^{*}B_{i}^{-1}S\Sigma_{i}$ as shown in Section \textcolor{blue}{\ref{incorporating_obs_data}}. We have denoted $B_{i}:=\epsilon^{2}I+S\Sigma_{i}S^{*}$ for convenience. We can no go about obtaining an upperbound for the Wasserstein distance between these two posteriors. The result is given in the following Theorem and we outline a proof of this.
-\vspace{8pt}
+\vspace{5pt}
 
 \begin{theorem}
     \label{posterior_difference_bound}

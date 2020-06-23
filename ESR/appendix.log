@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  22 JUN 2020 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  23 JUN 2020 16:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3826,6 +3826,10 @@ Overfull \hbox (34.21811pt too wide) in paragraph at lines 43--68
 Overfull \hbox (207.72063pt too wide) detected at line 70
 []\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 C[]C[]F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 IL\OML/cmm/m/it/10 V\OMS/cmsy/m/n/10 L[]I[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 F \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 a
  []
+
+
+Underfull \vbox (badness 3646) has occurred while \output is active []
+
 
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:70: LaTeX Error: The font size command \normalsize is not defined:
