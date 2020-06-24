@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  23 JUN 2020 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  24 JUN 2020 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -232,7 +232,7 @@ and I'll forget about whatever was undefined.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:6: Misplaced alignment tab character &.
 l.6         u(x) &
-                  = 0, \hspace{0.3cm} \mathbb{P}\text{-a.s. } x\in\partial\O...
+                  = 0, \hspace{0.3cm} \text{for } \mathbb{P}\text{-a.s. } x\...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -241,8 +241,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:6: Undefined control sequence.
-l.6         u(x) &= 0, \hspace{0.3cm} \mathbb
-                                             {P}\text{-a.s. } x\in\partial\O...
+l.6         u(x) &= 0, \hspace{0.3cm} \text
+                                           {for } \mathbb{P}\text{-a.s. } x\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -250,7 +250,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:6: Undefined control sequence.
-l.6 ...  u(x) &= 0, \hspace{0.3cm} \mathbb{P}\text
+l.6 ...x) &= 0, \hspace{0.3cm} \text{for } \mathbb
+                                                  {P}\text{-a.s. } x\in\part...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/elliptic_bvp.tex:6: Undefined control sequence.
+l.6 ... \hspace{0.3cm} \text{for } \mathbb{P}\text
                                                   {-a.s. } x\in\partial\Omega
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -521,8 +530,8 @@ Overfull \hbox (29.77316pt too wide) in paragraph at lines 1--10
  []
 
 
-Overfull \hbox (64.2558pt too wide) in paragraph at lines 1--10
-\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ;  P[]x \OMS/cmsy/m/n/10 2
+Overfull \hbox (79.86465pt too wide) in paragraph at lines 1--10
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ;  []P[]x \OMS/cmsy/m/n/10 2
  []
 
 
@@ -2329,6 +2338,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no - in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!

@@ -40,7 +40,7 @@ is already written in its $(\mathcal{H}_{1},\mathcal{H}_{2})$ partition represen
 We assume the invertibility of this partition. \vspace{5pt}
 
 \begin{remark}
-    This part of the partition reduces to the $J\times J$ matrix $A\Lambda A^{*}$ when we choose the FEM prior and FEM information operator as was discussed in Section \textcolor{blue}{\ref{elliptic_bv_prob}}. The invertibility of this matrix is then equivalent to the invertibility of the Galerkin Stiffness Matrix $A$ (since we assume the entries of $\Lambda$ are non-zero). $\mathbin{\blacklozenge}$
+    This part of the partition reduces to the $J\times J$ matrix $A\Lambda A^{*}$ when we choose the FEM prior and FEM information operator as was discussed in Section \textcolor{blue}{\ref{elliptic_bv_prob}}. The invertibility of this matrix is then equivalent to the invertibility of the Galerkin stiffnes Matrix $A$ (since we assume the entries of $\Lambda$ are non-zero). $\mathbin{\blacklozenge}$
 \end{remark}
 We thus see that the conditional distribution (\ref{conditionalDistnFixed_f}) has the correct covariance operator. Theorem \textcolor{blue}{\ref{condition_gaussian_hilbert}} also goes on to give the mean of the conditional distribution in the case that the covariance operator of the joint distribution is compatible with $H_{2}$. For our problem this is in fact the case as we now show. We first denote the covariance operator of the joint distribution by:
 \begin{equation*}
@@ -78,7 +78,7 @@ We provide here details of the computation of the following integral needed for 
 \end{equation*}
 Both measures in the above integral are multivariate normal and so we have:
 \begin{align}
-    \int\int&\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)= \nonumber \\ &=\frac{1}{Z_u}\int\int\psi(u^{N})\exp\left(-\frac{1}{2}\left\langle u^{N}-PQF,\Sigma_{N}^{-1}(u^{N}-PQF) \right\rangle\right)\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)\mathrm{d}u^{N} \nonumber \\
+    \int\int&\psi(u^{N})\mu_{PQF,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)= \nonumber \\ &=\frac{1}{Z_u}\int\int\psi(u^{N})\exp\left(-\frac{1}{2}\left\langle u^{N}-PQF,\Sigma_{N}^{-1}(u^{N}-PQF) \right\rangle\right)\mu_{\bar{F},K_{\mathcal{I}}}(\mathrm{d}F)\mathrm{d}u^{N} \nonumber \\
     &=\frac{1}{Z_{u}Z_{f}}\int\int\psi(u^{N})\exp\left(-\frac{1}{2}\left\langle u^{N}-PQF,\Sigma_{N}^{-1}(u^{N}-PQF)\right\rangle\right)\exp\left(-\frac{1}{2}\left\langle F-\bar{F},K_{\mathcal{I}}^{-1}(F-\bar{F}) \right\rangle\right)\mathrm{d}F\mathrm{d}u^{N}
 \end{align}
 where the normalization constants are $Z_u:=(2\pi)^{N/2}\det(\Sigma_N)^{1/2}$ and $Z_f:=(2\pi)^{J/2}\det(K_\mathcal{I})^{1/2}$. We now need to compute the integral over $F$. In order to do so we combine the exponents in (11) into a quadratic in $F$ in order to be able to use the well-known formula of a multidimensional Gaussian integral. Going through the algebra we obtain:
@@ -180,13 +180,13 @@ We thus obtain (\ref{psi_integral_one}) as claimed in the proof of Proposition \
 
 \subsection{Proof of the invertibility of the Galerkin Stiffness matrix $A$ introduced in Section \textcolor{blue}{\ref{elliptic_bv_prob}}}
 
-We prove here that that Galerkin Stiffness matrix $A$ with $ij$-\textit{th} entry given by $A_{ij}:=\int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x$ is invertible. The proof comes from \textcolor{blue}{\citep{lord2014introduction}}. As mentioned we assume that the diffusion coefficent $a(x)$ satisfies Assumption 2.
+We prove here that that Galerkin stiffnes matrix $A$ with $ij$-\textit{th} entry given by $A_{ij}:=\int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x$ is invertible. The proof comes from \textcolor{blue}{\citep{lord2014introduction}}. As mentioned we assume that the diffusion coefficent $a(x)$ satisfies Assumption 2.
 
 \noindent \textit{Proof:} In order to show that $A$ is invertible we shall show that it is (strictly) positive definite. Under Assumption 2 it is a simple exercise to show that the following bilinear form from $H_{0}^{1}(\Omega)\times H_{0}^{1}(\Omega)$ to $\mathbb{R}$ defined by:
 \begin{equation}
     \tilde{a}(u,w):=\int_{\Omega}a(x)\nabla u(x)\cdot\nabla w(x)\mathrm{d}x
 \end{equation}
-defines a norm $|\boldsymbol{\cdot}|_{E}$ on $H_{0}^{1}(\Omega)$ via $|v|_{E}:=\tilde{a}(u,u)^{1/2}$. We can now show that the Galerkin stiffness matrix $A$ is (strictly) positive definite. To this end let $\mathbf{v}\in\mathbb{R}^{J}\backslash\{0\}$ and define $v=\Phi^{*}\mathbf{v}=\sum_{i=1}^{J}v_{i}\phi_{i}$ where $\Phi^{*}$ is the operator in Section \textcolor{blue}{\ref{elliptic_bv_prob}} defined by equation (\ref{projection_into_fem_space}). Note that $v$ so defined is a function in $H_{0}^{1}(\Omega)$. We can now compute:
+defines a norm $|\boldsymbol{\cdot}|_{E}$ on $H_{0}^{1}(\Omega)$ via $|v|_{E}:=\tilde{a}(u,u)^{1/2}$. We can now show that the Galerkin stiffness matrix $A$ is (strictly) positive definite. To this end let $\mathbf{v}\in\mathbb{R}^{J}\backslash\{\mathbf{0}\}$ and define $v=\Phi^{*}\mathbf{v}=\sum_{i=1}^{J}v_{i}\phi_{i}$ where $\Phi^{*}$ is the operator in Section \textcolor{blue}{\ref{elliptic_bv_prob}} defined by equation (\ref{projection_into_fem_space}). Note that $v$ so defined is a function in $H_{0}^{1}(\Omega)$. We can now compute:
 \begin{align*}
     \mathbf{v}^{T}A\mathbf{v} &= \sum_{i,j=1}^{J}v_{j}A_{ij}v_{i} \\
     &=\sum_{i,j=1}^{J}v_{j}(\int_{\Omega}a(x)\nabla\phi_{i}(x)\cdot\nabla\phi_{j}(x)\mathrm{d}x)v_{i} \\
@@ -195,7 +195,7 @@ defines a norm $|\boldsymbol{\cdot}|_{E}$ on $H_{0}^{1}(\Omega)$ via $|v|_{E}:=\
     &= \tilde{a}(v,v) \\
     &= |v|_{E}^{2}>0
 \end{align*}
-where the strict inequality follows since $\tilde{a}(v,v)=0$ iff $|v|_{E}=0$ iff $v=0$ (since $|\boldsymbol{\cdot}|_{E}$ is a norm of $H_{0}^{1}(\Omega)$) iff $\mathbf{v}=0$ since the $\{\phi_{i}\}$ are linearly independent. \qedsymbol
+where the strict inequality follows since $\tilde{a}(v,v)=0$ iff $|v|_{E}=0$ iff $v=0$ (since $|\boldsymbol{\cdot}|_{E}$ is a norm of $H_{0}^{1}(\Omega)$) iff $\mathbf{v}=\mathbf{0}$ since the $\{\phi_{i}\}$ are linearly independent. \qedsymbol
 
 \subsection{Detailed computations for proving equation (\ref{approximate_fem_prior}) in Section \textcolor{blue}{\ref{elliptic_bv_prob}}}
 
@@ -228,7 +228,7 @@ i.e. the matrix with $ij$\textit{th} entry $\Theta_{i,j}:=\phi_{j}(x_{i})$ for $
     &=\int\psi(u^N)\left(\int\delta_{Y}(\mathrm{d}u^N)\mu_{\Theta A^{-1}\bar{F},\Theta A^{-1}K_{\mathcal{I}}A^{-1}\Theta^{*}}(\mathrm{d}Y)\right) \\
     &=\int\psi(u^N)\mu_{\Theta A^{-1}\bar{F},\Theta A^{-1}K_{\mathcal{I}}A^{-1}\Theta^{*}}(\mathrm{d}u^N)
 \end{align*}
-which we recognize as a finite dimensional projection of a Gaussian measure. Thus, we conclude that ``averaging" over $f$ gives the expected Gaussian posterior under these choices:
+which we recognize as a finite-dimensional projection of a Gaussian measure. Thus, we conclude that ``averaging" over $f$ gives the expected Gaussian posterior under these choices:
 \begin{equation}
     \label{average_posterior_FEM_prior}
     \mathcal{N}(\Phi^{*}A^{-1}\bar{F},\Phi^{*}A^{-1}K_{\mathcal{I}}A^{-1}\Phi)
@@ -259,7 +259,7 @@ where $\gamma_{1}:=\beta\gamma^{2}+\|\Sigma_{1}\|_{\infty}\beta^{2}\gamma^{2}>0$
 We now proceed to obtain an upper-bound on the third and final term in the bound on the norm of the difference in means:
 \begin{align*}
     \|\Sigma_{1}S^{*}B_{1}^{-1}Sm_{1}-\Sigma_{2}S^{*}B_{2}^{-1}Sm_{2}\|_{L^{2}(\Omega)} &= \|\Sigma_{1}S^{*}B_{1}^{-1}Sm_{1}-\Sigma_{1}S^{*}B_{1}^{-1}Sm_{2}+\Sigma_{1}S^{*}B_{1}^{-1}Sm_{2}-\Sigma_{2}S^{*}B_{2}^{-1}Sm_{2}\|_{L^{2}(\Omega)} \\
-    &\leq\|\Sigma_{1}S^{*}B_{1}^{-1}(m_1-m_2)\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})Sm_{2}\|_{L^{2}(\Omega)} \\
+    &\leq\|\Sigma_{1}S^{*}B_{1}^{-1}S(m_1-m_2)\|_{L^{2}(\Omega)}+\|(\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1})Sm_{2}\|_{L^{2}(\Omega)} \\
     &\leq\|\Sigma_{1}\|_{\infty}\beta\|m_{1}-m_{2}\|_{L^{2}(\Omega)}+\|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|m_{2}\|_{L^{2}(\Omega)} \\
     &\leq\beta\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}\|\Sigma_{1}\|_{\infty}h^{2}+(\gamma_{1}h^{2}+\mathcal{O}(h^4))(\|m_{1}\|_{L^{2}(\Omega)}+\tilde{C}h^{2}\|\bar{f}\|_{L^{2}(\Omega)}) \\
     &= (\beta\tilde{C}\|\bar{f}\|_{L^{2}(\Omega)}\|\Sigma_{1}\|_{\infty}+\|m_{1}\|_{L^{2}(\Omega)}\gamma_{1})h^{2}+\mathcal{O}(h^4) \\
@@ -283,10 +283,10 @@ We now bound the second term above as follows:
     &\leq\|\Sigma_{1}S^{*}B_{1}^{-1}-\Sigma_{2}S^{*}B_{2}^{-1}\|_{\infty}\|\Sigma_1\|_{1}+\|\Sigma_2\|_{\infty}\|B_{2}^{-1}\|_{\infty}\|\Sigma_1-\Sigma_2\|_{1}\\
     &\leq\gamma_{1}h^{2}\|\Sigma_1\|_{1}+(\|\Sigma_{1}\|_{\infty}+\|\Sigma_{1}-\Sigma_{2}\|_{1})(\|B_{1}^{-1}\|_{\infty}+\|B_{1}^{-1}-B_{2}^{-1}\|_{\infty})\|\Sigma_{1}-\Sigma_{2}\|_{1}+\mathcal{O}(h^{4}) \\
     &\leq\gamma_{1}\|\Sigma_1\|_{1}h^{2}+\|\Sigma_{1}\|_{\infty}\beta\gamma^{2}h^{2}+\mathcal{O}(h^4)\\
-    &=(\gamma_{1}\|Sigma_{1}\|_{1}+\beta\|\Sigma_1\|_{\infty}\gamma^{2})h^{2}+\mathcal{O}(h^4)\\
+    &=(\gamma_{1}\|\Sigma_{1}\|_{1}+\beta\|\Sigma_1\|_{\infty}\gamma^{2})h^{2}+\mathcal{O}(h^4)\\
     &=\gamma_{3}h^{2}+\mathcal{O}(h^4)
 \end{align*}
-where $\gamma_3:=\gamma_{1}\|Sigma_{1}\|_{1}+\beta\|\Sigma_1\|_{\infty}\gamma^{2}>0$ is a constant independent of $h$. Using this we can conclude:
+where $\gamma_3:=\gamma_{1}\|\Sigma_{1}\|_{1}+\beta\|\Sigma_1\|_{\infty}\gamma^{2}>0$ is a constant independent of $h$. Using this we can conclude:
 \begin{align*}
     \|\Sigma^{(1)}_{u|\mathbf{v}}-\Sigma^{(2)}_{u|\mathbf{v}}\|_{1} &\leq \gamma^{2}h^{2}+\gamma_{3}h^{2}+\mathcal{O}(h^4) \\
     &=(\gamma^{2}+\gamma_{3})h^{2}+\mathcal{O}(h^4) \\

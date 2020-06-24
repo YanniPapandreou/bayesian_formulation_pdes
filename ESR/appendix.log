@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  23 JUN 2020 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  24 JUN 2020 12:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2635,14 +2635,13 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no S in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -4385,13 +4384,13 @@ or  <return>  to continue without it.
 <inserted text> 
                 $
 l.81     \int
-             \int&\psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},...
+             \int&\psi(u^{N})\mu_{PQF,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:81: Misplaced alignment tab character &.
 l.81     \int\int&
-                  \psi(u^{N})\mu_{Pa,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F},...
+                  \psi(u^{N})\mu_{PQF,\Sigma_N}(\mathrm{d}u^{N})\mu_{\bar{F}...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -4697,7 +4696,7 @@ Overfull \hbox (157.83308pt too wide) in paragraph at lines 75--85
  []
 
 
-Overfull \hbox (161.14163pt too wide) in paragraph at lines 75--85
+Overfull \hbox (168.3886pt too wide) in paragraph at lines 75--85
 [] [] \OML/cmm/m/it/10  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 u[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ^^V[]\OT1/cmr/m/n/10 (d\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ) =
  []
 
@@ -7108,7 +7107,7 @@ l.160 \end{align}
 Here is how much of TeX's memory you used:
  35 strings out of 492982
  844 string characters out of 6134896
- 75888 words of memory out of 5000000
+ 74888 words of memory out of 5000000
  3695 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

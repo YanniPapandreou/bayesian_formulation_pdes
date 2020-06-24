@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  23 JUN 2020 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  24 JUN 2020 11:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1122,7 +1122,7 @@ Missing character: There is no d in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:16: Undefined control sequence.
 \@footnotetext ...tins {\reset@font \footnotesize 
                                                   \interlinepenalty \interfo...
-l.16 ...et our prior to be for further inference.}
+l.16 ...et our prior for further inference to be.}
                                                    for solving the problem (...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1133,7 +1133,7 @@ and I'll forget about whatever was undefined.
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:16: Undefined control sequence.
 \@footnotetext ...}\color@begingroup \@makefntext 
                                                   {\rule \z@ \footnotesep \i...
-l.16 ...et our prior to be for further inference.}
+l.16 ...et our prior for further inference to be.}
                                                    for solving the problem (...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1442,16 +1442,6 @@ Overfull \hbox (21.16672pt too wide) in paragraph at lines 16--16
  []
 
 
-Overfull \hbox (8.88892pt too wide) in paragraph at lines 16--16
-\OT1/cmr/m/n/10 to
- []
-
-
-Overfull \hbox (10.2778pt too wide) in paragraph at lines 16--16
-\OT1/cmr/m/n/10 be
- []
-
-
 Overfull \hbox (11.97226pt too wide) in paragraph at lines 16--16
 \OT1/cmr/m/n/10 for
  []
@@ -1477,8 +1467,18 @@ Overfull \hbox (14.75002pt too wide) in paragraph at lines 16--16
  []
 
 
-Overfull \hbox (21.66669pt too wide) in paragraph at lines 16--16
-\OT1/cmr/m/n/10 ence.| 
+Overfull \hbox (18.8889pt too wide) in paragraph at lines 16--16
+\OT1/cmr/m/n/10 ence
+ []
+
+
+Overfull \hbox (8.88892pt too wide) in paragraph at lines 16--16
+\OT1/cmr/m/n/10 to
+ []
+
+
+Overfull \hbox (13.05559pt too wide) in paragraph at lines 16--16
+\OT1/cmr/m/n/10 be.| 
  []
 
 Missing character: There is no f in font nullfont!
@@ -3980,9 +3980,6 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no b in font nullfont!
@@ -4216,23 +4213,13 @@ Overfull \hbox (10.05693pt too wide) in paragraph at lines 40--45
  []
 
 
-Overfull \hbox (19.6163pt too wide) in paragraph at lines 40--45
-\OML/cmm/m/it/10 ^^^[] \OMS/cmsy/m/n/10 2
+Overfull \hbox (45.06606pt too wide) in paragraph at lines 40--45
+\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^^[]\OMS/cmsy/m/n/10 g[] ^^Z
  []
 
 
 Overfull \hbox (12.36922pt too wide) in paragraph at lines 40--45
 \OMS/cmsy/m/n/10 F[]$
- []
-
-
-Overfull \hbox (15.246pt too wide) in paragraph at lines 40--45
-\OML/cmm/m/it/10 j \OT1/cmr/m/n/10 =
- []
-
-
-Overfull \hbox (33.72902pt too wide) in paragraph at lines 40--45
-\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; [] ; J$
  []
 
 
@@ -9571,7 +9558,7 @@ Missing character: There is no r in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
 \@footnotetext ...tins {\reset@font \footnotesize 
                                                   \interlinepenalty \interfo...
-l.152 ...ximate prior is tractable as seen above.}
+l.152 ...\ref{elliptic_bv_prob}} it is tractable.}
                                                   . Our goal will thus be to...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9582,13 +9569,38 @@ and I'll forget about whatever was undefined.
 /home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
 \@footnotetext ...}\color@begingroup \@makefntext 
                                                   {\rule \z@ \footnotesep \i...
-l.152 ...ximate prior is tractable as seen above.}
+l.152 ...\ref{elliptic_bv_prob}} it is tractable.}
                                                   . Our goal will thus be to...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
+<argument> ...will consider in Section \textcolor 
+                                                  {blue}{\ref {elliptic_bv_p...
+l.152 ...\ref{elliptic_bv_prob}} it is tractable.}
+                                                  . Our goal will thus be to...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/home/johnandrew/Documents/Imperial/PhD/ESR/general_framework.tex:152: Undefined control sequence.
+<write> ...ce `elliptic_bv_prob' on page \thepage 
+                                                  \space undefined\on@line .
+l.152 ...\ref{elliptic_bv_prob}} it is tractable.}
+                                                  . Our goal will thus be to...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `elliptic_bv_prob' on page  undefined on input line 152.
 
 
 Overfull \hbox (21.8056pt too wide) in paragraph at lines 152--152
@@ -9741,73 +9753,63 @@ Overfull \hbox (11.97226pt too wide) in paragraph at lines 152--152
  []
 
 
-Overfull \hbox (14.47226pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 our
- []
-
-
-Overfull \hbox (21.38895pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 BVP
- []
-
-
-Overfull \hbox (16.11116pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 and
- []
-
-
-Overfull \hbox (26.38892pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 choice
- []
-
-
-Overfull \hbox (8.05559pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 of
- []
-
-
-Overfull \hbox (8.05556pt too wide) in paragraph at lines 152--152
-\OML/cmm/m/it/10 V$
- []
-
-
-Overfull \hbox (16.11116pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 and
- []
-
-
-Overfull \hbox (6.18336pt too wide) in paragraph at lines 152--152
-\OMS/cmsy/m/n/10 I$
- []
-
-
 Overfull \hbox (13.88892pt too wide) in paragraph at lines 152--152
 \OT1/cmr/m/n/10 the
  []
 
 
-Overfull \hbox (13.88892pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 ap-
+Overfull \hbox (23.36116pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 prob-
  []
 
 
-Overfull \hbox (22.8056pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 prox-
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 lem
  []
 
 
-Overfull \hbox (6.11111pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 i-
+Overfull \hbox (11.38889pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 we
  []
 
 
-Overfull \hbox (21.66672pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 mate
+Overfull \hbox (15.55559pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 will
  []
 
 
-Overfull \hbox (21.16672pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 prior
+Overfull \hbox (18.33336pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 con-
+ []
+
+
+Overfull \hbox (20.63892pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 sider
+ []
+
+
+Overfull \hbox (8.33336pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 in
+ []
+
+
+Overfull \hbox (17.77779pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 Sec-
+ []
+
+
+Overfull \hbox (17.22227pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 tion
+ []
+
+
+Overfull \hbox (29.19443pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 blue[]
+ []
+
+
+Overfull \hbox (6.66669pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 it
  []
 
 
@@ -9816,23 +9818,8 @@ Overfull \hbox (6.72223pt too wide) in paragraph at lines 152--152
  []
 
 
-Overfull \hbox (38.91675pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 tractable
- []
-
-
-Overfull \hbox (8.94446pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 as
- []
-
-
-Overfull \hbox (18.3889pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 seen
- []
-
-
-Overfull \hbox (27.77785pt too wide) in paragraph at lines 152--152
-\OT1/cmr/m/n/10 above.| 
+Overfull \hbox (41.69453pt too wide) in paragraph at lines 152--152
+\OT1/cmr/m/n/10 tractable.| 
  []
 
 Missing character: There is no . in font nullfont!
@@ -12013,10 +12000,10 @@ Missing character: There is no . in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 38 strings out of 492982
- 747 string characters out of 6134896
+ 39 strings out of 492982
+ 756 string characters out of 6134896
  73888 words of memory out of 5000000
- 3697 multiletter control sequences out of 15000+600000
+ 3698 multiletter control sequences out of 15000+600000
  4913 words of font info for 18 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  18i,12n,16p,1315b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
