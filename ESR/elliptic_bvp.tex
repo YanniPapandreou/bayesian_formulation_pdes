@@ -1,9 +1,9 @@
-Let $(\Omega,\mathcal{B},\mathbb{P})$ be a probability space. In this section we will focus on the following standard elliptic stationary conductivity problem:
+In this section we will focus on the following standard elliptic stationary conductivity problem:
 \begin{align}
     \label{standard_conduct}
     \begin{split}
-        \mathcal{L}u(x) &:= -\nabla\cdot(a(x)\nabla u(x))=f(x), \hspace{0.3cm} \text{for } \mathbb{P}\text{-a.s. } x\in\Omega \\
-        u(x) &= 0, \hspace{0.3cm} \text{for } \mathbb{P}\text{-a.s. } x\in\partial\Omega
+        \mathcal{L}u(x) &:= -\nabla\cdot(a(x)\nabla u(x))=f(x), \hspace{0.3cm} x\in\Omega \\
+        u(x) &= 0, \hspace{0.3cm} x\in\partial\Omega
     \end{split}
 \end{align}
 where $f$ is random and has distribution $f\sim\mathcal{N}(\bar{f},K)$ as in Section \textcolor{blue}{\ref{general_framework}}. We assume that the diffusion coefficient satisfies the following assumption taken from \textcolor{blue}{\citep{lord2014introduction}}:
@@ -143,7 +143,7 @@ We now move on to work out the marginalization over $f$. Proposition \textcolor{
     \label{approximate_fem_prior}
     \mathcal{N}(\Phi^{*}A^{-1}\bar{F},\Phi^{*}A^{-1}K_{\mathcal{I}}A^{-1}\Phi)
 \end{equation}
-as our averaged distribution. However, in the proof of Proposition \textcolor{blue}{\ref{first_prop}} the calculations required the existence of the inverse of $\Sigma_{N}=P\Sigma P^{*}$ which in the FEM case is the $0$ matrix since $\Sigma=0$. However, it is still possible to redo the calculation of the expectation of an arbitrary bounded cylindrical test function which we performed in Section \textcolor{blue}{\ref{general_framework}}. The details of this are left to the \textcolor{blue}{\nameref{appendix}}, but the result is the same as expected from Proposition \textcolor{blue}{\ref{first_prop}}. Thus, the approximate prior arising from this choice of $V$ is given by (\ref{approximate_fem_prior}). It should be noted that this Gaussian measure directly links to what is found at the end of section 2 in the Statistical FEM paper \textcolor{blue}{\citep{girolami2019statistical}}. It is important to point out that here we still have a distribution over our function space as opposed to what is done in \textcolor{blue}{\citep{girolami2019statistical}} where they instead consider the distribution to be over a finite-dimensional projection of the function space. By working over the entire function space we will be able to investigate in more detail how the true prior differs from this approximate prior. This conforms with the principle of ``\textit{avoiding discretization until the last possible moment}". It is also worth pointing out that this probabilistic numerical method for solving the BVP (\ref{standard_conduct}) gives a distribution whose mean coincides with the weak solution obtained by solving the problem with forcing given by $\bar{f}$ using FEM. Thus, this PNM recovers a classical method. We now move onto discussing the true prior.
+as our averaged distribution. However, in the proof of Proposition \textcolor{blue}{\ref{first_prop}} the calculations required the existence of the inverse of $\Sigma_{N}=P\Sigma P^{*}$ which in the FEM case is the $0$ matrix since $\Sigma=0$. However, it is still possible to redo the calculation of the expectation of an arbitrary bounded cylindrical test function which we performed in Section \textcolor{blue}{\ref{general_framework}}. The details of this are left to the \textcolor{blue}{\nameref{appendix}}, but the result is the same as expected from Proposition \textcolor{blue}{\ref{first_prop}}. Thus, the approximate prior arising from this choice of $V$ is given by (\ref{approximate_fem_prior}). It should be noted that this Gaussian measure directly links to what is found at the end of section 2 in the Statistical FEM paper \textcolor{blue}{\citep{girolami2019statistical}}. It is important to point out that here we still have a distribution over our function space as opposed to what is done in \textcolor{blue}{\citep{girolami2019statistical}} where they instead consider the distribution to be over a finite-dimensional projection of the function space. By working over the entire function space we will be able to investigate in more detail how the true prior differs from this approximate prior. This conforms with the principle of ``\textit{avoiding discretization until the last possible moment}". It is also worth pointing out that this FEM prior for solving the BVP (\ref{standard_conduct}) gives a distribution whose mean coincides with the weak solution obtained by solving the problem with forcing given by $\bar{f}$ using FEM. We now move onto discussing the true prior.
 
 \subsection{Prior from the true solution}
 
@@ -186,7 +186,7 @@ When $\mu,\nu$ are both Gaussian measures an explicit expression can be obtained
 \begin{equation}
     W^{2}(\mu,\nu)=\|m_1-m_2\|^{2}_{\mathcal{H}}+\operatorname{tr}(\Sigma_1)+\operatorname{tr}(\Sigma_2)-2\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}
 \end{equation}
-This formula is true in both the finite and infinite-dimensional cases. The term $\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}$ is difficult to analyse in our situation and as such we will make use of Proposition 3 from \textcolor{blue}{\citep{masarotto2019procrustes}} which states: \vspace{5pt}
+This formula is true in both the finite and infinite-dimensional cases. The term $\operatorname{tr}\sqrt{\Sigma_{1}^{1/2}\Sigma_{2}\Sigma_{1}^{1/2}}$ is difficult to analyse in our situation and as such we will make use of \textcolor{blue}{\citep[Proposition 3]{masarotto2019procrustes}} which states: \vspace{5pt}
 \begin{proposition}
     The Procrustes distance between two trace-class operators $\Sigma_{1}$ and $\Sigma_{2}$ on $\mathcal{H}$ coincides with the Wasserstein distance between two second-order Gaussian processes $\mathcal{N}(0,\Sigma_{1})$ and $\mathcal{N}(0,\Sigma_2)$ on $\mathcal{H}$,
     $$\Pi(\Sigma_{1},\Sigma_{2}):=\inf_{R:R^{*}R=I}\|\Sigma_{1}^{1/2}-R\Sigma_{2}^{1/2}\|_{2}=W(\mathcal{N}(0,\Sigma_{1}),\mathcal{N}(0,\Sigma_{2}))$$
@@ -232,14 +232,14 @@ and since $m_2=\Phi^{*}A^{-1}\bar{F}=\Phi^{*}A^{-1}\mathcal{I}\bar{f}$ is the FE
     \label{bound_on_diff_means}
     \|m_1-m_2\|_{L^{2}(\Omega)}\leq Ch^{2}\|m_{1}\|_{H^{2}(\Omega)}\leq\tilde{C}h^{2}\|\bar{f}\|_{L^{2}(\Omega)}
 \end{equation}
-for some constances $C,\tilde{C}>0$. We have utilised in the last inequality above the assumption that the $H^2$ norm of the true solution can be controlled by the $L^2$ norm of $\bar{f}$. The assumptions and error analysis is taken from Chapter 5 of \textcolor{blue}{\citep{larsson2008partial}} (see in particular Theorem 5.4).
+for some constances $C,\tilde{C}>0$. We have utilised in the last inequality above the assumption that the $H^2$ norm of the true solution can be controlled by the $L^2$ norm of $\bar{f}$. The assumptions and error analysis is taken from Chapter 5 of \textcolor{blue}{\citep[see in particular Theorem 5.4]{larsson2008partial}}.
 
 We now move on to getting an upperbound for the second term. Using the link with the Procrustes distance discussed above we have:
 \begin{equation}
     W^2(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2))\leq\|\Sigma_{1}^{1/2}-\Sigma_{2}^{1/2}\|_{2}^{2}
 \end{equation}
 
-The RHS of the above is still difficult to deal with so we make use of Lemma 4.1 from \textcolor{blue}{\citep{powers1970free}} to obtain:
+The RHS of the above is still difficult to deal with so we make use of \textcolor{blue}{\citep[Lemma 4.1]{powers1970free}} to obtain:
 \begin{equation}
     W^2(\mathcal{N}(0,\Sigma_1),\mathcal{N}(0,\Sigma_2))\leq\|\Sigma_{1}^{1/2}-\Sigma_{2}^{1/2}\|_{2}^{2}\leq\|\Sigma_1-\Sigma_2\|_{1}
 \end{equation}
@@ -288,7 +288,7 @@ We thus have an upper bound on the Wasserstein distance between $\nu_{1},\nu_{2}
 \begin{equation}
     W(\nu_{1},\nu_{2})\leq h \sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}+\mathcal{O}(h^2)}\leq \gamma h +\mathcal{O}(h^2)
 \end{equation}
-where $\gamma:=\sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}}>0$ is a constant. Note that we have also used that both\footnote{$K$ is trace-class since it is a covariance operator and thus its trace norm is bounded.} $\|K\|_{1}$ and $\|\mathcal{L}^{-1}\|_{\infty}$ are bounded and independent of $h$. We also see that as $h\rightarrow 0$ the Wasserstein distance between $\nu_1,\nu_2$ goes to 0 and so the approximate prior converges (in distribution) to the true prior as $h\rightarrow 0$ (see Proposition 4 in \textcolor{blue}{\citep{masarotto2019procrustes}}).
+where $\gamma:=\sqrt{2\tilde{C}\|K\|_{1}\|\mathcal{L}^{-1}\|_{\infty}}>0$ is a constant. Note that we have also used that both\footnote{$K$ is trace-class since it is a covariance operator and thus its trace norm is bounded.} $\|K\|_{1}$ and $\|\mathcal{L}^{-1}\|_{\infty}$ are bounded and independent of $h$. We also see that as $h\rightarrow 0$ the Wasserstein distance between $\nu_1,\nu_2$ goes to 0 and so the approximate prior converges (in distribution) to the true prior as $h\rightarrow 0$ \textcolor{blue}{\citep[see Proposition 4]{masarotto2019procrustes}}.
 \qedsymbol
 
 Having obtained this upperbound on the distance between the true priors we are now in a position to investigate how this ``propagates" forwards to further inference. In particular, we will now look at incorporating sensor data and seeing how different the two resulting posteriors are from using the two different priors $\nu_1,\nu_2$ above.
@@ -319,7 +319,7 @@ In order to obtain on upperbound on each of these terms it will help to first fi
     &\leq\|\Sigma_{1}-\Sigma_{2}\|_{1} \\
     &\leq \gamma^{2}h^{2}+\mathcal{O}(h^4)
 \end{align*}
-where we have used the fact that $\|S\|_{\infty}\leq 1$ since it is a projection. Since $B_{1}$ (and $B_{2}$) are invertible and for sufficiently small\footnote{It suffices to take $h<h_{*}$ where $h_{*}$ satisfies $\gamma^{2}h_{*}^{2}+\tilde{C}^{2}h_{*}^{4}<1/\|B_{1}^{-1}\|_{\infty}$.} $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$ we can utilise Corollary 8.2 of \textcolor{blue}{\citep{gohberg2012basic}} to deduce that:
+where we have used the fact that $\|S\|_{\infty}\leq 1$ since it is a projection. Since $B_{1}$ (and $B_{2}$) are invertible and for sufficiently small\footnote{It suffices to take $h<h_{*}$ where $h_{*}$ satisfies $\gamma^{2}h_{*}^{2}+\tilde{C}^{2}h_{*}^{4}<1/\|B_{1}^{-1}\|_{\infty}$.} $h$ we have that $\|B_{1}-B_{2}\|_{\infty}<1/\|B_{1}^{-1}\|_{\infty}$ we can utilise \textcolor{blue}{\citep[Corollary 8.2]{gohberg2012basic}} to deduce that:
 \begin{equation}
     \label{bound_on_diff_inverses}
     \|B_{1}^{-1}-B_{2}^{-1}\|_{\infty}\leq\frac{\|B_{1}^{-1}\|_{\infty}^{2}\|B_{1}-B_{2}\|_{\infty}}{1-\|B_{1}^{-1}\|_{\infty}\|B_1-B_{2}\|_{\infty}}\leq\|B_{1}^{-1}\|_{\infty}^{2}\gamma^{2}h^{2}+\mathcal{O}(h^4)

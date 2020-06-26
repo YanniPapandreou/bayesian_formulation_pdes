@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  24 JUN 2020 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  26 JUN 2020 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -485,21 +485,9 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
-Missing character: There is no T in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:5: Undefined control sequence.
-l.5 ...ally follows from Theorem 3.3 in \textcolor
-                                                  {blue}{\citep{owhadi2015co...
+l.5 ...ication essentially follows from \textcolor
+                                                  {blue}{\citep[Theorem 3.3]...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -511,14 +499,26 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 /home/johnandrew/Documents/Imperial/PhD/ESR/appendix.tex:5: Undefined control sequence.
-l.5 ...from Theorem 3.3 in \textcolor{blue}{\citep
-                                                  {owhadi2015conditioning}}....
+l.5 ...tially follows from \textcolor{blue}{\citep
+                                                  [Theorem 3.3]{owhadi2015co...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+Missing character: There is no [ in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ] in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -7107,7 +7107,7 @@ l.160 \end{align}
 Here is how much of TeX's memory you used:
  35 strings out of 492982
  844 string characters out of 6134896
- 74888 words of memory out of 5000000
+ 75888 words of memory out of 5000000
  3695 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

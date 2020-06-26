@@ -13,17 +13,17 @@ We will consider PDEs which do not have any time dependence in this report. Futu
     \end{array}
     \right.
 \end{equation}
-where the functions $f,g$ may be noisy, typically Gaussian. The operator $\mathcal{L}$ may also be random. For simplicity we will take $g=0$ and will assume that $\mathcal{L}$ is deterministic. We will also now assume that $f$ is Gaussian, i.e. $f\sim\mathcal{N}(\bar{f},K)$. We seek the solution in some appropriate separable Hilbert space of functions $\mathcal{H}$. We now discuss how the two priors over the solution space are formed. The first prior will essentially come from the true solution of the PDE while the second will be the ``output" of a probabilistic numerical method\footnote{Note that in our discussion of probabilistic numerical methods we referred to the output as being a posterior distribution over the solution of the problem; here we are viewing the output as what we will set our prior for further inference to be.} for solving the problem (\ref{DirichletProb}). As such we will initially place an appropriate prior on the solution $u$ which encapsulates our prior belief on the solution (such as its smoothness) before utilising detailed knowledge of the specific PDE. We will then consider using an approximation to obtain a posterior distribution which will then become our prior for further inference. We start with utilising the true solution:
+where the functions $f,g$ may be noisy, typically Gaussian. The operator $\mathcal{L}$ may also be random. For simplicity we will take $g=0$ and will assume that $\mathcal{L}$ is deterministic. We will also now assume that $f$ is Gaussian, i.e. $f\sim\mathcal{N}(\bar{f},K)$. We seek the solution in some appropriate separable Hilbert space of functions $\mathcal{H}$. We now discuss how the two priors over the solution space are formed. The first prior will essentially come from the true solution of the PDE while the second will arise from a finite dimensional approximation of the true solution of the problem (\ref{DirichletProb}). As such we will initially place an appropriate prior on the solution $u$ which encapsulates our prior belief on the solution (such as its smoothness) before utilising detailed knowledge of the specific PDE. We will then consider using an approximation to obtain a posterior distribution which will then become our prior for further inference. We start with utilising the true solution:
 
 \subsection{Prior from the true solution}
 \label{prior_true_solution}
 
-Formally we have $u=\mathcal{L}^{-1}f$, where $\mathcal{L}^{-1}$ is the solution operator (Green's function) for the problem (\ref{DirichletProb}). Since $f$ is random we see that the solution is also random; in particular it is the push-forward of $f$ by the \textbf{linear} operator $\mathcal{L}^{-1}$. Provided that the linear operator $\mathcal{L}^{-1}$ is bounded it follows from the theory of Gaussian measures (see Proposition 1.18 of \textcolor{blue}{\citep{da2006introduction}}) that $u$ is also Gaussian and in particular has the following distribution:
+Formally we have $u=\mathcal{L}^{-1}f$, where $\mathcal{L}^{-1}$ is the solution operator (Green's function) for the problem (\ref{DirichletProb}). Since $f$ is random we see that the solution is also random; in particular it is the push-forward of $f$ by the \textbf{linear} operator $\mathcal{L}^{-1}$. Provided that the linear operator $\mathcal{L}^{-1}$ is bounded it follows from the theory of Gaussian measures \textcolor{blue}{\citep[see Proposition 1.18]{da2006introduction}} that $u$ is also Gaussian and in particular has the following distribution:
 \begin{equation}
     \label{true_prior}
     u\sim\mathcal{N}(\mathcal{L}^{-1}\bar{f},\mathcal{L}^{-1}K(\mathcal{L}^{-1})^{*})
 \end{equation}
-This will be one of the two priors we will consider. One should note that this prior indeed utilises the true solution to the PDE. However, for most PDEs it will be intractable to actually compute this prior due to the fact that $\mathcal{L}^{-1}$ is inaccessible. This leads us instead to consider a prior based on a probabilistic numerical method for solving (\ref{DirichletProb}):
+This will be one of the two priors we will consider. One should note that this prior indeed utilises the true solution to the PDE. However, for most PDEs it will be intractable to actually compute this prior due to the fact that $\mathcal{L}^{-1}$ is inaccessible. This leads us instead to consider a prior based on an approximation to the solution of (\ref{DirichletProb}):
 
 \subsection{Prior from an approximation}
 
@@ -43,7 +43,7 @@ Having placed this prior on $u$ we will now consider conditioning on the ``obser
 \end{equation*}
 where $\langle\boldsymbol{\cdot},\boldsymbol{\cdot}\rangle$ is the duality pairing between $\mathcal{U}$ and $\mathcal{U}^{\prime}$ and where the $\{\phi_{j}\}_{j=1}^{J}\subset\mathcal{F}_{h}$ form a basis for the finite element space $\mathcal{F}_{h}$. Note that $J$ is inversely proportional to the mesh size $h$, in particular if $\Omega\subset\mathbb{R}^{2}$ then $J\propto 1/h^2$. It is also important to emphasise that $I_{j}\in\mathcal{U}^{\prime\prime}$ and so they are bounded linear operators.
 
-Let $\mathcal{I}$ be the concatenation of these information operators, i.e. $\mathcal{I}=(I_1,\dots,I_J)^{T}$. We will refer to $\mathcal{I}$ as the information operator. The probabilistic numerical method will involve conditioning on the ``observation" of this information operator. To be more specific consider $\mathcal{I}$ acting on the PDE $\mathcal{L}u=f$. We have,
+Let $\mathcal{I}$ be the concatenation of these information operators, i.e. $\mathcal{I}=(I_1,\dots,I_J)^{T}$. We will refer to $\mathcal{I}$ as the information operator. We will now condition on the ``observation" of this information operator. To be more specific consider $\mathcal{I}$ acting on the PDE $\mathcal{L}u=f$. We have,
 \begin{equation*}
     \mathcal{I}\mathcal{L}u=\mathcal{I}f=:F
 \end{equation*}
@@ -88,12 +88,12 @@ We will now seek to marginalize over $f$ in (\ref{conditionalDistnFixed_f}) so a
 
 \begin{proposition}
     \label{first_prop}
-    Let $u$ satisfy problem (\ref{DirichletProb}) and suppose that we place a prior $u\sim\mathcal{N}(0,V)$ where $V$ satisfies Assumption 1. Also suppose that $g=0$ and that the forcing $f$ is distributed as $f\sim\mathcal{N}(\bar{f},K)$. Then the conditional distribution $u|\{\mathcal{I}\mathcal{L}u=F\}$ is given by:
+    Let $u$ satisfy problem (\ref{DirichletProb}) and suppose that we place a prior $u\sim\mathcal{N}(0,V)$ where $V$ satisfies Assumption 1. Also suppose that $g=0$ and that the forcing $f$ is distributed as $f\sim\mathcal{N}(\bar{f},K)$. Then the conditional distribution $\int u|\{\mathcal{I}\mathcal{L}u=F,f\}\mathrm{d}f$ is given by:
     \begin{equation}
         \label{approx_prior}
-        u|\{\mathcal{I}\mathcal{L}u=F\}\sim\mathcal{N}(Q\bar{F},\Sigma+QK_{\mathcal{I}}Q^{*})
+        \int u|\{\mathcal{I}\mathcal{L}u=F,f\}\mathrm{d}f\sim\mathcal{N}(Q\bar{F},\Sigma+QK_{\mathcal{I}}Q^{*})
     \end{equation}
-    where we have $\bar{F}:=\mathcal{I}\bar{f}$, $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$ and $Q:=V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$.
+    where we have $\bar{F}:=\mathcal{I}\bar{f}$, $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$ and $Q:=V\mathcal{L}^{*}\mathcal{I}^{*}(\mathcal{I}\mathcal{L}V\mathcal{L}^{*}\mathcal{I}^{*})^{-1}$. \textit{Note: The notation} $\int u|\{\mathcal{I}\mathcal{L}u=F,f\}\mathrm{d}f$ \textit{is to be interpreted as the distribution corresponding to marginalizing over} $f$ \textit{in} (\ref{conditionalDistnFixed_f}).
 \end{proposition}
 
 \noindent \textit{Proof:}
@@ -101,7 +101,7 @@ In order to perform this marginalization over $f$ we first note:
 \begin{equation}
     f\sim\mathcal{N}(\bar{f},K)=:\mu_{\bar{f},K} \implies \mathcal{I}f=F\sim\mathcal{N}(\mathcal{I}\bar{f},\mathcal{I}K\mathcal{I}^{*})=:\mu_{\bar{F},K_{\mathcal{I}}}
 \end{equation}
-where $\bar{F}:=\mathcal{I}\bar{f}$ and $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$. In order to specify the ``average" conditional distribution it suffices to compute the expectation of arbitrary bounded cylindrical test functions $\psi(u^{N}):=\psi(u(x_1),\dots,u(x_{N}))$ since the $\sigma-$algebra generated by cylinder sets coincides with the Borel $\sigma-$algebra (see for instance Theorem 2.1.1 in \textcolor{blue}{\citep{lunardi2015infinite}}). We must thus compute:
+where $\bar{F}:=\mathcal{I}\bar{f}$ and $K_{\mathcal{I}}:=\mathcal{I}K\mathcal{I}^{*}$. In order to specify the ``average" conditional distribution it suffices to compute the expectation of arbitrary bounded cylindrical test functions $\psi(u^{N}):=\psi(u(x_1),\dots,u(x_{N}))$ since the $\sigma-$algebra generated by cylinder sets coincides with the Borel $\sigma-$algebra \textcolor{blue}{\citep[see Theorem 2.1.1]{lunardi2015infinite}}. We must thus compute:
 \begin{equation}
     \int\int\psi(u^{N})\mu_{a,\Sigma}(\mathrm{d}u)\mu_{\bar{f},K}(\mathrm{d}f)
 \end{equation}
