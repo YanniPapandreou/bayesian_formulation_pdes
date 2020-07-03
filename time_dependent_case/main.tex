@@ -150,6 +150,7 @@ where $M$ is the Galerkin mass matrix and $A$ is the Galerkin stiffness  matrix,
 
 Using this result we can deduce that:
 \begin{equation}
+    \label{vector_formula}
     (V_{0}\tilde{A}_{\delta}^{*}\boldsymbol{v})(x,s) = \partial_{2}k(s,\delta)\Phi(x)^{*}\Lambda M\boldsymbol{v} + k(s,\delta)\Phi(x)^{*}\Lambda A \boldsymbol{v}
 \end{equation}
 for any $\boldsymbol{v}\in\mathbb{R}^{J}$, where $\Lambda=\operatorname{diag}\{\lambda_{i}\}_{i=1}^{J}$.
@@ -187,5 +188,69 @@ We now will choose a specific kernel $k(s,t)$ for the temporal part of our prior
     &= (M\Lambda+\delta A \Lambda)(M+\delta A) \\
     &= (M+\delta A)\Lambda(M+\delta A) = Q\Lambda Q
 \end{align*}
-where we have defined $Q:=M+\delta A$.
+where we have defined $Q:=M+\delta A$. We can now finish computing $m_{1}$. Evaluate it at $(x,t_{1})=(x,\delta)$:
+\begin{equation*}
+    m_{1}(x,\delta)=((1-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta})m_{0})(x,\delta)+(V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}F^{1})(x,\delta)
+\end{equation*}
+We can now apply (\ref{vector_formula}) to compute the last term:
+\begin{align*}
+    (V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}F^{1})(x,\delta) &= (V_{0}\tilde{A}_{\delta}^{*}(Q\Lambda Q)^{-1}F^{1})(x,\delta) \\
+    &=\partial_{2}k(\delta,\delta)\Phi(x)^{*}\Lambda M (Q\Lambda Q)^{-1}F^{1}+k(\delta,\delta)\Phi(x)^{*}\Lambda A (Q\Lambda Q)^{-1}F^{1} \\
+    &= \delta\Phi(x)^{*}\Lambda M(Q\Lambda Q)^{-1}F^{1}+\delta^{2}\Phi(x)^{*}\Lambda A (Q\Lambda Q)^{-1}F^{1} \\
+    &=\delta\Phi(x)^{*}\Lambda(M+\delta A)(Q\Lambda Q)^{-1}F^{1} \\
+    &=\delta\Phi(x)^{*}\Lambda Q Q^{-1}\Lambda^{-1} Q^{-1}F^{1} \\
+    &=\delta\Phi(x)^{*}Q^{-1}F^{1}
+\end{align*}
+In order to apply (\ref{vector_formula}) to compute the second term involving $m_{0}$ in the update rule we must first compute $\tilde{A}_{\delta}m_{0}=\mathcal{I}_{\delta}\mathcal{L}m_{0}$. To do this we compute:
+\begin{align*}
+    (\mathcal{L}m_{0})(x,t)&=\partial_{t}m_{0}-\nabla\cdot(a(x)\nabla m_{0}(x,t)) \\
+    &=-\nabla(a(x)\nabla\Phi(x)^{*}\boldsymbol{\gamma}) \\
+    &=-\sum_{j=1}^{J}\gamma_{j}\nabla\cdot(a(x)\nabla\phi_{j}(x))
+\end{align*}
+Thus, the $i$\textit{-th} entry of $\tilde{A}_{\delta}m_{0}$ can be computed as:
+\begin{align*}
+    (\tilde{A}_{\delta}m_{0})_{i} &= I_{i}(\delta)\mathcal{L}m_{0} \\
+    &= \int_{\Omega}\phi_{i}(x)\left(-\sum_{j=1}^{J}\gamma_{j}\nabla\cdot(a(x)\nabla\phi_{j}(x))\right)\mathrm{d}x \\
+    &= -\sum_{j=1}^{J}\gamma_{j}A_{ij} = (A\boldsymbol{\gamma})_{i}
+\end{align*}
+So $\tilde{A}_{\delta}m_{0}=A\boldsymbol{\gamma}$.
+We can now apply (\ref{vector_formula}) to compute the second term involving $m_{0}$ as follows:
+\begin{align*}
+    ((V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta})m_{0})(x,\delta) &= (V_{0}\tilde{A}_{\delta}^{*}(Q\Lambda Q)^{-1}A\boldsymbol{\gamma})(x,\delta) \\
+    &= \partial_{2}k(\delta,\delta)\Phi(x)^{*}\Lambda M (Q\Lambda Q)^{-1}A\boldsymbol{\gamma} + k(\delta,\delta)\Phi(x)^{*}\Lambda A(Q\Lambda Q)^{-1}A\boldsymbol{\gamma} \\
+    &= \delta\Phi(x)^{*}\Lambda M (Q\Lambda Q)^{-1}A\boldsymbol{\gamma} + \delta^{2}\Phi(x)^{*}\Lambda A(Q\Lambda Q)^{-1}A\boldsymbol{\gamma} \\
+    &= \delta\Phi(x)^{*}\Lambda (M + \delta A)(Q \Lambda Q)^{-1}A\boldsymbol{\gamma} \\
+    &=\delta\Phi(x)^{*}\Lambda Q Q^{-1}\Lambda^{-1}Q^{-1}A\boldsymbol{\gamma} \\
+    &=\delta\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}
+\end{align*}
+Thus we can compute:
+\begin{align*}
+    (1-(V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta})m_{0})(x,\delta)&=\Phi(x)^{*}\boldsymbol{\gamma}-\delta\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma} \\
+    &= \Phi(x)^{*}(I-\delta Q^{-1}A)\boldsymbol{\gamma} \\
+    &= \Phi(x)^{*}Q^{-1}(Q-\delta A)\boldsymbol{\gamma} \\
+    &= \Phi(x)^{*}Q^{-1}(M+\delta A- \delta A)\boldsymbol{\gamma} \\
+    &= \Phi(x)^{*}Q^{-1}M\boldsymbol{\gamma}
+\end{align*}
+
+Putting this all together we obtain:
+\begin{align*}
+    m_{1}(x,t_{1}) = m_{1}(x,\delta) &= \Phi(x)^{*}Q^{-1}M\boldsymbol{\gamma} + \delta\Phi(x)^{*}Q^{-1}F^{1} \\
+    &= \Phi(x)^{*}(Q^{-1}M\boldsymbol{\gamma}+\delta Q^{-1}F^{1}) \\
+    &= \Phi(x)^{*}((M+\delta A)^{-1}M\boldsymbol{\gamma}+\delta (M+\delta A)^{-1}F^{1})
+\end{align*}
+Thus we see that performing this mean update and then evaluating at the time $t_{1}=\delta$ we obtain that the coefficients of the $\{\phi_{i}(x)\}_{i=1}^{J}$ changes as follows:
+\begin{equation}
+    \boldsymbol{\gamma} \longmapsto (M+\delta A)^{-1}M\boldsymbol{\gamma}+\delta (M+\delta A)^{-1}F^{1}
+\end{equation}
+just like in the update equation for the backward-Euler Galerkin method. \vspace{10pt}
+\begin{remark}
+    Note that evaluating $m_{1}$ at $(x,s)$ instead of at $(x,\delta)$ yields the following:
+    \begin{equation}
+        m_{1}(x,s)=\Phi(x)^{*}[(M+\delta A)^{-1}(M+(\delta-s)A)\boldsymbol{\gamma}+s (M+\delta A)^{-1}F^{1}]
+    \end{equation}
+\end{remark}
+
+We can now move on to computing the covariance $V_{1}$.
+
+
 \end{document}
