@@ -117,5 +117,75 @@ In our mean update rule $m_{0}$ plays the role of $\Phi^{*}\boldsymbol{\alpha}^{
     \delta\Phi^{*}(M+\delta A)^{-1} &= V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}
 \end{align}
 
+To make progress we must now start computing various terms needed for our mean and covariance update rules. We start with $V_{0}\tilde{A}_{\delta}^{*}$. We have:
+\begin{equation*}
+    V_{0}\tilde{A}_{\delta}^{*}=V_{0}\mathcal{L}^{*}(I_{1}(\delta)^{*},\dots,I_{J}(\delta)^{*})
+\end{equation*}
+We can thus see that we need to be able to compute terms of form $V_{0}\mathcal{L}^{*}I_{i}^{*}(\delta)=V_{0}(I_{i}(\delta)\mathcal{L})^{*}$. Now since the operator $I_{i}(\delta)\mathcal{L}$ takes in a function on $\Omega\times[0,T]$ and outputs a real number its adjoint should take in a real number and output a function on $\Omega\times[0,T]$. This adjoint should satisfy the following relation:
+\begin{equation}
+    \alpha((I_{i}(\delta)\mathcal{L})g)=\int_{\Omega}\int_{0}^{T}((I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,t)g(x,t)\mathrm{d}t\mathrm{d}x \hspace{0.15cm} \forall{g}, \hspace{0.15cm} \forall\alpha\in\mathbb{R}
+\end{equation}
+Using this we can now compute:
+\begin{align*}
+    (V_{0}(I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,s) &= \int_{\Omega}\int_{0}^{T}k_{yw}^{xs}((I_{i}(\delta)\mathcal{L})^{*}\alpha)(y,w)\mathrm{d}w\mathrm{d}y \\
+    &=\alpha (I_{i}(\delta)(\mathcal{L}k^{xs})) \\
+    &=\alpha\int_{\Omega}\phi_{i}(y)(\mathcal{L}k^{xs})(y,\delta)\mathrm{d}y
+\end{align*}
 
+We now work out $(\mathcal{L}k^{xs})(y,\delta)$ taking care to remember that $x,s$ are fixed and so $\mathcal{L}$ acts on the variables $y,\delta$:
+\begin{align*}
+    (\mathcal{L}k^{xs})(y,\delta) &= \partial_{2}k(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)-k(s,\delta)\nabla_{y}\cdot\left(a(y)\nabla_{y}\sum_{j=1}^{J}(\lambda_{j}\phi_{j}(x)\phi_{j}(y)\right) \\
+    &=\partial_{2}k(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)-k(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\nabla_{y}\cdot\left(a(y)\nabla_{y}\phi_{j}(y)\right)
+\end{align*}
+So we can now compute:
+\begin{align*}
+    (V_{0}(I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,s) &= \alpha\int_{\Omega}\phi_{i}(y)\partial_{2}k(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)\mathrm{d}y-\alpha\int_{\Omega}\phi_{i}(y)k(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\nabla_{y}\cdot\left(a(y)\nabla_{y}\phi_{j}(y)\right)\mathrm{d}y \\
+    &=\alpha\partial_{2}k(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)M_{ji}+\alpha k(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)A_{ji}
+\end{align*}
+where $M$ is the Galerkin mass matrix and $A$ is the Galerkin stiffness  matrix, i.e. the matrices with entries given by:
+\begin{align}
+    M_{ij}&:=\int_{\Omega}\phi_{i}(x)\phi_{j}(x)\mathrm{d}x \\
+    A_{ij}&:=\int_{\Omega}a(x)\nabla\phi_{i}(x)\nabla\phi_{j}(x)\mathrm{d}x
+\end{align}
+
+Using this result we can deduce that:
+\begin{equation}
+    (V_{0}\tilde{A}_{\delta}^{*}\boldsymbol{v})(x,s) = \partial_{2}k(s,\delta)\Phi(x)^{*}\Lambda M\boldsymbol{v} + k(s,\delta)\Phi(x)^{*}\Lambda A \boldsymbol{v}
+\end{equation}
+for any $\boldsymbol{v}\in\mathbb{R}^{J}$, where $\Lambda=\operatorname{diag}\{\lambda_{i}\}_{i=1}^{J}$.
+
+We now move onto computing:
+\begin{align*}
+    \tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}&=\mathcal{I}_{\delta}\mathcal{L}V_{0}\mathcal{L}^{*}\mathcal{I}_{\delta}^{*} \\
+    &=\begin{pmatrix}
+        I_{1}(\delta) \\
+        \vdots \\
+        I_{J}(\delta)
+    \end{pmatrix}\mathcal{L}V_{0}\mathcal{L}^{*}\begin{pmatrix}
+                                                    I_{1}(\delta)^{*} & \dots & I_{J}(\delta)^{*}
+                                                \end{pmatrix}
+\end{align*}
+This operator has $ij$\textit{-th} entry which is given by:
+\begin{align*}
+    (\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})_{ij}\alpha &= I_{i}(\delta)\mathcal{L}V_{0}\mathcal{L}^{*}I_{j}(\delta)^{*}\alpha \\
+    &= \int_{\Omega}\phi_{i}(x)\left[(\mathcal{L}V_{0}(I_{j}(\delta)\mathcal{L})^{*}\alpha)(x,\delta)\right]\mathrm{d}x \\
+    &=\int_{\Omega}\phi_{i}(x)\bigg[\alpha\partial_{1}\partial_{2}k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}\phi_{l}(x)M_{lj}+\alpha\partial_{1}k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}\phi_{l}(x)A_{lj} \\
+    &-\alpha\partial_{2}k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{lj}\nabla\cdot(a(x)\nabla\phi_{l}(x)) - \alpha k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}A_{lj}\nabla\cdot(a(x)\nabla\phi_{l}(x))\bigg]\mathrm{d}x \\
+    &=\alpha\partial_{1}\partial_{2}k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{il}M_{lj} + \alpha\partial_{1}k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{il}A_{lj} \\
+    &+\alpha\partial_{2}k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{lj}A_{il} + \alpha k(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}A_{il}A_{lj} \\
+    &= \alpha\partial_{1}\partial_{2}k(\delta,\delta)(M\Lambda M)_{ij} + \alpha\partial_{1}k(\delta,\delta)(M\Lambda A)_{ij} + \alpha\partial_{2}k(\delta,\delta)(A\Lambda M)_{ij} + \alpha k(\delta,\delta)(A\Lambda A)_{ij}
+\end{align*}
+We can thus conclude that $\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}$ is the $J\times J$ matrix given by:
+\begin{equation}
+    \tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}=\partial_{1}\partial_{2}k(\delta,\delta)M\Lambda M + \partial_{1}k(\delta,\delta)M\Lambda A + \partial_{2}k(\delta,\delta)A\Lambda M +  k(\delta,\delta)A\Lambda A
+\end{equation}
+
+We now will choose a specific kernel $k(s,t)$ for the temporal part of our prior covariance. We will take $k(s,t):=st$. We thus have $\partial_{1}k(s,t)=t$, $\partial_{2}k(s,t)=s$, and $\partial_{1}\partial_{2}k(s,t)=1$. So we have:
+\begin{align*}
+    \tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*} &= M\Lambda M + \delta M\Lambda A + \delta A\Lambda M +  \delta^{2}A\Lambda A \\
+    &= M\Lambda(M+\delta A)+\delta A \Lambda(M+\delta A) \\
+    &= (M\Lambda+\delta A \Lambda)(M+\delta A) \\
+    &= (M+\delta A)\Lambda(M+\delta A) = Q\Lambda Q
+\end{align*}
+where we have defined $Q:=M+\delta A$.
 \end{document}
