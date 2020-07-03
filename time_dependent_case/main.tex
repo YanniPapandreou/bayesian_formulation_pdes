@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{dsfont}
+\usepackage{centernot}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage{parskip}
+
+% for theorems/lemmas/defs/etc
+%-------------------------------
+\usepackage[english]{babel}
+\usepackage[sort&compress,square,numbers]{natbib}
+\bibliographystyle{unsrtnat}
+
+\usepackage[dvipsnames]{xcolor}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{corollary1}{Corollary}[definition]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{\textbf{Remark}}  % if don't want bold face for remark remove textbf
+
+\theoremstyle{remark}
+\newtheorem*{remarks}{\textbf{Remarks}}
+
+%-------------------------------
+
+\DeclareMathOperator{\E}{\mathds{E}}
+\DeclareMathOperator{\Var}{\mathrm{Var}}
+\DeclareMathOperator{\prob}{\mathbb{P}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{June 2020}
+% \lhead{CID: 00955392}
+\cfoot{\thepage}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=false}
+
+\begin{document}
+\setlength\parskip{10pt}
+\setlength\parindent{20pt}
+
+\noindent We now focus on the following time-dependent PDE:
+\begin{align}
+        \mathcal{L}u(x,t) := \partial_{t}u(x,t) -\nabla\cdot(a(x)\nabla u(x,t))&=f(x,t), \hspace{0.3cm} x\in\Omega, \hspace{0.15cm} t\in[0,T] \\
+        u(x,t) &= 0, \hspace{1.15cm} x\in\partial\Omega, \hspace{0.15cm} t\in[0,T] \\
+        u(x,0) &= u_{0}(x), \hspace{0.5cm} x\in\Omega
+\end{align}
+
+We will now set up a prior on the solution $u$ to the above problem. To do so we first let $v_{h}\in S_{h}$ be some approximation of the initial condition $u_{0}(x)$ in the FEM space $S_{h}$. To be more specific we will assume that $v_{h}(x)=\Phi(x)^{*}\boldsymbol{\gamma}:=\sum_{i=1}^{J}\phi_{i}(x)\gamma_{i}$. Note that $\Phi(x):=(\phi_{1}(x),\dots,\phi_{J}(x))^{T}$. We take the prior on $u$ to be:
+\begin{equation}
+    u\sim\mathcal{N}(m_{0},V_{0})
+\end{equation}
+where $m_{0}(x,t):=v_{h}(x)=\Phi^{*}(x)\boldsymbol{\gamma}$ ($m_{0}$ is constant in time). The prior covariance operator $V_{0}$ is defined as follows:
+\begin{equation}
+    (V_{0}g)(x,t)=\int_{\Omega}\int_{o}^{T}\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)k(t,s)g(y,s)\mathrm{d}s\mathrm{d}y =: \int_{\Omega}\int_{0}^{T}k_{ys}^{xt}g(y,s)\mathrm{d}s\mathrm{d}y
+\end{equation}
+where we have a general kernel $k(t,s)$ for time which will be taken to be a specific function later. We have also used the notation $k_{ys}^{xt}:=\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)k(t,s)$ to make it clear which variables are held fixed and which we integrate against.
+
+\noindent We now introduce the following operators $\mathcal{I}_{s}:=(I_{1}(s),\dots,I_{J}(s))^{T}$ where:
+\begin{equation}
+    I_{i}(s)g:=\int_{\Omega}\phi_{i}(x)g(x,s)\mathrm{d}x
+\end{equation}
+
+\noindent We now introduce a uniform time grid:
+\begin{equation*}
+    t_{n}=n\delta, \hspace{0.2cm} n=0,1,\dots,N
+\end{equation*}
+where $\delta$ is the spacing between consecutive times and $N=\frac{T}{\delta}$ (\textit{assume that} $N$ \textit{is an integer}).
+
+To move from $t=t_{0}=0$ to $t=t_{1}=\delta$ we condition on observing $\mathcal{I}_{\delta}\mathcal{L}u=\mathcal{I}_{\delta}f=:F^{1}$. Let $\tilde{A}_{\delta}:=\mathcal{I}_{\delta}\mathcal{L}$. For a fixed realisation of $f$ (and so of $F^{1}$) we thus seek the following conditional distribution:
+\begin{equation}
+    u|\{\tilde{A}_{\delta}u=F^{1},f\}\sim\mathcal{N}(m_{1},V_{1})
+\end{equation}
+That this distribution is itself Gaussian follows from considering the following joint distribution:
+\begin{equation*}
+    \left(\begin{array}{c}u \\ \tilde{A}_{\delta} u\end{array}\right)=\left(\begin{array}{c}I \\ \tilde{A}_{\delta}\end{array}\right) u \sim \mathcal{N}\left(\left(\begin{array}{c}m_{o} \\ \tilde{A}_{\delta}m_{0}\end{array}\right),\left(\begin{array}{cc}V_{0} & V_{0} \tilde{A}_{\delta}^{*} \\ \tilde{A}_{\delta}V_{0} & \tilde{A}_{\delta}V_{0} \tilde{A}_{\delta}^{*}\end{array}\right)\right)
+\end{equation*}
+It follows that the conditional distribution is Gaussian and the mean and covariance are given by:
+\begin{align}
+    m_{1}&=m_{0}+V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}(F^{1}-\tilde{A}_{\delta}m_{0}) \\
+    V_{1}&=V_{0}-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}V_{0}
+\end{align}
+We now rewrite the mean update equation as follows:
+\begin{equation}
+    \label{new_method_update}
+    m_{1}=\left(1-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}\right)m_{0}+V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}F^{1}
+\end{equation}
+Written in this form this update equation can now be more easily compared to the backward-Euler Galerkin method update rule. This method involves the following approximations: $U^{n}\approx u(t_n)$ and $U^{n}(x)=\Phi(x)^{*}\boldsymbol{\alpha}^{n}$. The update rule for the vector of coefficients $\boldsymbol{\alpha}^{n}$ is given by:
+\begin{equation}
+    \boldsymbol{\alpha}^{n}=(M+\delta A)^{-1}M\boldsymbol{\alpha}^{n-1}+\delta(M+\delta A)^{-1}\mathbf{b}^{n}
+\end{equation}
+where $\mathbf{b}^{n}=\mathcal{I}_{t_n}f=F^{n}$. In order to compare this to our mean update rule we now project this into $S_{h}$ by premultiplying by $\Phi^{*}$:
+\begin{equation}
+    \label{classical_method_update}
+    \Phi^{*}\boldsymbol{\alpha}^{n}=\Phi^{*}(M+\delta A)^{-1}M\boldsymbol{\alpha}^{n-1}+\delta\Phi^{*}(M+\delta A)^{-1}\mathbf{b}^{n}
+\end{equation}
+In our mean update rule $m_{0}$ plays the role of $\Phi^{*}\boldsymbol{\alpha}^{0}$ and $m_{1}$ plays the role of $\Phi^{*}\alpha^{1}$. In fact, we have $m_{0}=\Phi^{*}\boldsymbol{\gamma}$ and so we can consider $\boldsymbol{\alpha}^{0}=\boldsymbol{\gamma}$. This is exactly the initial condition for the coefficient vector in the backward-Euler Galerkin method. Comparing (\ref{classical_method_update}) with (\ref{new_method_update}) we thus see that we would like to be able to show:
+\begin{align}
+    \Phi^{*}(M+\delta A)^{-1}M &= \left(1-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}\right)\Phi^{*} \\
+    \delta\Phi^{*}(M+\delta A)^{-1} &= V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}
+\end{align}
+
+
+\end{document}
