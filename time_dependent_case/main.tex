@@ -123,12 +123,12 @@ To make progress we must now start computing various terms needed for our mean a
 \end{equation*}
 We can thus see that we need to be able to compute terms of form $V_{0}\mathcal{L}^{*}I_{i}^{*}(\delta)=V_{0}(I_{i}(\delta)\mathcal{L})^{*}$. Now since the operator $I_{i}(\delta)\mathcal{L}$ takes in a function on $\Omega\times[0,T]$ and outputs a real number its adjoint should take in a real number and output a function on $\Omega\times[0,T]$. This adjoint should satisfy the following relation:
 \begin{equation}
-    \alpha((I_{i}(\delta)\mathcal{L})g)=\int_{\Omega}\int_{0}^{T}((I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,t)g(x,t)\mathrm{d}t\mathrm{d}x \hspace{0.15cm} \forall{g}, \hspace{0.15cm} \forall\alpha\in\mathbb{R}
+    \alpha(I_{i}(\delta)\mathcal{L}g)=\int_{\Omega}\int_{0}^{T}((I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,t)g(x,t)\mathrm{d}t\mathrm{d}x \hspace{0.15cm} \forall{g}, \hspace{0.15cm} \forall\alpha\in\mathbb{R}
 \end{equation}
 Using this we can now compute:
 \begin{align*}
     (V_{0}(I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,s) &= \int_{\Omega}\int_{0}^{T}k_{yw}^{xs}((I_{i}(\delta)\mathcal{L})^{*}\alpha)(y,w)\mathrm{d}w\mathrm{d}y \\
-    &=\alpha (I_{i}(\delta)(\mathcal{L}k^{xs})) \\
+    &=\alpha (I_{i}(\delta)\mathcal{L}k^{xs}) \\
     &=\alpha\int_{\Omega}\phi_{i}(y)(\mathcal{L}k^{xs})(y,\delta)\mathrm{d}y
 \end{align*}
 
@@ -250,7 +250,82 @@ just like in the update equation for the backward-Euler Galerkin method. \vspace
     \end{equation}
 \end{remark}
 
-We can now move on to computing the covariance $V_{1}$.
+We can now move on to computing the covariance $V_{1}$. We start by computing $\tilde{A}_{\delta}V_{0}$. Computing this involves determining how $I_{j}(\delta)\mathcal{L}V_{0}$ acts on functions $g$ for $j=1,\dots,J$. We have:
+\begin{equation*}
+    I_{j}(\delta)\mathcal{L}V_{0}g=\int_{\Omega}\phi_{j}(x)(\mathcal{L}V_{0}g)(x,\delta)\mathrm{d}x
+\end{equation*}
 
+Now recalling that $V_{0}g(x,\delta)=\int_{\Omega}\int_{0}^{T}k_{ys}^{x\delta}g(y,s)\mathrm{d}s\mathrm{d}y$ we deduce:
+\begin{align*}
+    (\mathcal{L}V_{0}g)(x,\delta) &= \int_{\Omega}\int_{0}^{T}(\mathcal{L}k_{ys})(x,\delta)g(y,s)\mathrm{d}s\mathrm{d}y \\
+    &= \int_{\Omega}\int_{0}^{T}\left(\partial_{1}k(\delta,s)\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)-k(\delta,s)\sum_{i=1}^{J}\lambda_{i}\nabla_{x}\cdot(a(x)\nabla_{x}\phi_{i}(x))\phi_{i}(y)\right)g(y,s)\mathrm{d}s\mathrm{d}y
+\end{align*}
 
+We can now perform the integration to obtain:
+\begin{align*}
+    I_{j}(\delta)\mathcal{L}V_{0}g &= \int_{\Omega}\phi_{j}(x)\left(\int_{\Omega}\int_{0}^{T}\left(\partial_{1}k(\delta,s)\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)-k(\delta,s)\sum_{i=1}^{J}\lambda_{i}\nabla_{x}\cdot(a(x)\nabla_{x}\phi_{i}(x))\phi_{i}(y)\right)g(y,s)\mathrm{d}s\mathrm{d}y\right)\mathrm{d}x \\
+    &= \int_{\Omega}\int_{0}^{T}\left(\partial_{1}k(\delta,s)\sum_{i=1}^{J}\lambda_{i}M_{ij}\phi_{i}(y)g(y,s)+k(\delta,s)\sum_{i=1}^{J}\lambda_{i}A_{ij}\phi_{i}(y)g(y,s)\right)\mathrm{d}s\mathrm{d}y \\
+    &= \sum_{i=1}^{J}\lambda_{i}\int_{\Omega}\int_{0}^{T}(\partial_{1}k(\delta,s)M_{ij}+k(\delta,s)A_{ij})\phi_{i}(y)g(y,s)\mathrm{d}s\mathrm{d}y \\
+    &= \sum_{i=1}^{J}\lambda_{i}\left[\int_{0}^{T}M_{ij}\partial_{1}k(\delta,s)(I_{i}(s)g)\mathrm{d}s+\int_{0}^{T}A_{ij}k(\delta,s)(I_{i}(s)g)\mathrm{d}s\right] \\
+    &= \sum_{i=1}^{J}\lambda_{i}\left[M_{ij}\left(\int_{0}^{T}\partial_{1}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right)_{i}+A_{ij}\left(\int_{0}^{T}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right)_{i}\right] \\
+    &= \left(M\Lambda\int_{0}^{T}\partial_{1}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s+A\Lambda\int_{0}^{T}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right)_{j}
+\end{align*}
+
+Thus we can deduce:
+\begin{equation}
+    \tilde{A}_{\delta}V_{0}g=M\Lambda\int_{0}^{T}\partial_{1}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s
+\end{equation}
+
+Having worked this out we can now compute the second term in the formula for $V_{1}$ by utilising (\ref{vector_formula}) as follows:
+\begin{align*}
+    (V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{o}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}V_{0}g)(x,t) &= \partial_{2}k(t,\delta)\Phi(x)^{*}\Lambda M (Q\Lambda Q)^{-1}\left[M\Lambda\int_{0}^{T}\partial_{1}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right] \\
+    &+ k(t,\delta)\Phi(x)^{*}\Lambda A (Q\Lambda Q)^{-1} \left[M\Lambda\int_{0}^{T}\partial_{1}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right]
+\end{align*}
+
+To proceed we now utilise the specific choice of $k(s,t)$ to work out:
+\begin{align*}
+    \int_{0}^{T}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s &= \delta\int_{0}^{T}s(\mathcal{I}_{s}g)\mathrm{d}s = \delta\boldsymbol{\nu}_{g} \\
+    \int_{0}^{T}\partial_{1}k(\delta,s)(\mathcal{I}_{s}g) &= \int_{0}^{T}s(\mathcal{I}_{s}g)\mathrm{d}s=\boldsymbol{\nu}_{g}
+\end{align*}
+where $\boldsymbol{\nu}g:=\int_{0}^{T}s(\mathcal{I}_{s}g)\mathrm{d}s$.
+Thus we have:
+\begin{align*}
+    M\Lambda\int_{0}^{T}\partial_{1}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s
+    &= M\Lambda\boldsymbol{\nu}_{g}+\delta A\Lambda\boldsymbol{\nu}_{g} \\
+    &=(M+\delta A)\Lambda\boldsymbol{\nu}_{g} \\
+    &=Q\Lambda\boldsymbol{\nu}_{g}
+\end{align*}
+
+We can now finish the computation of the second term of $V_{1}$:
+\begin{align*}
+    (V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{o}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}V_{0}g)(x,t) &= t\Phi(x)^{*}\Lambda M(Q\Lambda Q)^{-1}Q\Lambda\boldsymbol{\nu}_{g} + t\delta\Phi(x)^{*}\Lambda A(Q\Lambda Q)^{-1}Q\Lambda\boldsymbol{\nu}_{g} \\
+    &= t\Phi(x)^{*}\Lambda(M+\delta A)(Q\Lambda Q)^{-1}Q\Lambda\boldsymbol{\nu}_{g} \\
+    &= t\Phi(x)^{*}\Lambda QQ^{-1}\Lambda^{-1}Q^{-1}Q\Lambda\boldsymbol{\nu}_{g} \\
+    &= t\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g} \\
+    &= \sum_{i=1}^{J}t\lambda_{i}\phi_{i}(x)(\boldsymbol{\nu}_{g})_{i} \\
+    &= \sum_{i=1}^{J}\lambda_{i}t\phi_{i}(x)\int_{0}^{T}s(I_{i}(s)g)\mathrm{d}s \\
+    &= \int_{\Omega}\int_{0}^{T}\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)tsg(y,s)\mathrm{d}s\mathrm{d}y \\
+    &= \int_{\Omega}\int_{0}^{T}\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)k(t,s)g(y,s)\mathrm{d}s\mathrm{d}y = (V_{0}g)(x,t)
+\end{align*}
+Thus, we can conclude: $V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{o}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}V_{0}=V_{0}$ and so:
+\begin{equation}
+    V_{1}=V_{0}-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{o}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}V_{0} = 0
+\end{equation}
+
+Thus, for a fixed realisation of $f$ we have:
+\begin{equation}
+    \label{posterior_1}
+    u|\{\tilde{A}_{\delta}u=F^{1},f\}\sim\mathcal{N}(m_{1},V_{1})
+\end{equation}
+where the function $m_{1}$ is given by:
+\begin{equation}
+    m_{1}(x,s)=\Phi(x)^{*}[(M+\delta A)^{-1}(M+(\delta-s)A)\boldsymbol{\gamma}+s (M+\delta A)^{-1}F^{1}]
+\end{equation}
+and where:
+\begin{equation*}
+    V_{1}=0
+\end{equation*}
+
+Thus if we evaluate the posterior (\ref{posterior_1}) at the time $t_{1}=\delta$ we will obtain a point mass at the spatial function
+$m_{1}(x,\delta)=\Phi(x)^{*}[(M+\delta A)^{-1}M\boldsymbol{\gamma}+\delta (M+\delta A)^{-1}F^{1}]$ just like the backward-Euler Galerkin method yields.
 \end{document}

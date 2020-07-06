@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  3 JUL 2020 20:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.12.7)  6 JUL 2020 12:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -726,29 +726,39 @@ Overfull \hbox (12.93971pt too wide) detected at line 144
  []
 
 [2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
+Overfull \hbox (18.00587pt too wide) detected at line 272
+[]
+ []
+
+[4]
+Overfull \hbox (7.71707pt too wide) detected at line 283
+[]
+ []
+
+[5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
  (/home/johnandrew/Documents/Imperial/PhD/Bayesian_Formulation_PDE_Based_Models/time_dependent_case/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 256.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
  ) 
 Here is how much of TeX's memory you used:
- 8233 strings out of 492982
- 115055 string characters out of 6134896
- 233938 words of memory out of 5000000
- 11645 multiletter control sequences out of 15000+600000
+ 8240 strings out of 492982
+ 115132 string characters out of 6134896
+ 234966 words of memory out of 5000000
+ 11646 multiletter control sequences out of 15000+600000
  9296 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,15n,43p,523b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/johnandrew/Documents/Imperial/PhD/Bayesian_Formulation_PDE_Based_Models/time_dependent_case/main.pdf (4 pages, 143079 bytes).
+Output written on /home/johnandrew/Documents/Imperial/PhD/Bayesian_Formulation_PDE_Based_Models/time_dependent_case/main.pdf (6 pages, 150406 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 26 named destinations out of 1000 (max. 500000)
+ 124 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
