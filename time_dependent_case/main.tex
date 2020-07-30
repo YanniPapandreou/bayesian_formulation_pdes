@@ -328,4 +328,122 @@ and where:
 
 Thus if we evaluate the posterior (\ref{posterior_1}) at the time $t_{1}=\delta$ we will obtain a point mass at the spatial function
 $m_{1}(x,\delta)=\Phi(x)^{*}[(M+\delta A)^{-1}M\boldsymbol{\gamma}+\delta (M+\delta A)^{-1}F^{1}]$ just like the backward-Euler Galerkin method yields.
+
+We now have the following distribution (for a fixed realisation of $f$):
+\begin{equation}
+    \label{dist_time_1_fixed_f}
+    u|\{\tilde{A}_{\delta}u=F^{1},f\}\sim\mathcal{N}(m_1,0)=\delta_{m_{1}}
+\end{equation}
+
+We will now marginalise (\ref{dist_time_1_fixed_f}) over $f$ in order to obtain the averaged conditional distribution. To do this we will need the following Lemma (which we prove below): \vspace{10pt}
+\begin{lemma}
+    Let $f\sim\mathcal{N}(\bar{f},K)$ where we assume that this Gaussian measure is on a Hilbert space of functions $\mathcal{H}_{1}\subset\mathbb{R}^{\mathcal{X}}$. Suppose that for a fixed realisation of $f$ we have
+    \begin{equation*}
+        y|f\sim\mathcal{N}(Lf+c,0)=\delta_{Lf}
+    \end{equation*}
+    where $L$ is a bounded linear operator from $\mathcal{H}_{1}$ to another Hilbert space $\mathcal{H}_{2}\subset\mathbb{R}^{\mathcal{X}}$ (so $y$ lies in $\mathcal{H}_{2}$) and where $c$ is a deterministic function. Then marginalizing over $f$ yields:
+    \begin{equation*}
+        y\sim\mathcal{N}(L\bar{f}+c,LKL^{*})
+    \end{equation*}
+    as the averaged distribution of $y$.
+\end{lemma}
+% \noindent \textit{Proof:} To determine this marginal distribution we must compute the expectation of an arbitrary bounded cylindrical function, i.e. we must compute:
+% \begin{equation*}
+%     \int\int\psi(y^{N})\delta_{\mathcal{L}f}(\mathrm{d}y)\mu_{\bar{f},K}(\mathrm{d}f)
+% \end{equation*}
+% where $y^{N}=Py$ and $P:\mathcal{H}_{2}\rightarrow\mathbb{R}^{N}$ is the bounded linear operator given by $Ph:=(h(x_1),\dots,h(x_N))^{T}$ where the $x_{i}\in\mathcal{X}$ for $i=1,\dots,N$. Note that $u^{N}|\{f\}\sim\delta_{P\mathcal{L}f}$. We also have that $Y:=P\mathcal{L}f\sim\mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})$. Using these facts we can write:
+% \begin{align*}
+%     \int\int\psi(y^{N})\delta_{\mathcal{L}f}(\mathrm{d}y)\mu_{\bar{f},K}(\mathrm{d}f) &= \int\int\psi(y^N)\delta_{P\mathcal{L}f}(dy^{N})\mu_{\bar{f},K}(\mathrm{d}f) \\
+%     &= \int\int\psi(y^{N})\delta_{Y}(dy^N)\mu_{\bar{f},K}(\mathrm{d}f) \\
+%     &=\int\int\psi(y^{N})\delta_{Y}(dy^N)\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}Y) \\
+%     &=\int\psi(y^{N})\left(\int\delta_{Y}(dy^N)\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}Y)\right) \\
+%     &=\int\psi(y^{N})\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}y^{N})
+% \end{align*}
+% We thus obtain the expectation of $\psi(y^N)$ with respect to the multivariate Gaussian distribution:
+% \begin{equation*}
+%     \mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})
+% \end{equation*}
+% We thus have:
+% \begin{equation*}
+%     y^{N}=Py\sim\mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})
+% \end{equation*}
+% From this we can conclude that $y$ is distributed as $\mathcal{N}(\mathcal{L}\bar{f},\mathcal{L}K\mathcal{L}^{*})$. Indeed, we have that $\mathcal{L}\bar{f}\in\mathcal{H}_{2}$ is in the right space and also $\mathcal{L}K\mathcal{L}^{*}$ is a trace-class operator from $\mathcal{H}_{2}\rightarrow\mathcal{H}_{2}$ (since $\mathcal{L}$ and its adjoint are both bounded linear operators and $K$ is trace-class). We thus have that $\mathcal{N}(\mathcal{L}\bar{f},\mathcal{L}K\mathcal{L}^{*})$ is a valid Gaussian distribution. To show that we indeed have this as the distribution of $y$ we can proceed by contradiction: suppose that $y\sim\mathcal{N}(m,V)$.
+\noindent\textit{Proof:} The fact that $y|f\sim\mathcal{N}(Lf+c,0)$ is equivalent to saying that:
+\begin{equation*}
+    y=Lf+c+\tilde{y}
+\end{equation*}
+where $\tilde{y}\sim\mathcal{N}(0,0)(=\delta_{0})$ is independent of $f$. Thus we have:
+\begin{equation*}
+    \begin{pmatrix}
+        f \\
+        \tilde{y}
+    \end{pmatrix}=\mathcal{N}\left(\begin{pmatrix}
+                                \bar{f} \\
+                                0
+                            \end{pmatrix},\begin{pmatrix}
+                                            K & 0 \\
+                                            0 & 0
+                                          \end{pmatrix}\right)
+\end{equation*}
+Since we can write:
+\begin{equation*}
+    y=\begin{pmatrix}
+        L & 1
+    \end{pmatrix}\begin{pmatrix}
+                    f \\
+                    \tilde{y}
+                 \end{pmatrix}+c
+\end{equation*}
+we deduce:
+\begin{equation*}
+    y\sim\mathcal{N}\left(L\bar{f}+c, \begin{pmatrix}
+        L & 1
+    \end{pmatrix}\begin{pmatrix}
+                    K & 0 \\
+                    0 & 0
+                \end{pmatrix}\begin{pmatrix}
+                    L^{*} \\
+                    1
+                \end{pmatrix}\right)=\mathcal{N}(L\bar{f}+c,LKL^{*})
+\end{equation*}
+as required. \qedsymbol
+
+We can now perform the marginalisation over $f$ in (\ref{dist_time_1_fixed_f}). We first rewrite $m_1$ as follows:
+\begin{align*}
+    m_{1}(x,s) &= \Phi(x)^{*}[Q^{-1}(M+(\delta-s)A)\boldsymbol{\gamma}+sQ^{-1}F^{1}] \\
+    &= \Phi(x)^{*}Q^{-1}(M+(\delta-s)A)\boldsymbol{\gamma}+s\Phi(x)^{*}Q^{-1}F^{1} \\
+    &=c(x,s) + s\Phi(x)^{*}Q^{-1}\mathcal{I}_{\delta}f
+\end{align*}
+where $c(x,s):=\Phi(x)^{*}Q^{-1}(M+(\delta-s)A)\boldsymbol{\gamma}$ Thus, we have:
+\begin{equation*}
+    m_1=\Psi^{*}Q^{-1}\mathcal{I}_{\delta}f+c=Lf+c
+\end{equation*}
+where $\Psi^{*}:\mathbb{R}^{J}\rightarrow L^{2}(\Omega\times[0,T])$ is the linear operator given by $(\Psi^{*}\boldsymbol{v})(x,s):=s\Phi(x)^{*}\boldsymbol{v}$ and $L:=\Psi^{*}Q^{-1}\mathcal{I}_{\delta}$. Now both $\mathcal{I}_{\delta}$ and $Q^{-1}$ are bounded linear operators. $L$ will thus be a bounded linear operator provided $\Psi^{*}$ is bounded. We check this:
+\begin{align*}
+    \|\Psi^{*}\boldsymbol{v}\|^{2} &= \int_{\Omega}\int_{0}^{T}|(\Psi^{*}\boldsymbol{v})(y,s)|^{2}\mathrm{d}s\mathrm{d}y \\
+    &=\int_{\Omega}\int_{0}^{T}s^{2}|\Phi(y)^{*}\boldsymbol{v}|^{2}\mathrm{d}s\mathrm{d}y \\
+    &\leq T^{2}\int_{\Omega}\left|\sum_{i=1}^{J}\phi_{i}(y)v_{i}\right|^{2}\mathrm{d}y \\
+    &\leq T^{2}\int_{\Omega}\sum_{i=1}^{J}|\phi_{i}(y)|^{2}\sum_{j=1}^{J}|v_{j}|^{2}\mathrm{d}y \\
+    &= T^{2}\|\boldsymbol{v}\|^{2}\sum_{i=1}^{J}\|\phi_{i}\|^{2}
+\end{align*}
+and so $\|\Psi^{*}\boldsymbol{v}\|\leq T\left(\sum_{i=1}^{J}\|\phi_{i}\|^{2}\right)^{1/2}\|\boldsymbol{v}\|$. This implies: $\|\Psi^{*}\|_{\infty}\leq T\left(\sum_{i=1}^{J}\|\phi_{i}\|^{2}\right)<\infty$ and so $\Psi^{*}$ is a bounded linear operator. We can thus use the Lemma given above to conclude that the marginalised distribution is:
+\begin{equation*}
+    \int u|\{\tilde{A}_{\delta}u=F^{1},f\}\mathrm{d}f\sim\mathcal{N}(L\bar{f}+c,LKL^{*})=\mathcal{N}(\bar{m}_{1},\bar{V}_{1})
+\end{equation*}
+where we have denoted $\bar{m}_1:=L\bar{f}+c$ and $\bar{V}_{1}:=LKL^{*}$. The mean is thus the following function:
+\begin{equation*}
+    \bar{m}_{1}(x,s)=\Phi(x)^{*}[Q^{-1}(M+(\delta-s)A)\boldsymbol{\gamma}+sQ^{-1}\bar{F}^{1}]
+\end{equation*}
+where $\bar{F}^{1}:=\mathcal{I}_{\delta}\bar{f}$. The covariance operator is given by:
+\begin{align*}
+        \bar{V}_{1} &= \Psi^{*}Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}\Psi \\
+        &= \Psi^{*}H^{(1)}\Psi
+\end{align*}
+where $H^{(1)}:=Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}$ and $\Psi$ is the adjoint of $\Psi^{*}$ and which takes a function $g$ and gives the following vector: $\Psi g=\int_{0}^{T}s(\mathcal{I}_{s}g)\mathrm{d}s$. Thus, $\bar{V}_{1}$ acts on functions via:
+\begin{equation*}
+    (\bar{V}_{1}g)(x,t)=\int_{\Omega}\int_{0}^{T}\left(ts\sum_{i=1}^{J}\sum_{j=1}^{J}H^{(1)}_{ij}\phi_{i}(x)\phi_{j}(y)\right)g(y,s)\mathrm{d}s\mathrm{d}y
+\end{equation*}
+
+My idea was to continue with this distribution $\mathcal{N}(\bar{m}_1,\bar{V}_1)$ as the new prior and to condition on $A_{2\delta}u=F^{2}$ where $F^2:=\mathcal{I}_{2\delta}f$. This doesn't produce the Backward Euler-Galerkin since the mean function $\bar{m}_1$ is no longer constant in time and also applying $\mathcal{I}_{2\delta}$ will make a matrix $(M+2\delta A)$ appear in the update equation instead of $Q=(M+\delta A)$.
+
 \end{document}
