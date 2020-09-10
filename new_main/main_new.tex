@@ -314,6 +314,7 @@ to further deduce:
 \end{align*}
 where:
 \begin{equation}
+    \label{bold_nu}
     \boldsymbol{\nu}_{g}^{(i)}:=\int_{t_{i}}^{t_{i+1}}(s-t_{i})(\mathcal{I}_{s}g)\mathrm{d}s \text{  for } i=0,\dots,N-1
 \end{equation}
 
@@ -429,7 +430,7 @@ So $\tilde{A}_{2\delta}m_1=A\boldsymbol{\gamma}$. These results enable us to wor
   m_2(x,t_2)=m_2(x,2\delta) &= \Phi(x)^{*}\boldsymbol{\gamma} + (2\delta-\delta)\Phi(x)^{*}\boldsymbol{c}^{(2)} \\
   &= \Phi(x)^{*}\boldsymbol{\gamma} + \delta\Phi(x)^{*}Q^{-1}\left[F^{(2)}-A\boldsymbol{\gamma}\right] \\
   &= \Phi(x)^{*}Q^{-1}\left[Q\gamma+\delta F^{(2)}-\delta A\boldsymbol{\gamma}\right] \\
-  &= \Phi(x)^{*}Q^{-1}\left[(Q-\delta A)\boldsymbol{\gamma}+\delta F^{(2)}] \\
+  &= \Phi(x)^{*}Q^{-1}\left[(Q-\delta A)\boldsymbol{\gamma}+\delta F^{(2)}\right] \\
   &= \Phi(x)^{*}Q^{-1}\left[M\boldsymbol{\gamma}+\delta F^{(2)}\right]
 \end{align*}
 
@@ -476,7 +477,7 @@ where $F^{(p)}:=\mathcal{I}_{t_p}f=\mathcal{I}_{p\delta}f$ and where the mean an
     k^{(p)}(t,s) &:= \sum_{i=p}^{N-1}(t-t_i)(s-t_i)\mathbb{1}_{(t_i,t_{i+1}]^2}(t,s)
 \end{align}
 
-This can probably be shown by induction. The above implies that conditioning at all $N$ time points will yield the following degenerate Gaussian distribution:
+\noindent This can probably be shown by induction. The above implies that conditioning at all $N$ time points will yield the following degenerate Gaussian distribution:
 \begin{equation}
     u|\{\tilde{A}_{t_1}u=F^{(1)},\dots,\tilde{A}_{t_N}u=F^{(N)},f\}\sim\mathcal{N}(m_N,0)=\delta_{m_N}
 \end{equation}
@@ -485,19 +486,28 @@ since $V_N=0$. This is a Dirac point mass located at the function:
     m_N(x,t)=\Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}\boldsymbol{c}^{(i)}
 \end{equation}
 
-
-
-
-
-
-
-
-
-
-
-
-
-\clearpage
+\noindent We now want to perform the marginalisation over the RHS noise term $f$. In order to do this it will help to rewrite $m_{N}$ as follows:
+\begin{align*}
+    m_N(x,t) &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}Q^{-1}\left[F^{(i)}-A\boldsymbol{\gamma}\right] \\
+    &= \Phi(x)^{*}\boldsymbol{\gamma}-\sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma} + \sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_i}f \\
+    &= \Phi(x)^{*}Q^{-1}\left[Q-\sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)A\right]\boldsymbol{\gamma}+\left[\sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{i}\right]f \\
+    &= c(x,t) + (Lf)(x,t)
+\end{align*}
+i.e. $m_{N} = Lf + c$ where:
+\begin{align}
+    c(x,t) &:= \Phi(x)^{*}Q^{-1}\left[Q-\sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)A\right]\boldsymbol{\gamma} \\
+    L &:= \sum_{i=1}^{N}L_{(i)} \\
+    L_{(i)} &:= \Psi_{(i)}^{*}Q^{-1}\mathcal{I}_{t_i}
+\end{align}
+where the $\{\Psi_{(i)}^{*}\}_{i=1}^{N}$ are operators from $\mathbb{R}^{J}\rightarrow L^{2}(\Omega\times[0,T])$ given by:
+\begin{equation}
+    (\Psi_{(i)}^{*}\boldsymbol{v})(x,t) := (t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}\boldsymbol{v}
+\end{equation}
+It is easy to show that the adjoint of $\Psi_{(i)}^{*}$ is $\Psi_{(i)}$ which is defined as:
+\begin{equation}
+    \Psi_{(i)}g := \boldsymbol{\nu}_{g}^{(i-1)}
+\end{equation}
+\textit{Note: see equation }(\ref{bold_nu}) \textit{for the definition of }$\boldsymbol{\nu}_{g}^{(i)}$.
 
 \noindent We will now marginalise over $f$ in order to obtain the averaged conditional distribution. To do this we will need the following Lemma (which we prove below): \vspace{10pt}
 \begin{lemma}
@@ -572,37 +582,34 @@ we deduce:
 \end{equation*}
 as required. \qedsymbol
 
-\noindent We can now perform the marginalisation over $f$ noting that $V_1$ does not depend on $f$ to obtain:
+\noindent We can now perform the marginalisation over $f$ noting that $V_N=0$ does not depend on $f$ to obtain:
 \begin{equation}
-    \int u|\{\tilde{A}_{\delta}u=F^{(1)},f\}\mathrm{d}f\sim\mathcal{N}(L\bar{f}+c,LKL^{*}+V_{1})=:\mathcal{N}(\bar{m}_{1},\bar{V}_{1})
+    \int u|\{\tilde{A}_{t_1}u=F^{(1)},\dots,\tilde{A}_{t_N}u=F^{(N)},f\}\mathrm{d}f\sim\mathcal{N}(L\bar{f}+c,LKL^{*})
 \end{equation}
-We now compute $\bar{m}_1$ and $\bar{V}_1$. It is easy to see that $\bar{m}_{1}$ is the same as $m_1$ except $F^1$ is replaced by $\bar{F}^1:=\mathcal{I}_{\delta}\bar{f}$. For the covariance we must figure out how $L^{*}$ acts. This will require the adjoint $\Psi$ of $\Psi^{*}$ which can be shown to be given by $\Psi g=\boldsymbol{\nu}_{g}^{(0)}$. We thus can compute:
-\begin{equation}
-    LKL^{*} = \Psi^{*}Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}\Psi = \Psi^{*}H^{(1)}\Psi
-\end{equation}
-where $H^{(1)}:=Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}$ can be shown to be positive definite. We can now compute how $LKL^{*}$ acts on a function $g$ as follows:
-\begin{align*}
-    (LKL^{*}g)(x,t) &= (\Psi^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)})(x,t) \\ &=t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)}
-\end{align*}
-
-\noindent Thus, $\bar{V}_{1}$ acts on functions as:
-\begin{align*}
-    (\bar{V}_{1}g)(x,t) &= t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)} +\sum_{i=1}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(i)} \\
-    &=\sum_{i=0}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}H^{(1,i)}\boldsymbol{\nu}_{g}^{(i)}
-\end{align*}
-where:
-\begin{equation*}
-    H^{(1,i)}:=\left\{
-\begin{array}{ll}
-      H^{(1)} & i=0 \\
-      \Lambda & i=1,\dots,N-1
-\end{array}
-\right.
-\end{equation*}
-
-\noindent We can now repeat this computation to move from time $t_1=\delta$ to $t_2=2\delta$ by conditioning $\mathcal{N}(\bar{m}_1,\bar{V}_1)$ on $\tilde{A}_{2\delta}u=F^2=:\mathcal{I}_{2\delta}f$.
-
-
-
+% We now compute $\bar{m}_1$ and $\bar{V}_1$. It is easy to see that $\bar{m}_{1}$ is the same as $m_1$ except $F^1$ is replaced by $\bar{F}^1:=\mathcal{I}_{\delta}\bar{f}$. For the covariance we must figure out how $L^{*}$ acts. This will require the adjoint $\Psi$ of $\Psi^{*}$ which can be shown to be given by $\Psi g=\boldsymbol{\nu}_{g}^{(0)}$. We thus can compute:
+% \begin{equation}
+%     LKL^{*} = \Psi^{*}Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}\Psi = \Psi^{*}H^{(1)}\Psi
+% \end{equation}
+% where $H^{(1)}:=Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}$ can be shown to be positive definite. We can now compute how $LKL^{*}$ acts on a function $g$ as follows:
+% \begin{align*}
+%     (LKL^{*}g)(x,t) &= (\Psi^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)})(x,t) \\ &=t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)}
+% \end{align*}
+%
+% \noindent Thus, $\bar{V}_{1}$ acts on functions as:
+% \begin{align*}
+%     (\bar{V}_{1}g)(x,t) &= t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)} +\sum_{i=1}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(i)} \\
+%     &=\sum_{i=0}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}H^{(1,i)}\boldsymbol{\nu}_{g}^{(i)}
+% \end{align*}
+% where:
+% \begin{equation*}
+%     H^{(1,i)}:=\left\{
+% \begin{array}{ll}
+%       H^{(1)} & i=0 \\
+%       \Lambda & i=1,\dots,N-1
+% \end{array}
+% \right.
+% \end{equation*}
+%
+% \noindent We can now repeat this computation to move from time $t_1=\delta$ to $t_2=2\delta$ by conditioning $\mathcal{N}(\bar{m}_1,\bar{V}_1)$ on $\tilde{A}_{2\delta}u=F^2=:\mathcal{I}_{2\delta}f$.
 
 \end{document}

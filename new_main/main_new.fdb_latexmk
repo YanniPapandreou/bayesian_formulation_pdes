@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1599733527 "main_new.tex" "main_new.pdf" "main_new" 1599733528
+["pdflatex"] 1599743623 "main_new.tex" "main_new.pdf" "main_new" 1599743623
   "/etc/texmf/web2c/texmf.cnf" 1597790336 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -114,11 +114,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1597790392 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1597790449 8259909 563806bcec1c052a5a38868a2174ac7d ""
-  "main_new.aux" 1599733527 1123 fd657aceb852a27325af6e1c291d1b4c "pdflatex"
-  "main_new.out" 1599733527 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main_new.tex" 1599733526 38297 f644a5f1f0b6e5f0de0c7576c78df87a ""
+  "main_new.aux" 1599743623 1170 4bee04e66446144f6b70451bdb23a03e "pdflatex"
+  "main_new.out" 1599743623 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main_new.tex" 1599743622 39958 ae7fbe89375a4a390e82b7e3db6ea432 ""
   (generated)
-  "main_new.log"
-  "main_new.aux"
-  "main_new.out"
   "main_new.pdf"
+  "main_new.aux"
+  "main_new.log"
+  "main_new.out"
