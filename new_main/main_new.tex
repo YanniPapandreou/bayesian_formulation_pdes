@@ -1,0 +1,608 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{ bbold }
+\usepackage{dsfont}
+\usepackage{centernot}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage{parskip}
+
+% for theorems/lemmas/defs/etc
+%-------------------------------
+\usepackage[english]{babel}
+\usepackage[sort&compress,square,numbers]{natbib}
+\bibliographystyle{unsrtnat}
+
+\usepackage[dvipsnames]{xcolor}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{corollary1}{Corollary}[definition]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{\textbf{Remark}}  % if don't want bold face for remark remove textbf
+
+\theoremstyle{remark}
+\newtheorem*{remarks}{\textbf{Remarks}}
+
+%-------------------------------
+
+\DeclareMathOperator{\E}{\mathds{E}}
+\DeclareMathOperator{\Var}{\mathrm{Var}}
+\DeclareMathOperator{\prob}{\mathbb{P}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{June 2020}
+% \lhead{CID: 00955392}
+\cfoot{\thepage}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=false}
+
+\begin{document}
+\setlength\parskip{10pt}
+\setlength\parindent{20pt}
+
+\noindent We now focus on the following time-dependent PDE:
+\begin{align}
+        \mathcal{L}u(x,t) := \partial_{t}u(x,t) -\nabla\cdot(a(x)\nabla u(x,t))&=f(x,t), \hspace{0.3cm} x\in\Omega, \hspace{0.15cm} t\in[0,T] \\
+        u(x,t) &= 0, \hspace{1.15cm} x\in\partial\Omega, \hspace{0.15cm} t\in[0,T] \\
+        u(x,0) &= u_{0}(x), \hspace{0.5cm} x\in\Omega
+\end{align}
+
+\noindent We will set up a prior on the solution $u$ to the above problem. To do so we first let $v_{h}\in S_{h}$ be some approximation of the initial condition $u_{0}(x)$ in the FEM space $S_{h}$. To be more specific we will assume that $v_{h}(x)=\Phi(x)^{*}\boldsymbol{\gamma}:=\sum_{i=1}^{J}\phi_{i}(x)\gamma_{i}$. Note that $\Phi(x):=(\phi_{1}(x),\dots,\phi_{J}(x))^{T}$. We take the prior on $u$ to be:
+\begin{equation}
+    u\sim\mathcal{N}(m_{0},V_{0})
+\end{equation}
+where $m_{0}(x,t):=v_{h}(x)=\Phi^{*}(x)\boldsymbol{\gamma}$ ($m_{0}$ is constant in time). The prior covariance operator $V_{0}$ is defined as:
+\begin{equation}
+    (V_{0}g)(x,t)=\int_{\Omega}\int_{0}^{T}k_{x,t,y,s}^{(0)}g(y,s)\mathrm{d}s\mathrm{d}y
+\end{equation}
+where $k_{x,t,y,s}^{(0)}$ is defined as follows:
+\begin{equation}
+    k_{x,t,y,s}^{(0)}:=\sum_{i=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)k^{(0)}(t,s)
+\end{equation}
+
+\noindent We now introduce a uniform time grid:
+\begin{equation*}
+    t_{n}=n\delta, \hspace{0.2cm} n=0,1,\dots,N
+\end{equation*}
+where $\delta$ is the spacing between consecutive times and $N=\frac{T}{\delta}$ (\textit{assume that} $N$ \textit{is an integer}). The time kernel $k^{(0)}(t,s)$ will be taken to be:
+\begin{equation}
+    k^{(0)}(t,s):=\sum_{i=0}^{N-1}(t-t_{i})(s-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s)
+\end{equation}
+
+\noindent We now introduce the following operators $\mathcal{I}_{s}:=(I_{1}(s),\dots,I_{J}(s))^{T}$ where:
+\begin{equation}
+    I_{i}(s)g:=\int_{\Omega}\phi_{i}(x)g(x,s)\mathrm{d}x
+\end{equation}
+
+\noindent To move from $t=t_{0}=0$ to $t=t_{1}=\delta$ we condition on observing $\mathcal{I}_{\delta}\mathcal{L}u=\mathcal{I}_{\delta}f=:F^{(1)}$. Let $\tilde{A}_{\delta}:=\mathcal{I}_{\delta}\mathcal{L}$. For a fixed realisation of $f$ (and so of $F^{(1)}$) we thus seek the following conditional distribution:
+\begin{equation}
+    u|\{\tilde{A}_{\delta}u=F^{(1)},f\}\sim\mathcal{N}(m_{1},V_{1})
+\end{equation}
+That this distribution is itself Gaussian follows from considering the following joint distribution:
+\begin{equation*}
+    \left(\begin{array}{c}u \\ \tilde{A}_{\delta} u\end{array}\right)=\left(\begin{array}{c}I \\ \tilde{A}_{\delta}\end{array}\right) u \sim \mathcal{N}\left(\left(\begin{array}{c}m_{o} \\ \tilde{A}_{\delta}m_{0}\end{array}\right),\left(\begin{array}{cc}V_{0} & V_{0} \tilde{A}_{\delta}^{*} \\ \tilde{A}_{\delta}V_{0} & \tilde{A}_{\delta}V_{0} \tilde{A}_{\delta}^{*}\end{array}\right)\right)
+\end{equation*}
+It follows that the conditional distribution is Gaussian and the mean and covariance are given by:
+\begin{align}
+    m_{1}&=m_{0}+V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}(F^{(1)}-\tilde{A}_{\delta}m_{0}) \\
+    V_{1}&=V_{0}-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}V_{0}
+\end{align}
+We now rewrite the mean update equation as follows:
+\begin{equation}
+    \label{new_method_update}
+    m_{1}=\left(1-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}\right)m_{0}+V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}F^{(1)}
+\end{equation}
+% Written in this form this update equation can now be more easily compared to the backward-Euler Galerkin method update rule. This method involves the following approximations: $U^{n}\approx u(t_n)$ and $U^{n}(x)=\Phi(x)^{*}\boldsymbol{\alpha}^{n}$. The update rule for the vector of coefficients $\boldsymbol{\alpha}^{n}$ is given by:
+% \begin{equation}
+%     \boldsymbol{\alpha}^{n}=(M+\delta A)^{-1}M\boldsymbol{\alpha}^{n-1}+\delta(M+\delta A)^{-1}\mathbf{b}^{n}
+% \end{equation}
+% where $\mathbf{b}^{n}=\mathcal{I}_{t_n}f=F^{n}$. In order to compare this to our mean update rule we now project this into $S_{h}$ by premultiplying by $\Phi^{*}$:
+% \begin{equation}
+%     \label{classical_method_update}
+%     \Phi^{*}\boldsymbol{\alpha}^{n}=\Phi^{*}(M+\delta A)^{-1}M\boldsymbol{\alpha}^{n-1}+\delta\Phi^{*}(M+\delta A)^{-1}\mathbf{b}^{n}
+% \end{equation}
+% In our mean update rule $m_{0}$ plays the role of $\Phi^{*}\boldsymbol{\alpha}^{0}$ and $m_{1}$ plays the role of $\Phi^{*}\alpha^{1}$. In fact, we have $m_{0}=\Phi^{*}\boldsymbol{\gamma}$ and so we can consider $\boldsymbol{\alpha}^{0}=\boldsymbol{\gamma}$. This is exactly the initial condition for the coefficient vector in the backward-Euler Galerkin method. Comparing (\ref{classical_method_update}) with (\ref{new_method_update}) we thus see that we would like to be able to show:
+% \begin{align}
+%     \Phi^{*}(M+\delta A)^{-1}M &= \left(1-V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}\right)\Phi^{*} \\
+%     \delta\Phi^{*}(M+\delta A)^{-1} &= V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}
+% \end{align}
+
+\noindent To make progress we must now start computing various terms needed for our mean and covariance update rules. We start with $V_{0}\tilde{A}_{\delta}^{*}$. We have:
+\begin{equation*}
+    V_{0}\tilde{A}_{\delta}^{*}=V_{0}\mathcal{L}^{*}(I_{1}(\delta)^{*},\dots,I_{J}(\delta)^{*})
+\end{equation*}
+We can thus see that we need to be able to compute terms of the form $V_{0}\mathcal{L}^{*}I_{i}(\delta)^{*}=V_{0}(I_{i}(\delta)\mathcal{L})^{*}$. Now since the operator $I_{i}(\delta)\mathcal{L}$ takes in a function on $\Omega\times[0,T]$ and outputs a real number its adjoint should take in a real number and output a function on $\Omega\times[0,T]$. This adjoint should satisfy the following relation:
+\begin{equation}
+    \alpha(I_{i}(\delta)\mathcal{L}g)=\int_{\Omega}\int_{0}^{T}((I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,t)g(x,t)\mathrm{d}t\mathrm{d}x \hspace{0.15cm} \forall{g}, \hspace{0.15cm} \forall\alpha\in\mathbb{R}
+\end{equation}
+Using this we can now compute:
+\begin{align*}
+    (V_{0}(I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,s) &= \int_{\Omega}\int_{0}^{T}k_{x,s,y,w}^{(0)}((I_{i}(\delta)\mathcal{L})^{*}\alpha)(y,w)\mathrm{d}w\mathrm{d}y \\
+    &=\alpha (I_{i}(\delta)\mathcal{L}k_{x,s,\boldsymbol{\cdot},\boldsymbol{\cdot}}^{(0)}) \\
+    &=\alpha\int_{\Omega}\phi_{i}(y)(\mathcal{L}k_{x,s,\boldsymbol{\cdot},\boldsymbol{\cdot}}^{(0)})(y,\delta)\mathrm{d}y
+\end{align*}
+
+\noindent We now work out $(\mathcal{L}k_{x,s,\boldsymbol{\cdot},\boldsymbol{\cdot}}^{(0)})(y,\delta)$ taking care to remember that $x,s$ are fixed and so $\mathcal{L}$ acts on the variables $y,\delta$:
+\begin{align*}
+    (\mathcal{L}k_{x,s,\boldsymbol{\cdot},\boldsymbol{\cdot}}^{(0)})(y,\delta) &= \partial_{2}k^{(0)}(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)-k^{(0)}(s,\delta)\nabla_{y}\cdot\left(a(y)\nabla_{y}\sum_{j=1}^{J}(\lambda_{j}\phi_{j}(x)\phi_{j}(y)\right) \\
+    &=\partial_{2}k^{(0)}(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)-k^{(0)}(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\nabla_{y}\cdot\left(a(y)\nabla_{y}\phi_{j}(y)\right)
+\end{align*}
+So we can now compute:
+\begin{align*}
+    (V_{0}(I_{i}(\delta)\mathcal{L})^{*}\alpha)(x,s) &= \alpha\int_{\Omega}\phi_{i}(y)\partial_{2}k^{(0)}(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)\mathrm{d}y-\alpha\int_{\Omega}\phi_{i}(y)k^{(0)}(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\nabla_{y}\cdot\left(a(y)\nabla_{y}\phi_{j}(y)\right)\mathrm{d}y \\
+    &=\alpha\partial_{2}k^{(0)}(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)M_{ji}+\alpha k^{(0)}(s,\delta)\sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)A_{ji}
+\end{align*}
+where $M$ is the Galerkin mass matrix and $A$ is the Galerkin stiffness  matrix, i.e. the matrices with entries given by:
+\begin{align}
+    M_{ij}&:=\int_{\Omega}\phi_{i}(x)\phi_{j}(x)\mathrm{d}x \\
+    A_{ij}&:=\int_{\Omega}a(x)\nabla\phi_{i}(x)\nabla\phi_{j}(x)\mathrm{d}x
+\end{align}
+
+\noindent Using this result we can deduce that:
+\begin{equation}
+    \label{vector_formula}
+    (V_{0}\tilde{A}_{\delta}^{*}\boldsymbol{v})(x,s) = \partial_{2}k^{(0)}(s,\delta)\Phi(x)^{*}\Lambda M\boldsymbol{v} + k^{(0)}(s,\delta)\Phi(x)^{*}\Lambda A \boldsymbol{v}
+\end{equation}
+for any $\boldsymbol{v}\in\mathbb{R}^{J}$, where $\Lambda=\operatorname{diag}\{\lambda_{i}\}_{i=1}^{J}$.
+
+\noindent We now move onto computing:
+\begin{align*}
+    \tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}&=\mathcal{I}_{\delta}\mathcal{L}V_{0}\mathcal{L}^{*}\mathcal{I}_{\delta}^{*} \\
+    &=\begin{pmatrix}
+        I_{1}(\delta) \\
+        \vdots \\
+        I_{J}(\delta)
+    \end{pmatrix}\mathcal{L}V_{0}\mathcal{L}^{*}\begin{pmatrix}
+                                                    I_{1}(\delta)^{*} & \dots & I_{J}(\delta)^{*}
+                                                \end{pmatrix}
+\end{align*}
+This operator has $ij$\textit{-th} entry which is given by:
+\begin{align*}
+    (\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})_{ij}\alpha &= I_{i}(\delta)\mathcal{L}V_{0}\mathcal{L}^{*}I_{j}(\delta)^{*}\alpha \\
+    &= \int_{\Omega}\phi_{i}(x)\left[(\mathcal{L}V_{0}(I_{j}(\delta)\mathcal{L})^{*}\alpha)(x,\delta)\right]\mathrm{d}x \\
+    &=\int_{\Omega}\phi_{i}(x)\bigg[\alpha\partial_{1}\partial_{2}k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}\phi_{l}(x)M_{lj}+\alpha\partial_{1}k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}\phi_{l}(x)A_{lj} \\
+    &-\alpha\partial_{2}k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{lj}\nabla\cdot(a(x)\nabla\phi_{l}(x)) - \alpha k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}A_{lj}\nabla\cdot(a(x)\nabla\phi_{l}(x))\bigg]\mathrm{d}x \\
+    &=\alpha\partial_{1}\partial_{2}k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{il}M_{lj} + \alpha\partial_{1}k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{il}A_{lj} \\
+    &+\alpha\partial_{2}k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}M_{lj}A_{il} + \alpha k^{(0)}(\delta,\delta)\sum_{l=1}^{J}\lambda_{l}A_{il}A_{lj} \\
+    &= \alpha\partial_{1}\partial_{2}k^{(0)}(\delta,\delta)(M\Lambda M)_{ij} + \alpha\partial_{1}k^{(0)}(\delta,\delta)(M\Lambda A)_{ij} + \alpha\partial_{2}k^{(0)}(\delta,\delta)(A\Lambda M)_{ij} + \alpha k^{(0)}(\delta,\delta)(A\Lambda A)_{ij}
+\end{align*}
+We can thus conclude that $\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}$ is the $J\times J$ matrix given by:
+\begin{equation}
+    \label{cross_term}
+    \tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}=\partial_{1}\partial_{2}k^{(0)}(\delta,\delta)M\Lambda M + \partial_{1}k^{(0)}(\delta,\delta)M\Lambda A + \partial_{2}k^{(0)}(\delta,\delta)A\Lambda M +  k^{(0)}(\delta,\delta)A\Lambda A
+\end{equation}
+
+\noindent We now give the various derivatives for our time kernel which are required (\textbf{!!these should be checked rigorously!!}):
+\begin{align*}
+    \partial_{1}k^{(0)}(t,s) &= \sum_{i=0}^{N-1}(s-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s) \\
+    \partial_{2}k^{(0)}(t,s) &= \sum_{i=0}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s) \\
+    \partial_{1}\partial_{2}k^{(0)}(t,s) &= \sum_{i=0}^{N-1}\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s)
+\end{align*}
+
+\noindent We thus have:
+\begin{align*}
+    k^{(0)}(\delta,\delta) &= \delta^2 \\
+    \partial_{1}k^{(0)}(\delta,\delta) &= \delta \\
+    \partial_{2}k^{(0)}(\delta,\delta) &= \delta \\
+    \partial_{1}\partial_{2}k^{(0)}(\delta,\delta) &= 1 \\
+\end{align*}
+So we have:
+\begin{align*}
+    \tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*} &= M\Lambda M + \delta M\Lambda A + \delta A\Lambda M +  \delta^{2}A\Lambda A \\
+    &= M\Lambda(M+\delta A)+\delta A \Lambda(M+\delta A) \\
+    &= (M\Lambda+\delta A \Lambda)(M+\delta A) \\
+    &= (M+\delta A)\Lambda(M+\delta A) = Q\Lambda Q
+\end{align*}
+where we have defined $Q:=M+\delta A$. To make progress we now simplify equation (\ref{vector_formula}) using the derivatives noting the following:
+\begin{align*}
+    k^{(0)}(s,\delta) &= s\delta\mathbb{1}_{(0,\delta]}(s) \\
+    \partial_{2}k^{(0)}(s,\delta) &= s\mathbb{1}_{(0,\delta]}(s)
+\end{align*}
+We thus have:
+\begin{align}
+    (V_{0}\tilde{A}_{\delta}^{*}\boldsymbol{v})(x,s) &= s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\Lambda M\boldsymbol{v} + s\delta\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\Lambda A \boldsymbol{v} \nonumber \\
+    &=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\Lambda(M+\delta A)\mathbf{v} \nonumber \\
+    \label{helpful_identity}
+    &=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\Lambda Q\mathbf{v}
+\end{align}
+We can now make progress with the mean update equation. We first work out the following term using (\ref{helpful_identity}):
+\begin{align*}
+    (V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}F^{(1)})(x,s) &= s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\Lambda Q (Q\Lambda Q)^{-1}F^{(1)} \\
+    &=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\Lambda Q Q^{-1}\Lambda^{-1}Q^{-1}F^{(1)} \\
+    &=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}Q^{-1}F^{(1)}
+\end{align*}
+
+\noindent For the other term involving $m_0$ in the mean update equation we must first work out $\tilde{A}_{\delta}m_{0}=\mathcal{I}_{\delta}\mathcal{L}m_{0}$. To do this we compute:
+\begin{align*}
+    (\mathcal{L}m_{0})(x,t)&=\partial_{t}m_{0}-\nabla\cdot(a(x)\nabla m_{0}(x,t)) \\
+    &=-\nabla(a(x)\nabla\Phi(x)^{*}\boldsymbol{\gamma}) \\
+    &=-\sum_{j=1}^{J}\gamma_{j}\nabla\cdot(a(x)\nabla\phi_{j}(x))
+\end{align*}
+Thus, the $i$\textit{-th} entry of $\tilde{A}_{\delta}m_{0}$ can be computed as:
+\begin{align*}
+    (\tilde{A}_{\delta}m_{0})_{i} &= I_{i}(\delta)\mathcal{L}m_{0} \\
+    &= \int_{\Omega}\phi_{i}(x)\left(-\sum_{j=1}^{J}\gamma_{j}\nabla\cdot(a(x)\nabla\phi_{j}(x))\right)\mathrm{d}x \\
+    &= \sum_{j=1}^{J}\gamma_{j}A_{ij} = (A\boldsymbol{\gamma})_{i}
+\end{align*}
+So $\tilde{A}_{\delta}m_{0}=A\boldsymbol{\gamma}$.
+We can now compute the second term involving $m_{0}$ as follows (again using (\ref{helpful_identity})):
+\begin{align*}
+    ((V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta})m_{0})(x,s) &= (V_{0}\tilde{A}_{\delta}^{*}(Q\Lambda Q)^{-1}A\boldsymbol{\gamma})(x,s) \\
+    &= s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\Lambda QQ^{-1}\Lambda^{-1}Q^{-1}A\boldsymbol{\gamma}\\
+    &=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}
+\end{align*}
+Thus we can compute:
+\begin{align*}
+    (1-(V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta})m_{0})(x,s)&=\Phi(x)^{*}\boldsymbol{\gamma}-s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma} \\
+    &= \Phi(x)^{*}Q^{-1}[Q - s\mathbb{1}_{(0,\delta]}(s)A]\boldsymbol{\gamma} \\
+    &=\Phi(x)^{*}Q^{-1}[M+\delta A - s\mathbb{1}_{(0,\delta]}(s)A]\boldsymbol{\gamma} \\
+    &=\Phi(x)^{*}Q^{-1}[M + (\delta-s\mathbb{1}_{(0,\delta]}(s))A]\boldsymbol{\gamma}
+\end{align*}
+
+\noindent Putting this all together we obtain:
+\begin{equation}
+    m_{1}(x,s) = \Phi(x)^{*}Q^{-1}[M+(\delta-s\mathbb{1}_{(0,\delta]}(s))A]\boldsymbol{\gamma} + s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}Q^{-1}F^{(1)}
+\end{equation}
+Thus we see that performing this mean update and then evaluating at the time $t_{1}=\delta$ we obtain the following:
+\begin{equation}
+    m_{1}(x,t_1) = m_{1}(x,\delta) = \Phi(x)^{*}\left(Q^{-1}M\boldsymbol{\gamma}+\delta Q^{-1}F^{(1)}\right)
+\end{equation}
+Note that this is the same as the update equation for the coefficients in the backward-Euler Galerkin method:
+\begin{equation}
+    \boldsymbol{\gamma} \longmapsto (M+\delta A)^{-1}M\boldsymbol{\gamma}+\delta (M+\delta A)^{-1}F^{(1)}
+\end{equation}
+
+\noindent\textbf{!!!} Before proceeding to compute the covariance $V_1$ we first note that $m_1$ can be expressed as follows:
+\begin{align*}
+    m_{1}(x,s) &= c(x,s) + \Psi^{*}Q^{-1}\mathcal{I}_{\delta}f \\
+    \text{i.e. } m_{1} &= Lf + c
+\end{align*}
+where $c(x,s) = \Phi(x)^{*}Q^{-1}\left[M+(\delta-s\mathbb{1}_{(0,\delta]}(s))A\right]\boldsymbol{\gamma}$, $\Psi^{*}$ is the following function from $\mathbb{R}^{J}\rightarrow L^{2}(\Omega\times[0,T])$ given by $(\Psi^{*}\mathbf{v})(x,s):=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\mathbf{v}$ and $L:=\Psi^{*}Q^{-1}\mathcal{I}_{\delta}$. This observation will prove useful later when we marginalise over the noise term. \textbf{!!!}
+
+\noindent We can now move on to computing the covariance $V_{1}$. We start by computing $\tilde{A}_{\delta}V_{0}$. Computing this involves determining how $I_{j}(\delta)\mathcal{L}V_{0}$ acts on functions $g$ for $j=1,\dots,J$. We have:
+\begin{equation*}
+    I_{j}(\delta)\mathcal{L}V_{0}g=\int_{\Omega}\phi_{j}(x)(\mathcal{L}V_{0}g)(x,\delta)\mathrm{d}x
+\end{equation*}
+
+\noindent Now recalling that $V_{0}g(x,\delta)=\int_{\Omega}\int_{0}^{T}k_{x\delta,ys}^{(0)}g(y,s)\mathrm{d}s\mathrm{d}y$ we deduce:
+\begin{align*}
+    (\mathcal{L}V_{0}g)(x,\delta) &= \int_{\Omega}\int_{0}^{T}(\mathcal{L}k_{\boldsymbol{\cdot},\boldsymbol{\cdot},y,s}^{(0)})(x,\delta)g(y,s)\mathrm{d}s\mathrm{d}y \\
+    &= \int_{\Omega}\int_{0}^{T}\left(\partial_{1}k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)-k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}\nabla_{x}\cdot(a(x)\nabla_{x}\phi_{i}(x))\phi_{i}(y)\right)g(y,s)\mathrm{d}s\mathrm{d}y
+\end{align*}
+
+\noindent We can now perform the integration to obtain:
+\begin{align*}
+    I_{j}(\delta)\mathcal{L}V_{0}g &= \int_{\Omega}\phi_{j}(x)\left(\int_{\Omega}\int_{0}^{T}\left(\partial_{1}k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)-k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}\nabla_{x}\cdot(a(x)\nabla_{x}\phi_{i}(x))\phi_{i}(y)\right)g(y,s)\mathrm{d}s\mathrm{d}y\right)\mathrm{d}x \\
+    &= \int_{\Omega}\int_{0}^{T}\left(\partial_{1}k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}M_{ij}\phi_{i}(y)g(y,s)+k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}A_{ij}\phi_{i}(y)g(y,s)\right)\mathrm{d}s\mathrm{d}y \\
+    &= \sum_{i=1}^{J}\lambda_{i}\int_{\Omega}\int_{0}^{T}(\partial_{1}k^{(0)}(\delta,s)M_{ij}+k^{(0)}(\delta,s)A_{ij})\phi_{i}(y)g(y,s)\mathrm{d}s\mathrm{d}y \\
+    &= \sum_{i=1}^{J}\lambda_{i}\left[\int_{0}^{T}M_{ij}\partial_{1}k^{(0)}(\delta,s)(I_{i}(s)g)\mathrm{d}s+\int_{0}^{T}A_{ij}k^{(0)}(\delta,s)(I_{i}(s)g)\mathrm{d}s\right] \\
+    &= \sum_{i=1}^{J}\lambda_{i}\left[M_{ij}\left(\int_{0}^{T}\partial_{1}k^{(0)}(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right)_{i}+A_{ij}\left(\int_{0}^{T}k^{(0)}(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right)_{i}\right] \\
+    &= \left(M\Lambda\int_{0}^{T}\partial_{1}k^{(0)}(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s+A\Lambda\int_{0}^{T}k^{(0)}(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s\right)_{j}
+\end{align*}
+
+\noindent Thus we can deduce:
+\begin{equation}
+    \tilde{A}_{\delta}V_{0}g=M\Lambda\int_{0}^{T}\partial_{1}k^{(0)}(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k^{(0)}(\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s
+\end{equation}
+
+\noindent We now utilise the specific form of the time kernel:
+\begin{align*}
+    k^{(0)}(\delta,s)&=s\delta\mathbb{1}_{(0,\delta]}(s) \\
+    \partial_{1}k^{(0)}(\delta,s) &=s\mathbb{1}_{(0,\delta]}(s)
+\end{align*}
+to further deduce:
+\begin{align*}
+    \tilde{A}_{\delta}V_{0}g&=M\Lambda\int_{0}^{T}s\mathbb{1}_{(0,\delta]}(s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}s\delta\mathbb{1}_{(0,\delta]}(s)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    &= Q\Lambda\boldsymbol{\nu}_{g}^{(0)}
+\end{align*}
+where:
+\begin{equation}
+    \boldsymbol{\nu}_{g}^{(i)}:=\int_{t_{i}}^{t_{i+1}}(s-t_{i})(\mathcal{I}_{s}g)\mathrm{d}s \text{  for } i=0,\dots,N-1
+\end{equation}
+
+\noindent Having worked this out we can now compute the second term in the formula for $V_{1}$ as follows:
+\begin{align*}
+    (V_{0}\tilde{A}_{\delta}^{*}(\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*})^{-1}\tilde{A}_{\delta}V_{0}g)(x,t) &=
+    (V_{0}\tilde{A}_{\delta}^{*}(Q\Lambda Q)^{-1}Q\Lambda\boldsymbol{\nu}_{g}^{(0)})(x,t) \\
+    &=t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}\Lambda Q Q^{-1}\Lambda^{-1}Q^{-1}Q\Lambda\boldsymbol{\nu}_{g}^{(0)} \\
+    &=t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(0)}
+\end{align*}
+One can also easily show that the action of $V_0$ on functions can be rewritten as follows:
+\begin{equation}
+    (V_{0}g)(x,t)=\sum_{i=0}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(i)}
+\end{equation}
+and so we can deduce that $V_{1}$ is given by:
+\begin{align*}
+    (V_{1}g)(x,t) = \sum_{i=1}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(i)}
+\end{align*}
+
+\noindent This can be rewritten as follows:
+\begin{equation}
+  (V_{1}g)(x,t)=\int_{\Omega}\int_{0}^{T}k_{x,t,y,s}^{(1)}g(y,s)\mathrm{d}s\mathrm{d}y
+\end{equation}
+where the kernel is now:
+\begin{equation}
+  k_{x,t,y,s}^{(1)}:=\sum_{i=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)k^{(1)}(t,s)
+\end{equation}
+with time kernel:
+\begin{equation}
+  k^{(1)}(t,s):=\sum_{i=1}^{N-1}(t-t_{i})(s-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s)
+\end{equation}
+
+\noindent We can thus see that the new covariance operator is of the same form as the prior covariance; the only difference is the time kernel has changed by simply removing the term corresponding to the first time interval $(t_0,t_1]$. This observation will allow us to very easily move to the next time step $t=t_2=2\delta$. To do so we now condition on observing $\mathcal{I}_{2\delta}\mathcal{L}u=\mathcal{I}_{2\delta}f=:F^{(2)}$. As before let $\tilde{A}_{2\delta}=\mathcal{I}_{2\delta}\mathcal{L}$. For the same fixed realisation of $f$ we seek the following conditional distribution:
+\begin{equation}
+  u|\{\tilde{A}_{\delta}u=F^{(1)},\tilde{A}_{2\delta}u=F^{(2)},f\}\sim\mathcal{N}(m_{2},V_{2})
+\end{equation}
+where we have the update equations:
+\begin{align}
+    m_{2}&=m_{1}+V_{1}\tilde{A}_{2\delta}^{*}(\tilde{A}_{2\delta}V_{1}\tilde{A}_{2\delta}^{*})^{-1}(F^{(2)}-\tilde{A}_{2\delta}m_{1}) \\
+    V_{2}&=V_{1}-V_{1}\tilde{A}_{2\delta}^{*}(\tilde{A}_{2\delta}V_{1}\tilde{A}_{2\delta}^{*})^{-1}\tilde{A}_{2\delta}V_{1}
+\end{align}
+Since the covariance operator $V_1$ has the same form as $V_0$ but with a different time kernel most of the computations from before are the same. We give the results, and note where there are differences. First we have the analogue of (\ref{vector_formula}):
+\begin{equation}
+  \label{vector_formula_2}
+  (V_{1}\tilde{A}_{2\delta}^{*}\boldsymbol{v})(x,s) = \partial_{2}k^{(1)}(s,2\delta)\Phi(x)^{*}\Lambda M\boldsymbol{v} + k^{(1)}(s,2\delta)\Phi(x)^{*}\Lambda A \boldsymbol{v}
+\end{equation}
+The analogue of (\ref{cross_term}) is given by:
+\begin{equation}
+  \label{cross_term_2}
+  \tilde{A}_{2\delta}V_{1}\tilde{A}_{2\delta}^{*}=\partial_{1}\partial_{2}k^{(1)}(2\delta,2\delta)M\Lambda M + \partial_{1}k^{(1)}(2\delta,2\delta)M\Lambda A + \partial_{2}k^{(1)}(2\delta,2\delta)A\Lambda M +  k^{(1)}(2\delta,2\delta)A\Lambda A
+\end{equation}
+
+\noindent The various derivatives for our new time kernel follow almost exactly the same as before:
+\begin{align*}
+    \partial_{1}k^{(1)}(t,s) &= \sum_{i=1}^{N-1}(s-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s) \\
+    \partial_{2}k^{(1)}(t,s) &= \sum_{i=1}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s) \\
+    \partial_{1}\partial_{2}k^{(1)}(t,s) &= \sum_{i=1}^{N-1}\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s)
+\end{align*}
+
+\noindent We thus have:
+\begin{align*}
+    k^{(1)}(\delta,\delta) &= \delta^2 \\
+    \partial_{1}k^{(1)}(\delta,\delta) &= \delta \\
+    \partial_{2}k^{(1)}(\delta,\delta) &= \delta \\
+    \partial_{1}\partial_{2}k^{(1)}(\delta,\delta) &= 1 \\
+    k^{(1)}(s,2\delta) &= \delta(s-\delta)\mathbb{1}_{(\delta,2\delta]}(s) \\
+    \partial_{2}k^{(1)}(s,2\delta) &= (s-\delta)\mathbb{1}_{(\delta,2\delta]}(s)
+\end{align*}
+
+\noindent Using this we can now simplify (\ref{vector_formula_2}) to:
+\begin{equation}
+  \label{vector_formula_2_simplified}
+  (V_{1}\tilde{A}_{2\delta}^{*}\boldsymbol{v})(x,s) = (s-\delta)\mathbb{1}_{(\delta,2\delta]}(s)\Phi(x)^{*}\Lambda Q\boldsymbol{v}
+\end{equation}
+and (\ref{cross_term_2}) to:
+\begin{equation}
+  \tilde{A}_{2\delta}V_{1}\tilde{A}_{2\delta}^{*}=Q\Lambda Q
+\end{equation}
+We now need to compute the term $\tilde{A}_{2\delta}m_1$. Doing this will involve first computing $\mathcal{L}m_{1}$. Rewriting $m_1$ as follows will help with this:
+\begin{align*}
+  m_1(x,s) &= \Phi(x)^{*}Q^{-1}\left[M+\delta A\right]\boldsymbol{\gamma}+s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}Q^{-1}\left[F^{(1)}-A\boldsymbol{\gamma}\right] \\
+  &=\Phi(x)^{*}\boldsymbol{\gamma}+s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\boldsymbol{c}^{(1)}
+\end{align*}
+where $\boldsymbol{c}^{(1)}:=Q^{-1}\left[F^{(1)}-A\boldsymbol{\gamma}\right]$.
+We can now compute more easily:
+\begin{equation*}
+  (\mathcal{L}m_{1})(x,s) = \mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\boldsymbol{c}^{(1)} - \sum_{j=1}^{J}(\boldsymbol{\gamma}+s\mathbb{1}_{(0,\delta]}(s)\boldsymbol{c}^{(1)})_{j}\nabla\cdot(a(x)\nabla\phi_{j}(x))
+\end{equation*}
+This allows us to work out the $i$\textit{-th} entry of $\tilde{A}_{2\delta}m_1$ as follows:
+\begin{align*}
+  (\tilde{A}_{2\delta}m_1)_{i} &= I_{i}(2\delta)\mathcal{L}m_1 \\
+  &= \int_{\Omega}\phi_{i}(x)(\mathcal{L}m_1)(x,2\delta)\mathrm{d}x \\
+  &= -\int_{\Omega}\phi_{i}(x)\sum_{j=1}^{J}\gamma_{j}\nabla\cdot(a(x)\nabla\phi_j(x))\mathrm{d}x \\
+  &= \sum_{j=1}^{J}\gamma_{j}A_{ij} \\
+  &= (A\boldsymbol{\gamma})_{i}
+\end{align*}
+So $\tilde{A}_{2\delta}m_1=A\boldsymbol{\gamma}$. These results enable us to work out the following:
+\begin{align*}
+  (V_{1}\tilde{A}_{2\delta}^{*}(\tilde{A}_{2\delta}V_{1}\tilde{A}_{2\delta}^{*})^{-1}F^{(2)})(x,s) &= (s-t_{1})\mathbb{1}_{(t_1,t_2]}(s)\Phi(x)^{*}Q^{-1}F^{(2)} \\
+  (V_{1}\tilde{A}_{2\delta}^{*}(\tilde{A}_{2\delta}V_{1}\tilde{A}_{2\delta}^{*})^{-1}\tilde{A}_{2\delta}m_1)(x,s) &= (s-t_1)\mathbb{1}_{(t_1,t_2]}(s)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}
+\end{align*}
+
+\noindent Combining these results yields the new mean:
+\begin{align*}
+  m_{2}(x,s) &= m_1(x,s)+(s-t_1)\mathbb{1}_{(t_1,t_2]}\Phi(x)^{*}Q^{-1}\left[F^{(2)}-A\boldsymbol{\gamma}\right] \\
+  &= m_1(x,s) + (s-t_1)\mathbb{1}_{(t_1,t_2]}(s)\Phi(x)^{*}\boldsymbol{c}^{(2)} \\
+  &= \Phi(x)^{*}\boldsymbol{\gamma}+(s-t_0)\mathbb{1}_{(t_0,t_1]}(s)\Phi(x)^{*}\boldsymbol{c}^{(1)} + (s-t_1)\mathbb{1}_{(t_1,t_2]}(s)\Phi(x)^{*}\boldsymbol{c}^{(2)} \\
+  &= \Phi(x)^{*}\boldsymbol{\gamma} + \sum_{i=1}^{2}(s-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(s)\Phi(x)^{*}\boldsymbol{c}^{(i)}
+\end{align*}
+
+\noindent Evaluating this new mean at time $t=t_2=2\delta$ we obtain:
+\begin{align*}
+  m_2(x,t_2)=m_2(x,2\delta) &= \Phi(x)^{*}\boldsymbol{\gamma} + (2\delta-\delta)\Phi(x)^{*}\boldsymbol{c}^{(2)} \\
+  &= \Phi(x)^{*}\boldsymbol{\gamma} + \delta\Phi(x)^{*}Q^{-1}\left[F^{(2)}-A\boldsymbol{\gamma}\right] \\
+  &= \Phi(x)^{*}Q^{-1}\left[Q\gamma+\delta F^{(2)}-\delta A\boldsymbol{\gamma}\right] \\
+  &= \Phi(x)^{*}Q^{-1}\left[(Q-\delta A)\boldsymbol{\gamma}+\delta F^{(2)}] \\
+  &= \Phi(x)^{*}Q^{-1}\left[M\boldsymbol{\gamma}+\delta F^{(2)}\right]
+\end{align*}
+
+\noindent We now move onto computing $V_2$. Since $V_1$ is of the same form as $V_0$ with a different time kernel, the computations for $V_1$ can be reused almost identically to compute $V_2$. We have:
+\begin{align*}
+    \tilde{A}_{2\delta}V_{0}g &= M\Lambda\int_{0}^{T}\partial_{1}k^{(1)}(2\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k^{(1)}(2\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    &= M\Lambda\int_{0}^{T}(s-t_1)\mathbb{1}_{(t_1,t_2]}(s)(\mathcal{I}_{s}g)\mathrm{d}s + \delta A\Lambda\int_{0}^{T}(s-t_1)\mathbb{1}_{(t_1,t_2]}(s)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    &= M\Lambda\int_{t_1}^{t_2}(s-t_1)(\mathcal{I}_{s}g)\mathrm{d}s + \delta A\Lambda\int_{t_1}^{t_2}(s-t_1)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    &= M\Lambda\boldsymbol{\nu}_{g}^{(1)}+\delta A\Lambda\boldsymbol{\nu}_{g}^{(1)} \\
+    &= Q\Lambda\boldsymbol{\nu}_{g}^{(1)}
+\end{align*}
+
+\noindent Having worked this out we can now compute the second term in the formula for $V_2$ as follows:
+\begin{align*}
+    (V_{1}\tilde{A}_{2\delta}^{*}(\tilde{A}_{2\delta}V_{1}\tilde{A}_{2\delta}^{*})^{-1}\tilde{A}_{2\delta}V_{1}g)(x,t) &=
+    (V_{1}\tilde{A}_{2\delta}^{*}(Q\Lambda Q)^{-1}Q\Lambda\boldsymbol{\nu}_{g}^{(1)})(x,t) \\
+    &=(t-t_1)\mathbb{1}_{(t_1,t_2]}(t)\Phi(x)^{*}\Lambda Q Q^{-1}\Lambda^{-1}Q^{-1}Q\Lambda\boldsymbol{\nu}_{g}^{(1)} \\
+    &=(t-t_1)\mathbb{1}_{(t_1,t_2]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(1)}
+\end{align*}
+
+\noindent Thus, we can conclude that $V_2$ acts on functions $g$ as follows:
+\begin{equation}
+    (V_{2}g)(x,t) = \sum_{i=2}^{N-1}(t-t_i)\mathbb{1}_{(t_i,t_{i+1}]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(i)} = \int_{\Omega}\int_{0}^{T}k^{(2)}_{x,t,y,s}g(y,s)\mathrm{d}s\mathrm{d}y
+\end{equation}
+where the kernel is now:
+\begin{equation}
+  k_{x,t,y,s}^{(2)}:=\sum_{i=2}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)k^{(2)}(t,s)
+\end{equation}
+with time kernel:
+\begin{equation}
+  k^{(2)}(t,s):=\sum_{i=2}^{N-1}(t-t_{i})(s-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]^{2}}(t,s)
+\end{equation}
+
+\noindent We again can see that the form of the covariance operator remains the same as the previous one. We can now hypothesize a formula for conditioning up to time $t_p$ for $p\in\{1,\dots,N\}$:
+\begin{equation}
+    u|\{\tilde{A}_{t_1}u=F^{(1)},\dots,\tilde{A}_{t_p}u=F^{(p)},f\}\sim\mathcal{N}(m_p,V_p)
+\end{equation}
+where $F^{(p)}:=\mathcal{I}_{t_p}f=\mathcal{I}_{p\delta}f$ and where the mean and covariance are given by:
+\begin{align}
+    m_{p}(x,t) &:= \Phi(x)^{*}\boldsymbol{\gamma} + \sum_{i=1}^{p}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}\boldsymbol{c}^{(i)} \\
+    (V_{p}g)(x,t) &:= \int_{\Omega}\int_{0}^{T}k_{x,t,y,s}^{(p)}g(y,s)\mathrm{d}s\mathrm{d}y \\
+    \boldsymbol{c}^{(i)} &:= Q^{-1}\left[F^{(i)}-A\boldsymbol{\gamma}\right] \\
+    k_{x,t,y,s}^{(p)} &:= \sum_{i=p}^{N-1}\lambda_{j}\phi_{j}(x)\phi_{j}(y)k^{(p)}(t,s) \\
+    k^{(p)}(t,s) &:= \sum_{i=p}^{N-1}(t-t_i)(s-t_i)\mathbb{1}_{(t_i,t_{i+1}]^2}(t,s)
+\end{align}
+
+This can probably be shown by induction. The above implies that conditioning at all $N$ time points will yield the following degenerate Gaussian distribution:
+\begin{equation}
+    u|\{\tilde{A}_{t_1}u=F^{(1)},\dots,\tilde{A}_{t_N}u=F^{(N)},f\}\sim\mathcal{N}(m_N,0)=\delta_{m_N}
+\end{equation}
+since $V_N=0$. This is a Dirac point mass located at the function:
+\begin{equation}
+    m_N(x,t)=\Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{N}(t-t_{i-1})\mathbb{1}_{(t_{i-1},t_i]}(t)\Phi(x)^{*}\boldsymbol{c}^{(i)}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+
+\noindent We will now marginalise over $f$ in order to obtain the averaged conditional distribution. To do this we will need the following Lemma (which we prove below): \vspace{10pt}
+\begin{lemma}
+    Let $f\sim\mathcal{N}(\bar{f},K)$ where we assume that this Gaussian measure is on a Hilbert space of functions $\mathcal{H}_{1}\subset\mathbb{R}^{\mathcal{X}}$. Suppose that for a fixed realisation of $f$ we have
+    \begin{equation*}
+        y|f\sim\mathcal{N}(Lf+c,V)
+    \end{equation*}
+    where $L$ is a bounded linear operator from $\mathcal{H}_{1}$ to another Hilbert space $\mathcal{H}_{2}\subset\mathbb{R}^{\mathcal{X}}$ (so $y$ lies in $\mathcal{H}_{2}$), $c$ is a deterministic function and the covariance opertor $V$ does not depend on $f$. Then marginalizing over $f$ yields:
+    \begin{equation*}
+        y\sim\mathcal{N}(L\bar{f}+c,LKL^{*}+V)
+    \end{equation*}
+    as the averaged distribution of $y$.
+\end{lemma}
+% \noindent \textit{Proof:} To determine this marginal distribution we must compute the expectation of an arbitrary bounded cylindrical function, i.e. we must compute:
+% \begin{equation*}
+%     \int\int\psi(y^{N})\delta_{\mathcal{L}f}(\mathrm{d}y)\mu_{\bar{f},K}(\mathrm{d}f)
+% \end{equation*}
+% where $y^{N}=Py$ and $P:\mathcal{H}_{2}\rightarrow\mathbb{R}^{N}$ is the bounded linear operator given by $Ph:=(h(x_1),\dots,h(x_N))^{T}$ where the $x_{i}\in\mathcal{X}$ for $i=1,\dots,N$. Note that $u^{N}|\{f\}\sim\delta_{P\mathcal{L}f}$. We also have that $Y:=P\mathcal{L}f\sim\mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})$. Using these facts we can write:
+% \begin{align*}
+%     \int\int\psi(y^{N})\delta_{\mathcal{L}f}(\mathrm{d}y)\mu_{\bar{f},K}(\mathrm{d}f) &= \int\int\psi(y^N)\delta_{P\mathcal{L}f}(dy^{N})\mu_{\bar{f},K}(\mathrm{d}f) \\
+%     &= \int\int\psi(y^{N})\delta_{Y}(dy^N)\mu_{\bar{f},K}(\mathrm{d}f) \\
+%     &=\int\int\psi(y^{N})\delta_{Y}(dy^N)\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}Y) \\
+%     &=\int\psi(y^{N})\left(\int\delta_{Y}(dy^N)\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}Y)\right) \\
+%     &=\int\psi(y^{N})\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}y^{N})
+% \end{align*}
+% We thus obtain the expectation of $\psi(y^N)$ with respect to the multivariate Gaussian distribution:
+% \begin{equation*}
+%     \mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})
+% \end{equation*}
+% We thus have:
+% \begin{equation*}
+%     y^{N}=Py\sim\mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})
+% \end{equation*}
+% From this we can conclude that $y$ is distributed as $\mathcal{N}(\mathcal{L}\bar{f},\mathcal{L}K\mathcal{L}^{*})$. Indeed, we have that $\mathcal{L}\bar{f}\in\mathcal{H}_{2}$ is in the right space and also $\mathcal{L}K\mathcal{L}^{*}$ is a trace-class operator from $\mathcal{H}_{2}\rightarrow\mathcal{H}_{2}$ (since $\mathcal{L}$ and its adjoint are both bounded linear operators and $K$ is trace-class). We thus have that $\mathcal{N}(\mathcal{L}\bar{f},\mathcal{L}K\mathcal{L}^{*})$ is a valid Gaussian distribution. To show that we indeed have this as the distribution of $y$ we can proceed by contradiction: suppose that $y\sim\mathcal{N}(m,V)$.
+\noindent\textit{Proof:} The fact that $y|f\sim\mathcal{N}(Lf+c,V)$ is equivalent to saying that:
+\begin{equation*}
+    y=Lf+c+\tilde{y}
+\end{equation*}
+where $\tilde{y}\sim\mathcal{N}(0,V)$ is independent of $f$. Thus we have:
+\begin{equation*}
+    \begin{pmatrix}
+        f \\
+        \tilde{y}
+    \end{pmatrix}=\mathcal{N}\left(\begin{pmatrix}
+                                \bar{f} \\
+                                0
+                            \end{pmatrix},\begin{pmatrix}
+                                            K & 0 \\
+                                            0 & V
+                                          \end{pmatrix}\right)
+\end{equation*}
+Since we can write:
+\begin{equation*}
+    y=\begin{pmatrix}
+        L & 1
+    \end{pmatrix}\begin{pmatrix}
+                    f \\
+                    \tilde{y}
+                 \end{pmatrix}+c
+\end{equation*}
+we deduce:
+\begin{equation*}
+    y\sim\mathcal{N}\left(L\bar{f}+c, \begin{pmatrix}
+        L & 1
+    \end{pmatrix}\begin{pmatrix}
+                    K & 0 \\
+                    0 & V
+                \end{pmatrix}\begin{pmatrix}
+                    L^{*} \\
+                    1
+                \end{pmatrix}\right)=\mathcal{N}(L\bar{f}+c,LKL^{*}+V)
+\end{equation*}
+as required. \qedsymbol
+
+\noindent We can now perform the marginalisation over $f$ noting that $V_1$ does not depend on $f$ to obtain:
+\begin{equation}
+    \int u|\{\tilde{A}_{\delta}u=F^{(1)},f\}\mathrm{d}f\sim\mathcal{N}(L\bar{f}+c,LKL^{*}+V_{1})=:\mathcal{N}(\bar{m}_{1},\bar{V}_{1})
+\end{equation}
+We now compute $\bar{m}_1$ and $\bar{V}_1$. It is easy to see that $\bar{m}_{1}$ is the same as $m_1$ except $F^1$ is replaced by $\bar{F}^1:=\mathcal{I}_{\delta}\bar{f}$. For the covariance we must figure out how $L^{*}$ acts. This will require the adjoint $\Psi$ of $\Psi^{*}$ which can be shown to be given by $\Psi g=\boldsymbol{\nu}_{g}^{(0)}$. We thus can compute:
+\begin{equation}
+    LKL^{*} = \Psi^{*}Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}\Psi = \Psi^{*}H^{(1)}\Psi
+\end{equation}
+where $H^{(1)}:=Q^{-1}\mathcal{I}_{\delta}K\mathcal{I}_{\delta}^{*}Q^{-1}$ can be shown to be positive definite. We can now compute how $LKL^{*}$ acts on a function $g$ as follows:
+\begin{align*}
+    (LKL^{*}g)(x,t) &= (\Psi^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)})(x,t) \\ &=t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)}
+\end{align*}
+
+\noindent Thus, $\bar{V}_{1}$ acts on functions as:
+\begin{align*}
+    (\bar{V}_{1}g)(x,t) &= t\mathbb{1}_{(0,\delta]}(t)\Phi(x)^{*}H^{(1)}\boldsymbol{\nu}_{g}^{(0)} +\sum_{i=1}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(i)} \\
+    &=\sum_{i=0}^{N-1}(t-t_{i})\mathbb{1}_{(t_{i},t_{i+1}]}(t)\Phi(x)^{*}H^{(1,i)}\boldsymbol{\nu}_{g}^{(i)}
+\end{align*}
+where:
+\begin{equation*}
+    H^{(1,i)}:=\left\{
+\begin{array}{ll}
+      H^{(1)} & i=0 \\
+      \Lambda & i=1,\dots,N-1
+\end{array}
+\right.
+\end{equation*}
+
+\noindent We can now repeat this computation to move from time $t_1=\delta$ to $t_2=2\delta$ by conditioning $\mathcal{N}(\bar{m}_1,\bar{V}_1)$ on $\tilde{A}_{2\delta}u=F^2=:\mathcal{I}_{2\delta}f$.
+
+
+
+
+\end{document}
