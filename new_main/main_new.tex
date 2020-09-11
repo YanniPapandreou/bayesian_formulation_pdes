@@ -68,7 +68,7 @@
 \begin{equation}
     u\sim\mathcal{N}(m_{0},V_{0})
 \end{equation}
-where $m_{0}(x,t):=v_{h}(x)=\Phi^{*}(x)\boldsymbol{\gamma}$ ($m_{0}$ is constant in time). The prior covariance operator $V_{0}$ is defined as:
+where $m_{0}(x,t):=v_{h}(x)=\Phi(x)^{*}\boldsymbol{\gamma}$ ($m_{0}$ is constant in time). The prior covariance operator $V_{0}$ is defined as:
 \begin{equation}
     (V_{0}g)(x,t)=\int_{\Omega}\int_{0}^{T}k_{x,t,y,s}^{(0)}g(y,s)\mathrm{d}s\mathrm{d}y
 \end{equation}
@@ -269,19 +269,19 @@ Note that this is the same as the update equation for the coefficients in the ba
     \boldsymbol{\gamma} \longmapsto (M+\delta A)^{-1}M\boldsymbol{\gamma}+\delta (M+\delta A)^{-1}F^{(1)}
 \end{equation}
 
-\noindent\textbf{!!!} Before proceeding to compute the covariance $V_1$ we first note that $m_1$ can be expressed as follows:
-\begin{align*}
-    m_{1}(x,s) &= c(x,s) + \Psi^{*}Q^{-1}\mathcal{I}_{\delta}f \\
-    \text{i.e. } m_{1} &= Lf + c
-\end{align*}
-where $c(x,s) = \Phi(x)^{*}Q^{-1}\left[M+(\delta-s\mathbb{1}_{(0,\delta]}(s))A\right]\boldsymbol{\gamma}$, $\Psi^{*}$ is the following function from $\mathbb{R}^{J}\rightarrow L^{2}(\Omega\times[0,T])$ given by $(\Psi^{*}\mathbf{v})(x,s):=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\mathbf{v}$ and $L:=\Psi^{*}Q^{-1}\mathcal{I}_{\delta}$. This observation will prove useful later when we marginalise over the noise term. \textbf{!!!}
+% \noindent\textbf{!!!} Before proceeding to compute the covariance $V_1$ we first note that $m_1$ can be expressed as follows:
+% \begin{align*}
+%     m_{1}(x,s) &= c(x,s) + \Psi^{*}Q^{-1}\mathcal{I}_{\delta}f \\
+%     \text{i.e. } m_{1} &= Lf + c
+% \end{align*}
+% where $c(x,s) = \Phi(x)^{*}Q^{-1}\left[M+(\delta-s\mathbb{1}_{(0,\delta]}(s))A\right]\boldsymbol{\gamma}$, $\Psi^{*}$ is the following function from $\mathbb{R}^{J}\rightarrow L^{2}(\Omega\times[0,T])$ given by $(\Psi^{*}\mathbf{v})(x,s):=s\mathbb{1}_{(0,\delta]}(s)\Phi(x)^{*}\mathbf{v}$ and $L:=\Psi^{*}Q^{-1}\mathcal{I}_{\delta}$. This observation will prove useful later when we marginalise over the noise term. \textbf{!!!}
 
 \noindent We can now move on to computing the covariance $V_{1}$. We start by computing $\tilde{A}_{\delta}V_{0}$. Computing this involves determining how $I_{j}(\delta)\mathcal{L}V_{0}$ acts on functions $g$ for $j=1,\dots,J$. We have:
 \begin{equation*}
     I_{j}(\delta)\mathcal{L}V_{0}g=\int_{\Omega}\phi_{j}(x)(\mathcal{L}V_{0}g)(x,\delta)\mathrm{d}x
 \end{equation*}
 
-\noindent Now recalling that $V_{0}g(x,\delta)=\int_{\Omega}\int_{0}^{T}k_{x\delta,ys}^{(0)}g(y,s)\mathrm{d}s\mathrm{d}y$ we deduce:
+\noindent Now recalling that $V_{0}g(x,\delta)=\int_{\Omega}\int_{0}^{T}k_{x,\delta,y,s}^{(0)}g(y,s)\mathrm{d}s\mathrm{d}y$ we deduce:
 \begin{align*}
     (\mathcal{L}V_{0}g)(x,\delta) &= \int_{\Omega}\int_{0}^{T}(\mathcal{L}k_{\boldsymbol{\cdot},\boldsymbol{\cdot},y,s}^{(0)})(x,\delta)g(y,s)\mathrm{d}s\mathrm{d}y \\
     &= \int_{\Omega}\int_{0}^{T}\left(\partial_{1}k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}\phi_{i}(x)\phi_{i}(y)-k^{(0)}(\delta,s)\sum_{i=1}^{J}\lambda_{i}\nabla_{x}\cdot(a(x)\nabla_{x}\phi_{i}(x))\phi_{i}(y)\right)g(y,s)\mathrm{d}s\mathrm{d}y
@@ -436,7 +436,7 @@ So $\tilde{A}_{2\delta}m_1=A\boldsymbol{\gamma}$. These results enable us to wor
 
 \noindent We now move onto computing $V_2$. Since $V_1$ is of the same form as $V_0$ with a different time kernel, the computations for $V_1$ can be reused almost identically to compute $V_2$. We have:
 \begin{align*}
-    \tilde{A}_{2\delta}V_{0}g &= M\Lambda\int_{0}^{T}\partial_{1}k^{(1)}(2\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k^{(1)}(2\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    \tilde{A}_{2\delta}V_{1}g &= M\Lambda\int_{0}^{T}\partial_{1}k^{(1)}(2\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k^{(1)}(2\delta,s)(\mathcal{I}_{s}g)\mathrm{d}s \\
     &= M\Lambda\int_{0}^{T}(s-t_1)\mathbb{1}_{(t_1,t_2]}(s)(\mathcal{I}_{s}g)\mathrm{d}s + \delta A\Lambda\int_{0}^{T}(s-t_1)\mathbb{1}_{(t_1,t_2]}(s)(\mathcal{I}_{s}g)\mathrm{d}s \\
     &= M\Lambda\int_{t_1}^{t_2}(s-t_1)(\mathcal{I}_{s}g)\mathrm{d}s + \delta A\Lambda\int_{t_1}^{t_2}(s-t_1)(\mathcal{I}_{s}g)\mathrm{d}s \\
     &= M\Lambda\boldsymbol{\nu}_{g}^{(1)}+\delta A\Lambda\boldsymbol{\nu}_{g}^{(1)} \\
