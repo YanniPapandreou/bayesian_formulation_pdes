@@ -219,7 +219,9 @@ and
 \end{align*}
 where we have used the following properties of the functions $\{l^{(i)}\}$ which can easily be shown:
 \begin{align}
+    \label{helpful_identity_1}
     l^{(i)}(t_j) &= \delta\cdot\delta_{i,j-1} \\
+    \label{helpful_identity_2}
     l^{(i)\prime}(t_j) &= \delta_{i,j-1}
 \end{align}
 for $i=0,\dots,N-1$ and $j=1,\dots,N$.
@@ -372,7 +374,126 @@ where:
     k^{(1)}_{x,t,y,s} &:= \sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)k^{(1)}(t,s) \\
     k^{(1)}(t,s) &:= \sum_{i=1}^{N-1}l^{(i)}(t)l^{(i)}(s)
 \end{align}
-We thus see that the result holds for $p=1$.
+We thus see that the result holds for $p=1$. We now proceed with the inductive step. Assume the result holds for some $p<N$. As we did in the proof of the case $p=1$ we can easily deduce that
+\begin{equation}
+    u|\{\tilde{A}_{t_1}u=F^{(1)},\dots,\tilde{A}_{t_{p+1}}u=F^{(p+1)},f\}\sim\mathcal{N}(m_{p+1},V_{p+1})
+\end{equation}
+where we have the update equations:
+\begin{align}
+    \label{mean_update_p}
+    m_{p+1}&=m_{p}+V_{p}\tilde{A}_{t_{p+1}}^{*}(\tilde{A}_{t_{p+1}}V_{p}\tilde{A}_{t_{p+1}}^{*})^{-1}(F^{(p+1)}-\tilde{A}_{t_{p+1}}m_{p}) \\
+    \label{cov_update_p}
+    V_{p+1}&=V_{p}-V_{p}\tilde{A}_{t_{p+1}}^{*}(\tilde{A}_{t_{p+1}}V_{p}\tilde{A}_{t_{p+1}}^{*})^{-1}\tilde{A}_{t_{p+1}}V_{p}
+\end{align}
+From the time kernel $k^{(p)}(t,s)$ we can work out:
+\begin{align}
+    \partial_{1}k^{(p)}(t,s) &= \sum_{i=p}^{N-1}l^{(i)\prime}(t)l^{(i)}(s) \\
+    \partial_{2}k^{(p)}(t,s) &= \sum_{i=p}^{N-1}l^{(i)}(t)l^{(i)\prime}(s) \\
+    \partial_{1}\partial_{2}k^{(p)}(t,s) &= \sum_{i=p}^{N-1}l^{(i)\prime}(t)l^{(i)\prime}(s) \\
+\end{align}
+Using (\ref{helpful_identity_1}) and (\ref{helpful_identity_2}) we have
+\begin{align}
+    k^{(p)}(s,t_{p+1}) &= \delta l^{(p)}(s) \\
+    \partial_{2}k^{(p)}(s,t_{p+1}) &= l^{(p)}(s)
+\end{align}
+These results will help with figuring out the analogue of (\ref{vector_formula_simplified_1}). Since $V_p$ is of the same form as $V_0$ we can deduce:
+\begin{align}
+    (V_{p}\tilde{A}_{t_{p+1}}^{*}\boldsymbol{v})(x,s) &= \partial_{2}k^{(p)}(s,t_{p+1})\Phi(x)^{*}\Lambda M\boldsymbol{v} + k^{(p)}(s,t_{p+1})\Phi(x)^{*}\Lambda A\boldsymbol{v} \\
+    &= l^{(p)}(s)\Phi(x)^{*}\Lambda M\boldsymbol{v} + \delta l^{(p)}(s)\Phi(x)^{*}\Lambda A \boldsymbol{v} \\
+    \label{vector_formula_simplified_p}
+    &=l^{(p)}(s)\Phi(x)^{*}\Lambda Q\boldsymbol{v}
+\end{align}
+Using (\ref{helpful_identity_1}) and (\ref{helpful_identity_2}) we can also conclude the following:
+\begin{align*}
+    k^{(p)}(t_{p+1},t_{p+1}) &= \delta^2 \\
+    \partial_{1}k^{(p)}(t_{p+1},t_{p+1}) &= \delta \\
+    \partial_{2}k^{(p)}(t_{p+1},t_{p+1}) &= \delta \\
+    \partial_{1}\partial_{2}k^{(p)}(t_{p+1},t_{p+1}) &= 1 \\
+\end{align*}
+Thus, just as in the proof for $p=1$ we have:
+\begin{align*}
+    \tilde{A}_{t_{p+1}}V_{p}\tilde{A}_{t_{p+1}}^{*}&=\partial_{1}\partial_{2}k^{(p)}(t_{p+1},t_{p+1})M\Lambda M + \partial_{1}k^{(p)}(t_{p+1},t_{p+1})M\Lambda A + \partial_{2}k^{(p)}(t_{p+1},t_{p+1})A\Lambda M +  k^{(p)}(\delta,\delta)A\Lambda A \nonumber \\
+    &= Q\Lambda Q
+\end{align*}
+We can now compute:
+\begin{align*}
+    \left(V_{p}\tilde{A}_{t_{p+1}}^{*}(\tilde{A}_{t_{p+1}}V_{p}\tilde{A}_{t_{p+1}}^{*})^{-1}F^{(p+1)}\right)(x,s) &= l^{(p)}(s)\Phi(x)^{*}\Lambda Q (Q\Lambda Q)^{-1}F^{(p+1)} \\
+    &= l^{(p)}(s)\Phi(x)^{*}\Lambda QQ^{-1}\Lambda^{-1}Q^{-1}F^{(p+1)} \\
+    &= l^{(p)}(s)\Phi(x)^{*}Q^{-1}F^{(p+1)}
+\end{align*}
+In order to finish with the mean update we must now compute $\tilde{A}_{t_{p+1}}m_{p}=\mathcal{I}_{t_{p+1}}\mathcal{L}m_{p}$. Recalling that
+\begin{equation*}
+    m_{p}(x,s)=\Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{p}l^{(i-1)}(s)\Phi(x)^{*}\boldsymbol{c}^{(i)}
+\end{equation*}
+we can work out:
+\begin{align*}
+    (\mathcal{L}m_{p})(x,s) &= \sum_{i=1}^{p}l^{(i-1)\prime}(s)\Phi(x)^{*}\boldsymbol{c}^{(i)} - \sum_{j=1}^{J}\left(\boldsymbol{\gamma}+\sum_{i=1}^{p}l^{(i-1)}(s)\boldsymbol{c}^{(i)}\right)_{j}\nabla\cdot(a(x)\nabla\phi_{j}(x))
+\end{align*}
+Using this, together with (\ref{helpful_identity_1}) and (\ref{helpful_identity_2}), we can work out:
+\begin{align*}
+    (\tilde{A}_{t_{p+1}}m_{p})_{k} &= I_{k}(t_{p+1})\mathcal{L}m_{p} \\
+    &= \int_{\Omega}\phi_{k}(x)(\mathcal{L}m_{p})(x,t_{p+1})\mathrm{d}x \\
+    &=-\sum_{j=1}^{J}\left(\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}\right)_{j}\int_{\Omega}\phi_{k}(x)\nabla\cdot(a(x)\nabla\phi_{j}(x))\mathrm{d}x \\
+    &=\sum_{j=1}^{J}\left(\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}\right)_{j}A_{kj} \\
+    &= \left[A\left(\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}\right)\right]_{k}
+\end{align*}
+i.e. we have:
+\begin{equation}
+    \tilde{A}_{t_{p+1}}m_{p}=A\left(\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}\right)
+\end{equation}
+We now claim that $\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}=\boldsymbol{\gamma}_{p}$. This can proven by induction. It is true for $p=1$ (see proof that $m_1(x,t_1)=\Phi(x)^{*}\boldsymbol{\gamma}_1$). Assume its true for $p$. For $p+1$ we have:
+\begin{align*}
+    \boldsymbol{\gamma}+\sum_{i=1}^{p+1}\delta\boldsymbol{c}^{(i)} &= \boldsymbol{\gamma}\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)} + \delta\boldsymbol{c}^{(p+1)} \\
+    &= \boldsymbol{\gamma}_{p}+\delta\boldsymbol{c}^{(p+1)} \\
+    &= \boldsymbol{\gamma}_{p}+\delta Q^{-1}\left[F^{(p+1)}-A\boldsymbol{\gamma}_{p}\right] \\
+    &= Q^{-1}\left[\left(Q-\delta A)\boldsymbol{\gamma}_{p}+\delta F^{(p+1)}\right] \\
+    &= Q^{-1}\left[M\boldsymbol{\gamma}_p+\delta F^{(p+1)}\right] \\
+    &= \boldsymbol{\gamma}_{p+1}
+\end{align*}
+as claimed. Thus, $\tilde{A}_{t_{p+1}}m_{p}=A\boldsymbol{\gamma}_{p}$ and we can now compute:
+\begin{align*}
+    \left(V_{p}\tilde{A}_{t_{p+1}}^{*}(\tilde{A}_{t_{p+1}}V_{p}\tilde{A}_{t_{p+1}}^{*})^{-1}\tilde{A}_{t_{p+1}}m_p\right)(x,s) &= l^{(p)}(s)\Phi(x)^{*}\Lambda Q (Q\Lambda Q)^{-1}A\boldsymbol{\gamma}_{p} \\
+    &= l^{(p)}(s)\Phi(x)^{*}\Lambda QQ^{-1}\Lambda^{-1}Q^{-1}A\boldsymbol{\gamma}_{p} \\
+    &= l^{(p)}(s)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}_{p}
+\end{align*}
+It now follows from (\ref{mean_update_p}) that we have:
+\begin{align*}
+    m_{p+1}(x,s) &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{p}l^{(i-1)}(s)\Phi(x)^{*}\boldsymbol{c}^{(i)} + l^{(p)}(s)\Phi(x)^{*}Q^{-1}F^{(p+1)}-l^{(p)}(s)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}_{p} \\
+    &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{p}l^{(i-1)}(s)\Phi(x)^{*}\boldsymbol{c}^{(i)} + l^{(p)}(s)\Phi(x)^{*}Q^{-1}\left[F^{(p+1)}-A\boldsymbol{\gamma}_{p}\right] \\
+    &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{p}l^{(i-1)}(s)\Phi(x)^{*}\boldsymbol{c}^{(i)} + l^{(p)}(s)\Phi(x)^{*}\boldsymbol{c}^{(p+1)} \\
+    &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{p+1}l^{(i-1)}(s)\Phi(x)^{*}\boldsymbol{c}^{(i)}
+\end{align*}
 
+\noindent Having obtained this formula we can now evaluate the mean at $s=t_{p+1}$ to deduce:
+\begin{equation*}
+    m_{p+1}(x,t_{p+1}) = \Phi(x)^{*}\left[\boldsymbol{\gamma}+\sum_{i=1}^{p+1}\delta\boldsymbol{c^{(i)}}\right] = \Phi(x)^{*}\boldsymbol{\gamma}_{p+1}
+\end{equation*}
+by the above claim.
+
+\noindent We now move on to the covariance update (\ref{cov_update_p}). The piece missing before we can proceed is the computation of $\tilde{A}_{t_{p+1}}V_{p}$. Following the proof of the case $p=1$ we can write:
+\begin{align}
+    \tilde{A}_{t_{p+1}}V_{p}g &= M\Lambda\int_{0}^{T}\partial_{1}k^{(p)}(t_{p+1},s)(\mathcal{I}_{s}g)\mathrm{d}s + A\Lambda\int_{0}^{T}k^{(p)}(t_{p+1},s)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    &= M\Lambda\int_{0}^{T}l^{(p)}(s)(\mathcal{I}_{s}g)\mathrm{d}s + \delta A\Lambda\int_{0}^{T}l^{(p)}(s)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    &= (M+\delta A)\Lambda\int_{0}^{T}l^{(p)}(s)(\mathcal{I}_{s}g)\mathrm{d}s \\
+    &= Q\Lambda\boldsymbol{\nu}_{g}^{(p)}
+\end{align}
+And thus, we can compute:
+\begin{align*}
+    (V_{p}\tilde{A}_{t_{p+1}}^{*}(\tilde{A}_{t_{p+1}}V_{p}\tilde{A}_{t_{p+1}}^{*})^{-1}\tilde{A}_{t_{p+1}}V_{p}g)(x,t) &=
+    (V_{p}\tilde{A}_{t_{p+1}}^{*}(Q\Lambda Q)^{-1}Q\Lambda\boldsymbol{\nu}_{g}^{(p)})(x,t) \\
+    &=l^{(p)}(t)\Phi(x)^{*}\Lambda Q Q^{-1}\Lambda^{-1}Q^{-1}Q\Lambda\boldsymbol{\nu}_{g}^{(p)} \\
+    &=l^{(p)}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(p)}
+\end{align*}
+Thus, using (\ref{cov_update_p}) we can deduce:
+\begin{align*}
+    (V_{p+1}g)(x,t) &= \sum_{i=p+1}^{N-1}l^{(i)}(t)\Phi(x)^{*}\Lambda\boldsymbol{\nu}_{g}^{(i)} \\
+    &= \int_{\Omega}\int_{0}^{T}k^{(p+1)}_{x,t,y,s}g(y,s)\mathrm{d}s\mathrm{d}y
+\end{align*}
+where:
+\begin{align*}
+    k^{(p+1)}_{x,t,y,s} &:= \sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)k^{(p+1)}(t,s) \\
+    k^{(p+1)}(t,s) &:= \sum_{i=p+1}^{N-1}l^{(i)}(t)l^{(i)}(s)
+\end{align*}
+Thus, the result is true for $p=1$. So by induction it is true for $p\in\{1,\dots,N\}$. \qedsymbol
 
 \end{document}
