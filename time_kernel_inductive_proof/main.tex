@@ -120,12 +120,13 @@ while for for $i=N-1$ we have:
     I_{i}(s)g:=\int_{\Omega}\phi_{i}(x)g(x,s)\mathrm{d}x
 \end{equation}
 
-To update our belief in the distribution of $u$ we will condition on the following events: $\mathcal{I}_{t_{i}}\mathcal{L}u=\mathcal{I}_{t_{i}}f=:F^{(i)}$ sequentially for $i=1,\dots,N$. Letting $\tilde{A}_{t}:=\mathcal{I}_{t}\mathcal{L}$ we seek, for a fixed realisation of $f$ (and hence of the $\{F^{(i)}\}$), the following conditional distributions:
+\noindent To update our belief in the distribution of $u$ we will condition on the following events: $\mathcal{I}_{t_{i}}\mathcal{L}u=\mathcal{I}_{t_{i}}f=:F^{(i)}$ sequentially for $i=1,\dots,N$. Letting $\tilde{A}_{t}:=\mathcal{I}_{t}\mathcal{L}$ we seek, for a fixed realisation of $f$ (and hence of the $\{F^{(i)}\}$), the following conditional distributions:
 \begin{equation}
     u|\{\tilde{A}_{t_{1}}u=F^{(1)},\dots,\tilde{A}_{t_{p}}u=F^{(p)},f\}\sim\mathcal{N}(m_{p},V_{p})
 \end{equation}
 for $p\in\{1,\dots,N\}$. We make the following claim:
 \begin{proposition}
+    \label{proposition_1}
     With the prior specified as above we have that $m_{p}$ and $V_{p}$ are given as follows:
     \begin{align}
         m_{p}(x,t) &:= \Phi(x)^{*}\boldsymbol{\gamma} + \sum_{i=1}^{p}l^{(i-1)}(t)\Phi(x)^{*}\boldsymbol{c}^{(i)} \\
@@ -261,7 +262,7 @@ We can thus conclude that $\tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}$ is the
     \tilde{A}_{\delta}V_{0}\tilde{A}_{\delta}^{*}=\partial_{1}\partial_{2}k^{(0)}(\delta,\delta)M\Lambda M + \partial_{1}k^{(0)}(\delta,\delta)M\Lambda A + \partial_{2}k^{(0)}(\delta,\delta)A\Lambda M +  k^{(0)}(\delta,\delta)A\Lambda A
 \end{equation}
 
-\noindent Using our time kernel and its derivatives we can easily conclude:
+\noindent Using our time kernel and its derivatives we can easily deduce:
 \begin{align*}
     k^{(0)}(\delta,\delta) &= \delta^2 \\
     \partial_{1}k^{(0)}(\delta,\delta) &= \delta \\
@@ -349,7 +350,6 @@ From this we can note:
     &= (M+\delta A)\Lambda\int_{0}^{T}l^{(0)}(s)(\mathcal{I}_{s}g)\mathrm{d}s \\
     &= Q\Lambda\boldsymbol{\nu}_{g}^{(0)}
 \end{align}
-
 where $\boldsymbol{\nu}_{g}^{(i)}:=\int_{0}^{T}l^{(i)}(s)(\mathcal{I}_{s}g)\mathrm{d}s$ for $i=0,\dots,N-1$.
 
 \noindent We can use this to now compute:
@@ -441,12 +441,12 @@ i.e. we have:
 \begin{equation}
     \tilde{A}_{t_{p+1}}m_{p}=A\left(\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}\right)
 \end{equation}
-We now claim that $\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}=\boldsymbol{\gamma}_{p}$. This can proven by induction. It is true for $p=1$ (see proof that $m_1(x,t_1)=\Phi(x)^{*}\boldsymbol{\gamma}_1$). Assume its true for $p$. For $p+1$ we have:
+We now claim that $\boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)}=\boldsymbol{\gamma}_{p}$. This can be proven by induction. It is true for $p=1$ (see proof that $m_1(x,t_1)=\Phi(x)^{*}\boldsymbol{\gamma}_1$). Assume it holds for $p$. For $p+1$ we have:
 \begin{align*}
-    \boldsymbol{\gamma}+\sum_{i=1}^{p+1}\delta\boldsymbol{c}^{(i)} &= \boldsymbol{\gamma}\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)} + \delta\boldsymbol{c}^{(p+1)} \\
+    \boldsymbol{\gamma}+\sum_{i=1}^{p+1}\delta\boldsymbol{c}^{(i)} &= \boldsymbol{\gamma}+\sum_{i=1}^{p}\delta\boldsymbol{c}^{(i)} + \delta\boldsymbol{c}^{(p+1)} \\
     &= \boldsymbol{\gamma}_{p}+\delta\boldsymbol{c}^{(p+1)} \\
     &= \boldsymbol{\gamma}_{p}+\delta Q^{-1}\left[F^{(p+1)}-A\boldsymbol{\gamma}_{p}\right] \\
-    &= Q^{-1}\left[\left(Q-\delta A)\boldsymbol{\gamma}_{p}+\delta F^{(p+1)}\right] \\
+    &= Q^{-1}\left[\left(Q-\delta A\right)\boldsymbol{\gamma}_{p}+\delta F^{(p+1)}\right] \\
     &= Q^{-1}\left[M\boldsymbol{\gamma}_p+\delta F^{(p+1)}\right] \\
     &= \boldsymbol{\gamma}_{p+1}
 \end{align*}
@@ -494,6 +494,149 @@ where:
     k^{(p+1)}_{x,t,y,s} &:= \sum_{j=1}^{J}\lambda_{j}\phi_{j}(x)\phi_{j}(y)k^{(p+1)}(t,s) \\
     k^{(p+1)}(t,s) &:= \sum_{i=p+1}^{N-1}l^{(i)}(t)l^{(i)}(s)
 \end{align*}
-Thus, the result is true for $p=1$. So by induction it is true for $p\in\{1,\dots,N\}$. \qedsymbol
+Thus, the result is true for $p+1$. So by induction it is true for $p\in\{1,\dots,N\}$. \qedsymbol
+
+\noindent Proposition \ref{proposition_1} implies that conditioning at all $N$ time points will yield the following degenerate Gaussian distribution:
+\begin{equation}
+    u|\{\tilde{A}_{t_1}u=F^{(1)},\dots,\tilde{A}_{t_N}u=F^{(N)},f\}\sim\mathcal{N}(m_{N},0)=\delta_{m_N}
+\end{equation}
+since $V_N=0$. This is a Dirac point mass located at the function:
+\begin{equation}
+    m_{N}(x,t)=\Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}\boldsymbol{c}^{(i)}
+\end{equation}
+We now want to perform the marginalisation over the RHS noise term $f$. In order to do this it will help to rewrite $m_N$ as $m_N=Lf+c$ where $L$ is a bounded linear operator acting on $f$ and $c$ is a determinstic function (not depending on $f$). In order to rewrite $m_N$ in this form it will be useful to first prove the following result:
+\begin{lemma}
+    \label{lemma_1}
+    The vectors $\{\boldsymbol{\gamma}_{i}\}$ satisfy the following:
+    \begin{equation}
+        \label{f-dependenceOfgammas}
+        \boldsymbol{\gamma}_{i}=(Q^{-1}M)^{i}\boldsymbol{\gamma}+\delta Q^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}F^{(j)} \hspace{0.3cm}\text{for } i\geq 1
+    \end{equation}
+\end{lemma}
+\noindent \textit{Proof:} We proceed by induction. For $i=1$ we have:
+\begin{align*}
+    \boldsymbol{\gamma}_{1} &= Q^{-1}\left[M\boldsymbol{\gamma}+\delta F^{(1)}\right] \\
+    &= (Q^{-1}M)\boldsymbol{\gamma} + \delta Q^{-1}F^{(1)} \\
+    &= (Q^{-1}M)\boldsymbol{\gamma} + \delta Q^{-1}\sum_{j=1}^{1}(MQ^{-1})^{1-j}F^{(j)}
+\end{align*}
+so the result is true for $i=1$. Assume it is true for $i$. For $i+1$ we can use the recursive defintion of the $\{\boldsymbol{\gamma}_i\}$ to compute:
+\begin{align*}
+    \boldsymbol{\gamma}_{i+1} &= Q^{-1}\left[M\boldsymbol{\gamma}_{i}+\delta F^{(i+1)}\right] \\
+    &= Q^{-1}M\left[(Q^{-1}M)^{i}\boldsymbol{\gamma}+\delta Q^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}F^{(j)}\right] + \delta Q^{-1}F^{(i+1)} \\
+    &= (Q^{-1}M)^{i+1}\boldsymbol{\gamma}+\delta Q^{-1}\left[F^{(i+1)}+MQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}F^{(j)}\right] \\
+    &= (Q^{-1}M)^{i+1}\boldsymbol{\gamma} + \delta Q^{-1}\left[F^{(i+1)}+\sum_{j=1}^{i}(MQ^{-1})^{i+1-j}F^{(j)}\right] \\
+    &= (Q^{-1}M)^{i+1}\boldsymbol{\gamma} + \delta Q^{-1}\sum_{j=1}^{i+1}(MQ^{-1})^{(i+1)-j}F^{(j)}
+\end{align*}
+so the result is true for $i+1$. Thus, the result holds for $i\geq 1$ by induction. \qedsymbol
+
+\noindent Using Lemma \ref{lemma_1} we can now rewrite $m_N$ as follows:
+\begin{align*}
+    m_{N}(x,t) &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}\boldsymbol{c}^{(i)} \\
+    &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}\left[F^{(i)}-A\boldsymbol{\gamma}_{i-1}\right] \\
+    % &= \Phi(x)^{*}\boldsymbol{\gamma}+\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}F^{(i)} \\
+    &= \Phi(x)^{*}\boldsymbol{\gamma} + \sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}F^{(i)}-\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}_{i-1} \\
+    &= \Phi(x)^{*}\boldsymbol{\gamma}+\left(\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_i}\right)f-l^{(0)}(t)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}-\sum_{i=2}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}_{i-1} \\
+    &= \Phi(x)^{*}\left[I-l^{(0)}(t)Q^{-1}A\right]\boldsymbol{\gamma} + \left(\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_i}\right)f - \sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}A\boldsymbol{\gamma}_{i} \\
+    &= \Phi(x)^{*}\left[I-l^{(0)}(t)Q^{-1}A\right]\boldsymbol{\gamma} + \left(\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_i}\right)f \\
+    &- \sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}A\left((Q^{-1}M)^{i}\boldsymbol{\gamma}+\delta Q^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}F^{(j)}\right) \\
+    &= \Phi(x)^{*}\left[I-l^{(0)}(t)Q^{-1}A\right]\boldsymbol{\gamma} + \left(\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_i}\right)f-\sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}A(Q^{-1}M)^{i}\boldsymbol{\gamma} \\
+    &-\delta\sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}AQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}F^{(j)} \\
+    &= \Phi(x)^{*}\left[I-l^{(0)}(t)Q^{-1}A-\sum_{i=1}^{N-1}l^{(i)}(t)Q^{-1}A(Q^{-1}M)^{i}\right]\boldsymbol{\gamma} \\
+    &+ \left[\sum_{i=1}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_i}-\delta\sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}AQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}\mathcal{I}_{t_j}\right]f \\
+    &= \Phi(x)^{*}\left[I-\sum_{i=0}^{N-1}l^{(i)}(t)Q^{-1}A(Q^{-1}M)^{i}\right]\boldsymbol{\gamma} \\
+    &+ \left[l^{(0)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_1}+\sum_{i=2}^{N}l^{(i-1)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_i}-\delta\sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}AQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}\mathcal{I}_{t_j}\right]f \\
+    &= \Phi(x)^{*}\left[I-\sum_{i=0}^{N-1}l^{(i)}(t)Q^{-1}A(Q^{-1}M)^{i}\right]\boldsymbol{\gamma} \\
+    &+\left[l^{(0)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_1}+\sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_{i+1}}-\delta\sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}AQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}\mathcal{I}_{t_j}\right]f \\
+    &= \Phi(x)^{*}\left[I-\sum_{i=0}^{N-1}l^{(i)}(t)Q^{-1}A(Q^{-1}M)^{i}\right]\boldsymbol{\gamma} \\
+    &+\left[l^{(0)}(t)\Phi(x)^{*}Q^{-1}\mathcal{I}_{t_1}+\sum_{i=1}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}\left(\mathcal{I}_{t_{i+1}}-\delta AQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}\mathcal{I}_{t_j}\right)\right]f \\
+    &= \Phi(x)^{*}\left[I-\sum_{i=0}^{N-1}l^{(i)}(t)Q^{-1}A(Q^{-1}M)^{i}\right]\boldsymbol{\gamma} + \left[\sum_{i=0}^{N-1}l^{(i)}(t)\Phi(x)^{*}Q^{-1}\left(\mathcal{I}_{t_{i+1}}-\delta AQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}\mathcal{I}_{t_j}\right)\right]f \\
+    &= c(x,t)+(Lf)(x,t)
+\end{align*}
+\textit{Note: we have used the convention that a sum from } $j=1$ \textit{to} $j=0$ \textit{is considered to be empty, i.e.} $0$. In the above we have defined:
+\begin{align}
+    \label{constant_part}
+    c(x,t) &= \Phi(x)^{*}\left[I-\sum_{i=0}^{N-1}l^{(i)}(t)Q^{-1}A(Q^{-1}M)^{i}\right]\boldsymbol{\gamma} \\
+    \label{operator_on_f_part}
+    (Lf)(x,t) &= \Phi(x)^{*}\left[\sum_{i=0}^{N-1}l^{(i)}(t)Q^{-1}\left(\mathcal{I}_{t_{i+1}}-\delta AQ^{-1}\sum_{j=1}^{i}(MQ^{-1})^{i-j}\mathcal{I}_{t_j}\right)\right]f
+\end{align}
+
+\noindent We will now marginalise over $f$ in order to obtain the averaged conditional distribution. To do this we will need the following Lemma (which we prove below): \vspace{10pt}
+\begin{lemma}
+    Let $f\sim\mathcal{N}(\bar{f},K)$ where we assume that this Gaussian measure is on a Hilbert space of functions $\mathcal{H}_{1}\subset\mathbb{R}^{\mathcal{X}}$. Suppose that for a fixed realisation of $f$ we have
+    \begin{equation*}
+        y|f\sim\mathcal{N}(Lf+c,V)
+    \end{equation*}
+    where $L$ is a bounded linear operator from $\mathcal{H}_{1}$ to another Hilbert space $\mathcal{H}_{2}\subset\mathbb{R}^{\mathcal{X}}$ (so $y$ lies in $\mathcal{H}_{2}$), $c$ is a deterministic function and the covariance opertor $V$ does not depend on $f$. Then marginalizing over $f$ yields:
+    \begin{equation*}
+        y\sim\mathcal{N}(L\bar{f}+c,LKL^{*}+V)
+    \end{equation*}
+    as the averaged distribution of $y$.
+\end{lemma}
+% \noindent \textit{Proof:} To determine this marginal distribution we must compute the expectation of an arbitrary bounded cylindrical function, i.e. we must compute:
+% \begin{equation*}
+%     \int\int\psi(y^{N})\delta_{\mathcal{L}f}(\mathrm{d}y)\mu_{\bar{f},K}(\mathrm{d}f)
+% \end{equation*}
+% where $y^{N}=Py$ and $P:\mathcal{H}_{2}\rightarrow\mathbb{R}^{N}$ is the bounded linear operator given by $Ph:=(h(x_1),\dots,h(x_N))^{T}$ where the $x_{i}\in\mathcal{X}$ for $i=1,\dots,N$. Note that $u^{N}|\{f\}\sim\delta_{P\mathcal{L}f}$. We also have that $Y:=P\mathcal{L}f\sim\mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})$. Using these facts we can write:
+% \begin{align*}
+%     \int\int\psi(y^{N})\delta_{\mathcal{L}f}(\mathrm{d}y)\mu_{\bar{f},K}(\mathrm{d}f) &= \int\int\psi(y^N)\delta_{P\mathcal{L}f}(dy^{N})\mu_{\bar{f},K}(\mathrm{d}f) \\
+%     &= \int\int\psi(y^{N})\delta_{Y}(dy^N)\mu_{\bar{f},K}(\mathrm{d}f) \\
+%     &=\int\int\psi(y^{N})\delta_{Y}(dy^N)\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}Y) \\
+%     &=\int\psi(y^{N})\left(\int\delta_{Y}(dy^N)\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}Y)\right) \\
+%     &=\int\psi(y^{N})\mu_{P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*}}(\mathrm{d}y^{N})
+% \end{align*}
+% We thus obtain the expectation of $\psi(y^N)$ with respect to the multivariate Gaussian distribution:
+% \begin{equation*}
+%     \mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})
+% \end{equation*}
+% We thus have:
+% \begin{equation*}
+%     y^{N}=Py\sim\mathcal{N}(P\mathcal{L}\bar{f},P\mathcal{L}K\mathcal{L}^{*}P^{*})
+% \end{equation*}
+% From this we can conclude that $y$ is distributed as $\mathcal{N}(\mathcal{L}\bar{f},\mathcal{L}K\mathcal{L}^{*})$. Indeed, we have that $\mathcal{L}\bar{f}\in\mathcal{H}_{2}$ is in the right space and also $\mathcal{L}K\mathcal{L}^{*}$ is a trace-class operator from $\mathcal{H}_{2}\rightarrow\mathcal{H}_{2}$ (since $\mathcal{L}$ and its adjoint are both bounded linear operators and $K$ is trace-class). We thus have that $\mathcal{N}(\mathcal{L}\bar{f},\mathcal{L}K\mathcal{L}^{*})$ is a valid Gaussian distribution. To show that we indeed have this as the distribution of $y$ we can proceed by contradiction: suppose that $y\sim\mathcal{N}(m,V)$.
+\noindent\textit{Proof:} The fact that $y|f\sim\mathcal{N}(Lf+c,V)$ is equivalent to saying that:
+\begin{equation*}
+    y=Lf+c+\tilde{y}
+\end{equation*}
+where $\tilde{y}\sim\mathcal{N}(0,V)$ is independent of $f$. Thus we have:
+\begin{equation*}
+    \begin{pmatrix}
+        f \\
+        \tilde{y}
+    \end{pmatrix}=\mathcal{N}\left(\begin{pmatrix}
+                                \bar{f} \\
+                                0
+                            \end{pmatrix},\begin{pmatrix}
+                                            K & 0 \\
+                                            0 & V
+                                          \end{pmatrix}\right)
+\end{equation*}
+Since we can write:
+\begin{equation*}
+    y=\begin{pmatrix}
+        L & 1
+    \end{pmatrix}\begin{pmatrix}
+                    f \\
+                    \tilde{y}
+                 \end{pmatrix}+c
+\end{equation*}
+we deduce:
+\begin{equation*}
+    y\sim\mathcal{N}\left(L\bar{f}+c, \begin{pmatrix}
+        L & 1
+    \end{pmatrix}\begin{pmatrix}
+                    K & 0 \\
+                    0 & V
+                \end{pmatrix}\begin{pmatrix}
+                    L^{*} \\
+                    1
+                \end{pmatrix}\right)=\mathcal{N}(L\bar{f}+c,LKL^{*}+V)
+\end{equation*}
+as required. \qedsymbol
+
+\noindent We can now perform the marginalisation over $f$ noting that $V_N=0$ does not depend on $f$ to obtain:
+\begin{equation}
+    \int u|\{\tilde{A}_{t_1}u=F^{(1)},\dots,\tilde{A}_{t_N}u=F^{(N)},f\}\mathrm{d}f\sim\mathcal{N}(L\bar{f}+c,LKL^{*})
+\end{equation}
+with $L$ and $c$ given by equations (\ref{constant_part}) and (\ref{operator_on_f_part}) respectively. \textbf{\textit{Note: We must still prove that $L$ is bounded and work out its adjoint $L^{*}$.}}
 
 \end{document}
